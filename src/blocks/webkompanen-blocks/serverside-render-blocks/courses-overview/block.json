@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "webkompanen-blocks/courses-overview",
+	"title": "Trainingen overzicht",
+	"category": "webkompanen-blocks/querys",
+	"description": "Beschikbare training overzicht gebruiker",
+	"textdomain": "webkompanen",
+	"attributes": {
+		"align":{
+			"type": "string",
+			"default": "full"
+		},
+		"content":{
+			"type": "string"
+		},
+        "classes":{
+            "type": "string"
+        },
+		"post":{
+			"type": "object"
+		},
+		"image":{
+			"type": "object"
+		},
+		"imageId":{
+			"type": "number"
+		},
+		"imageUrl":{
+			"type": "string"
+		},
+		"imageAlt":{
+			"type": "string"
+		},
+		"requestedcategorie":{
+			"type": "string",
+			"default": ""
+		},
+		"number_of_items":{
+			"type": "number",
+			"default": -1
+		},
+		"title":{
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
+}
