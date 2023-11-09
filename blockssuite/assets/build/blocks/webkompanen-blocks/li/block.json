@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen/li",
+  "title": "List item (li)",
+  "category": "webkompanen/components",
+  "description": "Create a list item (li) element",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "content": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

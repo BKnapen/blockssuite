@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen/buttonlink",
+  "title": "Button link",
+  "category": "webkompanen",
+  "description": "Create a button link",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    },
+    "isOutline": {
+      "type": "boolean"
+    },
+    "color": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

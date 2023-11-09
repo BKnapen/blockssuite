@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-06-27 06:07+0200\n"
+"PO-Revision-Date: 2023-07-14 06:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: courses.php\n"
+"X-Poedit-SearchPath-1: courses-overview.php\n"
+
+#: courses-overview.php:28
+msgid "Cursus"
+msgstr "Course"
+
+#: courses-overview.php:29
+msgid "Periode"
+msgstr "Period"
+
+#: courses-overview.php:30
+msgid "Dag"
+msgstr "Day"
+
+#: courses-overview.php:31
+msgid "Tijd"
+msgstr "Time"
+
+#: courses.php:68
+msgid "eerstvolgende startdatum "
+msgstr "next start date "
+
+#: courses.php:77
+msgid "weken"
+msgstr "weeks"
+
+#: courses.php:81
+msgid "tot"
+msgstr "to"
+
+#: courses.php:81
+msgid "cursisten per groep"
+msgstr "students per group"
+
+msgid "Het cursusbedrag kan in termijnen betaald worden."
+msgstr "The course fee can be paid in instalments."
+
+msgid "inclusief lesmateriaal."
+msgstr "including teaching materials."
+
+msgid "Basis"
+msgstr "Basic"
+
+msgid "Beginners"
+msgstr "Beginners"
+
+msgid "Halfgevorderd"
+msgstr "Intermediate"
+
+msgid "Gevorderd"
+msgstr "Advanced"
+
+msgid "Overige cursussen"
+msgstr "Other courses"
+
+msgid "Lestijden"
+msgstr "Class times"
+
+msgid "Startdatum"
+msgstr "Start date"
+
+msgid "Cursusduur"
+msgstr "Course duration"
+
+msgid "Aantal cursisten"
+msgstr "Group size"
+
+msgid "Betaling"
+msgstr "Payment"
+
+msgid "Instapniveau"
+msgstr "Entry level"
+
+msgid "Cursusmateriaal"
+msgstr "Course material"
+
+msgid "Zelfstudie"
+msgstr "Self study"
+
+msgid "Afsluiting"
+msgstr "Certification"
+
+msgid "Wekelijks"
+msgstr "Weekly"
+
+msgid "Maandelijks"
+msgstr "Monthly"
+
+msgid "wekelijks"
+msgstr "weekly"
+
+msgid "maandelijks"
+msgstr "monthly"
+
+msgid "Eerste les gratis."
+msgstr "First lesson free."
+
+msgid "(per les)."
+msgstr "(per lesson)."
+
+msgid "Prijs per"
+msgstr "Price per"
+
+msgid "lessen"
+msgstr "classes"
+
+msgid "(minimum groepsgrootte)."
+msgstr "(minimum group size)."

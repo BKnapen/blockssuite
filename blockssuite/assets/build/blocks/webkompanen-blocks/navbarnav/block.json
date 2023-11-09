@@ -1,0 +1,312 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen/navbarnav",
+  "title": "navbar nav",
+  "category": "webkompanen/navigation",
+  "description": "Creates a navbar nav wraper",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "content": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "offcanvasbody": {
+      "type": "boolean"
+    },
+    "width": {
+      "type": "string"
+    },
+    "textalign": {
+      "type": "string"
+    },
+    "bgcolor": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "dxs": {
+      "type": "string"
+    },
+    "dsm": {
+      "type": "string"
+    },
+    "dmd": {
+      "type": "string"
+    },
+    "dlg": {
+      "type": "string"
+    },
+    "dxl": {
+      "type": "string"
+    },
+    "dxxl": {
+      "type": "string"
+    },
+    "possc": {
+      "type": "string"
+    },
+    "posmd": {
+      "type": "string"
+    },
+    "poslg": {
+      "type": "string"
+    },
+    "posxl": {
+      "type": "string"
+    },
+    "posxxl": {
+      "type": "string"
+    },
+    "mxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "msm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mlg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "psm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "plg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "justifycontentxs": {
+      "type": "string"
+    },
+    "justifycontentsm": {
+      "type": "string"
+    },
+    "justifycontentmd": {
+      "type": "string"
+    },
+    "justifycontentlg": {
+      "type": "string"
+    },
+    "justifycontentxl": {
+      "type": "string"
+    },
+    "justifycontentxxl": {
+      "type": "string"
+    },
+    "alignitemsxs": {
+      "type": "string"
+    },
+    "alignitemssm": {
+      "type": "string"
+    },
+    "alignitemsmd": {
+      "type": "string"
+    },
+    "alignitemslg": {
+      "type": "string"
+    },
+    "alignitemsxl": {
+      "type": "string"
+    },
+    "alignitemsxxl": {
+      "type": "string"
+    },
+    "rowcolsxs": {
+      "type": "number"
+    },
+    "rowcolsautoxs": {
+      "type": "number"
+    },
+    "rowcolssm": {
+      "type": "number"
+    },
+    "rowcolsautosm": {
+      "type": "number"
+    },
+    "rowcolsmd": {
+      "type": "number"
+    },
+    "rowcolsautomd": {
+      "type": "number"
+    },
+    "rowcolslg": {
+      "type": "number"
+    },
+    "rowcolsautolg": {
+      "type": "number"
+    },
+    "rowcolsxl": {
+      "type": "number"
+    },
+    "rowcolsautoxl": {
+      "type": "number"
+    },
+    "rowcolsxxl": {
+      "type": "number"
+    },
+    "rowcolsautoxxl": {
+      "type": "number"
+    },
+    "gxs": {
+      "type": "number"
+    },
+    "gsm": {
+      "type": "number"
+    },
+    "gmd": {
+      "type": "number"
+    },
+    "glg": {
+      "type": "number"
+    },
+    "gxl": {
+      "type": "number"
+    },
+    "gxxl": {
+      "type": "number"
+    },
+    "gxsx": {
+      "type": "number"
+    },
+    "gsmx": {
+      "type": "number"
+    },
+    "gmdx": {
+      "type": "number"
+    },
+    "glgx": {
+      "type": "number"
+    },
+    "gxlx": {
+      "type": "number"
+    },
+    "gxxlx": {
+      "type": "number"
+    },
+    "gxsy": {
+      "type": "number"
+    },
+    "gsmy": {
+      "type": "number"
+    },
+    "gmdy": {
+      "type": "number"
+    },
+    "glgy": {
+      "type": "number"
+    },
+    "gxly": {
+      "type": "number"
+    },
+    "gxxly": {
+      "type": "number"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

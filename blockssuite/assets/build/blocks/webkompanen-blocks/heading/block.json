@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen/heading",
+  "title": "Heading",
+  "category": "webkompanen/text",
+  "description": "Create a heading element",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "content": {
+      "type": "string"
+    },
+    "tagname": {
+      "type": "string"
+    },
+    "textalign": {
+      "type": "string"
+    },
+    "textalignxs": {
+      "type": "string"
+    },
+    "textalignsm": {
+      "type": "string"
+    },
+    "textalignmd": {
+      "type": "string"
+    },
+    "textalignlg": {
+      "type": "string"
+    },
+    "textalignxl": {
+      "type": "string"
+    },
+    "textalignxxl": {
+      "type": "string"
+    },
+    "texttransform": {
+      "type": "string"
+    },
+    "bgcolor": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen/span",
+  "title": "Span",
+  "category": "webkompanen",
+  "description": "Create a span element",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "content": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}
