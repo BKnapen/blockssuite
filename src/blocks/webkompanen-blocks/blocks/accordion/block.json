@@ -4,7 +4,7 @@
 	"name": "webkompanen-blocks/accordion",
 	"title": "Accordion",
 	"category": "webkompanen-blocks/layout",
-	"description": "Create a accordion element",
+	"description": "Create a accordion element.",
 	"textdomain": "webkompanen",
 	"attributes": {
 		"post":{
