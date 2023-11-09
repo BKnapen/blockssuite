@@ -8,7 +8,7 @@
         <li><b>src/blocks/webkompanen-blocks/blocks:</b> React source code blocks (admin blocks)</li>
         <li><b>src/blocks/webkompanen-blocks/editor:</b> React csource code editors for the blocks</li>
         <li><b>src/blocks/webkompanen-blocks/icon:</b> React source code icons</li>
-        <li><b>src/blocks/webkompanen-blocks/serverside-render-blocks:</b> React serverside render block php rendered blocks</li>
+        <li><b>src/blocks/webkompanen-blocks/serverside-render-blocks:</b> React serverside render blocks php rendered blocks</li>
     </ul>
 </p>
 <h3 align="left">Connect with me:</h3>
