@@ -1,6 +1,12 @@
 <h1 align="center">BlocksSuite</h1>
 <h3 align="center">BlocksSuite a block pakkage for the Wordpress block editor</h3>
-
+<p align="left">
+    Block editor package
+    <ul>
+        <li>src/blocks/webkompanen-blocks/blocks: hier vind je de react blocks</li>
+        <li>src/blocks/webkompanen-blocks/blocks: hier vind je de react blocks</li>
+    </ul>
+</p>
 <h3 align="left">Connect with me:</h3>
 <p align="left">
     <a href="https://twitter.com/bknapen" target="blank">
