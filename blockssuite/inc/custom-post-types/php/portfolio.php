@@ -52,5 +52,8 @@
 		); // Better be safe than sorry
 	}
 	endif;
-	add_action( 'init', 'cw_post_type' );
+
+	if(get_option('showPortfolioCustomPost') == true):
+		add_action( 'init', 'cw_post_type' );
+	endif;
 ?>

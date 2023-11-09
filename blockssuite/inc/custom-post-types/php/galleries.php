@@ -68,5 +68,7 @@ if ( ! function_exists( 'galleries_type' ) ):
 
 endif;
 
-add_action( 'init', 'galleries_type' );
+if(get_option('showGalleriesCustomPost') == true):
+    add_action( 'init', 'galleries_type' );
+endif;
 ?>

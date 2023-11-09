@@ -68,5 +68,7 @@ if ( ! function_exists( 'referenties_type' ) ):
 
 endif;
 
-add_action( 'init', 'referenties_type' );
+if(get_option('showReferentiesCustomPost') == true):
+    add_action( 'init', 'referenties_type' );
+endif;
 ?>

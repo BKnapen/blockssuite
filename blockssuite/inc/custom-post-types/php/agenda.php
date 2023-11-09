@@ -68,5 +68,7 @@ if ( ! function_exists( 'agenda_type' ) ):
 
 endif;
 
-add_action( 'init', 'agenda_type' );
+if(get_option('showAgendaCustomPost') == true):
+    add_action( 'init', 'agenda_type' );
+endif;
 ?>

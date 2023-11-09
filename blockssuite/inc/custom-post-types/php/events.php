@@ -68,5 +68,7 @@ if ( ! function_exists( 'events_type' ) ):
 
 endif;
 
-add_action( 'init', 'events_type' );
+if(get_option('showEventsCustomPost') == true):
+    add_action( 'init', 'events_type' );
+endif;
 ?>

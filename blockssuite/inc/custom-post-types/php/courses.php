@@ -68,5 +68,7 @@ if ( ! function_exists( 'courses_type' ) ):
 
 endif;
 
-add_action( 'init', 'courses_type' );
+if(get_option('showCoursesCustomPost') == true):
+    add_action( 'init', 'courses_type' );
+endif;
 ?>

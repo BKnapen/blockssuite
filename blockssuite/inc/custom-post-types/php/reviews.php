@@ -68,5 +68,7 @@ if ( ! function_exists( 'reviews_type' ) ):
 
 endif;
 
-add_action( 'init', 'reviews_type' );
+if(get_option('showReviewsCustomPost') == true):
+    add_action( 'init', 'reviews_type' );
+endif;
 ?>
