@@ -66,6 +66,13 @@ class WebkompanenEmailSettings extends Component {
 			phpmailerIsHTML: false,
 			phpmailerSMTPSecure: '',
 			phpmailerSMTPAutoTLS: false,
+			showAgendaCustomPost: false,
+			showCoursesCustomPost: false,
+			showEventsCustomPost: false,
+			showGalleriesCustomPost: false,
+			showPortfolioCustomPost: false,
+			showReferentiesCustomPost: false,
+			showReviewsCustomPost: false,
 			phpmailerSender: ''
 		};
 	}
@@ -92,6 +99,13 @@ class WebkompanenEmailSettings extends Component {
 						phpmailerSMTPSecure: response.phpmailerSMTPSecure,
 						phpmailerSMTPAutoTLS: response.phpmailerSMTPAutoTLS,
 						phpmailerSender: response.phpmailerSender,
+						showAgendaCustomPost: response.showAgendaCustomPost,
+						showCoursesCustomPost: response.showCoursesCustomPost,
+						showEventsCustomPost: response.showEventsCustomPost,
+						showGalleriesCustomPost: response.showGalleriesCustomPost,
+						showPortfolioCustomPost: response.showPortfolioCustomPost,
+						showReferentiesCustomPost: response.showReferentiesCustomPost,
+						showReviewsCustomPost: response.showReviewsCustomPost,
 						isAPILoaded: true
 					});
 				});
@@ -407,24 +421,134 @@ class WebkompanenEmailSettings extends Component {
 								}
 								{
 									(tab.title === 'Custom post settings') ? (
-										<ToggleControl
-											label="HTML"
-											help={ true ? '' : '' }
-											checked={ this.state.phpmailerIsHTML  }
-											onChange={ 
-												(e) => { 
-													this.changeOptions(
-														'phpmailerIsHTML', 
-														! this.state.phpmailerIsHTML
-													)
+										<>
+											<ToggleControl
+												label="Agenda custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showAgendaCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showAgendaCustomPost', 
+															! this.state.showAgendaCustomPost
+														)
+													}
 												}
-											}
-											style={
-												{
-													'margin-bottom': '0px'
+												style={
+													{
+														'margin-bottom': '0px'
+													}
 												}
-											}
-										/>
+											/>
+											<ToggleControl
+												label="Cursus custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showCoursesCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showCoursesCustomPost', 
+															! this.state.showCoursesCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label="Events custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showEventsCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showEventsCustomPost', 
+															! this.state.showEventsCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label="Galleries custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showGalleriesCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showGalleriesCustomPost', 
+															! this.state.showGalleriesCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label="Portfolio custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showPortfolioCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showPortfolioCustomPost', 
+															! this.state.showPortfolioCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label="Referenties custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showReferentiesCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showReferentiesCustomPost', 
+															! this.state.showReferentiesCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label="Reviews custom post weergeven"
+												help={ true ? '' : '' }
+												checked={ this.state.showReviewsCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showReviewsCustomPost', 
+															! this.state.showReviewsCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+										</>
 									) : null
 								}
 			                </PanelBody>
