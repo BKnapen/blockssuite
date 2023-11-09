@@ -6,23 +6,38 @@
         		$block_categories,
         		array(
             		array(
-						'slug'  => 'webkompanen/navigation',
+						'slug'  => 'webkompanen-blocks/navigation',
 						'title' => __( 'Navigatie', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/carousel',
+						'slug'  => 'webkompanen-blocks/media',
+						'title' => __( 'Media', 'text-domain' ),
+                		'icon'  => null,
+            		),
+            		array(
+						'slug'  => 'webkompanen-blocks/forms',
+						'title' => __( 'Forms', 'text-domain' ),
+                		'icon'  => null,
+            		),
+            		array(
+						'slug'  => 'webkompanen-blocks/carousel',
 						'title' => __( 'Carousel', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/text',
+						'slug'  => 'webkompanen-blocks/text',
 						'title' => __( 'Text', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/layout',
+						'slug'  => 'webkompanen-blocks/layout',
 						'title' => __( 'Layout', 'text-domain' ),
+                		'icon'  => null,
+            		),
+            		array(
+						'slug'  => 'webkompanen-blocks/components',
+						'title' => __( 'Components', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
@@ -31,37 +46,37 @@
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/content',
+						'slug'  => 'webkompanen-blocks/content',
 						'title' => __( 'Content', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/embed',
+						'slug'  => 'webkompanen-blocks/embed',
 						'title' => __( 'Embed', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/querys',
+						'slug'  => 'webkompanen-blocks/querys',
 						'title' => __( 'Query\'s', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/security',
+						'slug'  => 'webkompanen-blocks/security',
 						'title' => __( 'security', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen/user',
+						'slug'  => 'webkompanen-blocks/user',
 						'title' => __( 'gebruiker', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen',
+						'slug'  => 'webkompanen-blocks',
 						'title' => __( 'webkompanen blocks', 'text-domain' ),
                 		'icon'  => null,
             		),
             		array(
-						'slug'  => 'webkompanen',
+						'slug'  => 'webkompanen-blocks',
 						'title' => __( 'forms', 'text-domain' ),
                 		'icon'  => null,
             		),
