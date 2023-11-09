@@ -3,8 +3,8 @@
 <p align="left">
     Block editor package
     <ul>
-        <li>src/blocks/webkompanen-blocks/blocks: hier vind je de react blocks</li>
-        <li>src/blocks/webkompanen-blocks/blocks: hier vind je de react blocks</li>
+        <li><b>src/blocks/webkompanen-blocks/blocks:</b> React code blocks</li>
+        <li><b>src/blocks/webkompanen-blocks/admin:</b> React code theme settings</li>
     </ul>
 </p>
 <h3 align="left">Connect with me:</h3>
