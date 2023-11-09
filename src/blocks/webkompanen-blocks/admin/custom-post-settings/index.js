@@ -143,11 +143,6 @@ class WebkompanenEmailSettings extends Component {
 			                title: 'Google Maps',
 			                className: 'tab-three',
 		                },
-		                {
-			                name: 'tab4',
-			                title: 'Custom post settings',
-			                className: 'tab-four',
-		                },
 	                ] }>
 	                    {
 		                ( tab ) => (
@@ -405,28 +400,6 @@ class WebkompanenEmailSettings extends Component {
 										/>
 									) : null
 								}
-								{
-									(tab.title === 'Custom post settings') ? (
-										<ToggleControl
-											label="HTML"
-											help={ true ? '' : '' }
-											checked={ this.state.phpmailerIsHTML  }
-											onChange={ 
-												(e) => { 
-													this.changeOptions(
-														'phpmailerIsHTML', 
-														! this.state.phpmailerIsHTML
-													)
-												}
-											}
-											style={
-												{
-													'margin-bottom': '0px'
-												}
-											}
-										/>
-									) : null
-								}
 			                </PanelBody>
 		                )
 	                    }
@@ -439,11 +412,11 @@ class WebkompanenEmailSettings extends Component {
 document.addEventListener("DOMContentLoaded", function(event) {
 	wp.domReady( () => {
 		//wp.api.loadPromise.done( function() {
-		if(document.getElementById( 'webkompanen-email-settings' )){
+		if(document.getElementById( 'webkompanen-custom-post-settings' )){
 			try {
 				render(
 					<WebkompanenEmailSettings/>,
-					document.getElementById( 'webkompanen-email-settings' )
+					document.getElementById( 'webkompanen-custom-post-settings' )
 				);
 			}
 			finally{

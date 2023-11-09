@@ -5,7 +5,8 @@
 	$includes = array(
 		'email-settings',
 		'gtm-settings',
-		'google-maps-settings'
+		'google-maps-settings',
+		'custom-post-settings'
 	);
 
 	foreach ( $includes as $include ) {
