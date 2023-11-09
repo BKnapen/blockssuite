@@ -4,10 +4,10 @@
     Block editor package
     <ul>
         <li><b>src/blocks/webkompanen-blocks/index.js:</b> loading &amp; register admin blocks, collections, format types, sidebars, meta fields, blocks</li>
-        <li><b>src/blocks/webkompanen-blocks/admin:</b> React code theme settings (admin blocks)</li>
-        <li><b>src/blocks/webkompanen-blocks/blocks:</b> React code blocks</li>
-        <li><b>src/blocks/webkompanen-blocks/editor:</b> React code editors for the blocks</li>
-        <li><b>src/blocks/webkompanen-blocks/icon:</b> React code icons</li>
+        <li><b>src/blocks/webkompanen-blocks/admin:</b> React source code theme settings (admin blocks)</li>
+        <li><b>src/blocks/webkompanen-blocks/blocks:</b> React source code blocks (admin blocks)</li>
+        <li><b>src/blocks/webkompanen-blocks/editor:</b> React csource code editors for the blocks</li>
+        <li><b>src/blocks/webkompanen-blocks/icon:</b> React source code icons</li>
         <li><b>src/blocks/webkompanen-blocks/serverside-render-blocks:</b> React serverside render block php rendered blocks</li>
     </ul>
 </p>
