@@ -3,12 +3,12 @@
 <p align="left">
     Block editor package
     <ul>
-        <li><b>src/blocks/webkompanen-blocks/index.js:</b> loading &amp; register admin blocks, collections, format types, sidebars, meta fields, blocks</li>
-        <li><b>src/blocks/webkompanen-blocks/admin:</b> React source code theme settings (admin blocks)</li>
-        <li><b>src/blocks/webkompanen-blocks/blocks:</b> React source code blocks (admin blocks)</li>
-        <li><b>src/blocks/webkompanen-blocks/editor:</b> React csource code editors for the blocks</li>
-        <li><b>src/blocks/webkompanen-blocks/icon:</b> React source code icons</li>
-        <li><b>src/blocks/webkompanen-blocks/serverside-render-blocks:</b> React serverside render blocks php rendered blocks.</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/index.js">src/blocks/webkompanen-blocks/index.js:</a></b> loading &amp; register admin blocks, collections, format types, sidebars, meta fields, blocks</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/admin/">src/blocks/webkompanen-blocks/admin:</a></b> React source code theme settings (admin blocks)</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/blocks/">src/blocks/webkompanen-blocks/blocks:</a></b> React source code blocks (admin blocks)</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/editor/">src/blocks/webkompanen-blocks/editor:</a></b> React csource code editors for the blocks</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/icon/">src/blocks/webkompanen-blocks/icon:</a></b> React source code icons</li>
+        <li><b><a href="https://github.com/BKnapen/blockssuite/blob/main/src/blocks/webkompanen-blocks/serverside-render-blocks/">src/blocks/webkompanen-blocks/serverside-render-blocks:</a></b> React serverside render blocks php rendered blocks.</li>
     </ul>
 </p>
 <h3 align="left">Connect with me:</h3>
