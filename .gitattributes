@@ -10,9 +10,9 @@ build/* export-ignore
 src export-ignore
 src/* export-ignore
 
-# workflows directory
-workflows export-ignore
-workflows/* export-ignore
+# .github directory
+.github export-ignore
+github/* export-ignore
 
 # packages directory
 packages export-ignore
