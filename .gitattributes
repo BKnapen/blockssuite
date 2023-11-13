@@ -7,16 +7,16 @@
 #build/* export-ignore
 
 # src directory
-src/ export-ignore
-src/* export-ignore
+/src/ export-ignore
+/src/* export-ignore
 
 # .github directory
 .github export-ignore
 github/* export-ignore
 
 # packages directory
-candidate-packages/ export-ignore
-candidate-packages/* export-ignore
+/candidate-packages/ export-ignore
+/candidate-packages/* export-ignore
 
 # json
 package-lock.json export-ignore
@@ -27,9 +27,9 @@ blockssuite/package.json export-ignore
 README.md export-ignore
 
 # blockssuite/src directory
-blockssuite/src/ export-ignore
-blockssuite/src/* export-ignore
+/blockssuite/src/ export-ignore
+/blockssuite/src/* export-ignore
 
 # blockssuite/node_modules directory
-blockssuite/node_modules/ export-ignore
-blockssuite/node_modules/* export-ignore
+/blockssuite/node_modules/ export-ignore
+/blockssuite/node_modules/* export-ignore
