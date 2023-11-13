@@ -4,7 +4,7 @@
 
 # build directory
 build/ export-ignore
-build/* export-ignore
+#build/* export-ignore
 
 # src directory
 src/ export-ignore
