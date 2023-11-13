@@ -14,6 +14,10 @@ src/* export-ignore
 workflows export-ignore
 workflows/* export-ignore
 
+# packages directory
+packages export-ignore
+packages/* export-ignore
+
 # json
 package-lock.json export-ignore
 package.json export-ignore
