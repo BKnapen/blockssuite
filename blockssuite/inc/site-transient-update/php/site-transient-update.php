@@ -10,7 +10,7 @@ function webkompanen_site_transient_update_themes( $transient ) {
     $stylesheet = get_template();
 
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, $themedata['URI']);  
+	curl_setopt($ch, CURLOPT_URL, $themedata['ThemeURI']);  
 	curl_setopt($ch, CURLOPT_USERAGENT,'Awesome-Octocat-App');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
