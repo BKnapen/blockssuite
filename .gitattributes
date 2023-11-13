@@ -11,8 +11,13 @@ src/* export-ignore
 # workflows directory
 workflows/* export-ignore
 
-# src directory
-workflows/* export-ignore
+# json
+package-lock.json export-ignore
+package.json export-ignore
+blockssuite/package.json export-ignore
+
+# readme
+README.md export-ignore
 
 # src directory
 workflows/* export-ignore
