@@ -3,14 +3,15 @@
 .gitignore export-ignore
 
 # build directory
-build
+build export-ignore
 build/* export-ignore
 
 # src directory
-src
+src export-ignore
 src/* export-ignore
 
 # workflows directory
+workflows export-ignore
 workflows/* export-ignore
 
 # json
@@ -21,14 +22,10 @@ blockssuite/package.json export-ignore
 # readme
 README.md export-ignore
 
-# src directory
-workflows
-workflows/* export-ignore
-
 # blockssuite/src directory
-blockssuite/src
+blockssuite/src export-ignore
 blockssuite/src/* export-ignore
 
 # blockssuite/node_modules directory
-blockssuite/node_modules
+blockssuite/node_modules export-ignore
 blockssuite/node_modules/* export-ignore
