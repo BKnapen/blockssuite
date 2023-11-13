@@ -1,0 +1,24 @@
+# git files
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# build directory
+build/* export-ignore
+
+# src directory
+src/* export-ignore
+
+# workflows directory
+workflows/* export-ignore
+
+# src directory
+workflows/* export-ignore
+
+# src directory
+workflows/* export-ignore
+
+# blockssuite/src directory
+lockssuite/src/* export-ignore
+
+# blockssuite/node_modules directory
+lockssuite/node_modules/* export-ignore
