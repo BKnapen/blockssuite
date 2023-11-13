@@ -51,7 +51,7 @@ function webkompanen_site_transient_update_themes( $transient ) {
 		return $transient;
 	}
 	elseif(isset($jsondata['version'])){
-		if(version_compare( ''.$themedata['Version'].'', ''.$jsondata['version'].'', '<' )) {
+		if(version_compare( (float)(''.$jsondata['version'].''), (float)(''.$themedata['Version'].''), '>' )) {
 			
 			$newversion = $jsondata['version'];
 			$newpackage = $jsondata['package'];
