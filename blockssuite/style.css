@@ -1,18 +1,18 @@
 @charset "UTF-8";
 /*!
- * Theme Name:   			Webkompanen
- * Theme URI:    			http://webkompanen.com/webkompanen/
- * Description:  			webkompanen
+ * Theme Name:   			BlocksSuite
+ * Theme URI:    			https://webkompanen.com/themes/blockssuite/
+ * Description:  			BlocksSuite
  * Author:       			Bram Knapen
  * Author URI:   			http://webkompanen.com
  * Requires at least: 		5.9
  * Tested up to: 			5.9
  * Requires PHP: 			5.6
- * Version: 	   			1.6
+ * Version: 	   			1.0
  * License:      			GNU General Public License v2 or later
  * License URI:  			http://www.gnu.org/licenses/gpl-2.0.html
- * Tags:         			webkompanen
- * Text Domain:  			webkompanen
+ * Tags:         			BlocksSuite
+ * Text Domain:  			blockssuite
 */
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 body[data-aos-duration="50"] [data-aos], [data-aos][data-aos][data-aos-duration="50"] {
