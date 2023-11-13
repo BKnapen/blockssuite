@@ -15,8 +15,8 @@
 github/* export-ignore
 
 # packages directory
-/candidate-packages/ export-ignore
-/candidate-packages/* export-ignore
+/release-candidate/ export-ignore
+/release-candidate/* export-ignore
 
 # json
 package-lock.json export-ignore
