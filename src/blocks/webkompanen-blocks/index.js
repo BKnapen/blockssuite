@@ -2,7 +2,7 @@ import './settings/network-site-settings/index';
 import './settings/single-site-settings/index';
 
 import domReady from '@wordpress/dom-ready';
-/*Admin*/
+/* Admin */
 import * as batchuserimport from './admin/batch-user-import';
 import * as emailsettings from './admin/email-settings';
 
