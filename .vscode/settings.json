@@ -2,5 +2,5 @@
     "github-actions.workflows.pinned.workflows": [
 
     ],
-    "github-actions.remote-name": "main"
+    "github-actions.remote-name": "origin"
 }
