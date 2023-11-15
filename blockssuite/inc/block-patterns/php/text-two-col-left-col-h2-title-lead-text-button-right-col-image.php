@@ -46,14 +46,14 @@ ob_start();
 					wp:webkompanen-blocks/img 
 					{
 						"classes":"card-img flex-grow-1 h-100",
-						"imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/lending-3.jpeg",
+						"imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/lending-3.jpeg",
 						"width":null,
 						"height":null,
 						"h":null,
 						"w":null
 					} 
 				-->
-				<img class="card-img flex-grow-1 h-100" src="<?php echo $url ?>/assets/img/jpg/lending-3.jpeg" alt="" width="" height="" style="height:auto !important;width:px" />
+				<img class="card-img flex-grow-1 h-100" src="<?php echo $url ?>/assets/images/jpg/lending-3.jpeg" alt="" width="" height="" style="height:auto !important;width:px" />
 				<!-- /wp:webkompanen-blocks/img -->
       		</div>
 			<!-- /wp:webkompanen-blocks/col -->

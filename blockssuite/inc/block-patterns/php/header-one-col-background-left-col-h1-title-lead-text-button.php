@@ -8,8 +8,8 @@ ob_start();
 ?>
 <!-- wp:webkompanen-blocks/section {"classes":"p-0 bg-dark"} -->
 <section class="p-0 bg-dark">
-	<!-- wp:webkompanen-blocks/img {"classes":"bg-image position-md-absolute opacity-80","fullwidth":true,"imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/header-1.jpeg"} -->
-  	<img class="bg-image position-md-absolute opacity-80 w-100" src="<?php echo $url ?>/assets/img/jpg/header-1.jpeg" alt=""/>
+	<!-- wp:webkompanen-blocks/img {"classes":"bg-image position-md-absolute opacity-80","fullwidth":true,"imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/header-1.jpeg"} -->
+  	<img class="bg-image position-md-absolute opacity-80 w-100" src="<?php echo $url ?>/assets/images/jpg/header-1.jpeg" alt=""/>
 	<!-- /wp:webkompanen-blocks/img -->
 	<!-- wp:webkompanen-blocks/container {"classes":"container py-4 height-md-60"} -->
   	<div class="container py-4 height-md-60">

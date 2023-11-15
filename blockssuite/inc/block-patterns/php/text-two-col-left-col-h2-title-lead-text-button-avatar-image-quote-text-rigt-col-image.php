@@ -10,8 +10,8 @@ ob_start();
 <section class="row no-gutters p-0">
 	<!-- wp:webkompanen-blocks/col {"classes":"col-md-5 col-lg-6 d-flex flex-column order-md-2"} -->
  	<div class="col-md-5 col-lg-6 d-flex flex-column order-md-2">
-		<!-- wp:webkompanen-blocks/img {"classes":"flex-grow-1","imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/header-3.jpeg"} -->
-    	<img src="<?php echo $url ?>/assets/img/jpg/header-3.jpeg" alt="" class="flex-grow-1" width="" height="" style="height:auto !important;width:px">
+		<!-- wp:webkompanen-blocks/img {"classes":"flex-grow-1","imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/header-3.jpeg"} -->
+    	<img src="<?php echo $url ?>/assets/images/jpg/header-3.jpeg" alt="" class="flex-grow-1" width="" height="" style="height:auto !important;width:px">
 		<!-- /wp:webkompanen-blocks/img -->
   	</div>
 	<!-- /wp:webkompanen-blocks/col -->
@@ -36,8 +36,8 @@ ob_start();
 				<!-- /wp:webkompanen-blocks/btn -->
 				<!-- wp:webkompanen-blocks/div {"classes":"d-flex"} -->
           		<div class="d-flex">
-					<!-- wp:webkompanen-blocks/img {"classes":"avatar","imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/avatar-female-2.jpeg"} -->
-            		<img src="<?php echo $url ?>/assets/img/jpg/avatar-female-2.jpeg" alt="" class="avatar" width="" height="" style="height:auto !important;width:px">
+					<!-- wp:webkompanen-blocks/img {"classes":"avatar","imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/avatar-female-2.jpeg"} -->
+            		<img src="<?php echo $url ?>/assets/images/jpg/avatar-female-2.jpeg" alt="" class="avatar" width="" height="" style="height:auto !important;width:px">
 					<!-- /wp:webkompanen-blocks/img -->
 					<!-- wp:webkompanen-blocks/div {"classes":"ms-3"} -->
             		<div class="ms-3">

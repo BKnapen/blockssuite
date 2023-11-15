@@ -112,11 +112,11 @@ function inputSave( props ) {
 			<RichText.Content 
 				tagName={'input'}
 				className={ classes }
-				class={ classes }
 				id={ id }
 				name={ name }
 				type={ type }
 				data-value={ value }
+				value={ value }
 				placeholder={ placeholder }
 				data-name={ placeholder }
 			/>

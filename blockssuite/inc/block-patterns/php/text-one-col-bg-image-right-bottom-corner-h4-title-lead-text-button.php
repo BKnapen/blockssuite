@@ -13,8 +13,8 @@ ob_start();
     	<div class="row no-gutters">
 			<!-- wp:webkompanen-blocks/col {"classes":"col text-image-2"} -->
       		<div class="col text-image-2">
-				<!-- wp:webkompanen-blocks/img {"classes":"join-bottom img-fluid","imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/wide-large-3.jpeg"} -->
-        		<img class="join-bottom img-fluid" src="<?php echo $url ?>/assets/img/jpg/wide-large-3.jpeg" alt="" width="" height="" style="height:auto !important;width:px">
+				<!-- wp:webkompanen-blocks/img {"classes":"join-bottom img-fluid","imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/wide-large-3.jpeg"} -->
+        		<img class="join-bottom img-fluid" src="<?php echo $url ?>/assets/images/jpg/wide-large-3.jpeg" alt="" width="" height="" style="height:auto !important;width:px">
 				<!-- /wp:webkompanen-blocks/img -->
 				<!-- wp:webkompanen-blocks/div {"classes":"bg-white position-lg-absolute join-top col-lg-6 px-3 py-3 px-md-5 py-md-4"} -->
         		<div class="bg-white position-lg-absolute join-top col-lg-6 px-3 py-3 px-md-5 py-md-4">

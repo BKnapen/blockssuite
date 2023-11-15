@@ -8,9 +8,8 @@ function webkompanen_admin_notice() {
 function webkompanen_site_transient_update_themes( $transient ) {
 	$themedata = wp_get_theme( 'blockssuite' );
     $stylesheet = get_template();
-
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, ''.$themedata['ThemeURI'].'');  
+	curl_setopt($ch, CURLOPT_URL, esc_html( $themedata->get( 'ThemeURI' ) ));  
 	curl_setopt($ch, CURLOPT_USERAGENT,'Awesome-Octocat-App');
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
@@ -25,14 +24,14 @@ function webkompanen_site_transient_update_themes( $transient ) {
 		global $message;
 		global $messagestyle;
 		
-		$message = 'There is an conflict detected for '.$themedata['Name'].' message '.$jsondata->message.' for more information read the GitHub documentation '.$jsondata->documentation_url.'.';
+		$message = 'There is an conflict detected for '.esc_html( $themedata->get('Name') ).' message '.$jsondata->message.' for more information read the GitHub documentation '.$jsondata->documentation_url.'.';
 		$messagestyle = 'notice notice-error';
 		add_action( 'admin_notices', 'webkompanen_admin_notice');
 
 		$item = array(
 			'theme' => $stylesheet,
            	'plugin' => 'webkompanen/webkompanen.php',
-           	'new_version'  => ''.$themedata['Version'].'',
+           	'new_version'  => ''.esc_html( $themedata->get('Version') ).'',
            	'url'          => '',
            	'package'      => '',
            	'requires'     => '',
@@ -51,7 +50,7 @@ function webkompanen_site_transient_update_themes( $transient ) {
 		return $transient;
 	}
 	elseif(isset($jsondata['version'])){
-		if(version_compare( (float)(''.$jsondata['version'].''), (float)(''.$themedata['Version'].''), '>' )) {
+		if(version_compare( (float)(''.$jsondata['version'].''), (float)(''.esc_html( $themedata->get('Version') ).''), '>' )) {
 			
 			$newversion = $jsondata['version'];
 			$newpackage = $jsondata['package'];

@@ -48,10 +48,10 @@ ob_start();
 					wp:webkompanen-blocks/img 
 					{
 						"classes":"rounded",
-						"imagePlaceholder":"<?php echo $url ?>/assets/img/jpg/card-image-background-2.jpeg"
+						"imagePlaceholder":"<?php echo $url ?>/assets/images/jpg/card-image-background-2.jpeg"
 					} 
 				-->
-        		<img class="rounded" src="<?php echo $url ?>/assets/img/jpg/card-image-background-2.jpeg" alt="" width="" height="" style="height:auto !important;width:px">
+        		<img class="rounded" src="<?php echo $url ?>/assets/images/jpg/card-image-background-2.jpeg" alt="" width="" height="" style="height:auto !important;width:px">
 				<!-- /wp:webkompanen-blocks/img -->
       		</div>		
 			<!-- /wp:webkompanen-blocks/col -->

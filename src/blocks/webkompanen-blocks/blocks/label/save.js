@@ -43,7 +43,7 @@ function labelSave( props ) {
 	const texttransform = attributes.texttransform ? ' '+attributes.texttransform : null;
 
 	let divContainer = document.createElement('div')
-	divContainer.innerHTML = attributes.content;
+	divContainer.innerHTML = attributes.content ? attributes.content : null;
 	
 	let blockClasses = '';
 	
@@ -66,7 +66,7 @@ function labelSave( props ) {
 				className={ blockClasses }
 				for={forattr}
 				value={attributes.content}
-				data-name={divContainer.textContent || divContainer.innerText || ''}
+				data-name={attributes.content ? (divContainer.textContent || divContainer.innerText) : null}
 			/>
 		</>
 	)

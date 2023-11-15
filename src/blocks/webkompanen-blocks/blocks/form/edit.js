@@ -290,6 +290,7 @@ const formEdit = (props) => {
 				{ ...innerBlocksProps }
 				id={id}
 				name={name}
+				className={classes}
 				data-emailsubject={emailsubject}
 				data-answer={answer}
 				data-form-success-action={formsuccessaction}
