@@ -18,7 +18,7 @@ jobs:
         run: echo "::set-output name=tag::${GITHUB_REF#refs/tags/}"
 
       - name: Build release
-        run: git archive main -o /release-candidate/blockssuite-${{ steps.tag.outputs.tag }}.zip
+        run: git archive -o /release-candidate/blockssuite-${{ steps.tag.outputs.tag }}.zip --prefix=blockssuite/ ${{ steps.tag.outputs.tag }}
       
       - name: Build project
         run: git archive -o /tmp/blockssuite-${{ steps.tag.outputs.tag }}.zip --prefix=blockssuite/ ${{ steps.tag.outputs.tag }}
