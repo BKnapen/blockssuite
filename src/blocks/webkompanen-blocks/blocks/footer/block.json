@@ -459,6 +459,9 @@
 		},
 		"ratio":{
 			"type": "boolean"
+		},
+		"tintshade":{
+			"type": "number"
 		}
 	},
 	"supports": {

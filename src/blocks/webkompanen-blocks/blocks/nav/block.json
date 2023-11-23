@@ -477,6 +477,12 @@
 		},
 		"expand":{
 			"type": "string"
+		},
+		"positionalignment":{
+			"type": "string"
+		},
+		"position":{
+			"type": "string"
 		}
 	},
 	"supports": {

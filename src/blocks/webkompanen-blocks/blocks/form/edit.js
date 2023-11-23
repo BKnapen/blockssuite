@@ -139,7 +139,9 @@ const formEdit = (props) => {
 	const color = new Color(props)
 	const backgroundcolor = new Backgroundcolor(props)
 	
-	const blockProps = useBlockProps();
+	let blockClasses = classes;
+	
+	const blockProps = useBlockProps({ className: blockClasses });
 	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	const innerBlocksProps = useInnerBlocksProps(
 			{ ...blockProps },{ 
@@ -286,11 +288,10 @@ const formEdit = (props) => {
 					/>
 				</InspectorControls>
 			</Fragment>
-  			<form 
+  			<div 
 				{ ...innerBlocksProps }
 				id={id}
 				name={name}
-				className={classes}
 				data-emailsubject={emailsubject}
 				data-answer={answer}
 				data-form-success-action={formsuccessaction}
@@ -300,7 +301,7 @@ const formEdit = (props) => {
 					}
 				}
 			>		
-  			</form>
+  			</div>
 		</>
 	)
 }

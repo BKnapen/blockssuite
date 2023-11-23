@@ -128,7 +128,9 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/accordion-body',
 		'webkompanen-blocks/accordion-collapse',
 		'webkompanen-blocks/accordion-header',
-		'webkompanen-blocks/accordion-item'
+		'webkompanen-blocks/accordion-item',
+		'webkompanen-blocks/post-featured-img',
+		'webkompanen-blocks/post-title'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

@@ -35,6 +35,7 @@ import * as metafieldsgallery from './meta-fields/gallery';
 import * as metafieldsevents from './meta-fields/event';
 import * as metafieldsagenda from './meta-fields/agenda';
 import * as metafieldscourse from './meta-fields/course';
+import * as metafieldsvideotraining from './meta-fields/video-training';
 
 /*Edit site Sidebars*/
 
@@ -64,7 +65,9 @@ import * as row from './blocks/row';
 import * as col from './blocks/col';
 import * as video from './blocks/video';
 import * as img from './blocks/img';
+import * as postfeaturedimg from './blocks/post-featured-img';
 import * as heading from './blocks/h';
+import * as sitetitle from './blocks/site-title';
 import * as paragraph from './blocks/p';
 import * as span from './blocks/span';
 import * as btn from './blocks/btn';
@@ -171,7 +174,8 @@ const getAllBlockSidebars = () => [
 	metafieldsgallery,
 	metafieldsevents,
 	metafieldsagenda,
-	metafieldscourse
+	metafieldscourse,
+	metafieldsvideotraining
 ]
 
 const registerWebkompanenSidebars = (
@@ -189,10 +193,12 @@ const getAllBlocks = () => [
 	col,
 	container,
 	img,
+	postfeaturedimg,
 	row,
 	section,
 	video,
 	heading,
+	sitetitle,
 	paragraph,
 	span,
 	btn,

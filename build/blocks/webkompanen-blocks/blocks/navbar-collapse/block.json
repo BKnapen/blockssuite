@@ -108,6 +108,9 @@
     "bgcolor": {
       "type": "string"
     },
+    "tintshade": {
+      "type": "number"
+    },
     "classes": {
       "type": "string"
     },

@@ -473,6 +473,9 @@
 		},
 		"height": {
 			"type" : "string"
+		},
+		"positionalignment":{
+			"type": "string"
 		}
 	},
 	"supports": {
