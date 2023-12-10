@@ -193,7 +193,7 @@ const carouselEdit = (props) => {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Carousel button kleuren', 'webkompanen')}
+						title={__('Carousel button colors', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ColorPalette

@@ -189,7 +189,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -235,7 +235,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -281,7 +281,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -327,7 +327,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -373,7 +373,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -419,7 +419,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&
 				<PanelBody
-					title={__('Col opties', 'webkompanen')}
+					title={__('Col settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 

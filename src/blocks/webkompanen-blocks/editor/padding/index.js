@@ -82,7 +82,7 @@ const PaddingEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Padding opties', 'webkompanen')}
+			title={__('Padding settings', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -219,7 +219,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Padding opties', 'webkompanen')}
+					title={__('Padding settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -352,7 +352,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Padding opties (sm)', 'webkompanen')}
+					title={__('Padding settings (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -485,7 +485,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Padding opties (md)', 'webkompanen')}
+					title={__('Padding settings (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -618,7 +618,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Padding opties (lg)', 'webkompanen')}
+					title={__('Padding settings (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -751,7 +751,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Padding opties (xl)', 'webkompanen')}
+					title={__('Padding settings (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -885,7 +885,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Padding opties (xxl)', 'webkompanen')}
+					title={__('Padding settings (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 

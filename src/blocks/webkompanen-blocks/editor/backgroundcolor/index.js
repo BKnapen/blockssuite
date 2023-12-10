@@ -73,7 +73,7 @@ const BackgroundcolorEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Achtergrond kleur', 'webkompanen')}
+			title={__('Background color', 'webkompanen')}
 			initialOpen={false}
 		>
 			<ColorPalette

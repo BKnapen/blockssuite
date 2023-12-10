@@ -332,7 +332,7 @@ const paragraphEdit = (props) => {
 						<Spacer
 							marginBottom={3}
 						>
-							Key woorden kleur?
+							{__('Key words color?', 'webkompanen')}
 						</Spacer>
 						<Spacer
 							marginBottom={3}

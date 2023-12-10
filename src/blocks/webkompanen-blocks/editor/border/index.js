@@ -72,7 +72,7 @@ const BorderEdit = (props)=> {
 	const colors = new Colors;
 	return(
 		<PanelBody
-			title={__('Border opties', 'webkompanen')}
+			title={__('Border settings', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 

@@ -80,7 +80,7 @@ const DisplayEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Display opties', 'webkompanen')}
+			title={__('Display settings', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -249,7 +249,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -289,7 +289,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -329,7 +329,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -369,7 +369,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -409,7 +409,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -449,7 +449,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Display opties', 'webkompanen')}
+					title={__('Display settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 

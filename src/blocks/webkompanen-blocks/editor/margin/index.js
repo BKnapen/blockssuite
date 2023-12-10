@@ -95,7 +95,7 @@ const MarginEdit = (props) => {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Margin opties extra small devices', 'webkompanen')}
+			title={__('Margin settings extra small devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -209,7 +209,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties small devices', 'webkompanen')}
+			title={__('Margin settings small devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -321,7 +321,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties medium devices', 'webkompanen')}
+			title={__('Margin settings medium devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -433,7 +433,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties large devices', 'webkompanen')}
+			title={__('Margin settings large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -545,7 +545,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties extra large devices', 'webkompanen')}
+			title={__('Margin settings extra large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -655,7 +655,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties extra extra large devices', 'webkompanen')}
+			title={__('Margin settings extra extra large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -771,7 +771,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Margin opties', 'webkompanen')}
+					title={__('Margin settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -904,7 +904,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Margin opties (sm)', 'webkompanen')}
+					title={__('Margin settings (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1037,7 +1037,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Margin opties (md)', 'webkompanen')}
+					title={__('Margin settings (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1170,7 +1170,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Margin opties (lg)', 'webkompanen')}
+					title={__('Margin settings (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1303,7 +1303,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Margin opties (xl)', 'webkompanen')}
+					title={__('Margin settings (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1437,7 +1437,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Margin opties (xxl)', 'webkompanen')}
+					title={__('Margin settings (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 

@@ -73,7 +73,7 @@ const PositionEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Positie opties', 'webkompanen')}
+			title={__('P', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 

@@ -73,7 +73,7 @@ const BordercolorEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Border kleur', 'webkompanen')}
+			title={__('Border color', 'webkompanen')}
 			initialOpen={false}
 		>
 			<ColorPalette

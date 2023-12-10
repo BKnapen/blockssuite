@@ -72,7 +72,7 @@ const ColorEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Tekst kleur', 'webkompanen')}
+			title={__('Text color', 'webkompanen')}
 			initialOpen={false}
 		>
 			<ColorPalette

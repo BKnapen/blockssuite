@@ -87,7 +87,7 @@ const NegativeMarginEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Negative Margin opties', 'webkompanen')}
+			title={__('Negative Margin settings', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -226,7 +226,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Negative margin opties', 'webkompanen')}
+					title={__('Negative margin settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -261,7 +261,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Negative margin opties (sm)', 'webkompanen')}
+					title={__('Negative margin settings (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -296,7 +296,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Negative margin opties (md)', 'webkompanen')}
+					title={__('Negative margin settings (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -331,7 +331,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Negative margin opties (lg)', 'webkompanen')}
+					title={__('Negative margin settings (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -366,7 +366,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Negative margin opties (xl)', 'webkompanen')}
+					title={__('Negative margin settings (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -402,7 +402,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Negative margin opties (xxl)', 'webkompanen')}
+					title={__('Negative margin settings (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 

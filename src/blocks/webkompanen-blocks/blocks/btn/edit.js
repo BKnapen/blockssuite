@@ -182,7 +182,7 @@ function ButtonLinkEdit( props ) {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Button kleur', 'webkompanen')}
+						title={__('Button color', 'webkompanen')}
 						initialOpen={false}
 					>
 					<ColorPalette

@@ -1,3 +1,7 @@
+import { 
+	sprintf, __ 
+} from '@wordpress/i18n';
+
 /*import { 
 	PluginSidebarMoreMenuItem, 
 	PluginSidebar 
