@@ -21,15 +21,15 @@ github/* export-ignore
 # json
 package-lock.json export-ignore
 package.json export-ignore
-blockssuite/package.json export-ignore
+webkompanen/package.json export-ignore
 
 # readme
 README.md export-ignore
 
-# blockssuite/src directory
-/blockssuite/src/ export-ignore
-/blockssuite/src/* export-ignore
+# webkompanen/src directory
+/webkompanen/src/ export-ignore
+/webkompanen/src/* export-ignore
 
-# blockssuite/node_modules directory
-/blockssuite/node_modules/ export-ignore
-/blockssuite/node_modules/* export-ignore
+# webkompanen/node_modules directory
+/webkompanen/node_modules/ export-ignore
+/webkompanen/node_modules/* export-ignore

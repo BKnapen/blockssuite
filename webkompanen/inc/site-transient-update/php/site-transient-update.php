@@ -6,7 +6,7 @@ function webkompanen_admin_notice() {
 }
 
 function webkompanen_site_transient_update_themes( $transient ) {
-	$themedata = wp_get_theme( 'blockssuite' );
+	$themedata = wp_get_theme( 'webkompanen' );
     $stylesheet = get_template();
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_URL, esc_html( $themedata->get( 'ThemeURI' ) ));  

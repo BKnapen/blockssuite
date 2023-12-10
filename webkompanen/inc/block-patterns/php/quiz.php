@@ -2,22 +2,6 @@
 $url = untrailingslashit( get_template_directory_uri( __FILE__ ) );
 /**
  * CTA column left: h1 title column right: lead text button + span text + button
- zp@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/block-editor.min.js?ver=0c7c9b9a74ceb717d6eb:26:248707
-Bm@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/block-editor.min.js?ver=0c7c9b9a74ceb717d6eb:26:264010
-ct@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:43431
-os@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:111138
-Ur@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:77645
-Ir@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:77573
-Dr@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:77436
-Pr@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:74431
-Pr@[native code]
-@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:30174
-unstable_runWithPriority@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react.min.js?ver=17.0.1:9:7432
-Nn@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:30120
-_n@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:30055
-ua@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:115721
-pe@https://ardosz.gaatbinnenkortonline.nl/wp-includes/js/dist/vendor/react-dom.min.js?ver=17.0.1:9:15419
-pe@[native code]
  */
 ob_start();
 ?>
@@ -179,7 +163,7 @@ ob_start();
 $output = ob_get_contents();
 ob_clean();
 return array(
-	'title'      => __( 'Quiz', 'blockssuite' ),
+	'title'      => __( 'Quiz', 'webkompanen' ),
 	'categories' => array( 'quiz' ),
 	'blockTypes' => array( 'webcompanen/template-part/quiz' ),
 	'content'    => $output
