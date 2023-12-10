@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Blockssuite 1.0\n"
+"Project-Id-Version: Webkompanen 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/webkompanen\n"
 "POT-Creation-Date: 2023-12-08T21:05:26+00:00\n"
 "PO-Revision-Date: 2023-12-09 21:20+0100\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Domain: webkompanen\n"
 
 #. Theme Name of the theme
-msgid "Blockssuite"
+msgid "Webkompanen"
 msgstr "Webkompanen"
 
 #. Theme URI of the theme

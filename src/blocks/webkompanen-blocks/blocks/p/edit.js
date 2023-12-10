@@ -161,7 +161,7 @@ const paragraphEdit = (props) => {
 		console.log(promtValue)
 		console.log(siteinfo.chatGPTAPIKEY)
     	// Create a new AbortController instance
-		//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
+		
   		controller = new AbortController();
   		const signal = controller.signal;
 		//const resultText = document.getElementById('results');
