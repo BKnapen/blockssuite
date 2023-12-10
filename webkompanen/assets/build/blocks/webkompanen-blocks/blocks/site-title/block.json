@@ -1,84 +1,108 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "webkompanen-blocks/footer",
-  "title": "Footer",
-  "category": "webkompanen-blocks/layout",
-  "description": "Create a footer element",
+  "name": "webkompanen-blocks/site-title",
+  "title": "Site title",
+  "category": "webkompanen-blocks/text",
+  "description": "Create a site title element",
   "textdomain": "webkompanen",
   "attributes": {
-    "post": {
-      "type": "object"
-    },
-    "content": {
-      "type": "string"
-    },
     "align": {
       "type": "string",
       "default": "full"
     },
-    "alignselfxs": {
+    "content": {
       "type": "string"
     },
-    "alignselfsm": {
+    "tagname": {
       "type": "string"
     },
-    "alignselfmd": {
+    "textalign": {
       "type": "string"
     },
-    "alignselflg": {
+    "textalignxs": {
       "type": "string"
     },
-    "alignselfxl": {
+    "textalignsm": {
       "type": "string"
     },
-    "alignselfxxl": {
+    "textalignmd": {
+      "type": "string"
+    },
+    "textalignlg": {
+      "type": "string"
+    },
+    "textalignxl": {
+      "type": "string"
+    },
+    "textalignxxl": {
+      "type": "string"
+    },
+    "texttransform": {
       "type": "string"
     },
     "bgcolor": {
       "type": "string"
     },
+    "color": {
+      "type": "string"
+    },
     "classes": {
       "type": "string"
     },
-    "colxs": {
-      "type": "number"
+    "pxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
-    "colautoxs": {
-      "type": "number"
+    "psm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
-    "colsm": {
-      "type": "number"
+    "pmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
-    "colautosm": {
-      "type": "number"
+    "plg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
-    "colmd": {
-      "type": "number"
+    "pxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
-    "colautomd": {
-      "type": "number"
-    },
-    "collg": {
-      "type": "number"
-    },
-    "colautolg": {
-      "type": "number"
-    },
-    "colxl": {
-      "type": "number"
-    },
-    "colautoxl": {
-      "type": "number"
-    },
-    "colxxl": {
-      "type": "number"
-    },
-    "colautoxxl": {
-      "type": "number"
-    },
-    "color": {
-      "type": "string"
+    "pxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
     },
     "dxs": {
       "type": "string"
@@ -230,17 +254,6 @@
         "left": null
       }
     },
-    "style": {
-      "type": "object",
-      "default": {}
-    },
-    "ariahidden": {
-      "type": "boolean"
-    },
-    "flickity": {
-      "type": "object",
-      "default": null
-    },
     "mmd": {
       "type": "object",
       "default": {
@@ -331,114 +344,6 @@
         "left": null
       }
     },
-    "orderxs": {
-      "type": "number"
-    },
-    "orderfirstxs": {
-      "type": "number"
-    },
-    "orderlastxs": {
-      "type": "number"
-    },
-    "ordersm": {
-      "type": "number"
-    },
-    "orderfirstsm": {
-      "type": "number"
-    },
-    "orderlastsm": {
-      "type": "number"
-    },
-    "ordermd": {
-      "type": "number"
-    },
-    "orderfirstmd": {
-      "type": "number"
-    },
-    "orderlastmd": {
-      "type": "number"
-    },
-    "orderlg": {
-      "type": "number"
-    },
-    "orderfirstlg": {
-      "type": "number"
-    },
-    "orderlastlg": {
-      "type": "number"
-    },
-    "orderxl": {
-      "type": "number"
-    },
-    "orderfirstxl": {
-      "type": "number"
-    },
-    "orderlastxl": {
-      "type": "number"
-    },
-    "orderxxl": {
-      "type": "number"
-    },
-    "orderfirstxxl": {
-      "type": "number"
-    },
-    "orderlastxxl": {
-      "type": "number"
-    },
-    "pxs": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "psm": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "pmd": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "plg": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "pxl": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "pxxl": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
     "posxs": {
       "type": "string"
     },
@@ -454,16 +359,48 @@
     "posxxl": {
       "type": "string"
     },
-    "ratiosize": {
+    "position": {
       "type": "string"
     },
-    "ratio": {
+    "fw": {
+      "type": "string"
+    },
+    "fs": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    },
+    "dataaos": {
+      "type": "string"
+    },
+    "dataaoseasing": {
+      "type": "string"
+    },
+    "dataaosanchorplacement": {
+      "type": "string"
+    },
+    "dataaosonce": {
       "type": "boolean"
     },
-    "tintshade": {
+    "dataaosanchor": {
+      "type": "string"
+    },
+    "dataaosduration": {
+      "type": "number"
+    },
+    "dataaosdelay": {
+      "type": "number"
+    },
+    "dataaosoffset": {
       "type": "number"
     }
   },
+  "usesContext": [
+    "postId",
+    "postType",
+    "queryId"
+  ],
   "supports": {
     "align": [
       "wide",

@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "webkompanen-blocks/footer",
-  "title": "Footer",
+  "name": "webkompanen-blocks/list-group",
+  "title": "List group",
   "category": "webkompanen-blocks/layout",
-  "description": "Create a footer element",
+  "description": "Create a list group element",
   "textdomain": "webkompanen",
   "attributes": {
     "post": {
@@ -33,6 +33,49 @@
       "type": "string"
     },
     "alignselfxxl": {
+      "type": "string"
+    },
+    "alignitems": {
+      "type": "string",
+      "default": "full"
+    },
+    "alignitemsxs": {
+      "type": "string"
+    },
+    "alignitemssm": {
+      "type": "string"
+    },
+    "alignitemsmd": {
+      "type": "string"
+    },
+    "alignitemslg": {
+      "type": "string"
+    },
+    "alignitemsxl": {
+      "type": "string"
+    },
+    "alignitemsxxl": {
+      "type": "string"
+    },
+    "justifycontent": {
+      "type": "string"
+    },
+    "justifycontentxs": {
+      "type": "string"
+    },
+    "justifycontentsm": {
+      "type": "string"
+    },
+    "justifycontentmd": {
+      "type": "string"
+    },
+    "justifycontentlg": {
+      "type": "string"
+    },
+    "justifycontentxl": {
+      "type": "string"
+    },
+    "justifycontentxxl": {
       "type": "string"
     },
     "bgcolor": {
@@ -460,7 +503,127 @@
     "ratio": {
       "type": "boolean"
     },
+    "borderstartxs": {
+      "type": "boolean"
+    },
+    "bordertopxs": {
+      "type": "boolean"
+    },
+    "borderendxs": {
+      "type": "boolean"
+    },
+    "borderbottomxs": {
+      "type": "boolean"
+    },
+    "bsheight": {
+      "type": "string"
+    },
     "tintshade": {
+      "type": "number"
+    },
+    "bordercolor": {
+      "type": "string"
+    },
+    "bgimg": {
+      "type": "string"
+    },
+    "dataBsToggle": {
+      "type": "string"
+    },
+    "dataBsTarget": {
+      "type": "string"
+    },
+    "dataBsSlideTo": {
+      "type": "string"
+    },
+    "islightgalleryimage": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "object"
+    },
+    "image": {
+      "type": "object"
+    },
+    "imgfluid": {
+      "type": "boolean"
+    },
+    "imgfigure": {
+      "type": "boolean"
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "imagePlaceholder": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "viewheight": {
+      "type": "string"
+    },
+    "h": {
+      "type": "number"
+    },
+    "width": {
+      "type": "string"
+    },
+    "fullwidth": {
+      "type": "boolean"
+    },
+    "zoomeffect": {
+      "type": "boolean"
+    },
+    "w": {
+      "type": "number"
+    },
+    "objectfitcover": {
+      "type": "boolean"
+    },
+    "borders": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "dataaos": {
+      "type": "string"
+    },
+    "dataaoseasing": {
+      "type": "string"
+    },
+    "dataaosanchorplacement": {
+      "type": "string"
+    },
+    "dataaosonce": {
+      "type": "boolean"
+    },
+    "dataaosanchor": {
+      "type": "string"
+    },
+    "dataaosduration": {
+      "type": "number"
+    },
+    "dataaosdelay": {
+      "type": "number"
+    },
+    "position": {
+      "type": "string"
+    },
+    "positionalignment": {
+      "type": "string"
+    },
+    "dataaosoffset": {
       "type": "number"
     }
   },

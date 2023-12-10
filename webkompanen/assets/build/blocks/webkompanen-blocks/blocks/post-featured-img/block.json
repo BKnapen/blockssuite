@@ -1,84 +1,69 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "webkompanen-blocks/footer",
-  "title": "Footer",
-  "category": "webkompanen-blocks/layout",
-  "description": "Create a footer element",
+  "name": "webkompanen-blocks/post-featured-img",
+  "title": "Post featured img",
+  "category": "webkompanen-blocks/media",
+  "description": "The <img> tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag has two required attributes: src - Specifies the path to the image alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed",
   "textdomain": "webkompanen",
   "attributes": {
-    "post": {
-      "type": "object"
-    },
-    "content": {
-      "type": "string"
-    },
     "align": {
       "type": "string",
       "default": "full"
     },
-    "alignselfxs": {
-      "type": "string"
-    },
-    "alignselfsm": {
-      "type": "string"
-    },
-    "alignselfmd": {
-      "type": "string"
-    },
-    "alignselflg": {
-      "type": "string"
-    },
-    "alignselfxl": {
-      "type": "string"
-    },
-    "alignselfxxl": {
-      "type": "string"
-    },
-    "bgcolor": {
+    "content": {
       "type": "string"
     },
     "classes": {
       "type": "string"
     },
-    "colxs": {
-      "type": "number"
-    },
-    "colautoxs": {
-      "type": "number"
-    },
-    "colsm": {
-      "type": "number"
-    },
-    "colautosm": {
-      "type": "number"
-    },
-    "colmd": {
-      "type": "number"
-    },
-    "colautomd": {
-      "type": "number"
-    },
-    "collg": {
-      "type": "number"
-    },
-    "colautolg": {
-      "type": "number"
-    },
-    "colxl": {
-      "type": "number"
-    },
-    "colautoxl": {
-      "type": "number"
-    },
-    "colxxl": {
-      "type": "number"
-    },
-    "colautoxxl": {
-      "type": "number"
-    },
-    "color": {
+    "sizeSlug": {
       "type": "string"
+    },
+    "dataBsToggle": {
+      "type": "string"
+    },
+    "dataBsTarget": {
+      "type": "string"
+    },
+    "dataBsSlideTo": {
+      "type": "string"
+    },
+    "islightgalleryimage": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "object"
+    },
+    "post": {
+      "type": "object"
+    },
+    "image": {
+      "type": "object"
+    },
+    "imgfluid": {
+      "type": "boolean"
+    },
+    "imgfigure": {
+      "type": "boolean"
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "imagePlaceholder": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "h": {
+      "type": "number"
     },
     "dxs": {
       "type": "string"
@@ -230,17 +215,6 @@
         "left": null
       }
     },
-    "style": {
-      "type": "object",
-      "default": {}
-    },
-    "ariahidden": {
-      "type": "boolean"
-    },
-    "flickity": {
-      "type": "object",
-      "default": null
-    },
     "mmd": {
       "type": "object",
       "default": {
@@ -331,61 +305,7 @@
         "left": null
       }
     },
-    "orderxs": {
-      "type": "number"
-    },
-    "orderfirstxs": {
-      "type": "number"
-    },
-    "orderlastxs": {
-      "type": "number"
-    },
-    "ordersm": {
-      "type": "number"
-    },
-    "orderfirstsm": {
-      "type": "number"
-    },
-    "orderlastsm": {
-      "type": "number"
-    },
-    "ordermd": {
-      "type": "number"
-    },
-    "orderfirstmd": {
-      "type": "number"
-    },
-    "orderlastmd": {
-      "type": "number"
-    },
-    "orderlg": {
-      "type": "number"
-    },
-    "orderfirstlg": {
-      "type": "number"
-    },
-    "orderlastlg": {
-      "type": "number"
-    },
-    "orderxl": {
-      "type": "number"
-    },
-    "orderfirstxl": {
-      "type": "number"
-    },
-    "orderlastxl": {
-      "type": "number"
-    },
-    "orderxxl": {
-      "type": "number"
-    },
-    "orderfirstxxl": {
-      "type": "number"
-    },
-    "orderlastxxl": {
-      "type": "number"
-    },
-    "pxs": {
+    "borders": {
       "type": "object",
       "default": {
         "top": null,
@@ -394,50 +314,17 @@
         "left": null
       }
     },
-    "psm": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
+    "width": {
+      "type": "string"
     },
-    "pmd": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
+    "fullwidth": {
+      "type": "boolean"
     },
-    "plg": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
+    "zoomeffect": {
+      "type": "boolean"
     },
-    "pxl": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
-    },
-    "pxxl": {
-      "type": "object",
-      "default": {
-        "top": null,
-        "right": null,
-        "bottom": null,
-        "left": null
-      }
+    "w": {
+      "type": "number"
     },
     "posxs": {
       "type": "string"
@@ -454,20 +341,44 @@
     "posxxl": {
       "type": "string"
     },
-    "ratiosize": {
-      "type": "string"
-    },
-    "ratio": {
+    "objectfitcover": {
       "type": "boolean"
     },
-    "tintshade": {
+    "position": {
+      "type": "string"
+    },
+    "positionalignment": {
+      "type": "string"
+    },
+    "labelpositionalignment": {
+      "type": "string"
+    },
+    "labeltextalignment": {
+      "type": "string"
+    },
+    "showlabel": {
+      "type": "boolean"
+    },
+    "color": {
+      "type": "string"
+    },
+    "bgcolor": {
+      "type": "string"
+    },
+    "opacity": {
       "type": "number"
     }
   },
+  "usesContext": [
+    "postId",
+    "postType",
+    "queryId"
+  ],
   "supports": {
     "align": [
       "wide",
       "full"
-    ]
+    ],
+    "className": false
   }
 }

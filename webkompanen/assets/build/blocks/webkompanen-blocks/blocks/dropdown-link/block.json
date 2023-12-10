@@ -19,6 +19,9 @@
     "bgcolor": {
       "type": "string"
     },
+    "tintshade": {
+      "type": "number"
+    },
     "color": {
       "type": "string"
     },
