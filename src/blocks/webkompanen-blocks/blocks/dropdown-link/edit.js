@@ -110,6 +110,7 @@ function ButtonLinkEdit( props ) {
 	let blockClasses = 'dropdown-item';
 
 	blockClasses += classes != null && classes != '' ? ' '+classes : ''
+	blockClasses += color.classes() != null && color.classes() != '' ? ' '+color.classes() : ''
 	blockClasses += backgroundcolor.classes() != null && backgroundcolor.classes() != '' ? ' '+backgroundcolor.classes() : ''
 	blockClasses += margin.classes() != null && margin.classes() != '' ? ' '+margin.classes() : ''
 	blockClasses += negativemargin.classes() != null && negativemargin.classes() != '' ? ' '+negativemargin.classes() : ''
@@ -132,22 +133,14 @@ function ButtonLinkEdit( props ) {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Button kleur', 'awp')}
+						title={__('Button kleur', 'webkompanen')}
 						initialOpen={false}
 					>
-					<ColorPalette
-						colors={ colorArr }
-						value={ attributes.color ? 'var(--bs-'+attributes.color+')' : '' }
-						style={{width: "200px" }}
-						onChange={ 
-							( newColor ) => {
-								setAttributes({
-									color: getColorObjectByColorValue( colorArr, newColor ).name
-								})
-							} 
-						}
-						disableCustomColors={ true }
-						clearable={ false }
+					<ColorEdit 
+						props={props}
+					/>
+					<BackgroundcolorEdit 
+						props={props}
 					/>
 					</PanelBody>
 				</InspectorControls>
@@ -155,7 +148,7 @@ function ButtonLinkEdit( props ) {
 			<BlockControls>
 				<Toolbar>
 					<ToggleControl
-						label="Outline button"
+						label={__('Outline button', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.isOutline }
 						onChange={ 
@@ -172,7 +165,7 @@ function ButtonLinkEdit( props ) {
 						}
 					/>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 

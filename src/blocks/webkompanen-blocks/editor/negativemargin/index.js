@@ -87,7 +87,7 @@ const NegativeMarginEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Negative Margin opties', 'awp')}
+			title={__('Negative Margin opties', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -103,7 +103,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmxs.bottom
 							} 
 						}
-						label="xs"
+						label={__('xs', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -124,7 +124,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmsm.bottom
 							} 
 						}
-						label="sm"
+						label={__('sm', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -145,7 +145,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmmd.bottom
 							} 
 						}
-						label="md"
+						label={__('md', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -166,7 +166,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmlg.bottom
 							} 
 						}
-						label="lg"
+						label={__('lg', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -187,7 +187,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmxl.bottom
 							} 
 						}
-						label="xl"
+						label={__('xl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -208,7 +208,7 @@ const NegativeMarginEdit = (props)=> {
 								bottom: attributes.nmxxl.bottom
 							}
 						}
-						label="xxl"
+						label={__('xxl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -226,7 +226,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Negative margin opties', 'awp')}
+					title={__('Negative margin opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -242,7 +242,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmxs.bottom
 									} 
 								}
-								label="xs"
+								label={__('xs', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -261,7 +261,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Negative margin opties (sm)', 'awp')}
+					title={__('Negative margin opties (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -277,7 +277,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmsm.bottom
 									} 
 								}
-								label="sm"
+								label={__('sm', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -296,7 +296,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Negative margin opties (md)', 'awp')}
+					title={__('Negative margin opties (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -312,7 +312,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmmd.bottom
 									} 
 								}
-								label="md"
+								label={__('md', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -331,7 +331,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Negative margin opties (lg)', 'awp')}
+					title={__('Negative margin opties (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -347,7 +347,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmlg.bottom
 									} 
 								}
-								label="lg"
+								label={__('lg', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -366,7 +366,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Negative margin opties (xl)', 'awp')}
+					title={__('Negative margin opties (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -382,7 +382,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmxl.bottom
 									} 
 								}
-								label="xl"
+								label={__('xl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -402,7 +402,7 @@ const NegativeMarginEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Negative margin opties (xxl)', 'awp')}
+					title={__('Negative margin opties (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -418,7 +418,7 @@ const NegativeMarginEdit = (props)=> {
 										bottom: attributes.nmxxl.bottom
 									} 
 								}
-								label="xxl"
+								label={__('xxl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {

@@ -124,18 +124,18 @@ const googleMapsEdit = (props) => {
     );
 	
 	function Map(){
-		console.log(attributes.zoom)
-		console.log('attributes.zoom')
-		console.log(attributes.latitude)
-		console.log('attributes.latitude')
-		console.log(attributes.longitude)
-		console.log('attributes.longitude')
+		//console.log(attributes.zoom)
+		//console.log('attributes.zoom')
+		//console.log(attributes.latitude)
+		//console.log('attributes.latitude')
+		//console.log(attributes.longitude)
+		//console.log('attributes.longitude')
 		const lat = attributes.latitude ? Number(attributes.latitude) : 51.3638725
 		const lng = attributes.longitude ? Number(attributes.longitude) : 5.3228256
 		const zoom = attributes.zoom ? Number(attributes.zoom) : 17
-		console.log(lat)
-		console.log(lng)
-		console.log(zoom)
+		//console.log(lat)
+		//console.log(lng)
+		//console.log(zoom)
 		
 		const center = useMemo(()=>({ lat: lat, lng: lng }), []);
 		const position = { lat: lat, lng: lng };
@@ -186,12 +186,12 @@ const googleMapsEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<PanelBody
-						title={__('Google Maps instllingen', 'awp')}
+						title={__('Google Maps settings', 'webkompanen')}
 						initialOpen={false}
 						className="position-relative"
 					>
 						<ToggleControl
-							label="Static map"
+							label={__('Static map', 'webkompanen')}
 							help={ true ? '' : '' }
 							checked={ attributes.staticmap }
 							onChange={ 
@@ -203,7 +203,7 @@ const googleMapsEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="Latitude"
+							label={__('Latitude', 'webkompanen')}
 							labelPosition="top"
 							value={attributes.latitude ? attributes.latitude : 51.3638725}
 							type="number"
@@ -216,7 +216,7 @@ const googleMapsEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="Longitude"
+							label={__('Longitude', 'webkompanen')}
 							labelPosition="top"
 							value={attributes.longitude ? attributes.longitude : 5.3228256}
 							type="number"
@@ -229,7 +229,7 @@ const googleMapsEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="Zoom"
+							label={__('Zoom', 'webkompanen')}
 							labelPosition="top"
 							value={attributes.zoom ? attributes.zoom : 17}
 							type="number"
@@ -269,7 +269,7 @@ const googleMapsEdit = (props) => {
           				</Autocomplete>
 					</PanelBody>
 					<PanelBody
-						title={__('Height', 'awp')}
+						title={__('Height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -408,7 +408,7 @@ const googleMapsEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('View height', 'awp')}
+						title={__('View height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -547,7 +547,7 @@ const googleMapsEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('width', 'awp')}
+						title={__('width', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -686,7 +686,7 @@ const googleMapsEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('Aspect ratio', 'awp')}
+						title={__('Aspect ratio', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>

@@ -95,7 +95,7 @@ const MarginEdit = (props) => {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Margin opties extra small devices', 'awp')}
+			title={__('Margin opties extra small devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -111,7 +111,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.mxs.bottom
 							} 
 						}
-						label="xs"
+						label={__('xs', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -122,8 +122,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.mxsauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.mxsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxsauto }
 						onChange={ 
 							(e) => {
@@ -134,8 +134,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.mxsxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.mxsxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxsxauto }
 						onChange={ 
 							(e) => {
@@ -146,8 +146,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.mxsyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.mxsyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxsyauto }
 						onChange={ 
 							(e) => {
@@ -158,8 +158,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.mxstauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.mxstauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxstauto }
 						onChange={ 
 							(e) => {
@@ -170,8 +170,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.mxseauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.mxseauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxseauto }
 						onChange={ 
 							(e) => {
@@ -182,8 +182,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.mxsbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.mxsbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxsbauto }
 						onChange={ 
 							(e) => {
@@ -194,8 +194,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.mxssauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.mxssauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.mxssauto }
 						onChange={ 
 							(e) => {
@@ -209,7 +209,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties small devices', 'awp')}
+			title={__('Margin opties small devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -223,7 +223,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.msm.bottom
 							} 
 						}
-						label="sm"
+						label={__('sm', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -234,8 +234,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.msmauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.msmauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmauto }
 						onChange={ 
 							(e) => {
@@ -246,8 +246,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.msmxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.msmxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmxauto }
 						onChange={ 
 							(e) => {
@@ -258,8 +258,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.msmyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.msmyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmyauto }
 						onChange={ 
 							(e) => {
@@ -270,8 +270,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.msmtauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.msmtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmtauto }
 						onChange={ 
 							(e) => {
@@ -282,8 +282,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.msmeauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.msmeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmeauto }
 						onChange={ 
 							(e) => {
@@ -294,8 +294,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.msmbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.msmbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.msmbauto }
 						onChange={ 
 							(e) => {
@@ -306,8 +306,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.msmsauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.msmsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.msmsauto }
 						onChange={ 
 							(e) => {
@@ -321,7 +321,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties medium devices', 'awp')}
+			title={__('Margin opties medium devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -335,7 +335,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.mmd.bottom
 							} 
 						}
-						label="md"
+						label={__('md', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -346,8 +346,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.mmdauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.mmdauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdauto }
 						onChange={ 
 							(e) => {
@@ -358,8 +358,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.mmdxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.mmdxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdxauto }
 						onChange={ 
 							(e) => {
@@ -370,8 +370,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.mmdyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.mmdyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdyauto }
 						onChange={ 
 							(e) => {
@@ -382,8 +382,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.mmdtauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.mmdtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdtauto }
 						onChange={ 
 							(e) => {
@@ -394,8 +394,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.mmdeauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.mmdeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdeauto }
 						onChange={ 
 							(e) => {
@@ -406,8 +406,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.mmdbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.mmdbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mmdbauto }
 						onChange={ 
 							(e) => {
@@ -418,8 +418,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.mmdsauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.mmdsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.mmdsauto }
 						onChange={ 
 							(e) => {
@@ -433,7 +433,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties large devices', 'awp')}
+			title={__('Margin opties large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -447,7 +447,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.mlg.bottom
 							} 
 						}
-						label="lg"
+						label={__('lg', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -458,8 +458,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.mlgauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.mlgauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgauto }
 						onChange={ 
 							(e) => {
@@ -470,8 +470,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.mlgxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.mlgxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgxauto }
 						onChange={ 
 							(e) => {
@@ -482,8 +482,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.mlgyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.mlgyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgyauto }
 						onChange={ 
 							(e) => {
@@ -494,8 +494,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.mlgtauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.mlgtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgtauto }
 						onChange={ 
 							(e) => {
@@ -506,8 +506,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.mlgeauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.mlgeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgeauto }
 						onChange={ 
 							(e) => {
@@ -518,8 +518,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.mlgbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.mlgbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mlgbauto }
 						onChange={ 
 							(e) => {
@@ -530,8 +530,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.mlgsauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.mlgsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.mlgsauto }
 						onChange={ 
 							(e) => {
@@ -545,7 +545,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties extra large devices', 'awp')}
+			title={__('Margin opties extra large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -559,7 +559,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.mxl.bottom
 							} 
 						}
-						label="xl"
+						label={__('xl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -568,8 +568,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.mxlauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.mxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxlauto }
 						onChange={ 
 							(e) => {
@@ -580,8 +580,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.mxlxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.mxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxlxauto }
 						onChange={ 
 							(e) => {
@@ -592,8 +592,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.mxlyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.mxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxlyauto }
 						onChange={ 
 							(e) => {
@@ -604,8 +604,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.mxltauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.mxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxltauto }
 						onChange={ 
 							(e) => {
@@ -616,8 +616,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.mxleauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.mxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxleauto }
 						onChange={ 
 							(e) => {
@@ -628,8 +628,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.mxlbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.mxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxlbauto }
 						onChange={ 
 							(e) => {
@@ -640,8 +640,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.mxlsauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.mxlsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.mxlsauto }
 						onChange={ 
 							(e) => {
@@ -655,7 +655,7 @@ const MarginEdit = (props) => {
 			</div>
 		</PanelBody>
 		<PanelBody
-			title={__('Margin opties extra extra large devices', 'awp')}
+			title={__('Margin opties extra extra large devices', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div className="row">
@@ -669,7 +669,7 @@ const MarginEdit = (props) => {
 								bottom: attributes.mxxl.bottom
 							}
 						}
-						label="xxl"
+						label={__('xxl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -680,8 +680,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin auto"
-						help={ attributes.mxxlauto ? 'Yes.' : 'No.' }
+						label={__('Margin auto', 'webkompanen')}
+						help={ attributes.mxxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxlauto }
 						onChange={ 
 							(e) => {
@@ -692,8 +692,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin x auto"
-						help={ attributes.mxxlxauto ? 'Yes.' : 'No.' }
+						label={__('Margin x auto', 'webkompanen')}
+						help={ attributes.mxxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxlxauto }
 						onChange={ 
 							(e) => {
@@ -704,8 +704,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin y auto"
-						help={ attributes.mxxlyauto ? 'Yes.' : 'No.' }
+						label={__('Margin y auto', 'webkompanen')}
+						help={ attributes.mxxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxlyauto }
 						onChange={ 
 							(e) => {
@@ -716,8 +716,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin top auto"
-						help={ attributes.mxxltauto ? 'Yes.' : 'No.' }
+						label={__('Margin top auto', 'webkompanen')}
+						help={ attributes.mxxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxltauto }
 						onChange={ 
 							(e) => {
@@ -728,8 +728,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin right auto"
-						help={ attributes.mxxleauto ? 'Yes.' : 'No.' }
+						label={__('Margin right auto', 'webkompanen')}
+						help={ attributes.mxxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxleauto }
 						onChange={ 
 							(e) => {
@@ -740,8 +740,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin bottom auto"
-						help={ attributes.mxxlbauto ? 'Yes.' : 'No.' }
+						label={__('Margin bottom auto', 'webkompanen')}
+						help={ attributes.mxxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.mxxlbauto }
 						onChange={ 
 							(e) => {
@@ -752,8 +752,8 @@ const MarginEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Margin left auto"
-						help={ attributes.mxxlsauto ? 'Yes' : 'No' }
+						label={__('Margin left auto', 'webkompanen')}
+						help={ attributes.mxxlsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.mxxlsauto }
 						onChange={ 
 							(e) => {
@@ -771,7 +771,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Margin opties', 'awp')}
+					title={__('Margin opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -787,7 +787,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.mxs.bottom
 									} 
 								}
-								label="xs"
+								label={__('xs', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -800,8 +800,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ selectedblockpropstest.attributes.mxsauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxsauto }
 								onChange={ 
 									(e) => {
@@ -814,8 +814,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ selectedblockpropstest.attributes.mxsxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxsxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxsxauto }
 								onChange={ 
 									(e) => {
@@ -828,8 +828,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ selectedblockpropstest.attributes.mxsyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxsyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxsyauto }
 								onChange={ 
 									(e) => {
@@ -842,8 +842,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ selectedblockpropstest.attributes.mxstauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxstauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxstauto }
 								onChange={ 
 									(e) => {
@@ -856,8 +856,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ selectedblockpropstest.attributes.mxseauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxseauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxseauto }
 								onChange={ 
 									(e) => {
@@ -870,8 +870,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ selectedblockpropstest.attributes.mxsbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxsbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxsbauto }
 								onChange={ 
 									(e) => {
@@ -884,8 +884,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ selectedblockpropstest.attributes.mxssauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.mxssauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.mxssauto }
 								onChange={ 
 									(e) => {
@@ -904,7 +904,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Margin opties (sm)', 'awp')}
+					title={__('Margin opties (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -920,7 +920,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.msm.bottom
 									} 
 								}
-								label="sm"
+								label={__('sm', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -933,8 +933,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ attributes.msmauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ attributes.msmauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmauto }
 								onChange={ 
 									(e) => {
@@ -947,8 +947,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ attributes.msmxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ attributes.msmxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmxauto }
 								onChange={ 
 									(e) => {
@@ -961,8 +961,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ attributes.msmyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ attributes.msmyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmyauto }
 								onChange={ 
 									(e) => {
@@ -975,8 +975,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ attributes.msmtauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ attributes.msmtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmtauto }
 								onChange={ 
 									(e) => {
@@ -989,8 +989,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ attributes.msmeauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ attributes.msmeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmeauto }
 								onChange={ 
 									(e) => {
@@ -1003,8 +1003,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ attributes.msmbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ attributes.msmbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.msmbauto }
 								onChange={ 
 									(e) => {
@@ -1017,8 +1017,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ attributes.msmsauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ attributes.msmsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.msmsauto }
 								onChange={ 
 									(e) => {
@@ -1037,7 +1037,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Margin opties (md)', 'awp')}
+					title={__('Margin opties (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1053,7 +1053,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.mmd.bottom
 									} 
 								}
-								label="md"
+								label={__('md', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -1066,8 +1066,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ attributes.mmdauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ attributes.mmdauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdauto }
 								onChange={ 
 									(e) => {
@@ -1080,8 +1080,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ attributes.mmdxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ attributes.mmdxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdxauto }
 								onChange={ 
 									(e) => {
@@ -1094,8 +1094,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ attributes.mmdyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ attributes.mmdyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdyauto }
 								onChange={ 
 									(e) => {
@@ -1108,8 +1108,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ attributes.mmdtauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ attributes.mmdtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdtauto }
 								onChange={ 
 									(e) => {
@@ -1122,8 +1122,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ attributes.mmdeauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ attributes.mmdeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdeauto }
 								onChange={ 
 									(e) => {
@@ -1136,8 +1136,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ attributes.mmdbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ attributes.mmdbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mmdbauto }
 								onChange={ 
 									(e) => {
@@ -1150,8 +1150,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ attributes.mmdsauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ attributes.mmdsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.mmdsauto }
 								onChange={ 
 									(e) => {
@@ -1170,7 +1170,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Margin opties (lg)', 'awp')}
+					title={__('Margin opties (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1186,7 +1186,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.mlg.bottom
 									} 
 								}
-								label="lg"
+								label={__('lg', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -1199,8 +1199,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ attributes.mlgauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ attributes.mlgauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgauto }
 								onChange={ 
 									(e) => {
@@ -1213,8 +1213,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ attributes.mlgxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ attributes.mlgxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgxauto }
 								onChange={ 
 									(e) => {
@@ -1227,8 +1227,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ attributes.mlgyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ attributes.mlgyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgyauto }
 								onChange={ 
 									(e) => {
@@ -1241,8 +1241,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ attributes.mlgtauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ attributes.mlgtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgtauto }
 								onChange={ 
 									(e) => {
@@ -1255,8 +1255,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ attributes.mlgeauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ attributes.mlgeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgeauto }
 								onChange={ 
 									(e) => {
@@ -1269,8 +1269,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ attributes.mlgbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ attributes.mlgbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mlgbauto }
 								onChange={ 
 									(e) => {
@@ -1283,8 +1283,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ attributes.mlgsauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ attributes.mlgsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.mlgsauto }
 								onChange={ 
 									(e) => {
@@ -1303,7 +1303,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Margin opties (xl)', 'awp')}
+					title={__('Margin opties (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1319,7 +1319,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.mxl.bottom
 									} 
 								}
-								label="xl"
+								label={__('xl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -1333,8 +1333,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ attributes.mxlauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ attributes.mxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxlauto }
 								onChange={ 
 									(e) => {
@@ -1347,8 +1347,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ attributes.mxlxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ attributes.mxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxlxauto }
 								onChange={ 
 									(e) => {
@@ -1361,8 +1361,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ attributes.mxlyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ attributes.mxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxlyauto }
 								onChange={ 
 									(e) => {
@@ -1375,8 +1375,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ attributes.mxltauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ attributes.mxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxltauto }
 								onChange={ 
 									(e) => {
@@ -1389,8 +1389,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ attributes.mxleauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ attributes.mxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxleauto }
 								onChange={ 
 									(e) => {
@@ -1403,8 +1403,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ attributes.mxlbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ attributes.mxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxlbauto }
 								onChange={ 
 									(e) => {
@@ -1417,8 +1417,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ attributes.mxlsauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ attributes.mxlsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.mxlsauto }
 								onChange={ 
 									(e) => {
@@ -1437,7 +1437,7 @@ const MarginEdit = (props) => {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Margin opties (xxl)', 'awp')}
+					title={__('Margin opties (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -1453,7 +1453,7 @@ const MarginEdit = (props) => {
 										bottom: attributes.mxxl.bottom
 									} 
 								}
-								label="xxl"
+								label={__('xxl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -1467,8 +1467,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin auto"
-								help={ attributes.mxxlauto ? 'Yes.' : 'No.' }
+								label={__('Margin auto', 'webkompanen')}
+								help={ attributes.mxxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxlauto }
 								onChange={ 
 									(e) => {
@@ -1481,8 +1481,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin x auto"
-								help={ attributes.mxxlxauto ? 'Yes.' : 'No.' }
+								label={__('Margin x auto', 'webkompanen')}
+								help={ attributes.mxxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxlxauto }
 								onChange={ 
 									(e) => {
@@ -1495,8 +1495,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin y auto"
-								help={ attributes.mxxlyauto ? 'Yes.' : 'No.' }
+								label={__('Margin y auto', 'webkompanen')}
+								help={ attributes.mxxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxlyauto }
 								onChange={ 
 									(e) => {
@@ -1509,8 +1509,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin top auto"
-								help={ attributes.mxxltauto ? 'Yes.' : 'No.' }
+								label={__('Margin top auto', 'webkompanen')}
+								help={ attributes.mxxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxltauto }
 								onChange={ 
 									(e) => {
@@ -1523,8 +1523,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin right auto"
-								help={ attributes.mxxleauto ? 'Yes.' : 'No.' }
+								label={__('Margin right auto', 'webkompanen')}
+								help={ attributes.mxxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxleauto }
 								onChange={ 
 									(e) => {
@@ -1537,8 +1537,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin bottom auto"
-								help={ attributes.mxxlbauto ? 'Yes.' : 'No.' }
+								label={__('Margin bottom auto', 'webkompanen')}
+								help={ attributes.mxxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.mxxlbauto }
 								onChange={ 
 									(e) => {
@@ -1551,8 +1551,8 @@ const MarginEdit = (props) => {
 								}
 							/>
 							<ToggleControl
-								label="Margin left auto"
-								help={ attributes.mxxlsauto ? 'Yes' : 'No' }
+								label={__('Margin left auto', 'webkompanen')}
+								help={ attributes.mxxlsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.mxxlsauto }
 								onChange={ 
 									(e) => {

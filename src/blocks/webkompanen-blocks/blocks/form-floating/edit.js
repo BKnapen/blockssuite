@@ -154,7 +154,7 @@ const formEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="Antwoord"
+						label={__('Answer', 'webkompanen')}
 						labelPosition="top"
 						value={ answer }
 						type="text"

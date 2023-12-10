@@ -19,7 +19,7 @@ const GalleryMetaFieldLocation = () => {
         []
     );
 
-    console.log('postType');
+    //console.log('postType');
 
     if ( 'galleries' !== postType ) return null;  
 
@@ -40,18 +40,18 @@ const GalleryMetaFieldLocation = () => {
     return(
         <PluginDocumentSettingPanel
             name="custom-panel"
-            title="Custom Panel"
+            title={__('Custom Panel', 'webkompanen')}
             className="custom-panel"
         >
             <TextControl
-                label="Editie"
+                label={__('Edition', 'webkompanen')}
                 value={ gallerie_edition }
                 onChange={ ( newValue ) =>
                     editPost( { meta: { gallerie_edition: newValue } } )
                 }
             />
             <TextControl
-                label="Locatie"
+                label={__('Gallery URL', 'webkompanen')}
                 value={ gallerie_location }
                 onChange={ ( newValue ) =>
                     editPost( { meta: { gallerie_location: newValue } } )

@@ -42,7 +42,7 @@ const SidebarXs = () => {
       	<PluginSidebar 
 			name="bootstrap-xs-settings" 
 			icon={ icon } 
-			title="Breakpoint Extra small settings"
+			title={__('Breakpoint Extra small settings', 'webkompanen')}
 		>
 			<p>Breakpoint Extra small:</p>
 			<div

@@ -156,8 +156,8 @@ const containerEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<ToggleControl
-						label="container fluid"
-						help={ attributes.containerfluid ? 'Yes.' : 'No.' }
+						label={__('Container fluid', 'webkompanen')}
+						help={ attributes.containerfluid ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.containerfluid }
 						onChange={ 
 							(e) => {

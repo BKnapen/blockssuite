@@ -109,7 +109,7 @@ const ColorButton = ( props ) => {
 						}
                 	</>
             	}
-            	title=""
+            	title={__('', 'webkompanen')}
 				style={
 					{
 						background: bgcolor
@@ -132,7 +132,7 @@ const ColorButton = ( props ) => {
         			onClose={ () => setShowPopover( false ) }
         		>
 					<SelectControl
-						label={ __( 'Font size' ) }
+						label={ __( 'Font size', 'webkompanen' ) }
 						value={ activefontsize } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -161,18 +161,18 @@ const ColorButton = ( props ) => {
 							} 
 						}
 						options={ [
-							{ value: '', label: '' },
-							{ value: 'fs-xx-small', label: 'fs-xx-small' },
-							{ value: 'fs-x-small', label: 'fs-x-small' },
-							{ value: 'fs-1', label: 'fs-1' },
-							{ value: 'fs-2', label: 'fs-2' },
-							{ value: 'fs-3', label: 'fs-3' },
-							{ value: 'fs-4', label: 'fs-4' },
-							{ value: 'fs-5', label: 'fs-5' },
-							{ value: 'fs-5', label: 'fs-6' },
-							{ value: 'fs-x-large', label: 'fs-x-large' },
-							{ value: 'fs-xx-large', label: 'fs-xx-large' },
-							{ value: 'fs-xxx-large', label: 'fs-xxx-large' }
+							{ value: '', label: __('', 'webkompanen') },
+							{ value: 'fs-xx-small', label: __('fs-xx-small', 'webkompanen') },
+							{ value: 'fs-x-small', label: __('fs-x-small', 'webkompanen') },
+							{ value: 'fs-1', label: __('fs-1', 'webkompanen') },
+							{ value: 'fs-2', label: __('fs-2', 'webkompanen') },
+							{ value: 'fs-3', label: __('fs-3', 'webkompanen') },
+							{ value: 'fs-4', label: __('fs-4', 'webkompanen') },
+							{ value: 'fs-5', label: __('fs-5', 'webkompanen') },
+							{ value: 'fs-5', label: __('fs-6', 'webkompanen') },
+							{ value: 'fs-x-large', label: __('fs-x-large', 'webkompanen') },
+							{ value: 'fs-xx-large', label: __('fs-xx-large', 'webkompanen') },
+							{ value: 'fs-xxx-large', label: __('fs-xxx-large', 'webkompanen') }
 						] }
 					/>
       			</Popover>

@@ -119,7 +119,7 @@ const ColorButton = ( props ) => {
 						}
                 	</>
             	}
-            	title=""
+            	title={__('', 'webkompanen')}
 				style={
 					{
 						background: fillcolor

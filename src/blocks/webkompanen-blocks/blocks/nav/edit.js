@@ -169,7 +169,7 @@ const sectionEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<PanelBody
-						title={__('Navbar expand', 'awp')}
+						title={__('Navbar expand', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -347,8 +347,8 @@ const sectionEdit = (props) => {
 						props={props}
 					/>
 					<ToggleControl
-						label="Sticky top"
-						help={ attributes.stickytop ? 'Ja' : 'Nee' }
+						label={__('Sticky top', 'webkompanen')}
+						help={ attributes.stickytop ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.stickytop }
 						onChange={ 
 							(e) => {
@@ -361,8 +361,8 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Sticky bottom"
-						help={ attributes.stickybottom ? 'Ja' : 'Nee' }
+						label={__('Sticky bottom', 'webkompanen')}
+						help={ attributes.stickybottom ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.stickybottom }
 						onChange={ 
 							(e) => {
@@ -375,8 +375,8 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Fixed top"
-						help={ attributes.fixedtop ? 'Ja' : 'Nee' }
+						label={__('Fixed top', 'webkompanen')}
+						help={ attributes.fixedtop ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.fixedtop }
 						onChange={ 
 							(e) => {
@@ -389,8 +389,8 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Fixed top"
-						help={ attributes.fixedbottom ? 'Ja' : 'Nee' }
+						label={__('Fixed bottom', 'webkompanen')}
+						help={ attributes.fixedbottom ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 						checked={ attributes.fixedbottom }
 						onChange={ 
 							(e) => {

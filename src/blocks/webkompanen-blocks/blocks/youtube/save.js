@@ -43,7 +43,7 @@ function youTubeSave( props ) {
 	return(
 		<>
 			<div class="ratio ratio-16x9">
-  				<iframe src={`https://www.youtube.com/embed/${ attributes.youtubeid }?rel=0`} title="YouTube video" allowfullscreen></iframe>
+  				<iframe src={`https://www.youtube.com/embed/${ attributes.youtubeid }?rel=0`} title={__('YouTube video', 'webkompanen')} allowfullscreen></iframe>
 			</div> 
 		</>
 	)

@@ -154,7 +154,7 @@ class WebkompanenEmailSettings extends Component {
                                 				marginBottom={5}
                             				>
 												<InputControl
-													label='E-mailadres afzender'
+													label={__('Senders email address', 'webkompanen')}
 													labelPosition='top'
 													value={ this.state.phpmailerFrom }
 													id='phpmailerFrom'
@@ -174,7 +174,7 @@ class WebkompanenEmailSettings extends Component {
                                 				marginBottom={5}
                             				>
 						                    <InputControl
-							                    label='Naam afzender'
+							                    label={__('Senders name', 'webkompanen')}
 							                    labelPosition='top'
 							                    value={ this.state.phpmailerFromName }
 							                    id='phpmailerFromName'
@@ -194,7 +194,7 @@ class WebkompanenEmailSettings extends Component {
 											   marginBottom={5}
 										   	>
                                             	<InputControl
-                                                	label='E-mailhost'
+                                                	label={__('Mailhost', 'webkompanen')}
                                                 	labelPosition='top'
                                                 	value={ this.state.phpmailerHost }
                                                 	id='phpmailerHost'
@@ -224,7 +224,7 @@ class WebkompanenEmailSettings extends Component {
 														}
 													}
 													checked={this.state.phpmailerSMTPSecure}
-													label="Versleuteling" //aria-label - not label really
+													label={__('Encryption', 'webkompanen')}//aria-label - not label really
 												>
 													<Radio 
 														value="none"
@@ -247,7 +247,7 @@ class WebkompanenEmailSettings extends Component {
 											   marginBottom={5}
 										   	>
 						                    	<InputControl
-							                    	label='SMTP-poort'
+							                    	label={__('SMTP Port', 'webkompanen')}
 							                    	labelPosition='top'
 							                    	value={ this.state.phpmailerPort }
 							                    	id='phpmailerPort'
@@ -264,7 +264,7 @@ class WebkompanenEmailSettings extends Component {
 						                    	/>
 											</Spacer>
 											<ToggleControl
-												label="Auto-TLS"
+												label={__('Auto-TLS', 'webkompanen')}
 												help={ true ? '' : '' }
 												checked={ this.state.phpmailerSMTPAutoTLS  }
 												onChange={ 
@@ -282,7 +282,7 @@ class WebkompanenEmailSettings extends Component {
 												}
 											/>
 											<ToggleControl
-												label="Authenticatie"
+												label={__('Authentication', 'webkompanen')}
 												help={ true ? '' : '' }
 												checked={ this.state.phpmailerSMTPAuth  }
 												onChange={ 
@@ -303,7 +303,7 @@ class WebkompanenEmailSettings extends Component {
 											   marginBottom={5}
 										   	>
 						                    	<InputControl
-							                    	label='SMTP-gebruikersnaam'
+							                    	label={__('SMTP username', 'webkompanen')}
 							                    	labelPosition='top'
 							                    	value={ this.state.phpmailerUsername }
 							                   		id='emailusername'
@@ -323,7 +323,7 @@ class WebkompanenEmailSettings extends Component {
 											   marginBottom={5}
 										   	>
 						                    	<InputControl
-							                    	label='SMTP-wachtwoord'
+							                    	label={__('SMTP password', 'webkompanen')}
 							                    	labelPosition='top'
 							                   		value={ this.state.phpmailerPassword }
 							                    	id='phpmailerPassword'
@@ -340,7 +340,7 @@ class WebkompanenEmailSettings extends Component {
 						                    	/>
 											</Spacer>
 											<ToggleControl
-												label="HTML"
+												label={__('HTML', 'webkompanen')}
 												help={ true ? '' : '' }
 												checked={ this.state.phpmailerIsHTML  }
 												onChange={ 
@@ -363,7 +363,7 @@ class WebkompanenEmailSettings extends Component {
 								{
 									(tab.title === 'Google TAG Manager') ? (
 										<InputControl
-											label='GTM ID'
+											label={__('GTM ID', 'webkompanen')}
 											labelPosition='top'
 											value={ this.state.googleGTMId }
 											id='googleGTMId'
@@ -383,7 +383,7 @@ class WebkompanenEmailSettings extends Component {
 								{
 									(tab.title === 'Google Maps') ? (
 										<InputControl
-											label='API key'
+											label={__('API key', 'webkompanen')}
 											labelPosition='top'
 											value={ this.state.googleMapsAPIKey }
 											id='googleMapsAPIKey'

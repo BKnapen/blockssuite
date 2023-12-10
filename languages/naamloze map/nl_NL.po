@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-06-27 05:29+0200\n"
+"PO-Revision-Date: 2023-06-27 05:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: webkompanen\n"
+"X-Poedit-KeywordsList: Blockeditor\n"
+
+
+msgid "Chat GPT"
+msgstr "Chat GPT"
+
+msgid "Text"
+msgstr "Tekst"
+
+#: blocks/img/edit
+
+msgid "Alt text:"
+msgstr "Alt tekst:"
+
+msgid "Promt"
+msgstr "Promt"
+
+msgid "Resolution"
+msgstr "Resolutie"
+
+msgid "1024x1024"
+msgstr "1024x1024"
+
+msgid "1024x1792"
+msgstr "1024x1792"
+
+msgid "1792x1024"
+msgstr "1792x1024"
+
+msgid "Quality"
+msgstr "Kwaliteit"
+
+msgid "Standard"
+msgstr "Standaard"
+
+msgid "HD"
+msgstr "HD"
+
+msgid "Generate image"
+msgstr "Genereer afbeelding"
+
+msgid "Image will be generate"
+msgstr "Afbeelding wordt gegenereerd"
+
+msgid "Image will be uploaded"
+msgstr "Afbeelding wordt geüpload"
+
+#: blocks/p/edit
+
+msgid "put keywords in an html span element with class name"
+msgstr "zet zoekwoorden woorden in een html span element met classnaam"
+
+msgid "Generate text"
+msgstr "Genereer tekst"
+
+msgid "Text will be generate"
+msgstr "Tekst wordt gegenereerd"
+
+msgid "Typography"
+msgstr "Typografie"
+
+msgid "Text alignment"
+msgstr "Tekstuitlijning"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Center"
+msgstr "Gecentreerd"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Text transform"
+msgstr "Teksttransformatie"
+
+msgid "Lowercase"
+msgstr "Kleine letters"
+
+msgid "Uppercase"
+msgstr "Hoofdletters"
+
+msgid "Capitalize"
+msgstr "Met één hoofdletter"
+
+msgid "Font size"
+msgstr "Lettertypegrootte"
+
+msgid "fs-1"
+msgstr "fs-1"
+
+msgid "fs-2"
+msgstr "fs-2"
+
+msgid "fs-3"
+msgstr "fs-3"
+
+msgid "fs-4"
+msgstr "fs-4"
+
+msgid "fs-5"
+msgstr "fs-5"
+
+msgid "fs-6"
+msgstr "fs-6"
+
+msgid "Font weight and italics"
+msgstr "Lettergrootte en cursief"
+
+msgid "Bold text"
+msgstr "Vetgedrukte tekst"
+
+msgid "Bolder weight text"
+msgstr "Dikkere tekst"
+
+msgid "Semibold weight text"
+msgstr "Halfvetgedrukte tekst"
+
+msgid "Normal weight text"
+msgstr "Tekst normaal"
+
+msgid "Light weight text"
+msgstr "Lichte tekst"
+
+msgid "Lighter weight text"
+msgstr "Lichtere tekst"
+
+msgid "Italic text"
+msgstr "Cursieve tekst"
+
+msgid "Text with normal font style"
+msgstr "Tekst met normale lettertypestijl"
+
+msgid "Lineheight"
+msgstr "Regelhoogte"
+
+msgid "Lineheight 1"
+msgstr "Regelhoogte 1"
+
+msgid "Lineheight small"
+msgstr "Regelhoogte klein"
+
+msgid "Lineheight base"
+msgstr "Regelhoogte normaal"
+
+msgid "Lineheight large"
+msgstr "Regelhoogte groot"
+
+msgid "Text decoration"
+msgstr "Tekst decoratie"
+
+msgid "Underline"
+msgstr "Onderstreept"
+
+msgid "Line through"
+msgstr "Doorstreept"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "Text..."
+msgstr "Tekst..."

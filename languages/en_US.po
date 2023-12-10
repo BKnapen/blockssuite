@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-06-27 05:29+0200\n"
+"PO-Revision-Date: 2023-12-08 20:02+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: Blockeditor\n"
+"X-Poedit-SearchPath-0: webkompanen\n"
+"X-Domain: webkompanen\n"
+
+msgid "Chat GPT"
+msgstr "Chat GPT"
+
+msgid "Text"
+msgstr "Text"
+
+#: blocks/img/edit
+msgid "Alt text:"
+msgstr "Alt text:"
+
+msgid "Promt"
+msgstr "Promt"
+
+msgid "Resolution"
+msgstr "Resolution"
+
+msgid "1024x1024"
+msgstr "1024x1024"
+
+msgid "1024x1792"
+msgstr "1024x1792"
+
+msgid "1792x1024"
+msgstr "1792x1024"
+
+msgid "Quality"
+msgstr "Quality"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "HD"
+msgstr "HD"
+
+msgid "Generate image"
+msgstr "Generate image"
+
+msgid "Image will be generate"
+msgstr "Image will be generate"
+
+msgid "Image will be uploaded"
+msgstr "Image will be uploaded"
+
+#: blocks/p/edit
+msgid "put keywords in an html span element with class name"
+msgstr "put keywords in an html span element with class name"
+
+msgid "Generate text"
+msgstr "Generate text"
+
+msgid "Text will be generate"
+msgstr "Text will be generate"
+
+msgid "Typography"
+msgstr "Typography"
+
+msgid "Text alignment"
+msgstr "Text alignment"
+
+msgid "Left"
+msgstr "Left"
+
+msgid "Center"
+msgstr "Center"
+
+msgid "Right"
+msgstr "Right"
+
+msgid "Text transform"
+msgstr "Text transform"
+
+msgid "Lowercase"
+msgstr "Lowercase"
+
+msgid "Uppercase"
+msgstr "Uppercase"
+
+msgid "Capitalize"
+msgstr "Capitalize"
+
+msgid "Font size"
+msgstr "Font size"
+
+msgid "fs-1"
+msgstr "fs-1"
+
+msgid "fs-2"
+msgstr "fs-2"
+
+msgid "fs-3"
+msgstr "fs-3"
+
+msgid "fs-4"
+msgstr "fs-4"
+
+msgid "fs-5"
+msgstr "fs-5"
+
+msgid "fs-6"
+msgstr "fs-6"
+
+msgid "Font weight and italics"
+msgstr "Font weight and italics"
+
+msgid "Bold text"
+msgstr "Bold text"
+
+msgid "Bolder weight text"
+msgstr "Bolder weight text"
+
+msgid "Semibold weight text"
+msgstr "Semibold weight text"
+
+msgid "Normal weight text"
+msgstr "Normal weight text"
+
+msgid "Light weight text"
+msgstr "Light weight text"
+
+msgid "Lighter weight text"
+msgstr "Lighter weight text"
+
+msgid "Italic text"
+msgstr "Italic text"
+
+msgid "Text with normal font style"
+msgstr "Text with normal font style"
+
+msgid "Lineheight"
+msgstr "Lineheight"
+
+msgid "Lineheight 1"
+msgstr "Lineheight 1"
+
+msgid "Lineheight small"
+msgstr "Lineheight small"
+
+msgid "Lineheight base"
+msgstr "Lineheight base"
+
+msgid "Lineheight large"
+msgstr "Lineheight large"
+
+msgid "Text decoration"
+msgstr "Text decoration"
+
+msgid "Underline"
+msgstr "Underline"
+
+msgid "Line through"
+msgstr "Line through"
+
+msgid "None"
+msgstr "None"
+
+msgid "Text..."
+msgstr "Text..."

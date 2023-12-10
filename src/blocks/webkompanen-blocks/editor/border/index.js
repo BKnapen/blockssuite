@@ -72,7 +72,7 @@ const BorderEdit = (props)=> {
 	const colors = new Colors;
 	return(
 		<PanelBody
-			title={__('Border opties', 'awp')}
+			title={__('Border opties', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -95,8 +95,8 @@ const BorderEdit = (props)=> {
 						clearable={ true }
 					/>
                     <ToggleControl
-                        label="Border start?"
-                        help={ attributes.borderstartxs ? 'Yes.' : 'No.' }
+                        label={__('Border start?', 'webkompanen')}
+                        help={ attributes.borderstartxs ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
                         checked={ attributes.borderstartxs }
                         onChange={ 
                             (e) => {
@@ -107,8 +107,8 @@ const BorderEdit = (props)=> {
                         }
                     />
                     <ToggleControl
-                        label="Border top?"
-                        help={ attributes.bordertopxs ? 'Yes.' : 'No.' }
+                        label={__('Border top?', 'webkompanen')}
+                        help={ attributes.bordertopxs ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
                         checked={ attributes.bordertopxs }
                         onChange={ 
                             (e) => {
@@ -119,8 +119,8 @@ const BorderEdit = (props)=> {
                         }
                     />
                     <ToggleControl
-                        label="Border end?"
-                        help={ attributes.borderendxs ? 'Yes.' : 'No.' }
+                        label={__('Border end?', 'webkompanen')}
+                        help={ attributes.borderendxs ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
                         checked={ attributes.borderendxs }
                         onChange={ 
                             (e) => {
@@ -131,8 +131,8 @@ const BorderEdit = (props)=> {
                         }
                     />
                     <ToggleControl
-                        label="Border bottom?"
-                        help={ attributes.borderbottomxs ? 'Yes.' : 'No.' }
+                        label={__('Border bottom?', 'webkompanen')}
+                        help={ attributes.borderbottomxs ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
                         checked={ attributes.borderbottomxs }
                         onChange={ 
                             (e) => {

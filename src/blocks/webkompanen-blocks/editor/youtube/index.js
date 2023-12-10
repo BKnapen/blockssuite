@@ -73,15 +73,15 @@ const YouTubeEdit = (props)=> {
     
 	return(
 		<PanelBody
-			title={__('YouTube id', 'awp')}
+			title={__('YouTube ID', 'webkompanen')}
 			initialOpen={false}
 		>
 		    <InputControl
-				label="YouTube id"
+				label={__('YouTube ID', 'webkompanen')}
 				labelPosition="top"
 				value={ attributes.youtubeid }
 				type="text"
-				placeholder="Vul hier de YuTube id in"
+				placeholder={__('Fill in YouTube ID', 'webkompanen')}
 				isPressEnterToChange
 				onChange={ 
 				    ( nextValue ) => { 

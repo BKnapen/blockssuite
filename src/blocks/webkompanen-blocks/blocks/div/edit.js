@@ -130,7 +130,9 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/accordion-header',
 		'webkompanen-blocks/accordion-item',
 		'webkompanen-blocks/post-featured-img',
-		'webkompanen-blocks/post-title'
+		'webkompanen-blocks/post-title',
+		'webkompanen-blocks/list-group',
+		'webkompanen-blocks/list-group-item'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -203,11 +205,11 @@ const sectionEdit = (props) => {
 						props={props}
 					/>	
 					<PanelBody
-						title={__('AOS', 'awp')}
+						title={__('AOS', 'webkompanen')}
 						initialOpen={false}
 					>
 						<SelectControl
-							label={ __( 'AOS' ) }
+							label={ __( 'AOS', 'webkompanen' ) }
 							value={ attributes.dataaos } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -221,36 +223,36 @@ const sectionEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'fade-up', label: 'Fade up' },
-								{ value: 'fade-down', label: 'Fade down' },
-								{ value: 'fade-right', label: 'Fade right' },
-								{ value: 'fade-left', label: 'Fade left' },
-								{ value: 'fade-up-right', label: 'Fade up right' },
-								{ value: 'fade-up-left', label: 'Fade up left' },
-								{ value: 'fade-down-right', label: 'Fade down right' },
-								{ value: 'slide-up', label: 'Slide up' },
-								{ value: 'slide-down', label: 'Slide down' },
-								{ value: 'slide-right', label: 'Slide right' },
-								{ value: 'slide-left', label: 'Slide left' },
-								{ value: 'flip-left', label: 'Flip left' },
-								{ value: 'flip-right', label: 'Flip right' },
-								{ value: 'flip-up', label: 'Flip up' },
-								{ value: 'flip-down', label: 'Flip down' },
-								{ value: 'zoom-in', label: 'Zoom in' },
-								{ value: 'zoom-in-up', label: 'Zoom in up' },
-								{ value: 'zoom-in-down', label: 'Zoom in down' },
-								{ value: 'zoom-in-left', label: 'Zoom in left' },
-								{ value: 'zoom-in-right', label: 'Zoom in right' },
-								{ value: 'zoom-out', label: 'Zoom out' },
-								{ value: 'zoom-out-up', label: 'Zoom out up' },
-								{ value: 'zoom-out-down', label: 'Zoom out down' },
-								{ value: 'zoom-out-right', label: 'Zoom out right' },
-								{ value: 'zoom-out-left', label: 'Zoom out left' }
+								{ value: null, label: __('', 'webkompanen') },
+								{ value: 'fade-up', label: __('Fade up', 'webkompanen') },
+								{ value: 'fade-down', label: __('Fade down', 'webkompanen') },
+								{ value: 'fade-right', label: __('Fade right', 'webkompanen') },
+								{ value: 'fade-left', label: __('Fade left', 'webkompanen') },
+								{ value: 'fade-up-right', label: __('Fade up right', 'webkompanen') },
+								{ value: 'fade-up-left', label: __('Fade up left', 'webkompanen') },
+								{ value: 'fade-down-right', label: __('Fade down right', 'webkompanen') },
+								{ value: 'slide-up', label: __('Slide up', 'webkompanen') },
+								{ value: 'slide-down', label: __('Slide down', 'webkompanen') },
+								{ value: 'slide-right', label: __('Slide right', 'webkompanen') },
+								{ value: 'slide-left', label: __('Slide left', 'webkompanen') },
+								{ value: 'flip-left', label: __('Flip left', 'webkompanen') },
+								{ value: 'flip-right', label: __('Flip right', 'webkompanen') },
+								{ value: 'flip-up', label: __('Flip up', 'webkompanen') },
+								{ value: 'flip-down', label: __('Flip down', 'webkompanen') },
+								{ value: 'zoom-in', label: __('Zoom in', 'webkompanen') },
+								{ value: 'zoom-in-up', label: __('Zoom in up', 'webkompanen') },
+								{ value: 'zoom-in-down', label: __('Zoom in down', 'webkompanen') },
+								{ value: 'zoom-in-left', label: __('Zoom in left', 'webkompanen') },
+								{ value: 'zoom-in-right', label: __('Zoom in right', 'webkompanen') },
+								{ value: 'zoom-out', label: __('Zoom out', 'webkompanen') },
+								{ value: 'zoom-out-up', label: __('Zoom out up', 'webkompanen') },
+								{ value: 'zoom-out-down', label: __('Zoom out down', 'webkompanen') },
+								{ value: 'zoom-out-right', label: __('Zoom out right', 'webkompanen') },
+								{ value: 'zoom-out-left', label: __('Zoom out left', 'webkompanen') }
 							] }
 						/>
 						<SelectControl
-							label={ __( 'AOS easing' ) }
+							label={ __( 'AOS easing', 'webkompanen' ) }
 							value={ attributes.dataaos } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -264,31 +266,31 @@ const sectionEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'linear', label: 'Linear' },
-								{ value: 'ease', label: 'Ease' },
-								{ value: 'ease-in', label: 'Ease in' },
-								{ value: 'ease-out', label: 'Ease out' },
-								{ value: 'ease-in-out', label: 'Ease in out' },
-								{ value: 'ease-in-back', label: 'Ease in back' },
-								{ value: 'ease-out-back', label: 'Ease out back' },
-								{ value: 'ease-in-out-back', label: 'Ease in out back' },
-								{ value: 'ease-in-sine', label: 'Ease in sine' },
-								{ value: 'ease-out-sine', label: 'Ease out sine' },
-								{ value: 'ease-in-out-sine', label: 'Ease in out sine' },
-								{ value: 'ease-in-quad', label: 'Ease in quad' },
-								{ value: 'ease-out-quad', label: 'Ease out quad' },
-								{ value: 'ease-in-out-quad', label: 'Ease in out quad' },
-								{ value: 'ease-in-cubic', label: 'Ease in cubic' },
-								{ value: 'ease-out-cubic', label: 'Ease out cubic' },
-								{ value: 'ease-in-out-cubic', label: 'Ease in out cubic' },
-								{ value: 'ease-in-quart', label: 'Ease in quart' },
-								{ value: 'ease-out-quart', label: 'Ease out quart' },
-								{ value: 'ease-in-out-quart', label: 'Ease in out quart' },
+								{ value: null, label: __('', 'webkompanen') },
+								{ value: 'linear', label: __('Linear', 'webkompanen' ) },
+								{ value: 'ease', label: __('Ease', 'webkompanen' ) },
+								{ value: 'ease-in', label: __('Ease in', 'webkompanen' ) },
+								{ value: 'ease-out', label: __('Ease out', 'webkompanen' ) },
+								{ value: 'ease-in-out', label: __('Ease in out', 'webkompanen' ) },
+								{ value: 'ease-in-back', label: __('Ease in back', 'webkompanen' ) },
+								{ value: 'ease-out-back', label: __('Ease out back', 'webkompanen' ) },
+								{ value: 'ease-in-out-back', label: __('Ease in out back', 'webkompanen' ) },
+								{ value: 'ease-in-sine', label: __('Ease in sine', 'webkompanen' ) },
+								{ value: 'ease-out-sine', label: __('Ease out sine', 'webkompanen' ) },
+								{ value: 'ease-in-out-sine', label: __('Ease in out sine', 'webkompanen' ) },
+								{ value: 'ease-in-quad', label: __('Ease in quad', 'webkompanen' ) },
+								{ value: 'ease-out-quad', label: __('Ease out quad', 'webkompanen' ) },
+								{ value: 'ease-in-out-quad', label: __('Ease in out quad', 'webkompanen' ) },
+								{ value: 'ease-in-cubic', label: __('Ease in cubic', 'webkompanen' ) },
+								{ value: 'ease-out-cubic', label: __('Ease out cubic', 'webkompanen' ) },
+								{ value: 'ease-in-out-cubic', label: __('Ease in out cubic', 'webkompanen' ) },
+								{ value: 'ease-in-quart', label: __('Ease in quart', 'webkompanen' ) },
+								{ value: 'ease-out-quart', label: __('Ease out quart', 'webkompanen' ) },
+								{ value: 'ease-in-out-quart', label: __('Ease in out quart', 'webkompanen' ) },
 							] }
 						/>
 						<SelectControl
-							label={ __( 'AOS easing anchor placement' ) }
+							label={ __( 'AOS easing anchor placement', 'webkompanen' ) }
 							value={ attributes.dataaosanchorplacement } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -302,21 +304,21 @@ const sectionEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'top-top', label: 'Top top' },
-								{ value: 'center-top', label: 'Center top' },
-								{ value: 'bottom-top', label: 'Bottom top' },
-								{ value: 'top-center', label: 'Top center' },
-								{ value: 'center-center', label: 'Center center' },
-								{ value: 'bottom-center', label: 'Bottom center' },
-								{ value: 'top-bottom', label: 'Top bottom' },
-								{ value: 'center-bottom', label: 'Center bottom' },
-								{ value: 'bottom-bottom', label: 'Bottom bottom' }
+								{ value: null, label: __('', 'webkompanen') },
+								{ value: 'top-top', label: __('Top top', 'webkompanen' ) },
+								{ value: 'center-top', label: __('Center top', 'webkompanen' ) },
+								{ value: 'bottom-top', label: __('Bottom top', 'webkompanen' ) },
+								{ value: 'top-center', label: __('Top center', 'webkompanen' ) },
+								{ value: 'center-center', label: __('Center center', 'webkompanen' ) },
+								{ value: 'bottom-center', label: __('Bottom center', 'webkompanen' ) },
+								{ value: 'top-bottom', label: __('Top bottom', 'webkompanen' ) },
+								{ value: 'center-bottom', label: __('Center bottom', 'webkompanen' ) },
+								{ value: 'bottom-bottom', label: __('Bottom bottom', 'webkompanen' ) }
 							] }
 						/>
 						<ToggleControl
-							label="AOS once"
-							help={ attributes.dataaosonce ? 'Yes.' : 'No.' }
+							label={__('AOS once', 'webkompanen')}
+							help={ attributes.dataaosonce ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 							checked={ attributes.dataaosonce }
 							onChange={ 
 								(e) => {
@@ -327,7 +329,7 @@ const sectionEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS anchor"
+							label={__('AOS anchor', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataaosanchor }
 							type="text"
@@ -341,7 +343,7 @@ const sectionEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS Duration"
+							label={__('AOS Duration', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataaosduration }
 							type="number"
@@ -355,7 +357,7 @@ const sectionEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS delay"
+							label={__('AOS delay', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataaosdelay }
 							type="number"
@@ -369,7 +371,7 @@ const sectionEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS Offset"
+							label={__('AOS Offset', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataaosoffset }
 							type="number"
@@ -384,7 +386,7 @@ const sectionEdit = (props) => {
 						/>
 					</PanelBody>	
 					<PanelBody
-						title={__('Height', 'awp')}
+						title={__('Height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -523,7 +525,7 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('View height', 'awp')}
+						title={__('View height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -662,7 +664,7 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('width', 'awp')}
+						title={__('width', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -801,7 +803,7 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('Aspect ratio', 'awp')}
+						title={__('Aspect ratio', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -994,11 +996,11 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('Classes', 'awp')}
+						title={__('Classes', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Classes"
+							label={__('Classes', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.classes }
 							type="text"

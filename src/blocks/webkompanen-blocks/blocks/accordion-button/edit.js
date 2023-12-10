@@ -123,9 +123,6 @@ function ButtonLinkEdit( props ) {
 
 	const targetid = attributes.targetid ? attributes.targetid : ''
 	const targetID = targetid == '' ? null : targetid
-	
-	console.log('buttonid')
-	console.log(buttonid)
 
 	let blockClasses = 'accordion-button collapsed';
 
@@ -151,7 +148,7 @@ function ButtonLinkEdit( props ) {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="Target ID"
+						label={__('Target ID', 'webkompanen')}
 						labelPosition="top"
 						value={ targetID }
 						type="text"
@@ -165,7 +162,7 @@ function ButtonLinkEdit( props ) {
 						}
 					/>
 					<InputControl
-						label="Classes"
+						label={__('Classes', 'webkompanen')}
 						labelPosition="top"
 						value={ classes }
 						type="text"
@@ -190,7 +187,7 @@ function ButtonLinkEdit( props ) {
 				<Toolbar>
 					<div className='testje'>
 					<ToggleControl
-						label="Outline button"
+						label={__('DOutline button', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.isOutline }
 						onChange={ 
@@ -210,7 +207,7 @@ function ButtonLinkEdit( props ) {
 					/>
 					</div>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 

@@ -7,12 +7,20 @@ import {
 } from '@wordpress/blocks';
 
 import { 
+	createHooks 
+} from '@wordpress/hooks';
+
+import { 
 	useSelect, useDispatch, withSelect
 } from '@wordpress/data';
 
 import { 
 	sprintf, __ 
 } from '@wordpress/i18n';
+
+import {
+	apiFetch 
+} from '@wordpress/api-fetch';
 
 import {
 	__experimentalLinkControl as LinkControl,
@@ -32,7 +40,9 @@ import {
 } from '@wordpress/block-editor';
 
 import {
-	link
+	link, 
+	upload, 
+	Icon
 } from '@wordpress/icons';
 
 import {
@@ -43,6 +53,7 @@ import {
 import {
 	ToggleControl,
 	PanelBody,
+	TextareaControl,
 	PanelRow,
 	CheckboxControl,
 	SelectControl,
@@ -52,8 +63,14 @@ import {
 	IconButton,
 	Button,
 	ResponsiveWrapper,
-	Toolbar
+	Toolbar,
+	__experimentalInputControl as InputControl,
+	__experimentalSpacer as Spacer
 } from '@wordpress/components';
+
+import {
+	openai as openai,
+} from '../../icons'
 
 /* Utilities */
 
@@ -87,6 +104,13 @@ const imageEdit = (props) => {
 		className,
 		clientId
 	} = props;
+	const [ outputChatGPT, setOutputChatGPT] = useState('');
+	const [ altValue, setAltValue] = useState('');
+	const [ promtValue, setPromtValue ] = useState( '' );
+	const [ inProgress, setInProgress ] = useState( false );
+	const [ uploading, setUploading ] = useState( false );
+	const [ resolutionValue, setResolutionValue ] = useState( '1024x1024' );
+	const [ qualityValue, setQualityValue ] = useState( 'standard' );
 	
 	const { imageInfo } = useSelect( ( select ) => {		
 		return {
@@ -99,7 +123,9 @@ const imageEdit = (props) => {
 	const dataBsTarget = attributes.dataBsTarget ? ''+attributes.dataBsTarget+'' : null
 	const dataBsSlideTo = attributes.dataBsSlideTo ? ''+attributes.dataBsSlideTo+'' : null
 	
-	
+	const siteinfo = useSelect( ( select ) =>
+		select('core').getSite()
+	);
 	
 	let classes = attributes.classes ? ''+attributes.classes : ''
 	
@@ -112,9 +138,6 @@ const imageEdit = (props) => {
 	//const col = new Col(props)
 	const color = new Color(props)
 	const backgroundcolor = new Backgroundcolor(props)
-	
-	console.log('attributes.url')
-	console.log(attributes.url)
 		
 	const width = attributes.width ? ' '+attributes.width+'' : ''
 	const height = attributes.height ? ' '+attributes.height+'' : ''
@@ -206,11 +229,108 @@ const imageEdit = (props) => {
 			labelClasses += '';
 	}
 
+	let controller = null; // Store the AbortController instance
+	const uploadfile = (requestfile, requestfilename) => {
+		try {
+
+			wp.apiFetch( {
+				path: '/upload/v1/new',
+				method: 'POST',
+				data: { 
+					file: requestfile,
+					filename: requestfilename
+				},
+			} )
+			.then( 
+				(response) => {
+
+					setInProgress(false)
+					setUploading(false)
+					setResolutionValue('1024x1024')
+					setQualityValue('standard')
+					setPromtValue('')
+
+					setAttributes({
+						imageId: response.id,
+						imageUrl: response.url,
+						imageAlt: altValue,
+						image: {},
+						w: 1024,
+						h: 1024
+					});
+				}
+			)
+	  	}
+		catch (error) {
+			console.log(error)
+			setInProgress(false)
+			setUploading(false)
+	   	}
+	   	finally {
+		}
+	}
+
+	const generate = async () => {
+  		controller = new AbortController();
+  		const signal = controller.signal;
+		const promtText = document.getElementById('promt');
+		
+		setOutputChatGPT(
+			() => ''
+		);
+
+		let output = ''; // Store the AbortController instance
+		
+    	try {
+  			const response = await fetch(
+  				'https://api.openai.com/v1/images/generations',{
+        			headers:{
+            			'Content-Type': 'application/json',
+                		Authorization: 'Bearer '+siteinfo.chatGPTAPIKEY+'',
+            		},
+            		method: 'POST',
+            		body: JSON.stringify({
+            			model: 'dall-e-3',
+						prompt: ''+promtValue+'',
+						n: 1,
+						size: ''+resolutionValue+'',
+						quality: ''+qualityValue+''
+        			}),
+                    signal
+    			}
+ 			)
+			.then(
+				response => response.json()
+			)
+			.then(
+				(json) => {
+					//console.log(json['data'][0].revised_prompt)
+					setUploading(true)
+					uploadfile(
+						json['data'][0].url,
+						'chat_gpt_image_'+Date.now(),
+					)
+				}
+			)
+        }
+       	catch (error) {
+        	if (signal.aborted) {
+				setInProgress(false)
+				setUploading(false)
+            }
+            else {
+				setInProgress(false)
+				setUploading(false)
+    		}
+        }
+        finally {
+    		controller = null; // Reset the AbortController instance
+  		}
+    }
+
 	labelClasses = labelClasses.replace(/^\s+|\s+$/gm,'');
 	labelClasses = labelClasses.replace(/\s+\s+/gm,' ');
 	labelClasses = labelClasses == '' ? null : labelClasses
-	
-	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	
 	const [ isVisible, setIsVisible ] = useState( false );
 	const toggleVisible = () => {
@@ -223,6 +343,152 @@ const imageEdit = (props) => {
 		<>	
 			<Fragment>
 				<InspectorControls>
+					<PanelBody
+						title={__('Chat GPT', 'webkompanen')}
+						initialOpen={false}
+					>
+						<Spacer
+							marginBottom={3}
+						>
+							<InputControl
+								label={__('Alt text:', 'webkompanen')}
+								labelPosition="top"
+								value={ altValue }
+								type="text"
+								isPressEnterToChange
+								onChange={
+									( nextValue ) => {
+										setAltValue( nextValue ?? '' )
+									}
+								}
+							/>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<TextareaControl
+								label={__('Promt', 'webkompanen')}
+								labelPosition="top"
+								rows={5}
+								value={ promtValue }
+								onChange={
+									( nextValue ) => {
+										setPromtValue( nextValue ?? '' )
+									}
+								}
+							/>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<SelectControl
+								label={ __( 'Resolution', 'webkompanen' ) }
+								value={ resolutionValue } // e.g: value = [ 'a', 'c' ]
+									
+								onChange={
+									( nextValue ) => {
+										setResolutionValue( nextValue ?? '' )
+									}
+								}
+								options={ [
+									{ value: '1024x1024', label: __('1024x1024', 'webkompanen') },
+									{ value: '1024x1792', label: __('1024x1792', 'webkompanen') },
+									{ value: '1792x1024', label: __('1792x1024', 'webkompanen') }
+								] }
+							/>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<SelectControl
+								label={ __( 'Quality', 'webkompanen' ) }
+								value={ qualityValue } // e.g: value = [ 'a', 'c' ]
+									
+								onChange={
+									( nextValue ) => {
+										setQualityValue( nextValue ?? '' )
+									}
+								}
+								options={ [
+									{ value: 'standard', label: __('Standard', 'webkompanen') },
+									{ value: 'hd', label: __('HD', 'webkompanen') }
+								] }
+							/>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							{qualityValue == 'standard' && resolutionValue == '1024x1024' &&
+								<>($0.040 / image)</>
+							}
+							{qualityValue == 'standard' && resolutionValue == '1024x1792' &&
+								<>($0.080 / image)</>
+							}
+							{qualityValue == 'standard' && resolutionValue == '1792x1024' &&
+								<>($0.080 / image)</>
+							}
+							{qualityValue == 'hd' && resolutionValue == '1024x1024' &&
+								<>($0.080 / image)</>
+							}
+							{qualityValue == 'hd' && resolutionValue == '1024x1792' &&
+								<>($0.120 / image)</>
+							}
+							{qualityValue == 'hd' && resolutionValue == '1792x1024' &&
+								<>($0.120 / image)</>
+							}
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<Button
+								isPrimary
+								onClick={ 
+									() => {
+										setOutputChatGPT('')
+										setInProgress(true)
+										generate()
+									}
+								}
+							>
+								{!inProgress &&
+									<>
+										<Icon 
+											icon={ openai } 
+											className='me-1'
+										/>
+											{__('Generate image', 'webkompanen')} 
+									</>
+								}
+								{inProgress && !uploading &&
+									<>
+										<i 
+											className="fa-solid fa-circle-notch fa-spin me-1"
+										>
+										</i>
+										{__('Image will be generate', 'webkompanen')}
+									</>
+								}
+								{inProgress && uploading &&
+									<>
+										<i 
+											className="fa-solid fa-upload me-1"
+										>
+										</i>
+										{__('Image will be uploaded', 'webkompanen')}
+									</>
+								}
+							</Button>
+						</Spacer>
+						{outputChatGPT != '' ?
+							<Spacer
+								marginBottom={3}
+							>
+								<img src={outputChatGPT}/>
+							</Spacer>
+							:
+							null
+						}
+					</PanelBody>
 					<ImageEdit 
 						props={props}
 					/>
@@ -234,7 +500,7 @@ const imageEdit = (props) => {
 			<BlockControls>
 				<Toolbar>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 

@@ -73,15 +73,15 @@ const FacebookWatchEdit = (props)=> {
     
 	return(
 		<PanelBody
-			title={__('Facebook video id', 'awp')}
+			title={__('Facebook video id', 'webkompanen')}
 			initialOpen={false}
 		>
 		    <InputControl
-				label="Facebook video id"
+				label={__('Facebook video id', 'webkompanen')}
 				labelPosition="top"
 				value={ attributes.facebookvideoid }
 				type="text"
-				placeholder="Vul hier de Facebook video id in"
+				placeholder={__('Fill in Facebook video id', 'webkompanen')}
 				isPressEnterToChange
 				onChange={ 
 				    ( nextValue ) => { 

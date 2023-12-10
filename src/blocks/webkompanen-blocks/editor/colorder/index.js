@@ -79,7 +79,7 @@ const ColOrderEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Col instellingen', 'awp')}
+			title={__('Col instellingen', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -87,7 +87,7 @@ const ColOrderEdit = (props)=> {
 			>
 				<div className="col-4">
 					<InputControl
-						label="xs"
+						label={__('xs', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.orderxs}
 						type="number"
@@ -103,7 +103,7 @@ const ColOrderEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="sm"
+						label={__('sm', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.ordersm}
 						type="number"
@@ -119,7 +119,7 @@ const ColOrderEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="md"
+						label={__('md', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.ordermd}
 						type="number"
@@ -135,7 +135,7 @@ const ColOrderEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="lg"
+						label={__('lg', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.orderlg}
 						type="number"
@@ -151,7 +151,7 @@ const ColOrderEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="xl"
+						label={__('xl', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.orderxl}
 						type="number"
@@ -167,7 +167,7 @@ const ColOrderEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="xxl"
+						label={__('xxl', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.orderxxl}
 						type="number"
@@ -189,7 +189,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -199,7 +199,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xs"
+								label={__('xs', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.orderxs}
 								type="number"
@@ -221,7 +221,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -231,7 +231,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="sm"
+								label={__('sm', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.ordersm}
 								type="number"
@@ -253,7 +253,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -263,7 +263,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="md"
+								label={__('md', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.ordermd}
 								type="number"
@@ -285,7 +285,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -295,7 +295,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="lg"
+								label={__('lg', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.orderlg}
 								type="number"
@@ -317,7 +317,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -327,7 +327,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xl"
+								label={__('xl', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.orderxl}
 								type="number"
@@ -349,7 +349,7 @@ const ColOrderEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&
 				<PanelBody
-					title={__('Col order', 'awp')}
+					title={__('Col order', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -359,7 +359,7 @@ const ColOrderEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xxl"
+								label={__('xxl', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.orderxxl}
 								type="number"

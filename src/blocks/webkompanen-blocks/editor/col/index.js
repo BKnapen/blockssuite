@@ -79,7 +79,7 @@ const ColEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Col instellingen', 'awp')}
+			title={__('Col instellingen', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -87,7 +87,7 @@ const ColEdit = (props)=> {
 			>
 				<div className="col-4">
 					<InputControl
-						label="xs"
+						label={__('xs', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.colxs}
 						type="number"
@@ -103,7 +103,7 @@ const ColEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="sm"
+						label={__('sm', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.colsm}
 						type="number"
@@ -119,7 +119,7 @@ const ColEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="md"
+						label={__('md', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.colmd}
 						type="number"
@@ -135,7 +135,7 @@ const ColEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="lg"
+						label={__('lg', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.collg}
 						type="number"
@@ -151,7 +151,7 @@ const ColEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="xl"
+						label={__('xl', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.colxl}
 						type="number"
@@ -167,7 +167,7 @@ const ColEdit = (props)=> {
 				</div>
 				<div className="col-4">
 					<InputControl
-						label="xxl"
+						label={__('xxl', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.colxxl}
 						type="number"
@@ -189,7 +189,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -199,7 +199,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xs"
+								label={__('xs', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.colxs}
 								type="number"
@@ -215,8 +215,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col xs auto?"
-								help={ attributes.colautoxs ? 'Yes.' : 'No.' }
+								label={__('Col xs auto?', 'webkompanen')}
+								help={ attributes.colautoxs ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautoxs }
 								onChange={ 
 									(e) => {
@@ -235,7 +235,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -245,7 +245,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="sm"
+								label={__('sm', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.colsm}
 								type="number"
@@ -261,8 +261,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col sm auto?"
-								help={ attributes.colautosm ? 'Yes.' : 'No.' }
+								label={__('Col sm auto?', 'webkompanen')}
+								help={ attributes.colautosm ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautosm }
 								onChange={ 
 									(e) => {
@@ -281,7 +281,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -291,7 +291,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="md"
+								label={__('md', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.colmd}
 								type="number"
@@ -307,8 +307,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col md auto?"
-								help={ attributes.colautomd ? 'Yes.' : 'No.' }
+								label={__('Col md auto?', 'webkompanen')}
+								help={ attributes.colautomd ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautomd }
 								onChange={ 
 									(e) => {
@@ -327,7 +327,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -337,7 +337,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="lg"
+								label={__('lg', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.collg}
 								type="number"
@@ -353,8 +353,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col lg auto?"
-								help={ attributes.colautolg ? 'Yes.' : 'No.' }
+								label={__('Col lg auto?', 'webkompanen')}
+								help={ attributes.colautolg ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautolg }
 								onChange={ 
 									(e) => {
@@ -373,7 +373,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -383,7 +383,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xl"
+								label={__('xl', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.colxl}
 								type="number"
@@ -399,8 +399,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col xl auto?"
-								help={ attributes.colautoxl ? 'Yes.' : 'No.' }
+								label={__('Col xl auto?', 'webkompanen')}
+								help={ attributes.colautoxl ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautoxl }
 								onChange={ 
 									(e) => {
@@ -419,7 +419,7 @@ const ColEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&
 				<PanelBody
-					title={__('Col opties', 'awp')}
+					title={__('Col opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -429,7 +429,7 @@ const ColEdit = (props)=> {
 							className="col-12"
 						>
 							<InputControl
-								label="xxl"
+								label={__('xxl', 'webkompanen')}
 								labelPosition="top"
 								value={attributes.colxxl}
 								type="number"
@@ -445,8 +445,8 @@ const ColEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Col xxl auto?"
-								help={ attributes.colautoxxl ? 'Yes.' : 'No.' }
+								label={__('Col xxl auto?', 'webkompanen')}
+								help={ attributes.colautoxxl ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.colautoxxl }
 								onChange={ 
 									(e) => {

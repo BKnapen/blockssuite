@@ -150,7 +150,7 @@ const labelEdit = (props) => {
 			templateLock: false
 	}
     );
-	console.log('attributes.content')
+	//console.log('attributes.content')
 	//console.log(attributes.content.textContent)
 	return(
 		<>	

@@ -120,9 +120,6 @@ function ButtonLinkEdit( props ) {
 	const buttonid = attributes.buttonid ? attributes.buttonid : ''
 
 	const blockID = buttonid == '' ? null : buttonid
-	
-	console.log('buttonid')
-	console.log(buttonid)
 
 	let blockClasses = 'btn btn-'+btnoutline+''+btncolor+'';
 
@@ -148,7 +145,7 @@ function ButtonLinkEdit( props ) {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ blockID }
 						type="text"
@@ -162,7 +159,7 @@ function ButtonLinkEdit( props ) {
 						}
 					/>
 					<InputControl
-						label="Classes"
+						label={__('Classes', 'webkompanen')}
 						labelPosition="top"
 						value={ classes }
 						type="text"
@@ -176,7 +173,7 @@ function ButtonLinkEdit( props ) {
 						}
 					/>
 					<SelectControl
-						label={ __( 'Button size' ) }
+						label={ __( 'Button size', 'webkompanen' ) }
 						value={ attributes.buttonsize } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextvalue ) => {
@@ -186,16 +183,16 @@ function ButtonLinkEdit( props ) {
 							}
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'btn-sm', label: 'btn-sm' },
-							{ value: 'btn-lg', label: 'btn-lg' }
+							{ value: null, label: __('', 'webkompanen' ) },
+							{ value: 'btn-sm', label: __('btn-sm', 'webkompanen' ) },
+							{ value: 'btn-lg', label: __('btn-lg', 'webkompanen' ) }
 						] }
 					/>
 					<PositionEdit 
 						props={props}
 					/>
 					<PanelBody
-						title={__('Button kleur', 'awp')}
+						title={__('Button kleur', 'webkompanen')}
 						initialOpen={false}
 					>
 					<ColorPalette
@@ -214,7 +211,7 @@ function ButtonLinkEdit( props ) {
 					/>
 					</PanelBody>
 					<PanelBody
-						title={__('Tekst kleur', 'awp')}
+						title={__('Tekst kleur', 'webkompanen')}
 						initialOpen={false}
 					>
 					<ColorPalette
@@ -238,7 +235,7 @@ function ButtonLinkEdit( props ) {
 				<Toolbar>
 					<div className='testje'>
 					<ToggleControl
-						label="Outline button"
+						label={__('Outline button', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.isOutline }
 						onChange={ 
@@ -258,7 +255,7 @@ function ButtonLinkEdit( props ) {
 					/>
 					</div>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 

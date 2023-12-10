@@ -150,7 +150,7 @@ const sectionEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.id }
 						type="text"

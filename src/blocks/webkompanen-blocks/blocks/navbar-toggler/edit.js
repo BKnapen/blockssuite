@@ -163,11 +163,11 @@ const sectionEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>	
 					<PanelBody
-						title={__('ID & Classes', 'awp')}
+						title={__('ID & Classes', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="ID"
+							label={__('ID', 'webkompanen')}
 							labelPosition="top"
 							value={ blockid }
 							type="text"
@@ -181,7 +181,7 @@ const sectionEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="Classes"
+							label={__('Classes', 'webkompanen')}
 							labelPosition="top"
 							value={ classes }
 							type="text"
@@ -196,11 +196,11 @@ const sectionEdit = (props) => {
 						/>
 					</PanelBody>
 					<PanelBody
-						title={__('Z-index', 'awp')}
+						title={__('Z-index', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Z-index"
+							label={__('Z-index', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.zindex }
 							type="number"
@@ -232,11 +232,11 @@ const sectionEdit = (props) => {
 						/>	
 					</PanelBody>
 					<PanelBody
-						title={__('Data bs toggle', 'awp')}
+						title={__('Data bs toggle', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Name"
+							label={__('Name', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataBsToggle }
 							type="text"
@@ -251,11 +251,11 @@ const sectionEdit = (props) => {
 						/>
 					</PanelBody>
 					<PanelBody
-						title={__('Data bs target', 'awp')}
+						title={__('Data bs target', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Name"
+							label={__('Target', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.dataBsTarget }
 							type="text"
@@ -270,11 +270,11 @@ const sectionEdit = (props) => {
 						/>
 					</PanelBody>
 					<PanelBody
-						title={__('Aria controls', 'awp')}
+						title={__('Aria controls', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Name"
+							label={__('Aria controls', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.ariaControls }
 							type="text"
@@ -289,11 +289,11 @@ const sectionEdit = (props) => {
 						/>
 					</PanelBody>
 					<PanelBody
-						title={__('Aria label', 'awp')}
+						title={__('Aria label', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Name"
+							label={__('Aria label', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.ariaLabel }
 							type="text"

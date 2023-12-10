@@ -147,18 +147,18 @@ const siteTitleEdit = (props) => {
 	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	
 					/*<IconButton
-						label="My very own custom button"
+						label={__('My very own custom button', 'webkompanen')}
 						icon="edit"
 						className="my-custom-button"
 						onClick={() => 'pressed button'}
 					/>
             		<ToolbarGroup>
-                		<ToolbarButton icon={ paragraph } label="Paragraph" />
+                		<ToolbarButton icon={ paragraph } label={__('Paragraph', 'webkompanen')} />
             		</ToolbarGroup>
             		<ToolbarGroup>
-                		<ToolbarButton icon={ formatBold } label="Bold" />
-                		<ToolbarButton icon={ formatItalic } label="Italic" />
-                		<ToolbarButton icon={ link } label="Link" />
+                		<ToolbarButton icon={ formatBold } label={__('Bold', 'webkompanen')} />
+                		<ToolbarButton icon={ formatItalic } label={__('Italic', 'webkompanen')} />
+                		<ToolbarButton icon={ link } label={__('Link', 'webkompanen')} />
             		</ToolbarGroup>*/
 	
 	return(
@@ -166,11 +166,11 @@ const siteTitleEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<PanelBody
-						title={__('AOS', 'awp')}
+						title={__('AOS', 'webkompanen')}
 						initialOpen={false}
 					>
 						<SelectControl
-							label={ __( 'AOS' ) }
+							label={ __( 'AOS', 'webkompanen' ) }
 							value={ attributes.dataaos } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -184,36 +184,36 @@ const siteTitleEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'fade-up', label: 'Fade up' },
-								{ value: 'fade-down', label: 'Fade down' },
-								{ value: 'fade-right', label: 'Fade right' },
-								{ value: 'fade-left', label: 'Fade left' },
-								{ value: 'fade-up-right', label: 'Fade up right' },
-								{ value: 'fade-up-left', label: 'Fade up left' },
-								{ value: 'fade-down-right', label: 'Fade down right' },
-								{ value: 'slide-up', label: 'Slide up' },
-								{ value: 'slide-down', label: 'Slide down' },
-								{ value: 'slide-right', label: 'Slide right' },
-								{ value: 'slide-left', label: 'Slide left' },
-								{ value: 'flip-left', label: 'Flip left' },
-								{ value: 'flip-right', label: 'Flip right' },
-								{ value: 'flip-up', label: 'Flip up' },
-								{ value: 'flip-down', label: 'Flip down' },
-								{ value: 'zoom-in', label: 'Zoom in' },
-								{ value: 'zoom-in-up', label: 'Zoom in up' },
-								{ value: 'zoom-in-down', label: 'Zoom in down' },
-								{ value: 'zoom-in-left', label: 'Zoom in left' },
-								{ value: 'zoom-in-right', label: 'Zoom in right' },
-								{ value: 'zoom-out', label: 'Zoom out' },
-								{ value: 'zoom-out-up', label: 'Zoom out up' },
-								{ value: 'zoom-out-down', label: 'Zoom out down' },
-								{ value: 'zoom-out-right', label: 'Zoom out right' },
-								{ value: 'zoom-out-left', label: 'Zoom out left' }
+								{ value: null, label: __('', 'webkompanen' ) },
+								{ value: 'fade-up', label: __('Fade up', 'webkompanen') },
+								{ value: 'fade-down', label: __('Fade down', 'webkompanen') },
+								{ value: 'fade-right', label: __('Fade right', 'webkompanen') },
+								{ value: 'fade-left', label: __('Fade left', 'webkompanen') },
+								{ value: 'fade-up-right', label: __('Fade up right', 'webkompanen') },
+								{ value: 'fade-up-left', label: __('Fade up left', 'webkompanen') },
+								{ value: 'fade-down-right', label: __('Fade down right', 'webkompanen') },
+								{ value: 'slide-up', label: __('Slide up', 'webkompanen') },
+								{ value: 'slide-down', label: __('Slide down', 'webkompanen') },
+								{ value: 'slide-right', label: __('Slide right', 'webkompanen') },
+								{ value: 'slide-left', label: __('Slide left', 'webkompanen') },
+								{ value: 'flip-left', label: __('Flip left', 'webkompanen') },
+								{ value: 'flip-right', label: __('Flip right', 'webkompanen') },
+								{ value: 'flip-up', label: __('Flip up', 'webkompanen') },
+								{ value: 'flip-down', label: __('Flip down', 'webkompanen') },
+								{ value: 'zoom-in', label: __('Zoom in', 'webkompanen') },
+								{ value: 'zoom-in-up', label: __('Zoom in up', 'webkompanen') },
+								{ value: 'zoom-in-down', label: __('Zoom in down', 'webkompanen') },
+								{ value: 'zoom-in-left', label: __('Zoom in left', 'webkompanen') },
+								{ value: 'zoom-in-right', label: __('Zoom in right', 'webkompanen') },
+								{ value: 'zoom-out', label: __('Zoom out', 'webkompanen') },
+								{ value: 'zoom-out-up', label: __('Zoom out up', 'webkompanen') },
+								{ value: 'zoom-out-down', label: __('Zoom out down', 'webkompanen') },
+								{ value: 'zoom-out-right', label: __('Zoom out right', 'webkompanen') },
+								{ value: 'zoom-out-left', label: __('Zoom out left', 'webkompanen') }
 							] }
 						/>
 						<SelectControl
-							label={ __( 'AOS easing' ) }
+							label={ __( 'AOS easing', 'webkompanen' ) }
 							value={ attributes.dataaos } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -227,31 +227,31 @@ const siteTitleEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'linear', label: 'Linear' },
-								{ value: 'ease', label: 'Ease' },
-								{ value: 'ease-in', label: 'Ease in' },
-								{ value: 'ease-out', label: 'Ease out' },
-								{ value: 'ease-in-out', label: 'Ease in out' },
-								{ value: 'ease-in-back', label: 'Ease in back' },
-								{ value: 'ease-out-back', label: 'Ease out back' },
-								{ value: 'ease-in-out-back', label: 'Ease in out back' },
-								{ value: 'ease-in-sine', label: 'Ease in sine' },
-								{ value: 'ease-out-sine', label: 'Ease out sine' },
-								{ value: 'ease-in-out-sine', label: 'Ease in out sine' },
-								{ value: 'ease-in-quad', label: 'Ease in quad' },
-								{ value: 'ease-out-quad', label: 'Ease out quad' },
-								{ value: 'ease-in-out-quad', label: 'Ease in out quad' },
-								{ value: 'ease-in-cubic', label: 'Ease in cubic' },
-								{ value: 'ease-out-cubic', label: 'Ease out cubic' },
-								{ value: 'ease-in-out-cubic', label: 'Ease in out cubic' },
-								{ value: 'ease-in-quart', label: 'Ease in quart' },
-								{ value: 'ease-out-quart', label: 'Ease out quart' },
-								{ value: 'ease-in-out-quart', label: 'Ease in out quart' },
+								{ value: null, label: __('', 'webkompanen' ) },
+								{ value: 'linear', label: __('Linear', 'webkompanen') },
+								{ value: 'ease', label: __('Ease', 'webkompanen') },
+								{ value: 'ease-in', label: __('Ease in', 'webkompanen') },
+								{ value: 'ease-out', label: __('Ease out', 'webkompanen') },
+								{ value: 'ease-in-out', label: __('Ease in out', 'webkompanen') },
+								{ value: 'ease-in-back', label: __('Ease in back', 'webkompanen') },
+								{ value: 'ease-out-back', label: __('Ease out back', 'webkompanen') },
+								{ value: 'ease-in-out-back', label: __('Ease in out back', 'webkompanen') },
+								{ value: 'ease-in-sine', label: __('Ease in sine', 'webkompanen') },
+								{ value: 'ease-out-sine', label: __('Ease out sine', 'webkompanen') },
+								{ value: 'ease-in-out-sine', label: __('Ease in out sine', 'webkompanen') },
+								{ value: 'ease-in-quad', label: __('Ease in quad', 'webkompanen') },
+								{ value: 'ease-out-quad', label: __('Ease out quad', 'webkompanen') },
+								{ value: 'ease-in-out-quad', label: __('Ease in out quad', 'webkompanen') },
+								{ value: 'ease-in-cubic', label: __('Ease in cubic', 'webkompanen') },
+								{ value: 'ease-out-cubic', label: __('Ease out cubic', 'webkompanen') },
+								{ value: 'ease-in-out-cubic', label: __('Ease in out cubic', 'webkompanen') },
+								{ value: 'ease-in-quart', label: __('Ease in quart', 'webkompanen') },
+								{ value: 'ease-out-quart', label: __('Ease out quart', 'webkompanen') },
+								{ value: 'ease-in-out-quart', label: __('Ease in out quart', 'webkompanen') },
 							] }
 						/>
 						<SelectControl
-							label={ __( 'AOS easing anchor placement' ) }
+							label={ __( 'AOS easing anchor placement', 'webkompanen' ) }
 							value={ attributes.dataaosanchorplacement } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
@@ -265,21 +265,21 @@ const siteTitleEdit = (props) => {
 							}
 						}
 							options={ [
-								{ value: null, label: '' },
-								{ value: 'top-top', label: 'Top top' },
-								{ value: 'center-top', label: 'Center top' },
-								{ value: 'bottom-top', label: 'Bottom top' },
-								{ value: 'top-center', label: 'Top center' },
-								{ value: 'center-center', label: 'Center center' },
-								{ value: 'bottom-center', label: 'Bottom center' },
-								{ value: 'top-bottom', label: 'Top bottom' },
-								{ value: 'center-bottom', label: 'Center bottom' },
-								{ value: 'bottom-bottom', label: 'Bottom bottom' }
+								{ value: null, label: __('', 'webkompanen' ) },
+								{ value: 'top-top', label: __('Top top', 'webkompanen' ) },
+								{ value: 'center-top', label: __('Center top', 'webkompanen' ) },
+								{ value: 'bottom-top', label: __('Bottom top', 'webkompanen' ) },
+								{ value: 'top-center', label: __('Top center', 'webkompanen' ) },
+								{ value: 'center-center', label: __('Center center', 'webkompanen' ) },
+								{ value: 'bottom-center', label: __('Bottom center', 'webkompanen' ) },
+								{ value: 'top-bottom', label: __('Top bottom', 'webkompanen' ) },
+								{ value: 'center-bottom', label: __('Center bottom', 'webkompanen' ) },
+								{ value: 'bottom-bottom', label: __('Bottom bottom', 'webkompanen' ) }
 							] }
 						/>
 						<ToggleControl
-							label="AOS once"
-							help={ attributes.dataaosonce ? 'Yes.' : 'No.' }
+							label={ __( 'AOS once', 'webkompanen' ) }
+							help={ attributes.dataaosonce ? __('Yes.', 'webkompanen' ) : __('No.', 'webkompanen' ) }
 							checked={ attributes.dataaosonce }
 							onChange={ 
 								(e) => {
@@ -290,7 +290,7 @@ const siteTitleEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS anchor"
+							label={ __( 'AOS anchor', 'webkompanen' ) }
 							labelPosition="top"
 							value={ attributes.dataaosanchor }
 							type="text"
@@ -304,7 +304,7 @@ const siteTitleEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS Duration"
+							label={ __( 'AOS Duration', 'webkompanen' ) }
 							labelPosition="top"
 							value={ attributes.dataaosduration }
 							type="number"
@@ -318,7 +318,7 @@ const siteTitleEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS delay"
+							label={ __( 'AOS delay', 'webkompanen' ) }
 							labelPosition="top"
 							value={ attributes.dataaosdelay }
 							type="number"
@@ -332,7 +332,7 @@ const siteTitleEdit = (props) => {
 							}
 						/>
 						<InputControl
-							label="AOS Offset"
+							label={ __( 'AOS Offset', 'webkompanen' ) }
 							labelPosition="top"
 							value={ attributes.dataaosoffset }
 							type="number"
@@ -356,7 +356,7 @@ const siteTitleEdit = (props) => {
 						props={props}
 					/>
 					<SelectControl
-						label={ __( 'Font size' ) }
+						label={ __( 'Font size', 'webkompanen' ) }
 						value={ attributes.fs } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -366,17 +366,17 @@ const siteTitleEdit = (props) => {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'fs-1', label: 'font size 1' },
-							{ value: 'fs-2', label: 'font size 2' },
-							{ value: 'fs-3', label: 'font size 3' },
-							{ value: 'fs-4', label: 'font size 4' },
-							{ value: 'fs-5', label: 'font size 5' },
-							{ value: 'fs-6', label: 'font size 6' }
+							{ value: null, label: __('', 'webkompanen' ) },
+							{ value: 'fs-1', label: __('font size 1', 'webkompanen' ) },
+							{ value: 'fs-2', label: __('font size 2', 'webkompanen' ) },
+							{ value: 'fs-3', label: __('font size 3', 'webkompanen' ) },
+							{ value: 'fs-4', label: __('font size 4', 'webkompanen' ) },
+							{ value: 'fs-5', label: __('font size 5', 'webkompanen' ) },
+							{ value: 'fs-6', label: __('font size 6', 'webkompanen' ) }
 						] }
 					/>	
 					<SelectControl
-						label={ __( 'Font weight and italics' ) }
+						label={ __( 'Font weight and italics', 'webkompanen' ) }
 						value={ attributes.fw } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -386,24 +386,24 @@ const siteTitleEdit = (props) => {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'fw-bold', label: 'Bold text' },
-							{ value: 'fw-bolder', label: 'Bolder weight text' },
-							{ value: 'fw-semibold', label: 'Semibold weight text' },
-							{ value: 'fw-normal', label: 'Normal weight text' },
-							{ value: 'fw-light', label: 'Light weight text' },
-							{ value: 'fw-lighter', label: 'Lighter weight text' },
-							{ value: 'fst-italic', label: 'Italic text' },
-							{ value: 'fst-normal', label: 'Text with normal font style' }
+							{ value: null, label: __('', 'webkompanen' ) },
+							{ value: 'fw-bold', label: __('Bold text', 'webkompanen' ) },
+							{ value: 'fw-bolder', label: __('Bolder weight text', 'webkompanen' ) },
+							{ value: 'fw-semibold', label: __('Semibold weight text', 'webkompanen' ) },
+							{ value: 'fw-normal', label: __('Normal weight text', 'webkompanen' ) },
+							{ value: 'fw-light', label: __('Light weight text', 'webkompanen' ) },
+							{ value: 'fw-lighter', label: __('Lighter weight text', 'webkompanen' ) },
+							{ value: 'fst-italic', label: __('Italic text', 'webkompanen' ) },
+							{ value: 'fst-normal', label: __('Text with normal font style', 'webkompanen' ) }
 						] }
 					/>		
 					<PanelBody
-						title={__('Tekst', 'awp')}
+						title={__('Tekst', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div>
 							<TextareaControl
-								label="Text"
+								label={ __( 'Text', 'webkompanen' ) }
 								rows={5}
 								value={ attributes.content }
 								onChange={ 
@@ -432,7 +432,7 @@ const siteTitleEdit = (props) => {
 							}
 		
                         	toggleProps={ toolbarItemHTMLProps }
-                        	label={ 'Heading' }
+                        	label={ __('Heading', 'webkompanen') }
                         	controls={ [					
 								{
 									title: '',
@@ -564,7 +564,7 @@ const siteTitleEdit = (props) => {
 							}
 		
                         	toggleProps={ toolbarItemHTMLProps }
-                        	label={ 'Text align' }
+                        	label={ __('Text align', 'webkompanen') }
                         	controls={ [					
 								{
 									title: '',

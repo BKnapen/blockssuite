@@ -26,18 +26,24 @@ import {
 	withColors,
 	useInnerBlocksProps,
 	getColorClassName,
+	getColorObjectByColorValue,
 	store as blockEditorStore
 	
 } from '@wordpress/block-editor';
 
 import {
-	link
+	link,
+	Icon
 } from '@wordpress/icons';
 
 import {
 	useState,
 	Fragment
 } from '@wordpress/element';
+
+import {
+	openai as openai,
+} from '../../icons'
 
 import {
 	TextareaControl,
@@ -51,7 +57,10 @@ import {
 	IconButton,
 	Button,
 	ResponsiveWrapper,
-	Toolbar
+	Toolbar,
+	ColorPalette,
+	__experimentalInputControl as InputControl,
+	__experimentalSpacer as Spacer
 } from '@wordpress/components';
 
 /* Utilities */
@@ -76,8 +85,15 @@ import PaddingEdit from '../../editor/padding';
 import DisplayEdit from '../../editor/display';
 import PositionEdit from '../../editor/position';
 
+import { Colors } from '../../utilities/colors';
+
 /*function HeaderEdit( props ) {*/
 const paragraphEdit = (props) => {
+	const [ outputChatGPT, setOutputChatGPT] = useState('');
+	const [ promtValue, setPromtValue ] = useState( '' );
+	const [ keyWordsColor, setKeyWordsColor ] = useState( null );
+	const [ inProgress, setInProgress ] = useState( false );
+
 	const {
 		attributes,
 		setAttributes,
@@ -89,13 +105,19 @@ const paragraphEdit = (props) => {
 	const ALLOWED_BLOCKS = [ 
 		'webkompanen/row'
 	]
+
+	const colors = new Colors;
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
 		select( blockEditorStore ).getBlocks( clientId ).length > 0,
 		[ clientId ]
 	);
+
+	const chatGPTAPIKEY = wp.data.select( 'core' )
 	
-	const formattypes = wp.data.select( 'core/rich-text' ).getFormatTypes();
+	const siteinfo = useSelect( ( select ) =>
+		select('core').getSite()
+	);
 	
 	const margin = new Margin(props)
 	const negativemargin = new NegativeMargin(props)
@@ -131,6 +153,118 @@ const paragraphEdit = (props) => {
 
 	
 	const blockProps = useBlockProps( { className: blockClasses } );
+
+	let controller = null; // Store the AbortController instance
+
+	const generate = async () => {
+		console.log('promtValue')
+		console.log(promtValue)
+		console.log(siteinfo.chatGPTAPIKEY)
+    	// Create a new AbortController instance
+		//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
+  		controller = new AbortController();
+  		const signal = controller.signal;
+		//const resultText = document.getElementById('results');
+		const promtText = document.getElementById('promt');
+		
+		let output = ''; // Store the AbortController instance
+		//gpt-3.5-turbo
+		//ggpt-4	$0.03 / 1K tokens	$0.06 / 1K tokens
+		//gpt-4-32k	$0.06 / 1K tokens	$0.12 / 1K tokens
+		//gpt-3.5-turbo-1106	$0.0010 / 1K tokens	$0.0020 / 1K tokens
+		//gpt-3.5-turbo-instruct	$0.0015 / 1K tokens	$0.0020 / 1K tokens
+
+		//zet belangrijke zoekwoorden woorden in  een html span element met classnaam color-btn keyWordsColor
+    	
+		try {
+  			const response = await fetch(
+  				'https://api.openai.com/v1/chat/completions',{
+        			headers:{
+            			'Content-Type': 'application/json',
+                		Authorization: 'Bearer '+siteinfo.chatGPTAPIKEY+'',
+            		},
+            		method: 'POST',
+            		body: JSON.stringify({
+            			model: 'gpt-4',
+          				messages: [
+                			{
+                    			'role': 'user',
+                				'content': keyWordsColor ? ''+promtValue+' ' + __('put keywords in an html span element with class name', 'webkompanen') + ' color-btn text-'+keyWordsColor+'': ''+promtValue+''
+                   			}
+                		],
+          				temperature: 0.75,
+          				top_p: 0.95,
+          				stream: true
+        			}),
+                    signal
+    			}
+ 			)
+            
+            //const data = await response.json();
+            
+            //resultText.innerText = data.choices[0].message.content;
+            
+            // Read the response as a stream of data
+    		const reader = response.body.getReader();
+    		const decoder = new TextDecoder("utf-8");
+    		//resultText.innerText = '';
+			/*setAttributes( { 
+				content: '' 
+			} )*/
+
+    		while (true) {
+      			const { done, value } = await reader.read();
+      			if (done) {
+					//console.log('done')
+					//console.log('output')
+					//console.log(output)
+					setOutputChatGPT('');
+					setInProgress(false)
+					setKeyWordsColor(null)
+					setPromtValue('')
+					setAttributes( { 
+						content: output.replace(/\n/g, '<br/>')
+					} ) 
+        			break;
+      			}
+      			
+                // Massage and parse the chunk of data
+      			const chunk = decoder.decode(value);
+      			const lines = chunk.split("\n");
+      			const parsedLines = lines
+        		.map((line) => line.replace(/^data: /, "").trim()) // Remove the "data: " prefix
+        		.filter((line) => line !== "" && line !== "[DONE]") // Remove empty lines and "[DONE]"
+        		.map((line) => JSON.parse(line)); // Parse the JSON string
+
+      			for (const parsedLine of parsedLines) {
+        			const { choices } = parsedLine;
+        			const { delta } = choices[0];
+        			const { content } = delta;
+        			// Update the UI with the new content
+        			if (content) {
+						//resultText.innerText += content;
+						setOutputChatGPT((currentChatGPT) => currentChatGPT + content.replace(/\n/g, '<br/>'));
+						output += content
+						/*setOutputChatGPT(
+							outputChatGPT + content
+						)*/
+        			}
+      			}
+    		}
+        }
+       	catch (error) {
+        	if (signal.aborted) {
+					setInProgress(false)
+            }
+            else {
+      			console.error("Error:", error);
+					setInProgress(false)
+    		}
+        }
+        finally {
+    		controller = null; // Reset the AbortController instance
+  		}
+    }
 	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	
 	return(
@@ -144,7 +278,81 @@ const paragraphEdit = (props) => {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Typography', 'awp')}
+						title={__('Chat GPT', 'webkompanen')}
+						initialOpen={false}
+					>
+						<Spacer
+							marginBottom={3}
+						>
+							<TextareaControl
+								label={__('Promt', 'webkompanen')}
+								labelPosition="top"
+								rows={5}
+								value={ promtValue }
+								onChange={
+									( nextValue ) => {
+										setPromtValue( nextValue ?? '' )
+									}
+								}
+							/>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<Button
+								isPrimary
+								onClick={ 
+									() => {
+										setOutputChatGPT('')
+										setInProgress(true)
+										generate()
+									}
+								}
+							>
+								{!inProgress &&
+									<>
+										<Icon 
+											icon={ openai } 
+											className='me-1'
+										/>
+										{__('Generate text', 'webkompanen' )}
+									</>
+								}
+								{inProgress &&
+									<>
+										<i 
+											className="fa-solid fa-circle-notch fa-spin me-1"
+										>
+										</i>
+										{__('Text will be generate', 'webkompanen' )}
+									</>
+								}
+							</Button>
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							Key woorden kleur?
+						</Spacer>
+						<Spacer
+							marginBottom={3}
+						>
+							<ColorPalette
+								colors={ colors.get() }
+								value={ keyWordsColor ? 'var(--bs-'+keyWordsColor+')' : '' }
+								style={{width: "200px" }}
+								onChange={ 
+									( newColor ) => {
+										setKeyWordsColor( newColor ? getColorObjectByColorValue( colors.get(), newColor ).name : null )
+									} 
+								}
+								disableCustomColors={ true }
+								clearable={ true }
+							/>
+						</Spacer>
+					</PanelBody>
+					<PanelBody
+						title={__('Typography', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div 
@@ -152,7 +360,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Text alignment' ) }
+									label={ __( 'Text alignment', 'webkompanen' ) }
 									value={ attributes.textalignment } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -162,10 +370,10 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'text-start', label: __( 'Left' ) },
-										{ value: 'text-center', label: __( 'Center' ) },
-										{ value: 'text-right', label: __( 'Right' ) }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'text-start', label: __( 'Left', 'webkompanen' ) },
+										{ value: 'text-center', label: __( 'Center', 'webkompanen' ) },
+										{ value: 'text-end', label: __( 'Right', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -175,7 +383,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Text transform' ) }
+									label={ __( 'Text transform', 'webkompanen' ) }
 									value={ attributes.texttransform } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -185,10 +393,10 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'text-lowercase', label: 'Lowercase' },
-										{ value: 'text-uppercase', label: 'Uppercase' },
-										{ value: 'text-capitalize', label: 'Capitalize' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'text-lowercase', label: __('Lowercase', 'webkompanen' ) },
+										{ value: 'text-uppercase', label: __('Uppercase', 'webkompanen' ) },
+										{ value: 'text-capitalize', label: __('Capitalize', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -198,7 +406,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Font size' ) }
+									label={ __( 'Font size', 'webkompanen' ) }
 									value={ attributes.fs } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -208,13 +416,13 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 1, label: 'fs-1' },
-										{ value: 2, label: 'fs-2' },
-										{ value: 3, label: 'fs-3' },
-										{ value: 4, label: 'fs-4' },
-										{ value: 5, label: 'fs-5' },
-										{ value: 6, label: 'fs-6' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 1, label: __('fs-1', 'webkompanen' ) },
+										{ value: 2, label: __('fs-2', 'webkompanen' ) },
+										{ value: 3, label: __('fs-3', 'webkompanen' ) },
+										{ value: 4, label: __('fs-4', 'webkompanen' ) },
+										{ value: 5, label: __('fs-5', 'webkompanen' ) },
+										{ value: 6, label: __('fs-6', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -224,7 +432,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Font weight and italics' ) }
+									label={ __( 'Font weight and italics', 'webkompanen' ) }
 									value={ attributes.fw } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -234,15 +442,15 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'fw-bold', label: 'Bold text' },
-										{ value: 'fw-bolder', label: 'Bolder weight text' },
-										{ value: 'fw-semibold', label: 'Semibold weight text' },
-										{ value: 'fw-normal', label: 'Normal weight text' },
-										{ value: 'fw-light', label: 'Light weight text' },
-										{ value: 'fw-lighter', label: 'Lighter weight text' },
-										{ value: 'fst-italic', label: 'Italic text' },
-										{ value: 'fst-normal', label: 'Text with normal font style' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'fw-bold', label: __('Bold text', 'webkompanen' ) },
+										{ value: 'fw-bolder', label: __('Bolder weight text', 'webkompanen' ) },
+										{ value: 'fw-semibold', label: __('Semibold weight text', 'webkompanen' ) },
+										{ value: 'fw-normal', label: __('Normal weight text', 'webkompanen' ) },
+										{ value: 'fw-light', label: __('Light weight text', 'webkompanen' ) },
+										{ value: 'fw-lighter', label: __('Lighter weight text', 'webkompanen' ) },
+										{ value: 'fst-italic', label: __('Italic text', 'webkompanen' ) },
+										{ value: 'fst-normal', label: __('Text with normal font style', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -252,7 +460,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Line height' ) }
+									label={ __( 'Lineheight', 'webkompanen' ) }
 									value={ attributes.lh } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -262,11 +470,11 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'lh-1', label: 'Lineheight 1' },
-										{ value: 'lh-sm', label: 'Lineheight small' },
-										{ value: 'lh-base', label: 'Lineheight base' },
-										{ value: 'lh-lg', label: 'Lineheight large' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'lh-1', label: __('Lineheight 1', 'webkompanen' ) },
+										{ value: 'lh-sm', label: __('Lineheight small', 'webkompanen' ) },
+										{ value: 'lh-base', label: __('Lineheight base', 'webkompanen' ) },
+										{ value: 'lh-lg', label: __('Lineheight large', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -276,7 +484,7 @@ const paragraphEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Text decoration' ) }
+									label={ __( 'Text decoration', 'webkompanen' ) }
 									value={ attributes.textdecoration } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -286,10 +494,10 @@ const paragraphEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'text-textdecoration-underline', label: 'Underline' },
-										{ value: 'text-textdecoration-line-through', label: 'Line through' },
-										{ value: 'text-textdecoration-none', label: 'None' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'text-textdecoration-underline', label: __('Underline', 'webkompanen') },
+										{ value: 'text-textdecoration-line-through', label: __('Line through', 'webkompanen') },
+										{ value: 'text-textdecoration-none', label: __('None', 'webkompanen') }
 									] }
 								/>
 							</div>
@@ -299,12 +507,12 @@ const paragraphEdit = (props) => {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Tekst', 'awp')}
+						title={__('Text', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div>
 							<TextareaControl
-								label="Text"
+								label={__('Text', 'webkompanen')}
 								rows={5}
 								value={ attributes.content }
 								onChange={ 
@@ -318,7 +526,7 @@ const paragraphEdit = (props) => {
 						</div>
 					</PanelBody>
 					<PanelBody
-						title={__('Tekst', 'awp')}
+						title={__('Text', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div>
@@ -343,7 +551,7 @@ const paragraphEdit = (props) => {
 										// Content
 										var blockContent = block.attributes.content;
 
-										console.log(blockContent)
+										//console.log(blockContent)
 
 										var richTextContent = wp.richText.create({ 
 											text: blockContent,
@@ -351,7 +559,7 @@ const paragraphEdit = (props) => {
   											replacements: [],
 										});
 										
-										console.log(richTextContent)
+										//console.log(richTextContent)
 
 										richTextContent = wp.richText.applyFormat(
 											richTextContent, 
@@ -369,8 +577,8 @@ const paragraphEdit = (props) => {
 											selectionEnd.offset
 										)*/
 
-										console.log('richTextContent')
-										console.log(richTextContent)
+										//console.log('richTextContent')
+										//console.log(richTextContent)
 
 										var prepNewHTML = wp.richText.toHTMLString(
 											{ 
@@ -396,7 +604,7 @@ const paragraphEdit = (props) => {
 				{ ...blockProps }
 				//className="display-4"
                	tagName="p" // The tag here is the element output and editable in the admin
-               	value={ attributes.content } // Any existing content, either from the database or an attribute default
+               	value={ outputChatGPT != '' ? outputChatGPT : attributes.content } // Any existing content, either from the database or an attribute default
 				allowedFormats={ 
 					[ 
 						'core/italic', 
@@ -412,7 +620,7 @@ const paragraphEdit = (props) => {
 						content: newcontent 
 					} ) 
 				} // Store updated content as a block attribute
-               	placeholder={ __( 'Text...' ) } // Display this text before any content has been added by the user
+               	placeholder={ __( 'Text...', 'webkompanen' ) } // Display this text before any content has been added by the user
             />	
 		</>
 	)

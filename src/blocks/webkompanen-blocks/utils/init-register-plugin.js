@@ -17,7 +17,7 @@ export default function initPlugin( plugin ) {
 	}
 	const { settings, name } = plugin;
 	if (!getPlugin(name)) {
-		console.log(name)
+		//console.log(name)
 		return registerPlugin(
 			name, 
 			settings

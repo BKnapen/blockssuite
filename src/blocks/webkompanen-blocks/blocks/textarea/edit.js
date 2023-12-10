@@ -188,7 +188,7 @@ const inputEdit = (props) => {
 	const blockProps = useBlockProps( { className: 'form-control '+classes } );
 
 	
-	console.log(placeholder)
+	//console.log(placeholder)
 
 	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	const innerBlocksProps = useInnerBlocksProps(
@@ -222,7 +222,7 @@ const inputEdit = (props) => {
 								bottom: attributes.borders.bottom ? attributes.borders.bottom : null
 							}
 						}
-						label="Border"
+						label={__('Border', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -241,7 +241,7 @@ const inputEdit = (props) => {
 								bottom: attributes.rounded.bottom ? attributes.rounded.bottom : null
 							}
 						}
-						label="Rounded"
+						label={__('Rounded', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -252,7 +252,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ id }
 						type="text"
@@ -266,7 +266,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Name"
+						label={__('Name', 'webkompanen')}
 						labelPosition="top"
 						value={ name }
 						type="text"
@@ -280,7 +280,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Rows"
+						label={__('Rows', 'webkompanen')}
 						labelPosition="top"
 						value={ rows }
 						type="text"
@@ -294,7 +294,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Height"
+						label={__('Height', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.height }
 						type="number"
@@ -308,7 +308,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Value"
+						label={__('Value', 'webkompanen')}
 						labelPosition="top"
 						value={ value }
 						type="text"
@@ -322,7 +322,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Placeholder"
+						label={__('Placeholder', 'webkompanen')}
 						labelPosition="top"
 						value={ placeholder }
 						type="text"

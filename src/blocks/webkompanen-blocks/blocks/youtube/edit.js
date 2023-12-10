@@ -137,14 +137,14 @@ const youTubeEdit = (props) => {
 				{ 
 					attributes.youtubeid ? (
 						<div class="ratio ratio-16x9">
-  							<iframe src={`https://www.youtube.com/embed/${ attributes.youtubeid }?rel=0`} title="YouTube video" allowfullscreen></iframe>
+  							<iframe src={`https://www.youtube.com/embed/${ attributes.youtubeid }?rel=0`} title={__('YouTube video', 'webkompanen')} allowfullscreen></iframe>
 						</div> 
 					):(
 						<div class="ratio ratio-16x9">
   							<InputControl
 								value={ attributes.youtubeid }
 								type="text"
-								placeholder="Vul hier de YuTube ID in"
+								placeholder={__('Fill in YuTube video ID', 'webkompanen')}
 								isPressEnterToChange
 								onChange={ 
 									( nextValue ) => { 

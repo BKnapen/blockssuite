@@ -28,7 +28,7 @@ const EventMetaFields = () => {
         []
     );
 
-    console.log('postType');
+    //console.log('postType');
 
     const [ metadata, setMeta ] = useEntityProp( 'postType', postType, 'meta' );
 
@@ -105,10 +105,10 @@ const EventMetaFields = () => {
                 }
             )
 
-            console.log(artists)
+            //console.log(artists)
 
-            console.log('requestItem')
-            console.log(requestItem)
+            //console.log('requestItem')
+            //console.log(requestItem)
 
             //setMeta( { ...meta, event_performers: artists } );
 
@@ -158,10 +158,10 @@ const EventMetaFields = () => {
                 }
             )
 
-            console.log(artists)
+            //console.log(artists)
 
-            console.log('requestItem')
-            console.log(requestItem)
+            //console.log('requestItem')
+            //console.log(requestItem)
 
             //setMeta( { ...meta, event_performers: artists } );
 
@@ -213,7 +213,7 @@ const EventMetaFields = () => {
                 artistsoundcloud:''
             })
 
-            console.log(artists)
+            //console.log(artists)
 
             //setMeta( { ...meta, event_performers: artists } );
 
@@ -230,12 +230,12 @@ const EventMetaFields = () => {
     
     const LineupOutput = (props) =>{
 
-        console.log(event_performers)
-        console.log(metadata)
-        console.log(props)
-        console.log(props.artistPanel)
-        console.log('props.artistPanel')
-        console.log('props.focusField')
+        //console.log(event_performers)
+        //console.log(metadata)
+        //console.log(props)
+        //console.log(props.artistPanel)
+        //console.log('props.artistPanel')
+        //console.log('props.focusField')
         var lineup = [];
         if(event_performers){
             for(var i=0; i<event_performers.length; i++){
@@ -244,11 +244,11 @@ const EventMetaFields = () => {
                         name={`artist-panel-${i}`}
                         data-artist={i}
                         className={`artist-panel-${i}`}
-					    title={__('Artiest '+(i+1)+'', 'awp')}
+					    title={__('Artiest '+(i+1)+'', 'webkompanen')}
                         initialOpen={ artistPanel === i ? true : false }
                         onToggle={
                             (e)=>{
-                                console.log(e)
+                                //console.log(e)
                             }
                         }
 			        >
@@ -465,11 +465,11 @@ const EventMetaFields = () => {
         <>
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title="Event gegevens"
+            title={__('Event genamegevens', 'webkompanen')}
             className="custom-panel-1"
         >
             <TextControl
-                label="Naam"
+                label={__('', 'webkompanen')}
                 value={ event_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -480,7 +480,7 @@ const EventMetaFields = () => {
                 }
             />
             <DateTimePicker
-                label="Startdatum"
+                label={__('Start date', 'webkompanen')}
 	            currentDate={ event_start_date ? event_start_date : new Date() }
 	            onChange={ ( date ) => 
                     editPost( { 
@@ -494,11 +494,11 @@ const EventMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-2"
-            title="Event locatie gegevens"
+            title={__('Event locatie gegevens', 'webkompanen')}
             className="custom-panel-2"
         >
             <TextControl
-                label="Naam"
+                label={__('Venue', 'webkompanen')}
                 value={ event_location_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -509,7 +509,7 @@ const EventMetaFields = () => {
                 }
             />
             <TextControl
-                label="Website"
+                label={__('Venue URL', 'webkompanen')}
                 value={ event_location_same_as }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -520,7 +520,7 @@ const EventMetaFields = () => {
                 }
             />
             <TextControl
-                label="Adres"
+                label={__('Address', 'webkompanen')}
                 value={ event_location_address }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -533,11 +533,11 @@ const EventMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-3"
-            title="Kaart verkoop"
+            title={__('Kaart verkoop', 'webkompanen')}
             className="custom-panel-3"
         >
             <TextControl
-                label="Online voorverkoop"
+                label={__('Pre-sale URL', 'webkompanen')}
                 value={ event_ticket_url }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -548,7 +548,7 @@ const EventMetaFields = () => {
                 }
             />
             <TextControl
-                label="Prijs"
+                label={__('Price', 'webkompanen')}
                 value={ event_ticket_price }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -559,7 +559,7 @@ const EventMetaFields = () => {
                 }
             />
             <TextControl
-                label="Munteenheid/ valuta"
+                label={__('Currency/ valuta', 'webkompanen')}
                 value={ event_location_price_currency }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -572,7 +572,7 @@ const EventMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-4"
-            title="Lineup"
+            title={__('Lineup', 'webkompanen')}
             className="custom-panel-4"
         >
             <LineupOutput artistPanel={artistPanel} focusField={focusField} />

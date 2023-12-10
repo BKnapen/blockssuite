@@ -119,9 +119,9 @@ function ButtonLinkEdit( props ) {
 		select(blockEditorStore).getBlockAttributes( parent[0] )
 	);
 
-console.log('parentAttributes')
-console.log(parentAttributes)
-console.log(parent)
+//console.log('parentAttributes')
+//console.log(parentAttributes)
+//console.log(parent)
 
 	if(parentAttributes.dropdown){
 		parentAttributes.dropdown !== attributes.dropdowntoggle ? (
@@ -177,7 +177,7 @@ console.log(parent)
 			<Fragment>		
 				<InspectorControls>
 					<PanelBody
-						title={__('Typografie', 'awp')}
+						title={__('Typografie', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div 
@@ -195,13 +195,13 @@ console.log(parent)
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 1, label: 'fs-1' },
-										{ value: 2, label: 'fs-2' },
-										{ value: 3, label: 'fs-3' },
-										{ value: 4, label: 'fs-4' },
-										{ value: 5, label: 'fs-5' },
-										{ value: 6, label: 'fs-6' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 1, label: __('fs-1', 'webkompanen' ) },
+										{ value: 2, label: __('fs-2', 'webkompanen' ) },
+										{ value: 3, label: __('fs-3', 'webkompanen' ) },
+										{ value: 4, label: __('fs-4', 'webkompanen' ) },
+										{ value: 5, label: __('fs-5', 'webkompanen' ) },
+										{ value: 6, label: __('fs-6', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -221,15 +221,15 @@ console.log(parent)
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'fw-bold', label: 'Bold text' },
-										{ value: 'fw-bolder', label: 'Bolder weight text' },
-										{ value: 'fw-semibold', label: 'Semibold weight text' },
-										{ value: 'fw-normal', label: 'Normal weight text' },
-										{ value: 'fw-light', label: 'Light weight text' },
-										{ value: 'fw-lighter', label: 'Lighter weight text' },
-										{ value: 'fst-italic', label: 'Italic text' },
-										{ value: 'fst-normal', label: 'Text with normal font style' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'fw-bold', label: __('Bold text', 'webkompanen' ) },
+										{ value: 'fw-bolder', label: __('Bolder weight text', 'webkompanen' ) },
+										{ value: 'fw-semibold', label: __('Semibold weight text', 'webkompanen' ) },
+										{ value: 'fw-normal', label: __('Normal weight text', 'webkompanen' ) },
+										{ value: 'fw-light', label: __('Light weight text', 'webkompanen' ) },
+										{ value: 'fw-lighter', label: __('Lighter weight text', 'webkompanen' ) },
+										{ value: 'fst-italic', label: __('Italic text', 'webkompanen' ) },
+										{ value: 'fst-normal', label: __('Text with normal font style', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -245,7 +245,7 @@ console.log(parent)
 						props={props}
 					/>
 					<PanelBody
-						title={__('Button kleur', 'awp')}
+						title={__('Button kleur', 'webkompanen')}
 						initialOpen={false}
 					>
 					<ColorPalette
@@ -268,7 +268,7 @@ console.log(parent)
 			<BlockControls>
 				<Toolbar>
 					<ToggleControl
-						label="Outline button"
+						label={__('Outline button', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.isOutline }
 						onChange={ 
@@ -285,7 +285,7 @@ console.log(parent)
 						}
 					/>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 

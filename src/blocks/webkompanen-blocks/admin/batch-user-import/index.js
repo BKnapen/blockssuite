@@ -599,7 +599,7 @@ class AppBatchImport extends Component {
                             shouldCloseOnEsc
                             shouldCloseOnClickOutside
                             overlayClassName="my-extra-modal-overlay-class"
-                            title="Melding"
+                            title={__('Melding', 'webkompanen')}
                             onRequestClose={ e => this.setState({isopen : false}) }
                         >
                             <p>{this.state.modaltext}</p>
@@ -618,7 +618,7 @@ class AppBatchImport extends Component {
                     </h2>
                 </div>
                 <PanelBody 
-                    title={ __( 'Gebruikers importeren' ) } 
+                    title={ __( 'Gebruikers importeren', 'webkompanen' ) } 
                     initialOpen={ false }
                     onToggle={ 
                         ( e ) => {

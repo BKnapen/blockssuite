@@ -195,7 +195,7 @@ const carouselInnerEdit = (props) => {
 									marginBottom={3}
 								>
 								<InputControl
-									label="Carousel ID"
+									label={__('Carousel ID', 'webkompanen')}
 									labelPosition="top"
 									value={attributes.carousel}
 									type="text"
@@ -213,7 +213,7 @@ const carouselInnerEdit = (props) => {
 									marginBottom={3}
 								>
 								<InputControl
-									label="Custom classes"
+									label={__('Custom classes', 'webkompanen')}
 									labelPosition="top"
 									value={attributes.classes}
 									type="text"
@@ -231,8 +231,8 @@ const carouselInnerEdit = (props) => {
 									marginBottom={3}
 								>
 								<ToggleControl
-									label="Show carousel indicators?"
-									help={ attributes.showindicators ? 'Yes.' : 'No.' }
+									label={__('Show carousel indicators?', 'webkompanen')}
+									help={ attributes.showindicators ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 									checked={ attributes.showindicators }
 									onChange={ 
 										(e) => {
@@ -289,7 +289,7 @@ const carouselInnerEdit = (props) => {
 							marginBottom={3}
 						>
 						<InputControl
-							label="Carousel ID"
+							label={__('Carousel ID', 'webkompanen')}
 							labelPosition="top"
 							value={attributes.carousel}
 							type="text"
@@ -307,7 +307,7 @@ const carouselInnerEdit = (props) => {
 							marginBottom={3}
 						>
 						<InputControl
-							label="Custom classes"
+							label={__('Custom classes', 'webkompanen')}
 							labelPosition="top"
 							value={attributes.classes}
 							type="text"
@@ -325,8 +325,8 @@ const carouselInnerEdit = (props) => {
 							marginBottom={3}
 						>
 						<ToggleControl
-							label="Show carousel indicators?"
-							help={ attributes.showindicators ? 'Yes.' : 'No.' }
+							label={__('Show carousel indicators?', 'webkompanen')}
+							help={ attributes.showindicators ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 							checked={ attributes.showindicators }
 							onChange={ 
 								(e) => {

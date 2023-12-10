@@ -101,7 +101,7 @@ const VideoEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Video', 'awp')}
+			title={__('Video', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div>
@@ -122,7 +122,7 @@ const VideoEdit = (props)=> {
 										}
 									>
 										{
-											(attributes.videoUrl === '' ||  attributes.videoUrl) === undefined ? __('Choose an video', 'awp') : ''
+											(attributes.videoUrl === '' ||  attributes.videoUrl) === undefined ? __('Choose an video', 'webkompanen') : ''
 										}
 										{
 											(attributes.videoUrl !== '' && attributes.videoUrl !== undefined) ? ( 
@@ -148,7 +148,7 @@ const VideoEdit = (props)=> {
 						(attributes.videoUrl !== '' && attributes.videoUrl !== undefined) ? (
 							<MediaUploadCheck>
 								<MediaUpload
-									title={__('Replace video', 'awp')}
+									title={__('Replace video', 'webkompanen')}
 									value={attributes.videoId}
 									onSelect={onSelectMedia}
 									allowedTypes={['video']}
@@ -161,7 +161,7 @@ const VideoEdit = (props)=> {
 												isDefault 
 												//isLarge
 											>
-												{__('Replace video', 'awp')}
+												{__('Replace video', 'webkompanen')}
 											</Button>
 										)
 									}
@@ -172,7 +172,7 @@ const VideoEdit = (props)=> {
 					{
 						(attributes.videoUrl !== '' && attributes.videoUrl !== undefined) ? ( 
 							<MediaUploadCheck>
-								<Button onClick={removeMedia} isLink isDestructive>{__('Remove video', 'awp')}
+								<Button onClick={removeMedia} isLink isDestructive>{__('Remove video', 'webkompanen')}
 								</Button>
 							</MediaUploadCheck>
 						) : ''

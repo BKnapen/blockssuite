@@ -161,11 +161,11 @@ const sectionEdit = (props) => {
 			<Fragment>	
 				<InspectorControls>	
 					<PanelBody
-						title={__('Z-index', 'awp')}
+						title={__('Z-index', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Z-index"
+							label={__('Z-index', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.zindex }
 							type="number"

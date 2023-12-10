@@ -240,7 +240,7 @@ const inputEdit = (props) => {
 								bottom: attributes.borders.bottom ? attributes.borders.bottom : null
 							}
 						}
-						label="Border"
+						label={__('Border', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -259,7 +259,7 @@ const inputEdit = (props) => {
 								bottom: attributes.rounded.bottom ? attributes.rounded.bottom : null
 							}
 						}
-						label="Rounded"
+						label={__('Rounded', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -270,7 +270,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<SelectControl
-						label={ __( 'Type' ) }
+						label={ __( 'Type', 'webkompanen' ) }
 						value={ type } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -280,16 +280,16 @@ const inputEdit = (props) => {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'checkbox', label: 'Checkbox' },
-							{ value: 'radio', label: 'Radio' },
-							{ value: 'text', label: 'Text' },
-							{ value: 'number', label: 'Number' },
-							{ value: 'email', label: 'E-mail' }
+							{ value: null, label: __('', 'webkompanen' ) },
+							{ value: 'checkbox', label: __('Checkbox', 'webkompanen' ) },
+							{ value: 'radio', label: __('Radio', 'webkompanen' ) },
+							{ value: 'text', label: __('Text', 'webkompanen' ) },
+							{ value: 'number', label: __('Number', 'webkompanen' ) },
+							{ value: 'email', label: __('E-mail', 'webkompanen' ) }
 						] }
 					/>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ id }
 						type="text"
@@ -303,7 +303,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Name"
+						label={__('Name', 'webkompanen')}
 						labelPosition="top"
 						value={ name }
 						type="text"
@@ -317,7 +317,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Value"
+						label={__('Value', 'webkompanen')}
 						labelPosition="top"
 						value={ value }
 						type="text"
@@ -331,7 +331,7 @@ const inputEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Placeholder"
+						label={__('Placeholder', 'webkompanen')}
 						labelPosition="top"
 						value={ placeholder }
 						type="text"

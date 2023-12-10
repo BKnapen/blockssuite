@@ -83,7 +83,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -93,7 +93,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'xs' ) }
+                                label={ __( 'xs', 'webkompanen' ) }
                                 value={ attributes.justifycontentxs } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -105,13 +105,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>
@@ -121,7 +121,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -131,7 +131,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'sm' ) }
+                                label={ __( 'sm', 'webkompanen' ) }
                                 value={ attributes.justifycontentsm } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -143,13 +143,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>
@@ -159,7 +159,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -169,7 +169,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'md' ) }
+                                label={ __( 'md', 'webkompanen' ) }
                                 value={ attributes.justifycontentmd } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -181,13 +181,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>
@@ -197,7 +197,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -207,7 +207,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'lg' ) }
+                                label={ __( 'lg', 'webkompanen' ) }
                                 value={ attributes.justifycontentlg } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -219,13 +219,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>
@@ -235,7 +235,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -245,7 +245,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
 							<SelectControl
-                                label={ __( 'xl' ) }
+                                label={ __( 'xl', 'webkompanen' ) }
                                 value={ attributes.justifycontentxl } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -257,13 +257,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>
@@ -273,7 +273,7 @@ const JustifyEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&
 				<PanelBody
-					title={__('Justify content', 'awp')}
+					title={__('Justify content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -283,7 +283,7 @@ const JustifyEdit = (props)=> {
 							className="col-12"
 						>
 							<SelectControl
-                                label={ __( 'xxl' ) }
+                                label={ __( 'xxl', 'webkompanen' ) }
                                 value={ attributes.justifycontentxxl } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -295,13 +295,13 @@ const JustifyEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'between', label: 'Between' },
-                                    { value: 'around', label: 'Around' },
-                                    { value: 'evenly', label: 'Evenly' }
+                                    { value: null, label: __('', 'webkompanen') },
+                                    { value: 'start', label: __('Start', 'webkompanen') },
+                                    { value: 'end', label: __('End', 'webkompanen') },
+                                    { value: 'center', label: __('Center', 'webkompanen') },
+                                    { value: 'between', label: __('Between', 'webkompanen') },
+                                    { value: 'around', label: __('Around', 'webkompanen') },
+                                    { value: 'evenly', label: __('Evenly', 'webkompanen') }
                                 ] }
                             />
 						</div>

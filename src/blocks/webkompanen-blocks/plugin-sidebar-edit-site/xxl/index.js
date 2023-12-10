@@ -43,7 +43,7 @@ const SidebarXxl = () => {
       	<PluginSidebar 
 			name="bootstrap-xxl-settings" 
 			icon={ icon } 
-			title="Breakpoint Large (xxl) settings"
+			title={__('Breakpoint Large (xxl) settings', 'webkompanen')}
 		>
 			<p>Breakpoint Large (xxl):</p>
 			<div

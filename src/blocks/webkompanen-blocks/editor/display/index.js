@@ -80,7 +80,7 @@ const DisplayEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Display opties', 'awp')}
+			title={__('Display opties', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -88,7 +88,7 @@ const DisplayEdit = (props)=> {
 			>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'xs' ) }
+						label={ __( 'xs', 'webkompanen' ) }
 						value={ attributes.dxs } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -98,23 +98,23 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'sm' ) }
+						label={ __( 'sm', 'webkompanen' ) }
 						value={ attributes.dsm } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -124,23 +124,23 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'md' ) }
+						label={ __( 'md', 'webkompanen' ) }
 						value={ attributes.dmd } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -150,23 +150,23 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'lg' ) }
+						label={ __( 'lg', 'webkompanen' ) }
 						value={ attributes.dlg } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -176,23 +176,23 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'xl' ) }
+						label={ __( 'xl', 'webkompanen' ) }
 						value={ attributes.dxl } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -202,23 +202,23 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'xxl' ) }
+						label={ __( 'xxl', 'webkompanen' ) }
 						value={ attributes.dxxl } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -228,17 +228,17 @@ const DisplayEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'none', label: 'None' },
-							{ value: 'inline', label: 'Inline' },
-							{ value: 'inline-block', label: 'Inline block' },
-							{ value: 'block', label: 'Block' },
-							{ value: 'grid', label: 'Grid' },
-							{ value: 'table', label: 'Table' },
-							{ value: 'table-cell', label: 'Table cell' },
-							{ value: 'table-row', label: 'Table row' },
-							{ value: 'flex', label: 'Flex' },
-							{ value: 'inline-flex', label: 'Inline flex' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'none', label: __('None', 'webkompanen') },
+							{ value: 'inline', label: __('Inline', 'webkompanen') },
+							{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+							{ value: 'block', label: __('Block', 'webkompanen') },
+							{ value: 'grid', label: __('Grid', 'webkompanen') },
+							{ value: 'table', label: __('Table', 'webkompanen') },
+							{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+							{ value: 'table-row', label: __('Table row', 'webkompanen') },
+							{ value: 'flex', label: __('Flex', 'webkompanen') },
+							{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 						] }
 					/>
 				</div>
@@ -249,7 +249,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -257,7 +257,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'xs' ) }
+								label={ __( 'xs', 'webkompanen' ) }
 								value={ attributes.dxs } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -269,17 +269,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>
@@ -289,7 +289,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -297,7 +297,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'sm' ) }
+								label={ __( 'sm', 'webkompanen' ) }
 								value={ attributes.dsm } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -309,17 +309,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>
@@ -329,7 +329,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -337,7 +337,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'md' ) }
+								label={ __( 'md', 'webkompanen' ) }
 								value={ attributes.dmd } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -349,17 +349,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>
@@ -369,7 +369,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -377,7 +377,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'lg' ) }
+								label={ __( 'lg', 'webkompanen' ) }
 								value={ attributes.dlg } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -389,17 +389,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>
@@ -409,7 +409,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -417,7 +417,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'xl' ) }
+								label={ __( 'xl', 'webkompanen' ) }
 								value={ attributes.dxl } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -429,17 +429,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>
@@ -449,7 +449,7 @@ const DisplayEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Display opties', 'awp')}
+					title={__('Display opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -457,7 +457,7 @@ const DisplayEdit = (props)=> {
 					>
 						<div className="col-12">
 							<SelectControl
-								label={ __( 'xxl' ) }
+								label={ __( 'xxl', 'webkompanen' ) }
 								value={ attributes.dxxl } // e.g: value = [ 'a', 'c' ]
 								onChange={ 
 									( nextSelect ) => {
@@ -469,17 +469,17 @@ const DisplayEdit = (props)=> {
 									} 
 								}
 								options={ [
-									{ value: null, label: '' },
-									{ value: 'none', label: 'None' },
-									{ value: 'inline', label: 'Inline' },
-									{ value: 'inline-block', label: 'Inline block' },
-									{ value: 'block', label: 'Block' },
-									{ value: 'grid', label: 'Grid' },
-									{ value: 'table', label: 'Table' },
-									{ value: 'table-cell', label: 'Table cell' },
-									{ value: 'table-row', label: 'Table row' },
-									{ value: 'flex', label: 'Flex' },
-									{ value: 'inline-flex', label: 'Inline flex' }
+									{ value: null, label: __('', 'webkompanen') },
+									{ value: 'none', label: __('None', 'webkompanen') },
+									{ value: 'inline', label: __('Inline', 'webkompanen') },
+									{ value: 'inline-block', label: __('Inline block', 'webkompanen') },
+									{ value: 'block', label: __('Block', 'webkompanen') },
+									{ value: 'grid', label: __('Grid', 'webkompanen') },
+									{ value: 'table', label: __('Table', 'webkompanen') },
+									{ value: 'table-cell', label: __('Table cell', 'webkompanen') },
+									{ value: 'table-row', label: __('Table row', 'webkompanen') },
+									{ value: 'flex', label: __('Flex', 'webkompanen') },
+									{ value: 'inline-flex', label: __('Inline flex', 'webkompanen') }
 								] }
 							/>
 						</div>

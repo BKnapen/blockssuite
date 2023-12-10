@@ -82,7 +82,7 @@ const PaddingEdit = (props)=> {
 		{!breakpoint && 
 		<>
 		<PanelBody
-			title={__('Padding opties', 'awp')}
+			title={__('Padding opties', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -98,7 +98,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.pxs.bottom
 							} 
 						}
-						label="xs"
+						label={__('xs', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -119,7 +119,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.psm.bottom
 							} 
 						}
-						label="sm"
+						label={__('sm', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -140,7 +140,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.pmd.bottom
 							} 
 						}
-						label="md"
+						label={__('md', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -161,7 +161,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.plg.bottom
 							} 
 						}
-						label="lg"
+						label={__('lg', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -182,7 +182,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.pxl.bottom
 							} 
 						}
-						label="xl"
+						label={__('xl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -201,7 +201,7 @@ const PaddingEdit = (props)=> {
 								bottom: attributes.pxxl.bottom
 							}
 						}
-						label="xxl"
+						label={__('xxl', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {
@@ -219,7 +219,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Padding opties', 'awp')}
+					title={__('Padding opties', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -235,7 +235,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.pxs.bottom
 									} 
 								}
-								label="xs"
+								label={__('xs', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -248,8 +248,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ selectedblockpropstest.attributes.pxsauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxsauto }
 								onChange={ 
 									(e) => {
@@ -262,8 +262,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ selectedblockpropstest.attributes.pxsxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxsxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxsxauto }
 								onChange={ 
 									(e) => {
@@ -276,8 +276,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ selectedblockpropstest.attributes.pxsyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxsyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxsyauto }
 								onChange={ 
 									(e) => {
@@ -290,8 +290,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ selectedblockpropstest.attributes.pxstauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxstauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxstauto }
 								onChange={ 
 									(e) => {
@@ -304,8 +304,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ selectedblockpropstest.attributes.pxseauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxseauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxseauto }
 								onChange={ 
 									(e) => {
@@ -318,8 +318,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ selectedblockpropstest.attributes.pxsbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxsbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxsbauto }
 								onChange={ 
 									(e) => {
@@ -332,8 +332,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ selectedblockpropstest.attributes.pxssauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ selectedblockpropstest.attributes.pxssauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ selectedblockpropstest.attributes.pxssauto }
 								onChange={ 
 									(e) => {
@@ -352,7 +352,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Padding opties (sm)', 'awp')}
+					title={__('Padding opties (sm)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -368,7 +368,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.psm.bottom
 									} 
 								}
-								label="sm"
+								label={__('sm', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -381,8 +381,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ attributes.psmauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ attributes.psmauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmauto }
 								onChange={ 
 									(e) => {
@@ -395,8 +395,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ attributes.psmxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ attributes.psmxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmxauto }
 								onChange={ 
 									(e) => {
@@ -409,8 +409,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ attributes.psmyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ attributes.psmyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmyauto }
 								onChange={ 
 									(e) => {
@@ -423,8 +423,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ attributes.psmtauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ attributes.psmtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmtauto }
 								onChange={ 
 									(e) => {
@@ -437,8 +437,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ attributes.psmeauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ attributes.psmeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmeauto }
 								onChange={ 
 									(e) => {
@@ -451,8 +451,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ attributes.psmbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ attributes.psmbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmbauto }
 								onChange={ 
 									(e) => {
@@ -465,8 +465,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ attributes.psmsauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ attributes.psmsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.psmsauto }
 								onChange={ 
 									(e) => {
@@ -485,7 +485,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Padding opties (md)', 'awp')}
+					title={__('Padding opties (md)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -501,7 +501,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.pmd.bottom
 									} 
 								}
-								label="md"
+								label={__('md', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -514,8 +514,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ attributes.pmdauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ attributes.pmdauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdauto }
 								onChange={ 
 									(e) => {
@@ -528,8 +528,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ attributes.pmdxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ attributes.pmdxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdxauto }
 								onChange={ 
 									(e) => {
@@ -542,8 +542,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ attributes.pmdyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ attributes.pmdyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdyauto }
 								onChange={ 
 									(e) => {
@@ -556,8 +556,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ attributes.pmdtauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ attributes.pmdtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdtauto }
 								onChange={ 
 									(e) => {
@@ -570,8 +570,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ attributes.pmdeauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ attributes.pmdeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdeauto }
 								onChange={ 
 									(e) => {
@@ -584,8 +584,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ attributes.pmdbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ attributes.pmdbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdbauto }
 								onChange={ 
 									(e) => {
@@ -598,8 +598,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ attributes.pmdsauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ attributes.pmdsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pmdsauto }
 								onChange={ 
 									(e) => {
@@ -618,7 +618,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Padding opties (lg)', 'awp')}
+					title={__('Padding opties (lg)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -634,7 +634,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.plg.bottom
 									} 
 								}
-								label="lg"
+								label={__('lg', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -647,8 +647,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ attributes.plgauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ attributes.plgauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgauto }
 								onChange={ 
 									(e) => {
@@ -661,8 +661,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ attributes.plgxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ attributes.plgxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgxauto }
 								onChange={ 
 									(e) => {
@@ -675,8 +675,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ attributes.plgyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ attributes.plgyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgyauto }
 								onChange={ 
 									(e) => {
@@ -689,8 +689,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ attributes.plgtauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ attributes.plgtauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgtauto }
 								onChange={ 
 									(e) => {
@@ -703,8 +703,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ attributes.plgeauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ attributes.plgeauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgeauto }
 								onChange={ 
 									(e) => {
@@ -717,8 +717,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ attributes.plgbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ attributes.plgbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgbauto }
 								onChange={ 
 									(e) => {
@@ -731,8 +731,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ attributes.plgsauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ attributes.plgsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.plgsauto }
 								onChange={ 
 									(e) => {
@@ -751,7 +751,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Padding opties (xl)', 'awp')}
+					title={__('Padding opties (xl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -767,7 +767,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.pxl.bottom
 									} 
 								}
-								label="xl"
+								label={__('xl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -781,8 +781,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ attributes.pxlauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ attributes.pxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxlauto }
 								onChange={ 
 									(e) => {
@@ -795,8 +795,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ attributes.pxlxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ attributes.pxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxlxauto }
 								onChange={ 
 									(e) => {
@@ -809,8 +809,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ attributes.pxlyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ attributes.pxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxlyauto }
 								onChange={ 
 									(e) => {
@@ -823,8 +823,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ attributes.pxltauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ attributes.pxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxltauto }
 								onChange={ 
 									(e) => {
@@ -837,8 +837,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ attributes.pxleauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ attributes.pxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxleauto }
 								onChange={ 
 									(e) => {
@@ -851,8 +851,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ attributes.pxlbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ attributes.pxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxlbauto }
 								onChange={ 
 									(e) => {
@@ -865,8 +865,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ attributes.pxlsauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ attributes.pxlsauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxlsauto }
 								onChange={ 
 									(e) => {
@@ -885,7 +885,7 @@ const PaddingEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&	
 				<PanelBody
-					title={__('Padding opties (xxl)', 'awp')}
+					title={__('Padding opties (xxl)', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -901,7 +901,7 @@ const PaddingEdit = (props)=> {
 										bottom: attributes.pxxl.bottom
 									} 
 								}
-								label="xxl"
+								label={__('xxl', 'webkompanen')}
 								units={units.get()}
 								onChange={ 
 									( nextValues ) => {
@@ -915,8 +915,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding auto"
-								help={ attributes.pxxlauto ? 'Yes.' : 'No.' }
+								label={__('Padding auto', 'webkompanen')}
+								help={ attributes.pxxlauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxlauto }
 								onChange={ 
 									(e) => {
@@ -929,8 +929,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding x auto"
-								help={ attributes.pxxlxauto ? 'Yes.' : 'No.' }
+								label={__('Padding x auto', 'webkompanen')}
+								help={ attributes.pxxlxauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxlxauto }
 								onChange={ 
 									(e) => {
@@ -943,8 +943,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding y auto"
-								help={ attributes.pxxlyauto ? 'Yes.' : 'No.' }
+								label={__('Padding y auto', 'webkompanen')}
+								help={ attributes.pxxlyauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxlyauto }
 								onChange={ 
 									(e) => {
@@ -957,8 +957,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding top auto"
-								help={ attributes.pxxltauto ? 'Yes.' : 'No.' }
+								label={__('Padding top auto', 'webkompanen')}
+								help={ attributes.pxxltauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxltauto }
 								onChange={ 
 									(e) => {
@@ -971,8 +971,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding right auto"
-								help={ attributes.pxxleauto ? 'Yes.' : 'No.' }
+								label={__('Padding right auto', 'webkompanen')}
+								help={ attributes.pxxleauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxleauto }
 								onChange={ 
 									(e) => {
@@ -985,8 +985,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding bottom auto"
-								help={ attributes.pxxlbauto ? 'Yes.' : 'No.' }
+								label={__('Padding bottom auto', 'webkompanen')}
+								help={ attributes.pxxlbauto ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 								checked={ attributes.pxxlbauto }
 								onChange={ 
 									(e) => {
@@ -999,8 +999,8 @@ const PaddingEdit = (props)=> {
 								}
 							/>
 							<ToggleControl
-								label="Padding left auto"
-								help={ attributes.pxxlsauto ? 'Yes' : 'No' }
+								label={__('Padding left auto', 'webkompanen')}
+								help={ attributes.pxxlsauto ? __('Yes', 'webkompanen') : __('No', 'webkompanen') }
 								checked={ attributes.pxxlsauto }
 								onChange={ 
 									(e) => {

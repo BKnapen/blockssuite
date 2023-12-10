@@ -141,7 +141,7 @@ const formEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.id }
 						type="text"
@@ -155,7 +155,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Name"
+						label={__('Name', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.name }
 						type="text"
@@ -169,7 +169,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Aria label"
+						label={__('Aria label', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.arialabel }
 						type="text"
@@ -183,7 +183,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Antwoord"
+						label={__('Answer', 'webkompanen')}
 						labelPosition="top"
 						value={ answer }
 						type="text"

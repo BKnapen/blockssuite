@@ -76,11 +76,11 @@ const CategoriesEdit = (props)=> {
 
 	return(
 		<PanelBody
-			title={__('Categorie', 'awp')}
+			title={__('Categorie', 'webkompanen')}
 			initialOpen={false}
 		>		
 			<SelectControl
-				label={__('Categorie')}
+				label={__('Categorie', 'webkompanen')}
 				options={
 					categories.map(
 						(name, index) => (

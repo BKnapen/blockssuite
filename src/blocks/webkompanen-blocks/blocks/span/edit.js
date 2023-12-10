@@ -89,7 +89,7 @@ const spanEdit = (props) => {
 						content: newcontent 
 					} ) 
 				} // Store updated content as a block attribute
-               	placeholder={ __( 'Text...' ) } // Display this text before any content has been added by the user
+               	placeholder={ __( 'Text...', 'webkompanen' ) } // Display this text before any content has been added by the user
             />	
 		</>
 	)

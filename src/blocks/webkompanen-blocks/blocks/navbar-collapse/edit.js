@@ -179,7 +179,7 @@ const sectionEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>	
 					<ToggleControl
-						label="Collapse"
+						label={__('Collapse', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.collapse }
 						onChange={ 
@@ -196,11 +196,11 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<PanelBody
-						title={__('Z-index', 'awp')}
+						title={__('Z-index', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Z-index"
+							label={__('Z-index', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.zindex }
 							type="number"
@@ -232,7 +232,7 @@ const sectionEdit = (props) => {
 						/>	
 					</PanelBody>
 					<PanelBody
-						title={__('Height', 'awp')}
+						title={__('Height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -371,7 +371,7 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('View height', 'awp')}
+						title={__('View height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -510,7 +510,7 @@ const sectionEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('width', 'awp')}
+						title={__('width', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -658,7 +658,7 @@ const sectionEdit = (props) => {
 						props={props}
 					/>
 					<ToggleControl
-						label="Verberg offcanvas backdrop"
+						label={__('Hide offcanvas backdrop', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.backdrop }
 						onChange={ 
@@ -670,7 +670,7 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Offcanvas start"
+						label={__('Offcanvas start', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.offcanvasstart }
 						onChange={ 
@@ -682,7 +682,7 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Offcanvas top"
+						label={__('Offcanvas top', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.offcanvastop }
 						onChange={ 
@@ -694,7 +694,7 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Offcanvas end"
+						label={__('Offcanvas end', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.offcanvasend }
 						onChange={ 
@@ -706,7 +706,7 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<ToggleControl
-						label="Offcanvas bottom"
+						label={__('Offcanvas bottom', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.offcanvasbottom }
 						onChange={ 
@@ -718,7 +718,7 @@ const sectionEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ attributes.id }
 						type="text"

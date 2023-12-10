@@ -207,7 +207,7 @@ const videoEdit = (props) => {
 					className="html-5-video"
 				>
   					<source src={attributes.videoUrl} type="video/mp4"/>
-					Your browser does not support the video tag.
+					{__('Your browser does not support the video tag.', 'webkompanen')}
 				</video>
 			</div>
 		</>

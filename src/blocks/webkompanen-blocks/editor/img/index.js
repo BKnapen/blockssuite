@@ -138,7 +138,7 @@ const ImageEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Afbeelding', 'awp')}
+			title={__('Afbeelding', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div>
@@ -165,7 +165,7 @@ const ImageEdit = (props)=> {
 										}
 									>
 										{
-											(attributes.imageUrl === '' ||  attributes.imageUrl) === undefined ? __('Choose an image', 'awp') : ''
+											(attributes.imageUrl === '' ||  attributes.imageUrl) === undefined ? __('Choose an image', 'webkompanen') : ''
 										}
 										{
 											(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ( 
@@ -190,7 +190,7 @@ const ImageEdit = (props)=> {
 							
 							<MediaUploadCheck>
 								<MediaUpload
-									title={__('Replace image', 'awp')}
+									title={__('Replace image', 'webkompanen')}
 									value={attributes.imageId}
 									onSelect={onSelectMedia}
 									allowedTypes={['image']}
@@ -203,7 +203,7 @@ const ImageEdit = (props)=> {
 												isDefault 
 												//isLarge
 											>
-												{__('Replace image', 'awp')}
+												{__('Replace image', 'webkompanen')}
 											</Button>
 										)
 									}
@@ -214,7 +214,7 @@ const ImageEdit = (props)=> {
 					{
 						(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ( 
 							<MediaUploadCheck>
-								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'awp')}
+								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'webkompanen')}
 								</Button>
 							</MediaUploadCheck>
 						) : ''
@@ -504,8 +504,8 @@ const ImageEdit = (props)=> {
 					className="col-12"
 				>
 					<ToggleControl
-						label="Image fluid?"
-						help={ attributes.imgfluid ? 'Yes.' : 'No.' }
+						label={__('Image fluid?', 'webkompanen')}
+						help={ attributes.imgfluid ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.imgfluid }
 						onChange={ 
 							(e) => {
@@ -516,8 +516,8 @@ const ImageEdit = (props)=> {
 						}
 					/>
 					<ToggleControl
-						label="Figure wrapper?"
-						help={ attributes.imgfigure ? 'Yes.' : 'No.' }
+						label={__('Figure wrapper?', 'webkompanen')}
+						help={ attributes.imgfigure ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.imgfigure }
 						onChange={ 
 							(e) => {
@@ -528,8 +528,8 @@ const ImageEdit = (props)=> {
 						}
 					/>
 					<ToggleControl
-						label="Full width?"
-						help={ attributes.fullwidth ? 'Yes.' : 'No.' }
+						label={__('Full width?', 'webkompanen')}
+						help={ attributes.fullwidth ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.fullwidth }
 						onChange={ 
 							(e) => {
@@ -540,8 +540,8 @@ const ImageEdit = (props)=> {
 						}
 					/>
 					<ToggleControl
-						label="Zoom effect?"
-						help={ attributes.zoomeffect ? 'Yes.' : 'No.' }
+						label={__('Zoom effect?', 'webkompanen')}
+						help={ attributes.zoomeffect ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.zoomeffect }
 						onChange={ 
 							(e) => {
@@ -552,8 +552,8 @@ const ImageEdit = (props)=> {
 						}
 					/>
 					<ToggleControl
-						label="Object fit cover?"
-						help={ attributes.objectfitcover ? 'Yes.' : 'No.' }
+						label={__('Object fit cover?', 'webkompanen')}
+						help={ attributes.objectfitcover ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.objectfitcover }
 						onChange={ 
 							(e) => {
@@ -564,8 +564,8 @@ const ImageEdit = (props)=> {
 						}
 					/>
 					<ToggleControl
-						label="Show label"
-						help={ attributes.showlabel ? 'Yes.' : 'No.' }
+						label={__('Show label', 'webkompanen')}
+						help={ attributes.showlabel ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
 						checked={ attributes.showlabel }
 						onChange={ 
 							(e) => {
@@ -579,7 +579,7 @@ const ImageEdit = (props)=> {
 						attributes.showlabel&&
 							<>
 								<AlignmentMatrixControl 
-									label={__('Label positie')}
+									label={__('Label positie', 'webkompanen')}
 									value={attributes.labelpositionalignment} 
 									onChange={ 
 										( nextAlignment ) => {
@@ -590,7 +590,7 @@ const ImageEdit = (props)=> {
 									} 
 								/>
                             	<SelectControl
-                                	label={ __( 'Label text alignment' ) }
+                                	label={ __( 'Label text alignment', 'webkompanen' ) }
                                 	value={ attributes.labeltextalignment } // e.g: value = [ 'a', 'c' ]
                                 	onChange={ 
 										( nextSelect ) => {
@@ -600,10 +600,10 @@ const ImageEdit = (props)=> {
 										}
 									}
                                 	options={ [
-                                    	{ value: null, label: '' },
-                                    	{ value: 'start', label: 'Start' },
-                                    	{ value: 'center', label: 'Center' },
-                                    	{ value: 'end', label: 'End' }
+                                    	{ value: null, label: __('', 'webkompanen') },
+                                    	{ value: 'start', label: __('Start', 'webkompanen') },
+                                    	{ value: 'center', label: __('Center', 'webkompanen') },
+                                    	{ value: 'end', label: __('End', 'webkompanen') }
                                 	] }
                             	/>
 								<ColorEdit 
@@ -615,7 +615,7 @@ const ImageEdit = (props)=> {
 							</>
 					}
 					<TextareaControl
-						label="Alt text"
+						label={__('Alt text', 'webkompanen')}
 						rows={5}
 						value={ attributes.imageAlt }
 						onChange={ 
@@ -635,7 +635,7 @@ const ImageEdit = (props)=> {
 								bottom: attributes.borders.bottom ? attributes.borders.bottom : null
 							}
 						}
-						label="Afgeronde hoeken"
+						label={__('Rounded corners', 'webkompanen')}
 						units={units.get()}
 						onChange={ 
 							( nextValues ) => {

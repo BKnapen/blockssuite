@@ -41,7 +41,7 @@ const SidebarLg = () => {
       	<PluginSidebar 
 			name="bootstrap-lg-settings" 
 			icon={ icon } 
-			title="Breakpoint Large (lg) settings"
+			title={__('Breakpoint Large (lg) settings', 'webkompanen')}
 		>
 			<p>Breakpoint Large (lg):</p>
 			<div

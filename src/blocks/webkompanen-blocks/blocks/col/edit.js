@@ -112,7 +112,9 @@ const colEdit = (props) => {
 		'webkompanen-blocks/accordion-collapse',
 		'webkompanen-blocks/accordion-header',
 		'webkompanen-blocks/accordion-item',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/list-group',
+		'webkompanen-blocks/list-group-item'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

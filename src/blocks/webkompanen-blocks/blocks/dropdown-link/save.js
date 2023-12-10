@@ -39,6 +39,7 @@ function ButtonLinkSave( props ) {
 	const backgroundcolor = new Backgroundcolor(props)
 
 	blockClasses += classes != null && classes != '' ? ' '+classes : ''
+	blockClasses += color.classes() != null && color.classes() != '' ? ' '+color.classes() : ''
 	blockClasses += backgroundcolor.classes() != null && backgroundcolor.classes() != '' ? ' '+backgroundcolor.classes() : ''
 	blockClasses += margin.classes() != null && margin.classes() != '' ? ' '+margin.classes() : ''
 	blockClasses += negativemargin.classes() != null && negativemargin.classes() != '' ? ' '+negativemargin.classes() : ''

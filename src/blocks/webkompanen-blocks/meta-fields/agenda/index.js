@@ -58,7 +58,7 @@ const AgendaMetaFields = () => {
         []
     );
 
-    console.log('postType');
+    //console.log('postType');
 
     const [ metadata, setMeta ] = useEntityProp( 'postType', postType, 'meta' );
 
@@ -179,10 +179,10 @@ const AgendaMetaFields = () => {
                 }
             )
 
-            console.log(artists)
+            //console.log(artists)
 
-            console.log('requestItem')
-            console.log(requestItem)
+            //console.log('requestItem')
+            //console.log(requestItem)
 
             //setMeta( { ...meta, agenda_performers: artists } );
 
@@ -233,10 +233,10 @@ const AgendaMetaFields = () => {
                 }
             )
 
-            console.log(artists)
+            //console.log(artists)
 
-            console.log('requestItem')
-            console.log(requestItem)
+            //console.log('requestItem')
+            //console.log(requestItem)
 
             //setMeta( { ...meta, agenda_performers: artists } );
 
@@ -288,7 +288,7 @@ const AgendaMetaFields = () => {
                 artistsoundcloud:''
             })
 
-            console.log(artists)
+            //console.log(artists)
 
             //setMeta( { ...meta, agenda_performers: artists } );
 
@@ -306,8 +306,8 @@ const AgendaMetaFields = () => {
     /* image: imageInfo Media selector */
 	const onSelectMedia = (imageInfo) => {
         
-        console.log(agenda_image)
-        console.log(imageInfo)
+        //console.log(agenda_image)
+        //console.log(imageInfo)
 
 
         let image = []
@@ -321,7 +321,7 @@ const AgendaMetaFields = () => {
         })
 
 
-        console.log(image)
+        //console.log(image)
 
         editPost( { 
             meta: { 
@@ -352,12 +352,12 @@ const AgendaMetaFields = () => {
     
     const LineupOutput = (props) =>{
 
-        console.log(agenda_performers)
-        console.log(metadata)
-        console.log(props)
-        console.log(props.artistPanel)
-        console.log('props.artistPanel')
-        console.log('props.focusField')
+        //console.log(agenda_performers)
+        //console.log(metadata)
+        //console.log(props)
+        //console.log(props.artistPanel)
+        //console.log('props.artistPanel')
+        //console.log('props.focusField')
         var lineup = [];
         if(agenda_performers){
             for(var i=0; i<agenda_performers.length; i++){
@@ -366,11 +366,11 @@ const AgendaMetaFields = () => {
                         name={`artist-panel-${i}`}
                         data-artist={i}
                         className={`artist-panel-${i}`}
-					    title={__('Artiest '+(i+1)+'', 'awp')}
+					    title={__('Artiest '+(i+1)+'', 'webkompanen')}
                         initialOpen={ artistPanel === i ? true : false }
                         onToggle={
                             (e)=>{
-                                console.log(e)
+                                //console.log(e)
                             }
                         }
 			        >
@@ -587,7 +587,7 @@ const AgendaMetaFields = () => {
         <>
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title="Agenda overzicht afbeeling"
+            title={__('Agenda overzicht afbeeling', 'webkompanen')}
             className="custom-panel-1"
         >
             <MediaUploadCheck>
@@ -609,8 +609,8 @@ const AgendaMetaFields = () => {
 							>
 							    {
                                     agenda_image.length > 0? (
-							            (agenda_image[0].url === '' ||  agenda_image[0].url) === undefined ? __('Choose an image', 'awp') : ''
-                                    ) : __('Choose an image', 'awp')
+							            (agenda_image[0].url === '' ||  agenda_image[0].url) === undefined ? __('Choose an image', 'webkompanen') : ''
+                                    ) : __('Choose an image', 'webkompanen')
 							    }
 							    {
                                     agenda_image.length > 0 ? (
@@ -638,7 +638,7 @@ const AgendaMetaFields = () => {
 							
 				        <MediaUploadCheck>
 					        <MediaUpload
-						        title={__('Replace image', 'awp')}
+						        title={__('Replace image', 'webkompanen')}
 							    value={agenda_image[0].id}
 							    onSelect={onSelectMedia}
 							    allowedTypes={['image']}
@@ -651,7 +651,7 @@ const AgendaMetaFields = () => {
 										    isDefault 
 										    //isLarge
 									    >
-									        {__('Replace image', 'awp')}
+									        {__('Replace image', 'webkompanen')}
 									    </Button>
 								    )
 							    }
@@ -667,7 +667,7 @@ const AgendaMetaFields = () => {
 					        <Button 
                                 onClick={removeMedia} 
                                 isLink 
-                                isDestructive>{__('Remove image', 'awp')}
+                                isDestructive>{__('Remove image', 'webkompanen')}
 						    </Button>
 				        </MediaUploadCheck>
 			        ) : ''
@@ -756,11 +756,11 @@ const AgendaMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title="Agenda item gegevens"
+            title={__('Agenda item gegevens', 'webkompanen')}
             className="custom-panel-1"
         >
             <TextControl
-                label="Titel agenda item"
+                label={__('Calendar item title', 'webkompanen')}
                 value={ agenda_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -771,9 +771,9 @@ const AgendaMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Wekelijks evenement')}
+	            label={__('Weekly event', 'webkompanen')}
 	            help={ 
-                    agenda_weekly_event ? 'Ja' : 'Nee'
+                    agenda_weekly_event ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
 	            checked={ agenda_weekly_event }
 	            onChange={ (e) =>
@@ -817,7 +817,7 @@ const AgendaMetaFields = () => {
 	            // is12Hour
             />
             <TextControl
-                label="Prijs"
+                label={__('Price', 'webkompanen')}
                 value={ agenda_ticket_price }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -828,7 +828,7 @@ const AgendaMetaFields = () => {
                 }
             />
             <TextControl
-                label="Naam locatie"
+                label={__('Venue name', 'webkompanen')}
                 value={ agenda_location_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -839,7 +839,7 @@ const AgendaMetaFields = () => {
                 }
             />
             <TextControl
-                label="Website locatie"
+                label={__('Venue website', 'webkompanen')}
                 value={ agenda_location_same_as }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -850,7 +850,7 @@ const AgendaMetaFields = () => {
                 }
             />
             <TextControl
-                label="Adres"
+                label={__('Address', 'webkompanen')}
                 value={ agenda_location_address }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -861,7 +861,7 @@ const AgendaMetaFields = () => {
                 }
             />
             <TextControl
-                label="Button tekst"
+                label={__('Button text', 'webkompanen')}
                 value={ agenda_button_text }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -880,8 +880,8 @@ const AgendaMetaFields = () => {
 				settings={[]}
 				onChange={ 
 					( newPost ) => {
-                        console.log(newPost)
-                        console.log('newPost')
+                        //console.log(newPost)
+                        //console.log('newPost')
                         let link = []
                         if(newPost.type == 'mailto'){
                             link.push({
@@ -921,8 +921,8 @@ const AgendaMetaFields = () => {
 				withCreateSuggestion={false}
 				createSuggestion={ 
 					(inputValue) => {
-                        console.log(inputValue)
-                        console.log('inputValue')
+                        //console.log(inputValue)
+                        //console.log('inputValue')
                         let link = []
                         link.push({
 							id: Number(Date.now()),

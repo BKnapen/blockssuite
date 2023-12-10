@@ -83,7 +83,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xs' &&	
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -93,7 +93,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'xs' ) }
+                                label={ __( 'xs', 'webkompanen' ) }
                                 value={ attributes.alignitemsxs } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -105,12 +105,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>
@@ -120,7 +120,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'sm' &&	
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -130,7 +130,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'sm' ) }
+                                label={ __( 'sm', 'webkompanen' ) }
                                 value={ attributes.alignitemssm } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -142,12 +142,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>
@@ -157,7 +157,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'md' &&	
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -167,7 +167,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'md' ) }
+                                label={ __( 'md', 'webkompanen' ) }
                                 value={ attributes.alignitemsmd } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -179,12 +179,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>
@@ -194,7 +194,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'lg' &&	
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -204,7 +204,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
                             <SelectControl
-                                label={ __( 'lg' ) }
+                                label={ __( 'lg', 'webkompanen' ) }
                                 value={ attributes.alignitemslg } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -216,12 +216,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>
@@ -231,7 +231,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xl' &&	
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -241,7 +241,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
 							<SelectControl
-                                label={ __( 'xl' ) }
+                                label={ __( 'xl', 'webkompanen' ) }
                                 value={ attributes.alignitemsxl } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -253,12 +253,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>
@@ -268,7 +268,7 @@ const AlignItemsEdit = (props)=> {
 		{
 			breakpoint && breakpoint == 'xxl' &&
 				<PanelBody
-					title={__('Align items', 'awp')}
+					title={__('Align items', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div 
@@ -278,7 +278,7 @@ const AlignItemsEdit = (props)=> {
 							className="col-12"
 						>
 							<SelectControl
-                                label={ __( 'xxl' ) }
+                                label={ __( 'xxl', 'webkompanen' ) }
                                 value={ attributes.alignitemsxxl } // e.g: value = [ 'a', 'c' ]
                                 onChange={ 
 									( nextSelect ) => {
@@ -290,12 +290,12 @@ const AlignItemsEdit = (props)=> {
 									} 
 								}
                                 options={ [
-                                    { value: null, label: '' },
-                                    { value: 'start', label: 'Start' },
-                                    { value: 'end', label: 'End' },
-                                    { value: 'center', label: 'Center' },
-                                    { value: 'baseline', label: 'Baseline' },
-                                    { value: 'stretch', label: 'Stretch' }
+                                    { value: null, label: __('', 'webkompanen' ) },
+                                    { value: 'start', label: __('Start', 'webkompanen' ) },
+                                    { value: 'end', label: __('End', 'webkompanen' ) },
+                                    { value: 'center', label: __('Center', 'webkompanen' ) },
+                                    { value: 'baseline', label: __('Baseline', 'webkompanen' ) },
+                                    { value: 'stretch', label: __('Stretch', 'webkompanen' ) }
                                 ] }
                             />
 						</div>

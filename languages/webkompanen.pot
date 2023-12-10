@@ -1,0 +1,1582 @@
+# Copyright (C) 2023 Bram Knapen
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blockssuite 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/webkompanen\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-08T21:05:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: webkompanen\n"
+
+#. Theme Name of the theme
+msgid "Blockssuite"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://webkompanen.com/themes/blockssuite/"
+msgstr ""
+
+#. Description of the theme
+msgid "blockssuite"
+msgstr ""
+
+#. Author of the theme
+msgid "Bram Knapen"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://webkompanen.com"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:93
+msgid "Basis"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:96
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:186
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:276
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:366
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:455
+msgid "Cursus"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:97
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:187
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:277
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:367
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:456
+msgid "Periode"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:98
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:188
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:278
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:368
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:457
+msgid "Dag"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:99
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:189
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:279
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:369
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:458
+msgid "Tijd"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:138
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:318
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:408
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:497
+msgid "Wekelijks"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:140
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:230
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:320
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:410
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:499
+msgid "Maandelijks"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:183
+msgid "Beginners"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:228
+msgid "Weekelijks"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:273
+msgid "Halfgevorderd"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:363
+msgid "Gevorderd"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses-overview.php:452
+msgid "Overige cursussen"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:56
+msgid "Lestijden"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:82
+msgid "Startdatum"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:96
+msgid "eerstvolgende startdatum "
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:110
+msgid "Cursusduur"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:111
+msgid "weken"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:121
+msgid "Aantal cursisten"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:125
+msgid "tot"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:125
+msgid "cursisten per groep"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:125
+msgid "(minimum groepsgrootte)."
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:133
+msgid "Betaling"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:136
+msgid "Eerste les gratis."
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:139
+msgid "(per les)."
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:142
+msgid "Prijs per"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:142
+msgid "lessen"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:144
+msgid "inclusief lesmateriaal."
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:144
+msgid "Het cursusbedrag kan in termijnen betaald worden."
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:153
+msgid "Instapniveau"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:163
+msgid "Cursusmateriaal"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:173
+msgid "Zelfstudie"
+msgstr ""
+
+#: blockssuite/inc/block-callbacks/php/courses.php:183
+msgid "Afsluiting"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:21
+msgid "Featured"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:22
+msgid "Footers"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:23
+msgid "Headers"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:24
+msgid "Query"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:25
+msgid "Pages"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:26
+msgid "CTA"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:27
+#: build/index.js:33884
+#: build/index.js:33896
+#: build/index.js:38578
+#: build/index.js:38597
+msgid "Text"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:28
+msgid "Menu"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:29
+msgid "Components"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:30
+msgid "Page"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:31
+msgid "Video"
+msgstr ""
+
+#: blockssuite/inc/block-patterns/index.php:32
+msgid "Quiz"
+msgstr ""
+
+#: build/index.js:16381
+#: build/index.js:17582
+msgid "ID"
+msgstr ""
+
+#: build/index.js:16394
+#: build/index.js:16397
+#: build/index.js:17599
+#: build/index.js:17603
+msgid "AOS"
+msgstr ""
+
+#: build/index.js:16412
+#: build/index.js:17618
+msgid "Fade up"
+msgstr ""
+
+#: build/index.js:16415
+#: build/index.js:17619
+msgid "Fade down"
+msgstr ""
+
+#: build/index.js:16418
+#: build/index.js:17620
+msgid "Fade right"
+msgstr ""
+
+#: build/index.js:16421
+#: build/index.js:17621
+msgid "Fade left"
+msgstr ""
+
+#: build/index.js:16424
+#: build/index.js:17622
+msgid "Fade up right"
+msgstr ""
+
+#: build/index.js:16427
+#: build/index.js:17623
+msgid "Fade up left"
+msgstr ""
+
+#: build/index.js:16430
+#: build/index.js:17624
+msgid "Fade down right"
+msgstr ""
+
+#: build/index.js:16433
+#: build/index.js:17625
+msgid "Slide up"
+msgstr ""
+
+#: build/index.js:16436
+#: build/index.js:17626
+msgid "Slide down"
+msgstr ""
+
+#: build/index.js:16439
+#: build/index.js:17627
+msgid "Slide right"
+msgstr ""
+
+#: build/index.js:16442
+#: build/index.js:17628
+msgid "Slide left"
+msgstr ""
+
+#: build/index.js:16445
+#: build/index.js:17629
+msgid "Flip left"
+msgstr ""
+
+#: build/index.js:16448
+#: build/index.js:17630
+msgid "Flip right"
+msgstr ""
+
+#: build/index.js:16451
+#: build/index.js:17631
+msgid "Flip up"
+msgstr ""
+
+#: build/index.js:16454
+#: build/index.js:17632
+msgid "Flip down"
+msgstr ""
+
+#: build/index.js:16457
+#: build/index.js:17633
+msgid "Zoom in"
+msgstr ""
+
+#: build/index.js:16460
+#: build/index.js:17634
+msgid "Zoom in up"
+msgstr ""
+
+#: build/index.js:16463
+#: build/index.js:17635
+msgid "Zoom in down"
+msgstr ""
+
+#: build/index.js:16466
+#: build/index.js:17636
+msgid "Zoom in left"
+msgstr ""
+
+#: build/index.js:16469
+#: build/index.js:17637
+msgid "Zoom in right"
+msgstr ""
+
+#: build/index.js:16472
+#: build/index.js:17638
+msgid "Zoom out"
+msgstr ""
+
+#: build/index.js:16475
+#: build/index.js:17639
+msgid "Zoom out up"
+msgstr ""
+
+#: build/index.js:16478
+#: build/index.js:17640
+msgid "Zoom out down"
+msgstr ""
+
+#: build/index.js:16481
+#: build/index.js:17641
+msgid "Zoom out right"
+msgstr ""
+
+#: build/index.js:16484
+#: build/index.js:17642
+msgid "Zoom out left"
+msgstr ""
+
+#: build/index.js:16487
+#: build/index.js:17646
+msgid "AOS easing"
+msgstr ""
+
+#: build/index.js:16502
+#: build/index.js:17661
+msgid "Linear"
+msgstr ""
+
+#: build/index.js:16505
+#: build/index.js:17662
+msgid "Ease"
+msgstr ""
+
+#: build/index.js:16508
+#: build/index.js:17663
+msgid "Ease in"
+msgstr ""
+
+#: build/index.js:16511
+#: build/index.js:17664
+msgid "Ease out"
+msgstr ""
+
+#: build/index.js:16514
+#: build/index.js:17665
+msgid "Ease in out"
+msgstr ""
+
+#: build/index.js:16517
+#: build/index.js:17666
+msgid "Ease in back"
+msgstr ""
+
+#: build/index.js:16520
+#: build/index.js:17667
+msgid "Ease out back"
+msgstr ""
+
+#: build/index.js:16523
+#: build/index.js:17668
+msgid "Ease in out back"
+msgstr ""
+
+#: build/index.js:16526
+#: build/index.js:17669
+msgid "Ease in sine"
+msgstr ""
+
+#: build/index.js:16529
+#: build/index.js:17670
+msgid "Ease out sine"
+msgstr ""
+
+#: build/index.js:16532
+#: build/index.js:17671
+msgid "Ease in out sine"
+msgstr ""
+
+#: build/index.js:16535
+#: build/index.js:17672
+msgid "Ease in quad"
+msgstr ""
+
+#: build/index.js:16538
+#: build/index.js:17673
+msgid "Ease out quad"
+msgstr ""
+
+#: build/index.js:16541
+#: build/index.js:17674
+msgid "Ease in out quad"
+msgstr ""
+
+#: build/index.js:16544
+#: build/index.js:17675
+msgid "Ease in cubic"
+msgstr ""
+
+#: build/index.js:16547
+#: build/index.js:17676
+msgid "Ease out cubic"
+msgstr ""
+
+#: build/index.js:16550
+#: build/index.js:17677
+msgid "Ease in out cubic"
+msgstr ""
+
+#: build/index.js:16553
+#: build/index.js:17678
+msgid "Ease in quart"
+msgstr ""
+
+#: build/index.js:16556
+#: build/index.js:17679
+msgid "Ease out quart"
+msgstr ""
+
+#: build/index.js:16559
+#: build/index.js:17680
+msgid "Ease in out quart"
+msgstr ""
+
+#: build/index.js:16562
+#: build/index.js:17684
+msgid "AOS easing anchor placement"
+msgstr ""
+
+#: build/index.js:16577
+#: build/index.js:17699
+msgid "Top top"
+msgstr ""
+
+#: build/index.js:16580
+#: build/index.js:17700
+msgid "Center top"
+msgstr ""
+
+#: build/index.js:16583
+#: build/index.js:17701
+msgid "Bottom top"
+msgstr ""
+
+#: build/index.js:16586
+#: build/index.js:17702
+msgid "Top center"
+msgstr ""
+
+#: build/index.js:16589
+#: build/index.js:17703
+msgid "Center center"
+msgstr ""
+
+#: build/index.js:16592
+#: build/index.js:17704
+msgid "Bottom center"
+msgstr ""
+
+#: build/index.js:16595
+#: build/index.js:17705
+msgid "Top bottom"
+msgstr ""
+
+#: build/index.js:16598
+#: build/index.js:17706
+msgid "Center bottom"
+msgstr ""
+
+#: build/index.js:16601
+#: build/index.js:17707
+msgid "Bottom bottom"
+msgstr ""
+
+#: build/index.js:16604
+#: build/index.js:17711
+msgid "AOS once"
+msgstr ""
+
+#: build/index.js:16605
+#: build/index.js:17712
+msgid "Yes."
+msgstr ""
+
+#: build/index.js:16605
+#: build/index.js:17712
+msgid "No."
+msgstr ""
+
+#: build/index.js:16613
+#: build/index.js:17723
+msgid "AOS anchor"
+msgstr ""
+
+#: build/index.js:16624
+#: build/index.js:17737
+msgid "AOS Duration"
+msgstr ""
+
+#: build/index.js:16635
+#: build/index.js:17751
+msgid "AOS delay"
+msgstr ""
+
+#: build/index.js:16646
+#: build/index.js:17765
+msgid "AOS Offset"
+msgstr ""
+
+#: build/index.js:16657
+#: build/index.js:17780
+msgid "Height"
+msgstr ""
+
+#: build/index.js:16716
+#: build/index.js:17919
+msgid "View height"
+msgstr ""
+
+#: build/index.js:16775
+#: build/index.js:18058
+msgid "Width"
+msgstr ""
+
+#: build/index.js:16834
+#: build/index.js:18197
+msgid "Aspect ratio"
+msgstr ""
+
+#: build/index.js:16901
+#: build/index.js:18328
+msgid "Classes"
+msgstr ""
+
+#: build/index.js:27317
+#: build/index.js:33654
+#: build/index.js:30405
+#: build/index.js:38349
+msgid "Chat GPT"
+msgstr ""
+
+#: build/index.js:27322
+#: build/index.js:30412
+msgid "Alt text:"
+msgstr ""
+
+#: build/index.js:27333
+#: build/index.js:30428
+msgid "Promt"
+msgstr ""
+
+#: build/index.js:27343
+#: build/index.js:30443
+msgid "Resolution"
+msgstr ""
+
+#: build/index.js:27352
+#: build/index.js:30452
+msgid "1024x1024"
+msgstr ""
+
+#: build/index.js:27355
+#: build/index.js:30453
+msgid "1024x1792"
+msgstr ""
+
+#: build/index.js:27358
+#: build/index.js:30454
+msgid "1792x1024"
+msgstr ""
+
+#: build/index.js:27363
+#: build/index.js:30462
+msgid "Quality"
+msgstr ""
+
+#: build/index.js:27372
+#: build/index.js:30471
+msgid "Standard"
+msgstr ""
+
+#: build/index.js:27375
+#: build/index.js:30472
+msgid "HD"
+msgstr ""
+
+#: build/index.js:27391
+#: build/index.js:30517
+msgid "Generate image"
+msgstr ""
+
+#: build/index.js:27393
+#: build/index.js:30526
+msgid "Image will be generate"
+msgstr ""
+
+#: build/index.js:27395
+#: build/index.js:30535
+msgid "Image will be uploaded"
+msgstr ""
+
+#: build/index.js:27404
+#: build/index.js:30561
+msgid "Link"
+msgstr ""
+
+#: build/index.js:33568
+#: build/index.js:38260
+msgid "put keywords in an html span element with class name"
+msgstr ""
+
+#: build/index.js:33678
+#: build/index.js:38386
+msgid "Generate text"
+msgstr ""
+
+#: build/index.js:33680
+#: build/index.js:38395
+msgid "Text will be generate"
+msgstr ""
+
+#: build/index.js:33696
+#: build/index.js:38423
+msgid "Typography"
+msgstr ""
+
+#: build/index.js:33703
+#: build/index.js:38431
+msgid "Text alignment"
+msgstr ""
+
+#: build/index.js:33716
+#: build/index.js:38442
+msgid "Left"
+msgstr ""
+
+#: build/index.js:33719
+#: build/index.js:38443
+msgid "Center"
+msgstr ""
+
+#: build/index.js:33722
+#: build/index.js:38444
+msgid "Right"
+msgstr ""
+
+#: build/index.js:33729
+#: build/index.js:38454
+msgid "Text transform"
+msgstr ""
+
+#: build/index.js:33755
+#: build/index.js:38477
+msgid "Font size"
+msgstr ""
+
+#: build/index.js:33768
+#: build/index.js:38488
+msgid "fs-1"
+msgstr ""
+
+#: build/index.js:33771
+#: build/index.js:38489
+msgid "fs-2"
+msgstr ""
+
+#: build/index.js:33774
+#: build/index.js:38490
+msgid "fs-3"
+msgstr ""
+
+#: build/index.js:33777
+#: build/index.js:38491
+msgid "fs-4"
+msgstr ""
+
+#: build/index.js:33780
+#: build/index.js:38492
+msgid "fs-5"
+msgstr ""
+
+#: build/index.js:33783
+#: build/index.js:38493
+msgid "fs-6"
+msgstr ""
+
+#: build/index.js:33790
+#: build/index.js:38503
+msgid "Font weight and italics"
+msgstr ""
+
+#: build/index.js:33803
+#: build/index.js:38514
+msgid "Bold text"
+msgstr ""
+
+#: build/index.js:33806
+#: build/index.js:38515
+msgid "Bolder weight text"
+msgstr ""
+
+#: build/index.js:33809
+#: build/index.js:38516
+msgid "Semibold weight text"
+msgstr ""
+
+#: build/index.js:33812
+#: build/index.js:38517
+msgid "Normal weight text"
+msgstr ""
+
+#: build/index.js:33815
+#: build/index.js:38518
+msgid "Light weight text"
+msgstr ""
+
+#: build/index.js:33818
+#: build/index.js:38519
+msgid "Lighter weight text"
+msgstr ""
+
+#: build/index.js:33821
+#: build/index.js:38520
+msgid "Italic text"
+msgstr ""
+
+#: build/index.js:33824
+#: build/index.js:38521
+msgid "Text with normal font style"
+msgstr ""
+
+#: build/index.js:33831
+#: build/index.js:38531
+msgid "Lineheight"
+msgstr ""
+
+#: build/index.js:33844
+#: build/index.js:38542
+msgid "Lineheight 1"
+msgstr ""
+
+#: build/index.js:33847
+#: build/index.js:38543
+msgid "Lineheight small"
+msgstr ""
+
+#: build/index.js:33850
+#: build/index.js:38544
+msgid "Lineheight base"
+msgstr ""
+
+#: build/index.js:33853
+#: build/index.js:38545
+msgid "Lineheight large"
+msgstr ""
+
+#: build/index.js:33860
+#: build/index.js:38555
+msgid "Text decoration"
+msgstr ""
+
+#: build/index.js:33873
+#: build/index.js:38566
+msgid "Underline"
+msgstr ""
+
+#: build/index.js:33876
+#: build/index.js:38567
+msgid "Line through"
+msgstr ""
+
+#: build/index.js:33879
+#: build/index.js:38568
+msgid "None"
+msgstr ""
+
+#: build/index.js:33965
+#: build/index.js:38691
+msgid "Text..."
+msgstr ""
+
+#: build/index.js:38309
+#: build/index.js:43626
+msgid "Tekst kleur"
+msgstr ""
+
+#: build/index.js:38376
+#: build/index.js:43729
+msgid "Col instellingen"
+msgstr ""
+
+#: build/index.js:38459
+#: build/index.js:38477
+#: build/index.js:38495
+#: build/index.js:38513
+#: build/index.js:38531
+#: build/index.js:38549
+#: build/index.js:43839
+#: build/index.js:43871
+#: build/index.js:43903
+#: build/index.js:43935
+#: build/index.js:43967
+#: build/index.js:43999
+msgid "Col order"
+msgstr ""
+
+#: build/index.js:46900
+#: build/index.js:53615
+msgid "Videos"
+msgstr ""
+
+#: build/index.js:46914
+#: build/index.js:53629
+msgid "Voeg video toe"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-body/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-body/block.json
+msgctxt "block title"
+msgid "Accordion body"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-body/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-body/block.json
+msgctxt "block description"
+msgid "Create a accordion body element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-button/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-button/block.json
+msgctxt "block title"
+msgid "Accordion button"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-button/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-button/block.json
+msgctxt "block description"
+msgid "Create a accordion button component"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-collapse/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-collapse/block.json
+msgctxt "block title"
+msgid "Accordion collapse"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-collapse/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-collapse/block.json
+msgctxt "block description"
+msgid "Create a accordion collapse element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-header/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-header/block.json
+msgctxt "block title"
+msgid "Accordion header"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-header/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-header/block.json
+msgctxt "block description"
+msgid "Create a accordion header element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-item/block.json
+msgctxt "block title"
+msgid "Accordion item"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion-item/block.json
+msgctxt "block description"
+msgid "Create a accordion item element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion/block.json
+#: build/blocks/webkompanen-blocks/blocks/accordion/block.json
+msgctxt "block title"
+msgid "Accordion"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/accordion/block.json
+msgctxt "block description"
+msgid "Create a accordion element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/blockquote/block.json
+#: build/blocks/webkompanen-blocks/blocks/blockquote/block.json
+msgctxt "block title"
+msgid "Blockquote"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/blockquote/block.json
+#: build/blocks/webkompanen-blocks/blocks/blockquote/block.json
+msgctxt "block description"
+msgid "Create a blockquote element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/btn/block.json
+#: build/blocks/webkompanen-blocks/blocks/btn/block.json
+msgctxt "block title"
+msgid "Btn"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/btn/block.json
+#: build/blocks/webkompanen-blocks/blocks/btn/block.json
+msgctxt "block description"
+msgid "Create a btn component"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/button/block.json
+#: build/blocks/webkompanen-blocks/blocks/button/block.json
+msgctxt "block title"
+msgid "Button"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/button/block.json
+#: build/blocks/webkompanen-blocks/blocks/button/block.json
+msgctxt "block description"
+msgid "Create a button component"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+msgctxt "block title"
+msgid "Carousel inner"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/container/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+#: build/blocks/webkompanen-blocks/blocks/container/block.json
+msgctxt "block description"
+msgid "Containers <div class=\"container\"> center and horizontally pad your content. Use .container for a responsive pixel width, .container-fluid for width: 100% across all viewports and devices, or a responsive container (e.g., .container-md) for a combination of fluid and pixel widths."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/container/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel-inner/block.json
+#: build/blocks/webkompanen-blocks/blocks/container/block.json
+msgctxt "block keyword"
+msgid "container"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel-item/block.json
+msgctxt "block title"
+msgid "Carousel item"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel-item/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/div/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel/block.json
+#: build/blocks/webkompanen-blocks/blocks/div/block.json
+msgctxt "block description"
+msgid "Create a div element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/carousel/block.json
+#: build/blocks/webkompanen-blocks/blocks/carousel/block.json
+msgctxt "block title"
+msgid "Carousel"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/col/block.json
+#: build/blocks/webkompanen-blocks/blocks/col/block.json
+msgctxt "block title"
+msgid "Col"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/col/block.json
+#: build/blocks/webkompanen-blocks/blocks/col/block.json
+msgctxt "block description"
+msgid "Col <div class=\"col\"> Columns are incredibly flexible. There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., col-4 spans four). widths are set in percentages so you always have the same relative sizing."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/col/block.json
+#: build/blocks/webkompanen-blocks/blocks/col/block.json
+msgctxt "block keyword"
+msgid "col"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/container/block.json
+#: build/blocks/webkompanen-blocks/blocks/container/block.json
+msgctxt "block title"
+msgid "Container"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/div/block.json
+#: build/blocks/webkompanen-blocks/blocks/div/block.json
+msgctxt "block title"
+msgid "Div"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-item/block.json
+msgctxt "block title"
+msgid "Dropdown item"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-item/block.json
+msgctxt "block description"
+msgid "Create a dropdown-item element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-link/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-link/block.json
+msgctxt "block title"
+msgid "Dropdown link"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-link/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-link/block.json
+msgctxt "block description"
+msgid "Create a dropdown-link component"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-menu/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-menu/block.json
+msgctxt "block title"
+msgid "Dropdown menu"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/dropdown-menu/block.json
+#: build/blocks/webkompanen-blocks/blocks/dropdown-menu/block.json
+msgctxt "block description"
+msgid "Create a dropdoen-menu element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/facebookwatch/block.json
+#: build/blocks/webkompanen-blocks/blocks/facebookwatch/block.json
+msgctxt "block title"
+msgid "Facebook Watch"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/facebookwatch/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/gallery/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/video/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/youtube/block.json
+#: build/blocks/webkompanen-blocks/blocks/facebookwatch/block.json
+#: build/blocks/webkompanen-blocks/blocks/gallery/block.json
+#: build/blocks/webkompanen-blocks/blocks/video/block.json
+#: build/blocks/webkompanen-blocks/blocks/youtube/block.json
+msgctxt "block description"
+msgid "The <video> tag is used to embed video content in a document, such as a movie clip or other video streams. The <video> tag contains one or more <source> tags with different video sources. The browser will choose the first source it supports. The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element. There are three supported video formats in HTML: MP4, WebM, and OGG."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/footer/block.json
+#: build/blocks/webkompanen-blocks/blocks/footer/block.json
+msgctxt "block title"
+msgid "Footer"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/footer/block.json
+#: build/blocks/webkompanen-blocks/blocks/footer/block.json
+msgctxt "block description"
+msgid "Create a footer element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-check/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-check/block.json
+msgctxt "block title"
+msgid "Form check"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-check/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-floating/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-group/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-option/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-select/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-check/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-floating/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-group/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-option/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-select/block.json
+#: build/blocks/webkompanen-blocks/blocks/form/block.json
+msgctxt "block description"
+msgid "Create a form element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-floating/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-floating/block.json
+msgctxt "block title"
+msgid "Form floating"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-group/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-group/block.json
+msgctxt "block title"
+msgid "Form group"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-option/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-option/block.json
+msgctxt "block title"
+msgid "Form option"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form-select/block.json
+#: build/blocks/webkompanen-blocks/blocks/form-select/block.json
+msgctxt "block title"
+msgid "Form select"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/form/block.json
+#: build/blocks/webkompanen-blocks/blocks/form/block.json
+msgctxt "block title"
+msgid "Form"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/gallery/block.json
+#: build/blocks/webkompanen-blocks/blocks/gallery/block.json
+msgctxt "block title"
+msgid "Gallery"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/googlemaps/block.json
+#: build/blocks/webkompanen-blocks/blocks/googlemaps/block.json
+msgctxt "block title"
+msgid "Google Maps"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/googlemaps/block.json
+#: build/blocks/webkompanen-blocks/blocks/googlemaps/block.json
+msgctxt "block description"
+msgid "Create a google maps object"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/h/block.json
+#: build/blocks/webkompanen-blocks/blocks/h/block.json
+msgctxt "block title"
+msgid "Heading"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/h/block.json
+#: build/blocks/webkompanen-blocks/blocks/h/block.json
+msgctxt "block description"
+msgid "Create a heading element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/header/block.json
+#: build/blocks/webkompanen-blocks/blocks/header/block.json
+msgctxt "block title"
+msgid "Header"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/header/block.json
+#: build/blocks/webkompanen-blocks/blocks/header/block.json
+msgctxt "block description"
+msgid "Create a header element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/i/block.json
+#: build/blocks/webkompanen-blocks/blocks/i/block.json
+msgctxt "block title"
+msgid "Font Awesome"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/i/block.json
+#: build/blocks/webkompanen-blocks/blocks/i/block.json
+msgctxt "block description"
+msgid "Create a font awesome element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/img/block.json
+#: build/blocks/webkompanen-blocks/blocks/img/block.json
+msgctxt "block title"
+msgid "Image"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/img/block.json
+#: build/blocks/webkompanen-blocks/blocks/img/block.json
+#: build/blocks/webkompanen-blocks/blocks/post-featured-img/block.json
+msgctxt "block description"
+msgid "The <img> tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag has two required attributes: src - Specifies the path to the image alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/input/block.json
+#: build/blocks/webkompanen-blocks/blocks/input/block.json
+msgctxt "block title"
+msgid "Input"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/input/block.json
+#: build/blocks/webkompanen-blocks/blocks/input/block.json
+msgctxt "block description"
+msgid "Create a input element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/label/block.json
+#: build/blocks/webkompanen-blocks/blocks/label/block.json
+msgctxt "block title"
+msgid "Label"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/label/block.json
+#: build/blocks/webkompanen-blocks/blocks/label/block.json
+msgctxt "block description"
+msgid "Create a label element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/login/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/login/block.json
+#: build/blocks/webkompanen-blocks/blocks/login/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/login/block.json
+msgctxt "block title"
+msgid "Login"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/login/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/login/block.json
+#: build/blocks/webkompanen-blocks/blocks/login/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/login/block.json
+msgctxt "block description"
+msgid "Create a login modal"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav-item/block.json
+msgctxt "block title"
+msgid "Nav item"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav-item/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav-item/block.json
+msgctxt "block description"
+msgid "Create a nav-item element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav-link/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav-link/block.json
+msgctxt "block title"
+msgid "Nav link"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav-link/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav-link/block.json
+msgctxt "block description"
+msgid "Create a nav-link component"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav/block.json
+msgctxt "block title"
+msgid "Nav"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/nav/block.json
+#: build/blocks/webkompanen-blocks/blocks/nav/block.json
+msgctxt "block description"
+msgid "Create a nav element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-brand/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-brand/block.json
+msgctxt "block title"
+msgid "Navbar brand"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-brand/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-brand/block.json
+msgctxt "block description"
+msgid "Create a navbar-brand element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-collapse/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-collapse/block.json
+msgctxt "block title"
+msgid "Navbar collapse"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-collapse/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-collapse/block.json
+msgctxt "block description"
+msgid "Create a navbar-collapse element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-nav/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-nav/block.json
+msgctxt "block title"
+msgid "Navbar nav"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-nav/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-nav/block.json
+msgctxt "block description"
+msgid "Create a navbar-nav element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-toggler-icon/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-toggler-icon/block.json
+msgctxt "block title"
+msgid "Navbar toggler icon"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-toggler-icon/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-toggler/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-toggler-icon/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-toggler/block.json
+msgctxt "block description"
+msgid "Create a navbar-toggler element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/navbar-toggler/block.json
+#: build/blocks/webkompanen-blocks/blocks/navbar-toggler/block.json
+msgctxt "block title"
+msgid "Navbar toggler"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/p/block.json
+#: build/blocks/webkompanen-blocks/blocks/p/block.json
+msgctxt "block title"
+msgid "Paragraph"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/p/block.json
+#: build/blocks/webkompanen-blocks/blocks/p/block.json
+msgctxt "block description"
+msgid "Create a paragraph element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/row/block.json
+#: build/blocks/webkompanen-blocks/blocks/row/block.json
+msgctxt "block title"
+msgid "Row"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/row/block.json
+#: build/blocks/webkompanen-blocks/blocks/row/block.json
+msgctxt "block description"
+msgid "Rows <div class=\"row\"> are wrappers for columns <div class=\"col\">. Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to uniformly apply column sizing and gutter classes to change the spacing of your content."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/row/block.json
+#: build/blocks/webkompanen-blocks/blocks/row/block.json
+msgctxt "block keyword"
+msgid "row"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/section/block.json
+#: build/blocks/webkompanen-blocks/blocks/section/block.json
+msgctxt "block title"
+msgid "Section"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/section/block.json
+#: build/blocks/webkompanen-blocks/blocks/section/block.json
+msgctxt "block description"
+msgid "The section tag defines a section in a document."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/section/block.json
+#: build/blocks/webkompanen-blocks/blocks/section/block.json
+msgctxt "block keyword"
+msgid "section"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/span/block.json
+#: build/blocks/webkompanen-blocks/blocks/span/block.json
+msgctxt "block title"
+msgid "Span"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/span/block.json
+#: build/blocks/webkompanen-blocks/blocks/span/block.json
+msgctxt "block description"
+msgid "Create a span element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/textarea/block.json
+#: build/blocks/webkompanen-blocks/blocks/textarea/block.json
+msgctxt "block title"
+msgid "Textarea"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/textarea/block.json
+#: build/blocks/webkompanen-blocks/blocks/textarea/block.json
+msgctxt "block description"
+msgid "Create a textarea element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/video/block.json
+#: build/blocks/webkompanen-blocks/blocks/video/block.json
+msgctxt "block title"
+msgid "Video"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/w3schools-menu-icon/block.json
+#: build/blocks/webkompanen-blocks/blocks/w3schools-menu-icon/block.json
+msgctxt "block title"
+msgid "W3schools menu icon"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/w3schools-menu-icon/block.json
+#: build/blocks/webkompanen-blocks/blocks/w3schools-menu-icon/block.json
+msgctxt "block description"
+msgid "Create a W3schools menu icon element"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/blocks/youtube/block.json
+#: build/blocks/webkompanen-blocks/blocks/youtube/block.json
+msgctxt "block title"
+msgid "YouTube"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/agenda-overview/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/agenda-overview/block.json
+msgctxt "block title"
+msgid "Agenda overzicht"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/agenda-overview/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/courses-overview/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/agenda-overview/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/courses-overview/block.json
+msgctxt "block description"
+msgid "Beschikbare training overzicht gebruiker"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/courses-overview/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/courses-overview/block.json
+msgctxt "block title"
+msgid "Trainingen overzicht"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/courses/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/courses/block.json
+msgctxt "block title"
+msgid "Cursus gegevens"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/courses/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/courses/block.json
+msgctxt "block description"
+msgid "Tabel met gegevens van één specifieke training."
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/eventinfo/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/eventinfo/block.json
+msgctxt "block title"
+msgid "Eventinfo"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/eventinfo/block.json
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/lastposts/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/eventinfo/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/lastposts/block.json
+msgctxt "block description"
+msgid "Return a list of last posts from the database"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/lastposts/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/lastposts/block.json
+msgctxt "block title"
+msgid "Last posts"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/referenties/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/referenties/block.json
+msgctxt "block title"
+msgid "Referenties"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/referenties/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/referenties/block.json
+msgctxt "block description"
+msgid "Referenties"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/reviews/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/reviews/block.json
+msgctxt "block title"
+msgid "Reviews"
+msgstr ""
+
+#: blockssuite/assets/build/blocks/webkompanen-blocks/serverside-render-blocks/reviews/block.json
+#: build/blocks/webkompanen-blocks/serverside-render-blocks/reviews/block.json
+msgctxt "block description"
+msgid "Reviews"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/accordion/block.json
+msgctxt "block description"
+msgid "Create a accordion element."
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/list-group-item/block.json
+msgctxt "block title"
+msgid "List group item"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/list-group-item/block.json
+msgctxt "block description"
+msgid "Create a list group item element"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/list-group/block.json
+msgctxt "block title"
+msgid "List group"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/list-group/block.json
+msgctxt "block description"
+msgid "Create a list group element"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/post-featured-img/block.json
+msgctxt "block title"
+msgid "Post featured img"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/site-title/block.json
+msgctxt "block title"
+msgid "Site title"
+msgstr ""
+
+#: build/blocks/webkompanen-blocks/blocks/site-title/block.json
+msgctxt "block description"
+msgid "Create a site title element"
+msgstr ""

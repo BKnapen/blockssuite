@@ -127,7 +127,7 @@ class SingleSiteSettings extends Component {
 									tab.name === 'restapi' &&
 									<>
 										<InputControl
-											label="Rest API"
+											label={__('Rest API', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_app_auth }
 											disabled={ this.state.isAPISaving }
@@ -148,8 +148,8 @@ class SingleSiteSettings extends Component {
 											marginBottom="5"
 										>
 											<ToggleControl
-												label={ __( 'is SMTP?' ) }
-												help={ __( 'E-mail login is SMTP' ) }
+												label={ __( 'is SMTP?', 'webkompanen' ) }
+												help={ __( 'E-mail login is SMTP', 'webkompanen' ) }
 												checked={ this.state.webkompanen_phpmailer_is_smtp }
 												disabled={ this.state.isAPISaving }
 												onChange={ 
@@ -160,10 +160,10 @@ class SingleSiteSettings extends Component {
 											/>
 										</Spacer>
 										<InputControl
-											label={ __( 'Host' ) }
+											label={ __( 'Host', 'webkompanen' ) }
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_host }
-											placeholder={ __( 'Host' ) }
+											placeholder={ __( 'Host', 'webkompanen' ) }
 											disabled={ this.state.isAPISaving }
 											type="text"
 											isPressEnterToChange
@@ -177,7 +177,7 @@ class SingleSiteSettings extends Component {
 											marginY="5"
 										>
 											<ToggleControl
-												label={ __( 'SMTPAuth?' ) }
+												label={ __( 'SMTPAuth?', 'webkompanen' ) }
 												help={ __( 'Use SMTPAuth' ) }
 												checked={ this.state.webkompanen_phpmailer_smtpauth }
 												disabled={ this.state.isAPISaving }
@@ -189,7 +189,7 @@ class SingleSiteSettings extends Component {
 											/>
 										</Spacer>
 										<NumberControl
-											label="Port"
+											label={__('Port', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_port }
 											disabled={ this.state.isAPISaving }
@@ -202,7 +202,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>
 										<InputControl
-											label="Username"
+											label={__('Username', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_username }
 											disabled={ this.state.isAPISaving }
@@ -215,7 +215,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>
 										<InputControl
-											label="Password"
+											label={__('Password', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_password }
 											disabled={ this.state.isAPISaving }
@@ -228,7 +228,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>
 										<SelectControl
-											label={ __( 'SMTP Secure:' ) }
+											label={ __( 'SMTP Secure:', 'webkompanen' ) }
 											value={ this.state.webkompanen_phpmailer_smtp_secure } // e.g: value = [ 'a', 'c' ]
 											onChange={ 
 												( selectedValue ) => this.setState({
@@ -236,13 +236,13 @@ class SingleSiteSettings extends Component {
 												}) 
 											}
 											options={ [
-												{ value: null, label: 'geen' },
-												{ value: 'tls', label: 'tls' },
-												{ value: 'ssl', label: 'ssl' },
+												{ value: null, label: __('geen', 'webkompanen') },
+												{ value: 'tls', label: __('tls', 'webkompanen') },
+												{ value: 'ssl', label: __('ssl', 'webkompanen') },
 											] }
 										/>
 										<InputControl
-											label="Sender e-mail address"
+											label={__('Sender e-mail address', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_sender }
 											disabled={ this.state.isAPISaving }
@@ -255,7 +255,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>	
 										<InputControl
-											label="Sender from e-mail address"
+											label={__('Sender from e-mail address', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_from }
 											disabled={ this.state.isAPISaving }
@@ -268,7 +268,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>
 										<InputControl
-											label="Sender from name"
+											label={__('Sender from name', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_from_name }
 											disabled={ this.state.isAPISaving }
@@ -284,7 +284,7 @@ class SingleSiteSettings extends Component {
 											marginTop="5"
 										>
 											<ToggleControl
-												label={ __( 'is HTML?' ) }
+												label={ __( 'is HTML?', 'webkompanen' ) }
 												help={ __( 'HTML E-mail' ) }
 												checked={ this.state.webkompanen_phpmailer_is_html }
 												disabled={ this.state.isAPISaving }

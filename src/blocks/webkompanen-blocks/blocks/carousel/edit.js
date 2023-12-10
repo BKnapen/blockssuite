@@ -169,7 +169,7 @@ const carouselEdit = (props) => {
 						marginBottom={3}
 					>
 					<InputControl
-						label="Caroucel ID"
+						label={__('Caroucel ID', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.carouselid}
 						type="text"
@@ -193,7 +193,7 @@ const carouselEdit = (props) => {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Carousel button kleuren', 'awp')}
+						title={__('Carousel button kleuren', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ColorPalette

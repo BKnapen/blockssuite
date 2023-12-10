@@ -73,11 +73,11 @@ const HeightEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Height', 'awp')}
+			title={__('Height', 'webkompanen')}
 			initialOpen={false}
 		>
             <SelectControl
-                label={ __( 'Height' ) }
+                label={ __( 'Height', 'webkompanen' ) }
                 value={ attributes.bsheight } // e.g: value = [ 'a', 'c' ]
                 onChange={ 
                     ( nextSelect ) => {
@@ -91,17 +91,17 @@ const HeightEdit = (props)=> {
                     }
                 }
                 options={ [
-                    { value: null, label: '' },
-                    { value: 'height-10', label: 'Height 10' },
-                    { value: 'height-20', label: 'Height 20' },
-                    { value: 'height-30', label: 'Height 30' },
-                    { value: 'height-40', label: 'Height 40' },
-                    { value: 'height-50', label: 'Height 50' },
-                    { value: 'height-60', label: 'Height 60' },
-                    { value: 'height-70', label: 'Height 70' },
-                    { value: 'height-80', label: 'Height 80' },
-                    { value: 'height-90', label: 'Height 90' },
-                    { value: 'height-100', label: 'Height 100' }
+                    { value: null, label: __('', 'webkompanen') },
+                    { value: 'height-10', label: __('Height 10', 'webkompanen') },
+                    { value: 'height-20', label: __('Height 20', 'webkompanen') },
+                    { value: 'height-30', label: __('Height 30', 'webkompanen') },
+                    { value: 'height-40', label: __('Height 40', 'webkompanen') },
+                    { value: 'height-50', label: __('Height 50', 'webkompanen') },
+                    { value: 'height-60', label: __('Height 60', 'webkompanen') },
+                    { value: 'height-70', label: __('Height 70', 'webkompanen') },
+                    { value: 'height-80', label: __('Height 80', 'webkompanen') },
+                    { value: 'height-90', label: __('Height 90', 'webkompanen') },
+                    { value: 'height-100', label: __('Height 100', 'webkompanen') }
                 ] }
             />
 		</PanelBody>

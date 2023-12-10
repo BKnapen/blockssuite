@@ -43,7 +43,7 @@ const SidebarMd = () => {
       	<PluginSidebar 
 			name="bootstrap-md-settings" 
 			icon={ icon } 
-			title="Breakpoint Medium (md) settings"
+			title={__('Breakpoint Medium (md) settings', 'webkompanen')}
 		>
 			<p>Breakpoint Medium (md):</p>
 			<div

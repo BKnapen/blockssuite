@@ -453,7 +453,7 @@ const CourseMetaFields = () => {
                 shouldCloseOnClickOutside
                 isFullScreen
                 overlayClassName="my-extra-modal-overlay-class"
-                title="Cursus tijden en datums"
+                title={__('Cursus tijden en datums', 'webkompanen')}
                 onRequestClose={ closeModal }
             >
                 <Flex
@@ -465,10 +465,10 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Startdatum')} {modalOpen}</Text>
+                            <Text variant="body">{__('Startdatum', 'webkompanen')} {modalOpen}</Text>
                         </Spacer>
                         <DatePicker
-                            label={__('Startdatum')}
+                            label={__('Startdatum', 'webkompanen')}
 	                        currentDate={ course_event_schedule[modalOpen] ? course_event_schedule[modalOpen].startdate : new Date() }
 	                        onChange={ 
                                 ( date ) => {
@@ -496,7 +496,7 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Aanvangtijd')}</Text>
+                            <Text variant="body">{__('Aanvangtijd', 'webkompanen')}</Text>
                         </Spacer>
                         <Flex
                             gap={2}
@@ -514,7 +514,7 @@ const CourseMetaFields = () => {
                                         }
                                     }
                                     hideLabelFromVision
-                                    label="HH"
+                                    label={__('HH', 'webkompanen')}
                                     labelPosition="top"
                                     value={format( course_event_schedule[modalOpen] ? new Date(course_event_schedule[modalOpen].startdate) : new Date(), 'HH' )}
                                     step="1"
@@ -573,7 +573,7 @@ const CourseMetaFields = () => {
                                         }
                                     }
                                     hideLabelFromVision
-                                    label="MM"
+                                    label={__('MM', 'webkompanen')}
                                     labelPosition="top"
                                     value={format( course_event_schedule[modalOpen] ? new Date(course_event_schedule[modalOpen].startdate) : new Date(), 'mm' )}
                                     step="1"
@@ -627,7 +627,7 @@ const CourseMetaFields = () => {
                             <Text variant="body">{__('Einddatum')}</Text>
                         </Spacer>
                         <DatePicker
-                            label={__('Einddatum')}
+                            label={__('Einddatum', 'webkompanen')}
 	                        currentDate={ course_event_schedule[modalOpen] ? course_event_schedule[modalOpen].enddate : new Date() }
 	                        onChange={ 
                                 ( date ) => {
@@ -667,7 +667,7 @@ const CourseMetaFields = () => {
                             <FlexItem>
                                 <InputControl
                                     hideLabelFromVision
-                                    label="HH"
+                                    label={__('HH', 'webkompanen')}
                                     labelPosition="top"
                                     value={format( course_event_schedule[modalOpen] ? new Date(course_event_schedule[modalOpen].enddate) : new Date(), 'HH' )}
                                     step="1"
@@ -718,7 +718,7 @@ const CourseMetaFields = () => {
                             <FlexItem>
                                 <InputControl
                                     hideLabelFromVision
-                                    label="MM"
+                                    label={__('MM', 'webkompanen')}
                                     labelPosition="top"
                                     value={format( course_event_schedule[modalOpen] ? new Date(course_event_schedule[modalOpen].enddate) : new Date(), 'mm' )}
                                     step="1"
@@ -774,7 +774,7 @@ const CourseMetaFields = () => {
             className="custom-panel-1"
         >
             <TextControl
-                label={__('Cursus naam')}
+                label={__('Cursus naam', 'webkompanen')}
                 value={ course_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -785,7 +785,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Prijs')}
+                label={__('Prijs', 'webkompanen')}
                 value={ course_price }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -796,7 +796,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Prijs per les')}
+                label={__('Prijs per les', 'webkompanen')}
                 value={ course_price_per_lesson }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -807,7 +807,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextareaControl
-	            label="Studielast"
+	            label={__('Study load', 'webkompanen')}
 	            rows={4}
 	            value={ course_study_load }
 	            onChange={ ( newValue ) =>
@@ -819,7 +819,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextareaControl
-	            label="Doelgroep"
+	            label={__('Target audience', 'webkompanen')}
 	            rows={4}
 	            value={ course_target_audience }
 	            onChange={ ( newValue ) =>
@@ -831,7 +831,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextareaControl
-	            label="Toelatingseisen"
+	            label={__('Entry requirements', 'webkompanen')}
 	            rows={4}
 	            value={ course_entry_requirements }
 	            onChange={ ( newValue ) =>
@@ -843,7 +843,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextareaControl
-	            label="Lesmethode"
+	            label={__('Les method', 'webkompanen')}
 	            rows={4}
 	            value={ course_les_method }
 	            onChange={ ( newValue ) =>
@@ -855,7 +855,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextareaControl
-	            label="Certificaat/ diploma"
+	            label={__('Certificate/ diploma', 'webkompanen')}
 	            rows={4}
 	            value={ course_certificate }
 	            onChange={ ( newValue ) =>
@@ -869,7 +869,7 @@ const CourseMetaFields = () => {
             <Spacer
                 marginY="5"
             >
-                <Text variant="body">{__('Cursus dagen')}</Text>
+                <Text variant="body">{__('Course days', 'webkompanen')}</Text>
             </Spacer>
             <Flex
 	            gap={2}
@@ -878,7 +878,7 @@ const CourseMetaFields = () => {
             >
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Ma"
+	                    label={__('Mo', 'webkompanen')}
 	                    checked={ course_days[1] }
                         onChange={
                             (e)=>{
@@ -901,7 +901,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Di"
+	                    label={__('Tu', 'webkompanen')}
 	                    checked={ course_days[2] }
                         onChange={
                             (e)=>{
@@ -924,7 +924,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Wo"
+	                    label={__('We', 'webkompanen')}
 	                    checked={ course_days[3] }
                         onChange={
                             (e)=>{
@@ -947,7 +947,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Do"
+	                    label={__('Th', 'webkompanen')}
 	                    checked={ course_days[4] }
                         onChange={
                             (e)=>{
@@ -970,7 +970,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Vr"
+	                    label={__('Fr', 'webkompanen')}
 	                    checked={ course_days[5] }
                         onChange={
                             (e)=>{
@@ -993,7 +993,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Za"
+	                    label={__('Sa', 'webkompanen')}
 	                    checked={ course_days[6] }
                         onChange={
                             (e)=>{
@@ -1016,7 +1016,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
 	            <FlexItem>
                     <CheckboxControl
-	                    label="Zo"
+	                    label={__('Su', 'webkompanen')}
 	                    checked={ course_days[0] }
                         onChange={
                             (e)=>{
@@ -1039,7 +1039,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
             </Flex>
             <TextControl
-                label={__('Duur cursus (aantal weken)')}
+                label={__('Duur cursus (aantal weken)', 'webkompanen')}
                 value={ course_duration }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1050,9 +1050,9 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Duur cursus verbergen')}
+	            label={__('Duur cursus verbergen', 'webkompanen')}
 	            help={ 
-                    course_show_as_weekly ? 'Ja' : 'Nee'
+                    course_show_as_weekly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
 	            checked={ hide_course_duration }
 	            onChange={ (e) =>
@@ -1064,7 +1064,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Minimum aantal deelnemers')}
+                label={__('Minimum aantal deelnemers', 'webkompanen')}
                 value={ course_minimum_attendee_capacity }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1075,7 +1075,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Maximum aantal deelnemers')}
+                label={__('Maximum aantal deelnemers', 'webkompanen')}
                 value={ course_maximum_attendee_capacity }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1086,9 +1086,9 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Weergeven als wekelijks')}
+	            label={__('Weergeven als wekelijks', 'webkompanen')}
 	            help={ 
-                    course_show_as_weekly ? 'Ja' : 'Nee'
+                    course_show_as_weekly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
 	            checked={ course_show_as_weekly }
 	            onChange={ (e) =>
@@ -1100,9 +1100,9 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Weergeven als maandelijks')}
+	            label={__('Weergeven als maandelijks', 'webkompanen')}
 	            help={ 
-                    course_show_as_monthly ? 'Ja' : 'Nee'
+                    course_show_as_monthly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
 	            checked={ course_show_as_monthly }
 	            onChange={ (e) =>
@@ -1114,9 +1114,9 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-                label={__('Eerste les gratis')}
+                label={__('Eerste les gratis', 'webkompanen')}
                 help={ 
-                    course_first_lesson_free ? 'Ja' : 'Nee'
+                    course_first_lesson_free ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
                 checked={ course_first_lesson_free }
                 onChange={ (e) =>

@@ -210,8 +210,8 @@ const carouselEdit = (props) => {
 		if(selectedInnerBlock){
 			if(selectedInnerBlock.name === 'webkompanen-blocks/carousel-item'){
 				if(innerBlocksParent.indexOf(clientId)){
-					console.log(parent[0])
-					console.log(parentinner[0])
+					//console.log(parent[0])
+					//console.log(parentinner[0])
 					if(selectedInnerBlock && selectedInnerBlock.clientId === clientId){
 						isactive = ' active'
 					}
@@ -296,7 +296,7 @@ const carouselEdit = (props) => {
 						marginBottom={3}
 					>
 					<InputControl
-						label="Custom classes"
+						label={__('Custom classes', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.classes}
 						type="text"

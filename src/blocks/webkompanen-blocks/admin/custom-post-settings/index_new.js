@@ -69,7 +69,7 @@ const emailSettings = () => {
                                     (tab.title === 'E-mailinstellingen') ? (
                                         <>
                                             <InputControl
-                                                label='E-mailserver'
+                                                label={__('Mailserver', 'webkompanen')}
                                                 labelPosition='top'
                                                 value={ this.state.emailserveraddress }
                                                 id='emailserveraddress'
@@ -81,7 +81,7 @@ const emailSettings = () => {
                                                 }
                                             />
 						                    <InputControl
-							                    label='E-mailadres'
+							                    label={__('Email address', 'webkompanen')}
 							                    labelPosition='top'
 							                    value={ this.state.emailaddress }
 							                    id='emailaddress'

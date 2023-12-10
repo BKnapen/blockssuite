@@ -116,8 +116,8 @@ const galleryEdit = (props) => {
 	const getEntitiesConfig = useSelect( ( select ) => {
         return select( 'core' ).getEntitiesConfig('root');
     }, [] );
-	console.log('getEntitiesConfig')
-	console.log(getEntitiesConfig)
+	//console.log('getEntitiesConfig')
+	//console.log(getEntitiesConfig)
 	
 	const alttext = attributes.videoAlt ? attributes.videoAlt : ''
 	
@@ -127,7 +127,7 @@ const galleryEdit = (props) => {
 				<InspectorControls>
 					<GalleryEdit 
 						props={props}
-						label="Gallery"
+						label={__('Gallery', 'webkompanen')}
 					/>
 				</InspectorControls>
 			</Fragment>
@@ -136,7 +136,7 @@ const galleryEdit = (props) => {
 			>
 				<GalleryEdit 
 					props={props}
-					label="Gallery"
+					label={__('Gallery', 'webkompanen')}
 				/>
 			</div>
 		</>

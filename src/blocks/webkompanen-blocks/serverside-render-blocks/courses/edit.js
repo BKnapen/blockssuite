@@ -102,11 +102,11 @@ const pagelistEdit = (props) => {
 		<Fragment>
 			<InspectorControls>
 				<PanelBody
-					title={__('Inhoud', 'awp')}
+					title={__('Inhoud', 'webkompanen')}
 					initialOpen={false}
 				>
 					<InputControl
-						label="Titel"
+						label={__('Title', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.title}
 						type="text"
@@ -119,14 +119,14 @@ const pagelistEdit = (props) => {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={__('Instellingen', 'awp')}
+					title={__('Settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<div
 						className='custom-link-control'
 					>
 					<LinkControl
-						searchInputPlaceholder="Search here..."
+						searchInputPlaceholder={__('Search here...', 'webkompanen')}
 						value={ attributes.post }
 						settings={[]}
 						onChange={ 

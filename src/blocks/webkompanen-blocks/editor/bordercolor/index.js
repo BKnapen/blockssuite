@@ -73,7 +73,7 @@ const BordercolorEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Border kleur', 'awp')}
+			title={__('Border kleur', 'webkompanen')}
 			initialOpen={false}
 		>
 			<ColorPalette
@@ -92,7 +92,7 @@ const BordercolorEdit = (props)=> {
 				clearable={ true }
 			/>
 			<SelectControl
-				label={ __( 'Tint & shade' ) }
+				label={ __( 'Tint & shade', 'webkompanen' ) }
 				value={ attributes.tintshade } // e.g: value = [ 'a', 'c' ]
 				onChange={ 
 					( nextSelect ) => {
@@ -102,16 +102,16 @@ const BordercolorEdit = (props)=> {
 					} 
 				}
 				options={ [
-					{ value: null, label: '' },
-					{ value: 100, label: '100' },
-					{ value: 200, label: '200' },
-					{ value: 300, label: '300' },
-					{ value: 400, label: '400' },
-					{ value: 500, label: '500' },
-					{ value: 600, label: '600' },
-					{ value: 700, label: '700' },
-					{ value: 800, label: '800' },
-					{ value: 900, label: '900' },
+					{ value: null, label: __('', 'webkompanen') },
+					{ value: 100, label: __('100', 'webkompanen') },
+					{ value: 200, label: __('200', 'webkompanen') },
+					{ value: 300, label: __('300', 'webkompanen') },
+					{ value: 400, label: __('400', 'webkompanen') },
+					{ value: 500, label: __('500', 'webkompanen') },
+					{ value: 600, label: __('600', 'webkompanen') },
+					{ value: 700, label: __('700', 'webkompanen') },
+					{ value: 800, label: __('800', 'webkompanen') },
+					{ value: 900, label: __('900', 'webkompanen') },
 				] }
 			/>
 		</PanelBody>

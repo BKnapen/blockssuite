@@ -166,7 +166,7 @@ const headerEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>	
 					<PanelBody
-						title={__('Height', 'awp')}
+						title={__('Height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -305,7 +305,7 @@ const headerEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('View height', 'awp')}
+						title={__('View height', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -444,7 +444,7 @@ const headerEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('width', 'awp')}
+						title={__('width', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>
@@ -583,11 +583,11 @@ const headerEdit = (props) => {
 						</ButtonGroup>
 					</PanelBody>
 					<PanelBody
-						title={__('Z-index', 'awp')}
+						title={__('Z-index', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="Z-index"
+							label={__('Z-index', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.zindex }
 							type="number"
@@ -619,7 +619,7 @@ const headerEdit = (props) => {
 						/>	
 					</PanelBody>
 					<PanelBody
-						title={__('Aspect ratio', 'awp')}
+						title={__('Aspect ratio', 'webkompanen')}
 						initialOpen={false}
 					>
 						<ButtonGroup>

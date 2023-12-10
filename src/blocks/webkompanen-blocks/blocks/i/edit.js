@@ -132,8 +132,8 @@ const iEdit = (props) => {
 	)
 
 	const formattypes = wp.data.select( 'core/rich-text' ).getFormatTypes();
-	console.log(iconArray)
-	console.log('iconArray')
+	//console.log(iconArray)
+	//console.log('iconArray')
 	const autoConfigs = [
 		{
 			name: "Autocomplete",
@@ -196,18 +196,18 @@ const iEdit = (props) => {
 	//https://wordpress.stackexchange.com/questions/367932/create-a-custom-render-appender-button-to-add-inner-blocks
 	
 					/*<IconButton
-						label="My very own custom button"
+						label={__('My very own custom button', 'webkompanen')}
 						icon="edit"
 						className="my-custom-button"
 						onClick={() => 'pressed button'}
 					/>
             		<ToolbarGroup>
-                		<ToolbarButton icon={ paragraph } label="Paragraph" />
+                		<ToolbarButton icon={ paragraph } label={__(''Paragraph, 'webkompanen')} />
             		</ToolbarGroup>
             		<ToolbarGroup>
-                		<ToolbarButton icon={ formatBold } label="Bold" />
-                		<ToolbarButton icon={ formatItalic } label="Italic" />
-                		<ToolbarButton icon={ link } label="Link" />
+                		<ToolbarButton icon={ formatBold } label={__('Bold', 'webkompanen')} />
+                		<ToolbarButton icon={ formatItalic } label={__('Italic', 'webkompanen')} />
+                		<ToolbarButton icon={ link } label={__('Link', 'webkompanen')} />
             		</ToolbarGroup>*/
 	
 	return(
@@ -215,11 +215,11 @@ const iEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<PanelBody
-						title={__('ID', 'awp')}
+						title={__('ID', 'webkompanen')}
 						initialOpen={false}
 					>
 						<InputControl
-							label="id"
+							label={__('ID', 'webkompanen')}
 							labelPosition="top"
 							value={ attributes.blockid }
 							type="text"
@@ -243,7 +243,7 @@ const iEdit = (props) => {
 						props={props}
 					/>
 					<PanelBody
-						title={__('Link', 'awp')}
+						title={__('Link', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div 
@@ -251,7 +251,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<InputControl
-									label="Url"
+									label={__('URL', 'webkompanen')}
 									labelPosition="top"
 									value={ attributes.url }
 									type="text"
@@ -268,7 +268,7 @@ const iEdit = (props) => {
 						</div>
 					</PanelBody>
 					<PanelBody
-						title={__('Typografie', 'awp')}
+						title={__('Typografie', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div 
@@ -276,7 +276,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Text transform' ) }
+									label={ __( 'Text transform', 'webkompanen' ) }
 									value={ attributes.texttransform } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -286,10 +286,10 @@ const iEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'text-lowercase', label: 'Lowercase' },
-										{ value: 'text-uppercase', label: 'Uppercase' },
-										{ value: 'text-capitalize', label: 'Capitalize' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'text-lowercase', label: __('Lowercase', 'webkompanen' ) },
+										{ value: 'text-uppercase', label: __('Uppercase', 'webkompanen' ) },
+										{ value: 'text-capitalize', label: __('Capitalize', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -299,7 +299,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Font size' ) }
+									label={ __( 'Font size', 'webkompanen' ) }
 									value={ attributes.fs } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -309,13 +309,13 @@ const iEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 1, label: 'fs-1' },
-										{ value: 2, label: 'fs-2' },
-										{ value: 3, label: 'fs-3' },
-										{ value: 4, label: 'fs-4' },
-										{ value: 5, label: 'fs-5' },
-										{ value: 6, label: 'fs-6' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 1, label: __('fs-1', 'webkompanen' ) },
+										{ value: 2, label: __('fs-2', 'webkompanen' ) },
+										{ value: 3, label: __('fs-3', 'webkompanen' ) },
+										{ value: 4, label: __('fs-4', 'webkompanen' ) },
+										{ value: 5, label: __('fs-5', 'webkompanen' ) },
+										{ value: 6, label: __('fs-6', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -325,7 +325,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Font weight and italics' ) }
+									label={ __( 'Font weight and italics', 'webkompanen' ) }
 									value={ attributes.fw } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -335,15 +335,15 @@ const iEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'fw-bold', label: 'Bold text' },
-										{ value: 'fw-bolder', label: 'Bolder weight text' },
-										{ value: 'fw-semibold', label: 'Semibold weight text' },
-										{ value: 'fw-normal', label: 'Normal weight text' },
-										{ value: 'fw-light', label: 'Light weight text' },
-										{ value: 'fw-lighter', label: 'Lighter weight text' },
-										{ value: 'fst-italic', label: 'Italic text' },
-										{ value: 'fst-normal', label: 'Text with normal font style' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'fw-bold', label: __('Bold text', 'webkompanen' ) },
+										{ value: 'fw-bolder', label: __('Bolder weight text', 'webkompanen' ) },
+										{ value: 'fw-semibold', label: __('Semibold weight text', 'webkompanen' ) },
+										{ value: 'fw-normal', label: __('Normal weight text', 'webkompanen' ) },
+										{ value: 'fw-light', label: __('Light weight text', 'webkompanen' ) },
+										{ value: 'fw-lighter', label: __('Lighter weight text', 'webkompanen' ) },
+										{ value: 'fst-italic', label: __('Italic text', 'webkompanen' ) },
+										{ value: 'fst-normal', label: __('Text with normal font style', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -353,7 +353,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Line height' ) }
+									label={ __( 'Line height', 'webkompanen' ) }
 									value={ attributes.lh } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -363,11 +363,11 @@ const iEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'lh-1', label: 'Lineheight 1' },
-										{ value: 'lh-sm', label: 'Lineheight small' },
-										{ value: 'lh-base', label: 'Lineheight base' },
-										{ value: 'lh-lg', label: 'Lineheight large' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'lh-1', label: __('Lineheight 1', 'webkompanen' ) },
+										{ value: 'lh-sm', label: __('Lineheight small', 'webkompanen' ) },
+										{ value: 'lh-base', label: __('Lineheight base', 'webkompanen' ) },
+										{ value: 'lh-lg', label: __('Lineheight large', 'webkompanen' ) }
 									] }
 								/>
 							</div>
@@ -377,7 +377,7 @@ const iEdit = (props) => {
 						>
 							<div className="col-12">
 								<SelectControl
-									label={ __( 'Text decoration' ) }
+									label={ __( 'Text decoration', 'webkompanen' ) }
 									value={ attributes.textdecoration } // e.g: value = [ 'a', 'c' ]
 									onChange={ 
 										( nextSelect ) => {
@@ -387,22 +387,22 @@ const iEdit = (props) => {
 										} 
 									}
 									options={ [
-										{ value: null, label: '' },
-										{ value: 'text-textdecoration-underline', label: 'Underline' },
-										{ value: 'text-textdecoration-line-through', label: 'Line through' },
-										{ value: 'text-textdecoration-none', label: 'None' }
+										{ value: null, label: __('', 'webkompanen' ) },
+										{ value: 'text-textdecoration-underline', label: __('Underline', 'webkompanen' ) },
+										{ value: 'text-textdecoration-line-through', label: __('Line through', 'webkompanen' ) },
+										{ value: 'text-textdecoration-none', label: __('None', 'webkompanen' ) }
 									] }
 								/>
 							</div>
 						</div>
 					</PanelBody>
 					<PanelBody
-						title={__('Tekst', 'awp')}
+						title={__('Tekst', 'webkompanen')}
 						initialOpen={false}
 					>
 						<div>
 							<TextareaControl
-								label="Text"
+								label={__('Text', 'webkompanen')}
 								rows={5}
 								value={ attributes.content }
 								onChange={ 
@@ -431,7 +431,7 @@ const iEdit = (props) => {
 							}
 		
                         	toggleProps={ toolbarItemHTMLProps }
-                        	label={ 'Heading' }
+                        	label={ __('Heading', 'webkompanen') }
                         	controls={ [					
 								{
 									title: '',

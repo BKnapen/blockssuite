@@ -73,7 +73,7 @@ const PositionEdit = (props)=> {
 	
 	return(
 		<PanelBody
-			title={__('Positie opties', 'awp')}
+			title={__('Positie opties', 'webkompanen')}
 			initialOpen={false}
 		>
 			<div 
@@ -81,7 +81,7 @@ const PositionEdit = (props)=> {
 			>
 				<div className="col-12">
 					<SelectControl
-						label={ __( 'position' ) }
+						label={ __( 'position', 'webkompanen' ) }
 						value={ attributes.position } // e.g: value = [ 'a', 'c' ]
 						onChange={ 
 							( nextSelect ) => {
@@ -91,12 +91,12 @@ const PositionEdit = (props)=> {
 							} 
 						}
 						options={ [
-							{ value: null, label: '' },
-							{ value: 'static', label: 'Static' },
-							{ value: 'relative', label: 'Relative' },
-							{ value: 'absolute', label: 'Absolute' },
-							{ value: 'fixed', label: 'Fixed' },
-							{ value: 'sticky', label: 'Sticky' }
+							{ value: null, label: __('', 'webkompanen') },
+							{ value: 'static', label: __('Static', 'webkompanen') },
+							{ value: 'relative', label: __('Relative', 'webkompanen') },
+							{ value: 'absolute', label: __('Absolute', 'webkompanen') },
+							{ value: 'fixed', label: __('Fixed', 'webkompanen') },
+							{ value: 'sticky', label: __('Sticky', 'webkompanen') }
 						] }
 					/>
 					{

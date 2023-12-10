@@ -88,11 +88,11 @@ const pagelistEdit = (props) => {
 		<Fragment>
 			<InspectorControls>
 				<PanelBody
-					title={__('Inhoud', 'awp')}
+					title={__('Inhoud', 'webkompanen')}
 					initialOpen={false}
 				>
 					<InputControl
-						label="Titel"
+						label={__('Title', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.title}
 						type="text"
@@ -105,11 +105,11 @@ const pagelistEdit = (props) => {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={__('Instellingen', 'awp')}
+					title={__('Settings', 'webkompanen')}
 					initialOpen={false}
 				>
 					<InputControl
-						label="Aantal berichten"
+						label={__('Number of posts', 'webkompanen')}
 						labelPosition="top"
 						value={attributes.number_of_items}
 						type="number"

@@ -41,7 +41,7 @@ const SidebarSm = () => {
       	<PluginSidebar 
 			name="bootstrap-sm-settings" 
 			icon={ icon } 
-			title="Breakpoint Small (sm) settings"
+			title={__('Breakpoint Small (sm) settings', 'webkompanen')}
 		>
 			<p>Breakpoint Small (sm):</p>
 			<div

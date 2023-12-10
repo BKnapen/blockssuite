@@ -172,7 +172,7 @@ const UrlButton = ( props ) => {
 						}
                 	</>
             	}
-            	title=""
+            	title={__('', 'webkompanen')}
 				style={
 					{
 						background: bgcolorurl,

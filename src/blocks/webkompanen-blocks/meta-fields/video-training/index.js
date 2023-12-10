@@ -295,7 +295,7 @@ const CourseMetaFields = () => {
                 shouldCloseOnClickOutside
                 isFullScreen
                 overlayClassName="my-extra-modal-overlay-class"
-                title="Video en vragen"
+                title={__('Video en vragen', 'webkompanen')}
                 onRequestClose={ closeModal }
             >
                 <Flex
@@ -327,7 +327,7 @@ const CourseMetaFields = () => {
 										            }
 									            >
 										            {
-											            (videoUrl === '' ||  videoUrl) === undefined ? __('Choose an video', 'awp') : ''
+											            (videoUrl === '' ||  videoUrl) === undefined ? __('Choose an video', 'webkompanen') : ''
 										            }
 										            {
 											            (videoUrl !== '' && videoUrl !== undefined) ? ( 
@@ -353,7 +353,7 @@ const CourseMetaFields = () => {
 						            (videoUrl !== '' && videoUrl !== undefined) ? (
 							            <MediaUploadCheck>
 								            <MediaUpload
-									            title={__('Replace video', 'awp')}
+									            title={__('Replace video', 'webkompanen')}
 									            value={''}
 									            onSelect={onSelectMedia}
 									            allowedTypes={['video']}
@@ -366,7 +366,7 @@ const CourseMetaFields = () => {
 												            isDefault 
 												            //isLarge
 											            >
-												            {__('Replace video', 'awp')}
+												            {__('Replace video', 'webkompanen')}
 											            </Button>
 										            )
 									            }
@@ -377,7 +377,7 @@ const CourseMetaFields = () => {
 					            {
 						            (videoUrl !== '' && videoUrl !== undefined) ? ( 
 							            <MediaUploadCheck>
-								            <Button onClick={removeMedia} isLink isDestructive>{__('Remove video', 'awp')}
+								            <Button onClick={removeMedia} isLink isDestructive>{__('Remove video', 'webkompanen')}
 								            </Button>
 							            </MediaUploadCheck>
 						            ) : ''
@@ -403,11 +403,11 @@ const CourseMetaFields = () => {
         }
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title={__('Cursus gegevens')}
+            title={__('Course info', 'webkompanen')}
             className="custom-panel-1"
         >
             <TextControl
-                label={__('Cursus naam')}
+                label={__('Course name', 'webkompanen')}
                 value={ video_training_name }
                 onChange={ ( newValue ) =>
                     editPost( { 

@@ -157,7 +157,7 @@ const formEdit = (props) => {
 			<BlockControls>
 				<Toolbar>
 					<IconButton
-						label="Link"
+						label={__('Link', 'webkompanen')}
 						icon={link}
 						className="link"
 						onClick={ 
@@ -217,7 +217,7 @@ const formEdit = (props) => {
 			<Fragment>		
 				<InspectorControls>
 					<InputControl
-						label="Antwoord"
+						label={__('Answer', 'webkompanen')}
 						labelPosition="top"
 						value={ answer }
 						type="text"
@@ -231,7 +231,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="ID"
+						label={__('ID', 'webkompanen')}
 						labelPosition="top"
 						value={ id }
 						type="text"
@@ -245,7 +245,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="E-mail onderwerp"
+						label={__('E-mail subject', 'webkompanen')}
 						labelPosition="top"
 						value={ emailsubject }
 						type="text"
@@ -259,7 +259,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Class"
+						label={__('Classes', 'webkompanen')}
 						labelPosition="top"
 						value={ classes }
 						type="text"
@@ -273,7 +273,7 @@ const formEdit = (props) => {
 						}
 					/>
 					<InputControl
-						label="Naam"
+						label={__('Name', 'webkompanen')}
 						labelPosition="top"
 						value={ name }
 						type="text"
