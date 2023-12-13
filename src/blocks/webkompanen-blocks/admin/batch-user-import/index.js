@@ -132,7 +132,7 @@ class AppBatchImport extends Component {
 			donors:(
 					<div>
 						<ul>
-							<li>Geen donateurs voor dit project</li>
+							<li>{__('No donors for this project', 'webkompanen')}</li>
 						</ul>
 					</div>
 			),
@@ -229,18 +229,15 @@ class AppBatchImport extends Component {
 		})
   		.then(
 			(response) => {
-				console.log(response)
 				return response.json()
 			}
 		)
   		.then(
 			(data) => {
-				console.log(data)
 			}
 		)
 		.catch(
 			(error) => {
-    			console.error('Error:', error);
 			}
 		);
 		/*const url = '/share/v1/new/';
@@ -264,18 +261,15 @@ class AppBatchImport extends Component {
 		)
 		.then(  
 			(response) => {
-				console.log(response)
 				return response.json()
 			}
 		)
 		.then(
 		  	(data) => {
-			  	console.log(data)
 			}
 	  	)
 		.catch(
 			(error) => {
-				console.error('Error:', error);
 			}
 		)*/
 	}
@@ -342,10 +336,10 @@ class AppBatchImport extends Component {
 							<thead>
     							<tr>
       								<th scope="col">#</th>
-      								<th scope="col">Bedrijf</th>
-      								<th scope="col">Voornaam</th>
-      								<th scope="col">Achternaam</th>
-      								<th scope="col">E-mail</th>
+      								<th scope="col">{__('Company', 'webkompanen')}</th>
+      								<th scope="col">{__('Firstname', 'webkompanen')}</th>
+      								<th scope="col">{__('Surname', 'webkompanen')}</th>
+      								<th scope="col">{__('Email', 'webkompanen')}</th>
     							</tr>
   							</thead>
 							<tbody>
@@ -355,14 +349,13 @@ class AppBatchImport extends Component {
 					),
 					headeroptions:(
 						<div>
-							<p>Gegevens zijn verwerkt.</p>
+							<p>{__('Data has been processed.', 'webkompanen')}</p>
 						</div>
 					),
 					databasedata: output
 				}, ()=>{
 					for(var i=0; i < _this.state.databasedata.length; i++){
 						//i === 0	? '' : _this.databaseInsert(_this.state.databasedata[i], i)
-						console.log(_this.state.databasedata[i])
 					}
 				})
 			}
@@ -396,17 +389,11 @@ class AppBatchImport extends Component {
 				projecttoken: _this.state.projecttoken,
 			}
 		} ).then( ( res ) => {
-			console.log(reqItem)
 			if(res.success){
-				console.log(res)
 			}
 			if(!(res.success)){
-				console.log(res)
 			}
-			console.log(reqItem)
 		}).catch( err => {
-			console.log(reqItem)
-			console.log(err)
 		})
 	}
 
@@ -460,7 +447,6 @@ class AppBatchImport extends Component {
 								var surnamevailid = false
 								var emailvailid = false
 								for(var j=0; j < _this.state.importheaders.length; j++){
-									console.log(_this.state.importheaders[j])
 									if(j == 0){
 										companyvailid = _this.state.importheaders[j] == 'bedrijf' ? true : false
 									}
@@ -504,7 +490,6 @@ class AppBatchImport extends Component {
 															options: items
 														},
 															() => {
-																console.log( _this.state.options )
 															}
 														);
 													}
@@ -528,21 +513,19 @@ class AppBatchImport extends Component {
 																{ width: "100%", marginBottom:"20px" }
 															}
 														>
-															<p>Bestand voldoet aan de juiste gegevens.</p>
-															<p>Selecteer uit onderstaande lijst voor welke trainingen je een uitnodiging wilt versturen.</p>
+															<p>{__('File complies at the correct requirements.', 'webkompanen')}</p>
+															<p>{__('Select from the list below for which training courses you want to send an invitation to.', 'webkompanen')}</p>
 														</div>
 														<PageSearch/>
 														<Button 
 															isPrimary 
 															onClick={ ()=>{
 																_this.dataHandeler()
-																console.log('global.__SelectedPage')
-																console.log(global.__SelectedPage)
 															} }
 															//style={{ width: "100%" }}
 															className="btn mt-3"
 														>
-															Verwerk gegevens
+															{__('Process data', 'webkompanen')}
 														</Button>
 													</div>
 												)
@@ -552,7 +535,7 @@ class AppBatchImport extends Component {
 											_this.setState({
 												headeroptions:(
 													<div>
-														<p>Bestand voldoet niet aan de juiste gegevens.</p>
+														<p>{__('File complies not at the correct requirements.', 'webkompanen')}</p>
 													</div>
 												)
 											})
@@ -566,13 +549,11 @@ class AppBatchImport extends Component {
 					
                 	/*var rowObject  =  XLSX.utils.sheet_to_row_object_array(workbook.Sheets[y]);
 					
-					console.log(rowObject);
 					
                     exceljsonObj = rowObject;
                     for(var i=0;i<exceljsonObj.length;i++){
                     	//var recordcount = exceljsonObj.length;
                     	var data = exceljsonObj[i];
-						console.log(data)
                     }*/
                 });
             };
@@ -599,7 +580,7 @@ class AppBatchImport extends Component {
                             shouldCloseOnEsc
                             shouldCloseOnClickOutside
                             overlayClassName="my-extra-modal-overlay-class"
-                            title={__('Melding', 'webkompanen')}
+                            title={__('Notification', 'webkompanen')}
                             onRequestClose={ e => this.setState({isopen : false}) }
                         >
                             <p>{this.state.modaltext}</p>
@@ -607,18 +588,18 @@ class AppBatchImport extends Component {
                                 isSecondary 
                                 onClick={ e => this.setState({isopen : false} ) }
                             >
-                                Sluit venster
+                                {__('Close window', 'webkompanen')}
                             </Button>
                         </Modal>
                     )
                 }
                 <div className="components-panel__header">
                     <h2>
-						<i class="fa-solid fa-file-import fa-bounce"></i> Batch import
+						<i class="fa-solid fa-file-import fa-bounce"></i> {__('Batch import', 'webkompanen')}
                     </h2>
                 </div>
                 <PanelBody 
-                    title={ __( 'Gebruikers importeren', 'webkompanen' ) } 
+                    title={__('Import users', 'webkompanen') } 
                     initialOpen={ false }
                     onToggle={ 
                         ( e ) => {
@@ -641,12 +622,12 @@ class AppBatchImport extends Component {
                                     render={ 
                                         ( { openFileDialog } ) => (
                                             <div>
-                                                <p>Upload csv, xlsx, xls bestand: </p>
+                                                <p>{__('Upload csv, xlsx, xls file:', 'webkompanen')} </p>
                                                 <Button 
                                                     isSecondary 
                                                     onClick={ openFileDialog }
                                                 >
-                                                    Upload csv, xlsx, xls bestand
+                                                    {__('Upload csv, xlsx, xls file', 'webkompanen')}
                                                 </Button>
 												{ this.state.fileinfo }
                                             </div>
@@ -659,7 +640,7 @@ class AppBatchImport extends Component {
                                 marginBottom={5}
                             >
                                     <div style={{ backgroundColor: "#e7e7e7", padding: "56px 64px", position: "relative", textAlign: "center"}}>
-                                        { this.state.hasDropped ? 'Bestand geupload!' : 'Upload csv, xlsx, xls bestand, door het hier in te slepen' }
+                                        { this.state.hasDropped ? __('File uploaded!', 'webkompanen') : __('Upload csv, xlsx, xls file, by dragging it in here', 'webkompanen') }
                                         <DropZone 
                                             //onFilesDrop={ (files, position) => this.setState( { hasDropped: true } ) }
                                             onFilesDrop={ 

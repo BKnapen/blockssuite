@@ -465,7 +465,7 @@ const EventMetaFields = () => {
         <>
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title={__('Event genamegevens', 'webkompanen')}
+            title={__('Event info', 'webkompanen')}
             className="custom-panel-1"
         >
             <TextControl
@@ -494,7 +494,7 @@ const EventMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-2"
-            title={__('Event locatie gegevens', 'webkompanen')}
+            title={__('Event location info', 'webkompanen')}
             className="custom-panel-2"
         >
             <TextControl
@@ -533,7 +533,7 @@ const EventMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-3"
-            title={__('Kaart verkoop', 'webkompanen')}
+            title={__('Ticket sale', 'webkompanen')}
             className="custom-panel-3"
         >
             <TextControl
@@ -582,7 +582,7 @@ const EventMetaFields = () => {
                     ()=>{ lineupHandeler(artistPanel, focusField) }
                 }
             >
-                Voeg artiest toe
+                {__('Add artist', 'webkompanen')}
             </Button>
         </PluginDocumentSettingPanel>
         </>

@@ -1,4 +1,7 @@
 <?php
+	// Exit if accessed directly.
+	defined( 'ABSPATH' ) || exit;
+	
 	function sharer_invitation_email($first_name_request, $last_name_request, $email_request, $activation_key_request){
 
         	$unique_url = network_site_url('account?action=activation&key=' . $activation_key_request . '&login=' . rawurlencode($email_request) . '', 'login');

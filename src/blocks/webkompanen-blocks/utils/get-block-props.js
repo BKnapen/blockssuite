@@ -28,7 +28,9 @@ const GetProps = (props) => {
 		'webkompanen-blocks/button',
 		'webkompanen-blocks/div',
 		'webkompanen-blocks/fontawesome',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 	
 	const justifyblocks = [
@@ -36,13 +38,17 @@ const GetProps = (props) => {
 		'webkompanen-blocks/div',
 		'webkompanen-blocks/nav',
 		'webkompanen-blocks/navbar-collapse',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 	
 	const textalignblocks = [
 		'webkompanen-blocks/col',
 		'webkompanen-blocks/nav-link',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 	
 	const positionblocks = [
@@ -56,7 +62,9 @@ const GetProps = (props) => {
 		'webkompanen-blocks/col',
 		'webkompanen-blocks/div',
 		'webkompanen-blocks/img',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 	
 	const marginblocks = [
@@ -75,7 +83,9 @@ const GetProps = (props) => {
 		'webkompanen-blocks/fontawesome',
 		'webkompanen-blocks/form-floating',
 		'webkompanen-blocks/accordion',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 	
 	const paddingblocks = [
@@ -90,7 +100,9 @@ const GetProps = (props) => {
 		'webkompanen-blocks/header',
 		'webkompanen-blocks/div',
 		'webkompanen-blocks/nav',
-		'webkompanen-blocks/site-title'
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/ul',
+		'webkompanen-blocks/li'
 	]
 
 	const selectedblockprops = wp.data.select( 'core/block-editor' ).getSelectedBlock();

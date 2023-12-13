@@ -95,7 +95,7 @@ const pagelistEdit = (props) => {
 		<Fragment>
 			<InspectorControls>
 				<PanelBody
-					title={__('Inhoud', 'webkompanen')}
+					title={__('Content', 'webkompanen')}
 					initialOpen={false}
 				>
 					<InputControl

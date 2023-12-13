@@ -1,16 +1,17 @@
 <?php
+	// Exit if accessed directly.
+	defined( 'ABSPATH' ) || exit;
 // Exit if accessed directly.
 //https://developers.miniorange.com/docs/rest-api-authentication/wordpress/api-key-authentication
 //https://developers.miniorange.com/docs/rest-api-authentication/wordpress/oauth-authentication
 //https://wp-oauth.com/docs/how-to/openid-authentication-for-wp-rest-api/
 
-defined( 'ABSPATH' ) || exit;
-
 $includes = array(
 	'put-user-pages',
 	'get-user-pages',
 	'get-link',
-	'post-link'
+	'post-link',
+	'upload-media'
 );
 
 foreach ( $includes as $include ) {

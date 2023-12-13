@@ -113,6 +113,8 @@ import * as accordionitem from './blocks/accordion-item';
 import * as accordionbutton from './blocks/accordion-button';
 import * as listgroup from './blocks/list-group';
 import * as listgroupitem from './blocks/list-group-item';
+import * as listitem from './blocks/li';
+import * as unorderedlist from './blocks/ul';
 
 const getAllBlockCollections = () => [
 	webkompanen
@@ -253,7 +255,9 @@ const getAllBlocks = () => [
 	accordionitem,
 	accordionbutton,
 	listgroup,
-	listgroupitem
+	listgroupitem,
+	listitem,
+	unorderedlist
 ]
 
 const registerWebkompanenBlocks = (

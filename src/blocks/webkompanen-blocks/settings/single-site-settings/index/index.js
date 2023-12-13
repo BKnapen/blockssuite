@@ -149,7 +149,7 @@ class SingleSiteSettings extends Component {
 										>
 											<ToggleControl
 												label={ __( 'is SMTP?', 'webkompanen' ) }
-												help={ __( 'E-mail login is SMTP', 'webkompanen' ) }
+												help={ __( 'Email login is SMTP', 'webkompanen' ) }
 												checked={ this.state.webkompanen_phpmailer_is_smtp }
 												disabled={ this.state.isAPISaving }
 												onChange={ 
@@ -236,13 +236,13 @@ class SingleSiteSettings extends Component {
 												}) 
 											}
 											options={ [
-												{ value: null, label: __('geen', 'webkompanen') },
+												{ value: null, label: __('', 'webkompanen') },
 												{ value: 'tls', label: __('tls', 'webkompanen') },
 												{ value: 'ssl', label: __('ssl', 'webkompanen') },
 											] }
 										/>
 										<InputControl
-											label={__('Sender e-mail address', 'webkompanen')}
+											label={__('Sender email address', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_sender }
 											disabled={ this.state.isAPISaving }
@@ -255,7 +255,7 @@ class SingleSiteSettings extends Component {
 											}
 										/>	
 										<InputControl
-											label={__('Sender from e-mail address', 'webkompanen')}
+											label={__('Sender from email address', 'webkompanen')}
 											labelPosition="top"
 											value={ this.state.webkompanen_phpmailer_from }
 											disabled={ this.state.isAPISaving }
@@ -285,7 +285,7 @@ class SingleSiteSettings extends Component {
 										>
 											<ToggleControl
 												label={ __( 'is HTML?', 'webkompanen' ) }
-												help={ __( 'HTML E-mail' ) }
+												help={ __( 'HTML Email', 'webkompanen' ) }
 												checked={ this.state.webkompanen_phpmailer_is_html }
 												disabled={ this.state.isAPISaving }
 												onChange={ 

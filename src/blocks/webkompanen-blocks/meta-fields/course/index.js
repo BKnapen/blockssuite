@@ -281,7 +281,6 @@ const CourseMetaFields = () => {
     }
 
     const cursusEditHandeler = (requestItem) => {
-        console.log(requestItem)
         setModalOpen(requestItem)
     }
     const cursusRemoveHandeler = (requestItem) => {
@@ -384,11 +383,8 @@ const CourseMetaFields = () => {
     }
 
     const CoursesDataOutput = (props) =>{
-        console.log('course_event_schedule')
-        console.log(course_event_schedule)
         if(course_event_schedule){
             let schedule = []
-            console.log(course_event_schedule)
             course_event_schedule.map(
                 (eventschedule, index) => {
                     schedule.push(
@@ -438,9 +434,6 @@ const CourseMetaFields = () => {
         }
     }
 
-    console.log('course_days')
-    console.log(course_days)
-
     return(
         <>
         {
@@ -453,7 +446,7 @@ const CourseMetaFields = () => {
                 shouldCloseOnClickOutside
                 isFullScreen
                 overlayClassName="my-extra-modal-overlay-class"
-                title={__('Cursus tijden en datums', 'webkompanen')}
+                title={__('Course dates and times', 'webkompanen')}
                 onRequestClose={ closeModal }
             >
                 <Flex
@@ -465,10 +458,10 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Startdatum', 'webkompanen')} {modalOpen}</Text>
+                            <Text variant="body">{__('Start date', 'webkompanen')} {modalOpen}</Text>
                         </Spacer>
                         <DatePicker
-                            label={__('Startdatum', 'webkompanen')}
+                            label={__('Start date', 'webkompanen')}
 	                        currentDate={ course_event_schedule[modalOpen] ? course_event_schedule[modalOpen].startdate : new Date() }
 	                        onChange={ 
                                 ( date ) => {
@@ -496,7 +489,7 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Aanvangtijd', 'webkompanen')}</Text>
+                            <Text variant="body">{__('Start time', 'webkompanen')}</Text>
                         </Spacer>
                         <Flex
                             gap={2}
@@ -560,7 +553,7 @@ const CourseMetaFields = () => {
                                 />
                             </FlexItem>
                             <FlexItem>
-                                <Text variant="body">{__(':')}</Text>
+                                <Text variant="body">{__(':', 'webkompanen')}</Text>
                             </FlexItem>
                             <FlexItem>
                                 <InputControl
@@ -624,10 +617,10 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Einddatum')}</Text>
+                            <Text variant="body">{__('End date')}</Text>
                         </Spacer>
                         <DatePicker
-                            label={__('Einddatum', 'webkompanen')}
+                            label={__('End date', 'webkompanen')}
 	                        currentDate={ course_event_schedule[modalOpen] ? course_event_schedule[modalOpen].enddate : new Date() }
 	                        onChange={ 
                                 ( date ) => {
@@ -657,7 +650,7 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Eindtijd')}</Text>
+                            <Text variant="body">{__('End date')}</Text>
                         </Spacer>
                         <Flex
                             gap={2}
@@ -713,7 +706,7 @@ const CourseMetaFields = () => {
                                 />
                             </FlexItem>
                             <FlexItem>
-                                <Text variant="body">{__(':')}</Text>
+                                <Text variant="body">{__(':', 'webkompanen')}</Text>
                             </FlexItem>
                             <FlexItem>
                                 <InputControl
@@ -770,11 +763,11 @@ const CourseMetaFields = () => {
         }
         <PluginDocumentSettingPanel
             name="custom-panel-1"
-            title={__('Cursus gegevens')}
+            title={__('Course details')}
             className="custom-panel-1"
         >
             <TextControl
-                label={__('Cursus naam', 'webkompanen')}
+                label={__('Course name', 'webkompanen')}
                 value={ course_name }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -785,7 +778,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Prijs', 'webkompanen')}
+                label={__('Price', 'webkompanen')}
                 value={ course_price }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -796,7 +789,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Prijs per les', 'webkompanen')}
+                label={__('Price per lesson', 'webkompanen')}
                 value={ course_price_per_lesson }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1039,7 +1032,7 @@ const CourseMetaFields = () => {
                 </FlexItem>
             </Flex>
             <TextControl
-                label={__('Duur cursus (aantal weken)', 'webkompanen')}
+                label={__('Course duration (number of weeks)', 'webkompanen')}
                 value={ course_duration }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1050,7 +1043,7 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Duur cursus verbergen', 'webkompanen')}
+	            label={__('Hide course duration', 'webkompanen')}
 	            help={ 
                     course_show_as_weekly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
@@ -1064,7 +1057,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Minimum aantal deelnemers', 'webkompanen')}
+                label={__('Minimum number of attendees', 'webkompanen')}
                 value={ course_minimum_attendee_capacity }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1075,7 +1068,7 @@ const CourseMetaFields = () => {
                 }
             />
             <TextControl
-                label={__('Maximum aantal deelnemers', 'webkompanen')}
+                label={__('Maximum number of attendees', 'webkompanen')}
                 value={ course_maximum_attendee_capacity }
                 onChange={ ( newValue ) =>
                     editPost( { 
@@ -1086,7 +1079,7 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Weergeven als wekelijks', 'webkompanen')}
+	            label={__('Show as weekly', 'webkompanen')}
 	            help={ 
                     course_show_as_weekly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
@@ -1100,7 +1093,7 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-	            label={__('Weergeven als maandelijks', 'webkompanen')}
+	            label={__('Show as monthly', 'webkompanen')}
 	            help={ 
                     course_show_as_monthly ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
@@ -1114,7 +1107,7 @@ const CourseMetaFields = () => {
                 }
             />
             <ToggleControl
-                label={__('Eerste les gratis', 'webkompanen')}
+                label={__('First lesson free', 'webkompanen')}
                 help={ 
                     course_first_lesson_free ? __('Yes', 'webkompanen') : __('No', 'webkompanen')
                 }
@@ -1130,7 +1123,7 @@ const CourseMetaFields = () => {
         </PluginDocumentSettingPanel>
         <PluginDocumentSettingPanel
             name="custom-panel-2"
-            title={__('Cursus datums')}
+            title={__('Course dates', 'webkompanen')}
             className="custom-panel-2"
         >
             <CoursesDataOutput/>
@@ -1140,7 +1133,7 @@ const CourseMetaFields = () => {
                     ()=>{ cursusDataHandeler() }
                 }
             >
-                Voeg cursus datum toe
+                {__('Add course date', 'webkompanen')}
             </Button>
         </PluginDocumentSettingPanel>
         </>

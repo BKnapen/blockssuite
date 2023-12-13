@@ -1,4 +1,7 @@
 <?php
+	// Exit if accessed directly.
+	defined( 'ABSPATH' ) || exit;
+	
 	function new_training_email($first_name_request, $last_name_request, $email_request, $page_id_request, $token_request){
 
         	//$unique_url = network_site_url('account?action=activation&key=' . $activation_key_request . '&login=' . rawurlencode($email_request) . '', 'login');

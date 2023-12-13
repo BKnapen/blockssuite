@@ -295,7 +295,7 @@ const CourseMetaFields = () => {
                 shouldCloseOnClickOutside
                 isFullScreen
                 overlayClassName="my-extra-modal-overlay-class"
-                title={__('Video en vragen', 'webkompanen')}
+                title={__('Video and questions', 'webkompanen')}
                 onRequestClose={ closeModal }
             >
                 <Flex
@@ -307,7 +307,7 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Video')}</Text>
+                            <Text variant="body">{__('Video', 'webkompanen')}</Text>
                         </Spacer>
                         <div>
 				            <div className="editor-post-featured-video">
@@ -395,7 +395,7 @@ const CourseMetaFields = () => {
                         <Spacer
                             marginY="5"
                         >
-                            <Text variant="body">{__('Vragen')}</Text>
+                            <Text variant="body">{__('Questions')}</Text>
                         </Spacer>
                     </FlexItem>
                 </Flex>
@@ -434,7 +434,7 @@ const CourseMetaFields = () => {
                             isPrimary
                             onClick={open}
                         >
-                            {__('Voeg video toe', 'webkompanen')}
+                            {__('Add video', 'webkompanen')}
                         </Button>
                     </>
                 )}

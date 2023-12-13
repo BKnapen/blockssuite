@@ -1,4 +1,7 @@
 <?php
+	// Exit if accessed directly.
+	defined( 'ABSPATH' ) || exit;
+	
 //https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
 /*show all errors debug modes*/
 error_reporting(E_ALL);

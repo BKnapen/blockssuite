@@ -1,4 +1,6 @@
 <?php
+	// Exit if accessed directly.
+	defined( 'ABSPATH' ) || exit;
 //https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
 
 if(isset($_SERVER['HTTP_REFERER'])):

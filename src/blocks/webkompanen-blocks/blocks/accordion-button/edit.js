@@ -187,7 +187,7 @@ function ButtonLinkEdit( props ) {
 				<Toolbar>
 					<div className='testje'>
 					<ToggleControl
-						label={__('DOutline button', 'webkompanen')}
+						label={__('Outline button', 'webkompanen')}
 						help={ true ? '' : '' }
 						checked={ attributes.isOutline }
 						onChange={ 

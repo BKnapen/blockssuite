@@ -104,6 +104,7 @@ add_action( 'admin_head', 'fix_svg' );
 		'register-settings',
 		'theme-support',
 		'site-transient-update',
+		'translate-theme'
 		//'user-profile-fields'
 	);
 
