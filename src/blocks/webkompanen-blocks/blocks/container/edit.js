@@ -98,12 +98,14 @@ const containerEdit = (props) => {
 		'webkompanen-blocks/navbar-brand',
 		'webkompanen-blocks/navbar-collapse',
 		'webkompanen-blocks/navbar-nav',
+		'webkompanen-blocks/navbar-toggler',
 		'webkompanen-blocks/w3schools-menu-icon',
 		'webkompanen-blocks/carousel',
 		'webkompanen-blocks/carousel-inner',
 		'webkompanen-blocks/carousel-item',
 		'webkompanen-blocks/referenties',
-		'webkompanen-blocks/form'
+		'webkompanen-blocks/form',
+		'webkompanen-blocks/woocommerce-add-to-cart-button'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

@@ -9,6 +9,7 @@ import {
 } from '@wordpress/block-editor';
 
 import { Margin } from '../../utilities/margin';
+import { Border } from '../../utilities/border';
 import { NegativeMargin } from '../../utilities/negativemargin';
 import { Padding } from '../../utilities/padding';
 import { Display } from '../../utilities/display';
@@ -33,6 +34,7 @@ function ButtonLinkSave( props ) {
 	let blockClasses = 'nav-link';
 	
 	const margin = new Margin(props)
+	const border = new Border(props)
 	const negativemargin = new NegativeMargin(props)
 	const padding = new Padding(props)
 	const display = new Display(props)
@@ -48,6 +50,7 @@ function ButtonLinkSave( props ) {
 	blockClasses += backgroundcolor.classes() != null && backgroundcolor.classes() != '' ? ' '+backgroundcolor.classes() : ''
 	blockClasses += color.classes() != null && color.classes() != '' ? ' '+color.classes() : ''
 	blockClasses += margin.classes() != null && margin.classes() != '' ? ' '+margin.classes() : ''
+	blockClasses += border.classes() != null && border.classes() != '' ? ' '+border.classes() : ''
 	blockClasses += negativemargin.classes() != null && negativemargin.classes() != '' ? ' '+negativemargin.classes() : ''
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''

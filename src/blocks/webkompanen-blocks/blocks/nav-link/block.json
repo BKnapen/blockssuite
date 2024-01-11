@@ -28,6 +28,30 @@
         	"selector": "a",
         	"attribute": "href"
     	},
+		"bordercolor":{
+			"type": "string"
+		},
+		"borders":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"borderstartxs":{
+			"type": "boolean"
+		},
+		"bordertopxs":{
+			"type": "boolean"
+		},
+		"borderendxs":{
+			"type": "boolean"
+		},
+		"borderbottomxs":{
+			"type": "boolean"
+		},
         "classes":{
             "type": "string"
         },

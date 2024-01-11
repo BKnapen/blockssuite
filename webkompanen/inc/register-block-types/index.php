@@ -11,7 +11,8 @@
 		'login-modal',
 		'page-list',
 		'reset-password-form',
-		'reset-password'
+		'reset-password',
+		'woocommerce-add-to-cart-button'
 	);
 
 	foreach ( $includes as $include ) {

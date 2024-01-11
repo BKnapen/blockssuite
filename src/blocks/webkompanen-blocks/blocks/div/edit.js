@@ -59,6 +59,7 @@ import {
 /* Utilities */
 
 import { Margin } from '../../utilities/margin';
+import { Border } from '../../utilities/border';
 import { NegativeMargin } from '../../utilities/negativemargin';
 import { Padding } from '../../utilities/padding';
 import { Display } from '../../utilities/display';
@@ -73,6 +74,7 @@ import { Alignitems } from '../../utilities/alignitems';
 /* Editors */
 
 import ColorEdit from '../../editor/color';
+import BorderEdit from '../../editor/border';
 import BackgroundcolorEdit from '../../editor/backgroundcolor';
 import ColEdit from '../../editor/col';
 import MarginEdit from '../../editor/margin';
@@ -132,7 +134,15 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/post-featured-img',
 		'webkompanen-blocks/post-title',
 		'webkompanen-blocks/list-group',
-		'webkompanen-blocks/list-group-item'
+		'webkompanen-blocks/list-group-item',
+		'webkompanen-blocks/nav',
+		'webkompanen-blocks/navbar-brand',
+		'webkompanen-blocks/navbar-collapse',
+		'webkompanen-blocks/navbar-nav',
+		'webkompanen-blocks/site-title',
+		'webkompanen-blocks/navbar-toggler',
+		'webkompanen-blocks/woocommerce-add-to-cart-button',
+		'webkompanen-blocks/woocommerce-activity-location'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -154,6 +164,7 @@ const sectionEdit = (props) => {
 	const display = new Display(props)
 	const position = new Position(props)
 	const justify = new Justify(props)
+	const border = new Border(props)
 	const bsheight = new BSHeight(props)
 	const col = new Col(props)
 	const color = new Color(props)

@@ -98,7 +98,11 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/container',
 		'webkompanen-blocks/row',
 		'webkompanen-blocks/img',
-		'webkompanen-blocks/form'
+		'webkompanen-blocks/form',
+		'webkompanen-blocks/woocommerce-add-to-cart-button',
+		'webkompanen-blocks/carousel',
+		'webkompanen-blocks/carousel-inner',
+		'webkompanen-blocks/carousel-item'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

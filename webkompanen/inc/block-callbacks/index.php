@@ -12,6 +12,7 @@
 		'portfolio',
 		'reset-password-modal',
 		'reset-password-request-modal',
+		'woocommerce-add-to-cart-button'
 	);
 
 	foreach ( $includes as $include ) {

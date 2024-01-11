@@ -137,11 +137,8 @@ const pagelistEdit = (props) => {
 			{...blockProps}
 		>
 			<ServerSideRender
-        		block="webkompanen-blocks/courses-overview"
+        		block="webkompanen-blocks/courses"
         		attributes={ {
-            		number_of_items: attributes.number_of_items,
-            		title: attributes.title,
-            		requestedcategorie: attributes.requestedcategorie
         		} }
 				httpMethod="POST"
     		/>

@@ -102,7 +102,8 @@ const GetProps = (props) => {
 		'webkompanen-blocks/nav',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
-		'webkompanen-blocks/li'
+		'webkompanen-blocks/li',
+		'webkompanen-blocks/nav-item'
 	]
 
 	const selectedblockprops = wp.data.select( 'core/block-editor' ).getSelectedBlock();

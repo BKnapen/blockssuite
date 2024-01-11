@@ -56,6 +56,8 @@ import * as coursesoverview from './serverside-render-blocks/courses-overview'
 import * as agendaoverview from './serverside-render-blocks/agenda-overview'
 import * as login from './serverside-render-blocks/login'
 import * as eventinfo from './serverside-render-blocks/eventinfo'
+import * as woocommerceaddtocartbutton from './serverside-render-blocks/woocommerce-add-to-cart-button'
+import * as woocommerceactivitylocation from './serverside-render-blocks/woocommerce-activity-location'
 
 /*Blocks*/
 
@@ -247,6 +249,8 @@ const getAllBlocks = () => [
 	coursesoverview,
 	agendaoverview,
 	eventinfo,
+	woocommerceaddtocartbutton,
+	woocommerceactivitylocation,
 	w3schoolsmenuicon,
 	accordion,
 	accordionbody,

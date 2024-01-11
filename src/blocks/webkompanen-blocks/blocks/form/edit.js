@@ -110,7 +110,8 @@ const formEdit = (props) => {
 		'webkompanen-blocks/fontawesome',
 		'webkompanen-blocks/form-group',
 		'webkompanen-blocks/form-check',
-		'webkompanen-blocks/form-floating'
+		'webkompanen-blocks/form-floating',
+		'webkompanen-blocks/woocommerce-add-to-cart-button'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
