@@ -128,7 +128,7 @@ const pagelistEdit = (props) => {
 			{...blockProps}
 		>
 			<ServerSideRender
-        		block="webkompanen-blocks/reviews"
+        		block="webkompanen-blocks/google-reviews"
         		attributes={ {
             		number_of_items: attributes.number_of_items,
             		title: attributes.title

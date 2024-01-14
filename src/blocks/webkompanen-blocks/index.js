@@ -57,8 +57,10 @@ import * as agendaoverview from './serverside-render-blocks/agenda-overview'
 import * as login from './serverside-render-blocks/login'
 import * as eventinfo from './serverside-render-blocks/eventinfo'
 import * as woocommerceaddtocartbutton from './serverside-render-blocks/woocommerce-add-to-cart-button'
+import * as woocommercecart from './serverside-render-blocks/woocommerce-cart'
 import * as woocommerceactivitylocation from './serverside-render-blocks/woocommerce-activity-location'
-
+import * as googlerating from './serverside-render-blocks/google-rating'
+import * as googlereviews from './serverside-render-blocks/google-reviews'
 /*Blocks*/
 
 import * as section from './blocks/section';
@@ -250,6 +252,7 @@ const getAllBlocks = () => [
 	agendaoverview,
 	eventinfo,
 	woocommerceaddtocartbutton,
+	woocommercecart,
 	woocommerceactivitylocation,
 	w3schoolsmenuicon,
 	accordion,
@@ -261,7 +264,9 @@ const getAllBlocks = () => [
 	listgroup,
 	listgroupitem,
 	listitem,
-	unorderedlist
+	unorderedlist,
+	googlerating,
+	googlereviews
 ]
 
 const registerWebkompanenBlocks = (

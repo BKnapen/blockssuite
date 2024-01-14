@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen-blocks/woocommerce-cart",
+  "title": "WooCommerce cart",
+  "category": "webkompanen-blocks/woocommerce",
+  "description": "WooCommerce cart",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "content": {
+      "type": "string"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "object"
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "categorie": {
+      "type": "string"
+    },
+    "number_of_items": {
+      "type": "number",
+      "default": -1
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

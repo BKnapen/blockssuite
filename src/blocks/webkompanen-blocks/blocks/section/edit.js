@@ -102,7 +102,9 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/woocommerce-add-to-cart-button',
 		'webkompanen-blocks/carousel',
 		'webkompanen-blocks/carousel-inner',
-		'webkompanen-blocks/carousel-item'
+		'webkompanen-blocks/carousel-item',
+		'webkompanen-blocks/google-reviews',
+		'webkompanen-blocks/google-rating'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

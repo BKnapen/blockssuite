@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "webkompanen-blocks/reviews",
-	"title": "Reviews",
-	"category": "webkompanen-blocks/querys",
-	"description": "Reviews",
+	"name": "webkompanen-blocks/google-reviews",
+	"title": "Google reviews",
+	"category": "webkompanen-blocks/google",
+	"description": "Google reviews",
 	"textdomain": "webkompanen",
 	"attributes": {
 		"align":{

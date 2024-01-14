@@ -85,7 +85,9 @@ const rowEdit = (props) => {
 	const ALLOWED_BLOCKS = [ 
 		'webkompanen-blocks/lastposts',
 		'webkompanen-blocks/col',
-		'webkompanen-blocks/form'
+		'webkompanen-blocks/form',
+		'webkompanen-blocks/google-reviews',
+		'webkompanen-blocks/google-rating'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

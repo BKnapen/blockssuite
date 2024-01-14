@@ -115,7 +115,9 @@ const colEdit = (props) => {
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/list-group',
 		'webkompanen-blocks/list-group-item',
-		'webkompanen-blocks/woocommerce-add-to-cart-button'
+		'webkompanen-blocks/woocommerce-add-to-cart-button',
+		'webkompanen-blocks/google-reviews',
+		'webkompanen-blocks/google-rating'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

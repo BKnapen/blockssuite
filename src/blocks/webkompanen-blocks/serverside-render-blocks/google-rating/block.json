@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "webkompanen-blocks/google-rating",
+	"title": "Google rating",
+	"category": "webkompanen-blocks/google",
+	"description": "Google rating",
+	"textdomain": "webkompanen",
+	"attributes": {
+		"align":{
+			"type": "string",
+			"default": "full"
+		},
+		"content":{
+			"type": "string"
+		},
+        "classes":{
+            "type": "string"
+        },
+		"post":{
+			"type": "object"
+		},
+		"image":{
+			"type": "object"
+		},
+		"imageId":{
+			"type": "number"
+		},
+		"imageUrl":{
+			"type": "string"
+		},
+		"imageAlt":{
+			"type": "string"
+		},
+		"number_of_items":{
+			"type": "number",
+			"default": -1
+		},
+		"title":{
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
+}

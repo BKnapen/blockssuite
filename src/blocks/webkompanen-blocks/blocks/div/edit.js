@@ -142,7 +142,9 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/navbar-toggler',
 		'webkompanen-blocks/woocommerce-add-to-cart-button',
-		'webkompanen-blocks/woocommerce-activity-location'
+		'webkompanen-blocks/woocommerce-activity-location',
+		'webkompanen-blocks/google-reviews',
+		'webkompanen-blocks/google-rating'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
