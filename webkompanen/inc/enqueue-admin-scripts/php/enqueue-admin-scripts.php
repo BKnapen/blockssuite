@@ -89,7 +89,7 @@
 			
 			wp_register_script(
 				'google-maps-head-js',
-				'https://maps.googleapis.com/maps/api/js?key=AIzaSyApISeKdsn9D36qQieobFvHrIEXMwkIVU4&libraries=places&callback=initMap', // Handle.
+				'https://maps.googleapis.com/maps/api/js?key='.get_option( 'googleMapsAPIKey' ).'&libraries=places&callback=initMap', // Handle.
 				array(),
 				'', 
 				false 

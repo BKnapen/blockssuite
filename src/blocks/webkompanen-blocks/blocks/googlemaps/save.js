@@ -15,7 +15,7 @@ function googleMapsSave( props ) {
 	
 	console.log('GOOGLE')
 	console.log(attributes)
-	const googlemapsapikey = 'AIzaSyApISeKdsn9D36qQieobFvHrIEXMwkIVU4'
+	const googlemapsapikey = attributes.apiKey
 	const classes = attributes.classes ? attributes.classes : ''
 	const mapwidth = attributes.mapwidth ? attributes.mapwidth : '100%'
 	const mapheight = attributes.mapheight ? attributes.mapheight : '400px'

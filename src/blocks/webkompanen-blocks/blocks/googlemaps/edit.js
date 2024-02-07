@@ -316,7 +316,6 @@ const googleMapsEdit = (props) => {
 
 	const MarkersOutput = (props) =>{
 		
-		const googlemapsapikey = 'AIzaSyApISeKdsn9D36qQieobFvHrIEXMwkIVU4'
         //console.log(event_performers)
         //console.log(metadata)
         //console.log(props)
