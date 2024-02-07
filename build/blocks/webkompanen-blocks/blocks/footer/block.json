@@ -483,6 +483,9 @@
     },
     "tintshade": {
       "type": "number"
+    },
+    "opacity": {
+      "type": "number"
     }
   },
   "supports": {

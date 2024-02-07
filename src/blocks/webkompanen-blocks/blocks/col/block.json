@@ -671,6 +671,9 @@
 		},
 		"height":{
 			"type":"string"
+		},
+		"opacity":{
+			"type": "number"
 		}
 	},
 	"supports": {
