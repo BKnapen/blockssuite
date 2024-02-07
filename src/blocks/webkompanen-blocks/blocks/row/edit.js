@@ -87,7 +87,13 @@ const rowEdit = (props) => {
 		'webkompanen-blocks/col',
 		'webkompanen-blocks/form',
 		'webkompanen-blocks/google-reviews',
-		'webkompanen-blocks/google-rating'
+		'webkompanen-blocks/google-rating',
+		'webkompanen-blocks/woocommerce-add-to-cart-button',
+		'webkompanen-blocks/woocommerce-cart',
+		'webkompanen-blocks/woocommerce-activity-products',
+		'webkompanen-blocks/woocommerce-checkout-billing-address',
+		'webkompanen-blocks/woocommerce-checkout-shipping-address',
+		'webkompanen-blocks/woocommerce-checkout-payment-options'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

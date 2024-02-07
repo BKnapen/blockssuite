@@ -98,13 +98,16 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/container',
 		'webkompanen-blocks/row',
 		'webkompanen-blocks/img',
+		'webkompanen-blocks/div',
 		'webkompanen-blocks/form',
 		'webkompanen-blocks/woocommerce-add-to-cart-button',
 		'webkompanen-blocks/carousel',
 		'webkompanen-blocks/carousel-inner',
 		'webkompanen-blocks/carousel-item',
 		'webkompanen-blocks/google-reviews',
-		'webkompanen-blocks/google-rating'
+		'webkompanen-blocks/google-rating',,
+		'webkompanen-blocks/woocommerce-checkout-billing-address',
+		'webkompanen-blocks/woocommerce-checkout-shipping-address'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

@@ -49,9 +49,11 @@ import {
 	ColorPicker,
 	Popover,
 	IconButton,
+	ButtonGroup,
 	Button,
 	ResponsiveWrapper,
-	Toolbar
+	Toolbar,
+	__experimentalInputControl as InputControl
 } from '@wordpress/components';
 
 /* Utilities */
@@ -64,6 +66,8 @@ import { Position } from '../../utilities/position';
 import { Col } from '../../utilities/col';
 import { Color } from '../../utilities/color';
 import { Backgroundcolor } from '../../utilities/backgroundcolor';
+import { Justify } from '../../utilities/justify';
+import { Alignitems } from '../../utilities/alignitems';
 
 /* Editors */
 
@@ -125,6 +129,7 @@ const footerEdit = (props) => {
 	const col = new Col(props)
 	const color = new Color(props)
 	const backgroundcolor = new Backgroundcolor(props)
+	const alignitems = new Alignitems(props)
 	
 	let blockClasses = '';
 
@@ -138,6 +143,10 @@ const footerEdit = (props) => {
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
+	blockClasses += attributes.height != null && attributes.height != '' ? ' '+attributes.height : ''
+	blockClasses += attributes.viewheight != null && attributes.viewheight != '' ? ' '+attributes.viewheight : ''
+	blockClasses += attributes.width != null && attributes.width != '' ? ' '+attributes.width : ''
+	blockClasses += alignitems.classes() != null && alignitems.classes() != '' ? ' '+alignitems.classes() : ''
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');
@@ -157,7 +166,636 @@ const footerEdit = (props) => {
 	return(
 		<>		
 			<Fragment>		
-				<InspectorControls>
+				<InspectorControls>	
+					<PanelBody
+						title={__('Height', 'webkompanen')}
+						initialOpen={false}
+					>
+						<ButtonGroup>
+							{
+								attributes.height === 'h-25' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													height:null
+												}
+											)
+										}
+									}
+								>
+									25%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												height:'h-25'
+											}
+										)
+									}
+								}
+								>
+									25%
+								</Button>
+
+							}
+							{
+								attributes.height === 'h-50' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													height:null
+												}
+											)
+										}
+									}
+								>
+									50%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												height:'h-50'
+											}
+										)
+									}
+								}
+								>
+									50%
+								</Button>
+
+							}
+							{
+								attributes.height === 'h-75' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													height:null
+												}
+											)
+										}
+									}
+								>
+									75%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												height:'h-75'
+											}
+										)
+									}
+								}
+								>
+									75%
+								</Button>
+
+							}
+							{
+								attributes.height === 'h-100' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													height:null
+												}
+											)
+										}
+									}
+								>
+									100%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												height:'h-100'
+											}
+										)
+									}
+								}
+								>
+									100%
+								</Button>
+
+							}
+						</ButtonGroup>
+					</PanelBody>
+					<PanelBody
+						title={__('View height', 'webkompanen')}
+						initialOpen={false}
+					>
+						<ButtonGroup>
+							{
+								attributes.viewheight === 'vh-25' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													viewheight:null
+												}
+											)
+										}
+									}
+								>
+									25%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													viewheight:'vh-25'
+												}
+											)
+										}
+									}
+								>
+									25%
+								</Button>
+
+							}
+							{
+								attributes.viewheight === 'vh-50' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													viewheight:null
+												}
+											)
+										}
+									}
+								>
+									50%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												viewheight:'vh-50'
+											}
+										)
+									}
+								}
+								>
+									50%
+								</Button>
+
+							}
+							{
+								attributes.viewheight === 'vh-75' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													viewheight:null
+												}
+											)
+										}
+									}
+								>
+									75%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												viewheight:'vh-75'
+											}
+										)
+									}
+								}
+								>
+									75%
+								</Button>
+
+							}
+							{
+								attributes.viewheight === 'vh-100' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													viewheight:null
+												}
+											)
+										}
+									}
+								>
+									100%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												viewheight:'vh-100'
+											}
+										)
+									}
+								}
+								>
+									100%
+								</Button>
+
+							}
+						</ButtonGroup>
+					</PanelBody>
+					<PanelBody
+						title={__('width', 'webkompanen')}
+						initialOpen={false}
+					>
+						<ButtonGroup>
+							{
+								attributes.width === 'w-25' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													width:null
+												}
+											)
+										}
+									}
+								>
+									25%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													width:'w-25'
+												}
+											)
+										}
+									}
+								>
+									25%
+								</Button>
+
+							}
+							{
+								attributes.width === 'w-50' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													width:null
+												}
+											)
+										}
+									}
+								>
+									50%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												width:'w-50'
+											}
+										)
+									}
+								}
+								>
+									50%
+								</Button>
+
+							}
+							{
+								attributes.width === 'w-75' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													width:null
+												}
+											)
+										}
+									}
+								>
+									75%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												width:'w-75'
+											}
+										)
+									}
+								}
+								>
+									75%
+								</Button>
+
+							}
+							{
+								attributes.width === 'w-100' ?
+								<Button 
+									isPrimary
+									onClick={
+										(e)=>{
+											setAttributes(
+												{
+													width:null
+												}
+											)
+										}
+									}
+								>
+									100%
+								</Button>
+								:
+								<Button 
+									isSecondary
+									onClick={
+									(e)=>{
+										setAttributes(
+											{
+												width:'w-100'
+											}
+										)
+									}
+								}
+								>
+									100%
+								</Button>
+
+							}
+						</ButtonGroup>
+					</PanelBody>
+					<PanelBody
+						title={__('Aspect ratio', 'webkompanen')}
+						initialOpen={false}
+					>
+						<ButtonGroup>
+							{
+								attributes.ratiosize === 'ratio-1x1' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										1x1
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-1x1'
+												})
+											}
+										}
+									>
+										1x1
+									</Button>
+
+							}
+							{
+								attributes.ratiosize === 'ratio-1x2' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										1x2
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-1x2'
+												})
+											}
+										}
+									>
+										1x2
+									</Button>
+
+							}
+							{
+								attributes.ratiosize === 'ratio-2x1' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										2x1
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-2x1'
+												})
+											}
+										}
+									>
+										2x1
+									</Button>
+
+							}
+							{
+								attributes.ratiosize === 'ratio-4x3' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										4x3
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-4x3'
+												})
+											}
+										}
+									>
+										4x3
+									</Button>
+
+							}
+							{
+								attributes.ratiosize === 'ratio-16x9' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										16x9
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-16x9'
+												})
+											}
+										}
+									>
+										16x9
+									</Button>
+
+							}
+							{
+								attributes.ratiosize === 'ratio-21x9' ?
+									<Button 
+										isPrimary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: false,
+													ratiosize: null
+												})
+											}
+										}
+									>
+										21x9
+									</Button>
+									:
+									<Button 
+										isSecondary
+										onClick={
+											(e)=>{
+												setAttributes({
+													ratio: true,
+													ratiosize: 'ratio-21x9'
+												})
+											}
+										}
+									>
+										21x9
+									</Button>
+
+							}
+						</ButtonGroup>
+					</PanelBody>
+					<PanelBody
+						title={__('Classes', 'webkompanen')}
+						initialOpen={false}
+					>
+						<InputControl
+							label={__('Classes', 'webkompanen')}
+							labelPosition="top"
+							value={ attributes.classes }
+							type="text"
+							isPressEnterToChange
+							onChange={ 
+								(nextValue) => {
+									setAttributes({
+										classes: nextValue
+									})
+								} 
+							}
+						/>
+					</PanelBody>
 					<ColorEdit 
 						props={props}
 					/>

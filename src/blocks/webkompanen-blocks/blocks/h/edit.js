@@ -170,6 +170,13 @@ const HeadingEdit = (props) => {
 										}
 									)
 								}
+								else{
+									setAttributes(
+										{
+											dataaos:nextSelect
+										}
+									)
+								}
 							}
 						}
 							options={ [
@@ -203,10 +210,17 @@ const HeadingEdit = (props) => {
 						/>
 						<SelectControl
 							label={ __( 'AOS easing', 'webkompanen' ) }
-							value={ attributes.dataaos } // e.g: value = [ 'a', 'c' ]
+							value={ attributes.dataaoseasing } // e.g: value = [ 'a', 'c' ]
 							onChange={ 
 							( nextSelect ) => {
 								if ( nextSelect ) {
+									setAttributes(
+										{
+											dataaoseasing:nextSelect
+										}
+									)
+								}
+								else{
 									setAttributes(
 										{
 											dataaoseasing:nextSelect
@@ -245,6 +259,13 @@ const HeadingEdit = (props) => {
 							onChange={ 
 							( nextSelect ) => {
 								if ( nextSelect ) {
+									setAttributes(
+										{
+											dataaosanchorplacement:nextSelect
+										}
+									)
+								}
+								else{
 									setAttributes(
 										{
 											dataaosanchorplacement:nextSelect

@@ -340,6 +340,30 @@
 		},
 		"textalignment":{
 			"type": "string"
+		},
+		"dataaos":{
+			"type":"string"
+		},
+		"dataaoseasing":{
+			"type":"string"
+		},
+		"dataaosanchorplacement":{
+			"type":"string"
+		},
+		"dataaosonce":{
+			"type":"boolean"
+		},
+		"dataaosanchor":{
+			"type":"string"
+		},
+		"dataaosduration":{
+			"type":"number"
+		},
+		"dataaosdelay":{
+			"type":"number"
+		},
+		"dataaosoffset":{
+			"type":"number"
 		}
 	},
 	"supports": {

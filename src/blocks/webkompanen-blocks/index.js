@@ -58,7 +58,11 @@ import * as login from './serverside-render-blocks/login'
 import * as eventinfo from './serverside-render-blocks/eventinfo'
 import * as woocommerceaddtocartbutton from './serverside-render-blocks/woocommerce-add-to-cart-button'
 import * as woocommercecart from './serverside-render-blocks/woocommerce-cart'
+import * as woocommerceactivityproducts from './serverside-render-blocks/woocommerce-activity-products'
 import * as woocommerceactivitylocation from './serverside-render-blocks/woocommerce-activity-location'
+import * as woocommercecheckoutbillingaddress from './serverside-render-blocks/woocommerce-checkout-billing-address'
+import * as woocommercecheckoutshippingaddress from './serverside-render-blocks/woocommerce-checkout-shipping-address'
+import * as woocommercecheckoutpaymentoptions from './serverside-render-blocks/woocommerce-checkout-payment-options'
 import * as googlerating from './serverside-render-blocks/google-rating'
 import * as googlereviews from './serverside-render-blocks/google-reviews'
 /*Blocks*/
@@ -253,7 +257,11 @@ const getAllBlocks = () => [
 	eventinfo,
 	woocommerceaddtocartbutton,
 	woocommercecart,
+	woocommerceactivityproducts,
 	woocommerceactivitylocation,
+	woocommercecheckoutbillingaddress,
+	woocommercecheckoutshippingaddress,
+	woocommercecheckoutpaymentoptions,
 	w3schoolsmenuicon,
 	accordion,
 	accordionbody,

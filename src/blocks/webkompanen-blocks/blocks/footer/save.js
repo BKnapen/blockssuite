@@ -18,6 +18,7 @@ import { Position } from '../../utilities/position';
 import { Col } from '../../utilities/col';
 import { Color } from '../../utilities/color';
 import { Backgroundcolor } from '../../utilities/backgroundcolor';
+import { Alignitems } from '../../utilities/alignitems';
 
 function footerSave( props ) {
 	const {
@@ -40,6 +41,7 @@ function footerSave( props ) {
 	const col = new Col(props)
 	const color = new Color(props)
 	const backgroundcolor = new Backgroundcolor(props)
+	const alignitems = new Alignitems(props)
 	
 	let blockClasses = '';
 
@@ -53,6 +55,10 @@ function footerSave( props ) {
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
+	blockClasses += attributes.height != null && attributes.height != '' ? ' '+attributes.height : ''
+	blockClasses += attributes.viewheight != null && attributes.viewheight != '' ? ' '+attributes.viewheight : ''
+	blockClasses += attributes.width != null && attributes.width != '' ? ' '+attributes.width : ''
+	blockClasses += alignitems.classes() != null && alignitems.classes() != '' ? ' '+alignitems.classes() : ''
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');

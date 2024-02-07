@@ -45,6 +45,7 @@ function googleMapsSave( props ) {
 						data-latitude={attributes.latitude ? attributes.latitude : ''}
 						data-longitude={attributes.longitude ? attributes.longitude : ''}
 						data-zoom={attributes.zoom ? attributes.zoom : ''}
+						data-locations={attributes.locations}
 						style={
 							{
 								height: ''+mapheight+'',
@@ -76,6 +77,8 @@ function googleMapsSave( props ) {
 						data-latitude={attributes.latitude ? attributes.latitude : 51.3638725}
 						data-longitude={attributes.longitude ? attributes.longitude : 5.3228256}
 						data-zoom={attributes.zoom ? attributes.zoom : 17}
+						data-locations={JSON.stringify(attributes.locations)}
+						data-testje='testje'
 						style={
 							{
 								height: ''+mapheight+'',

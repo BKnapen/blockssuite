@@ -13,6 +13,27 @@
     "content": {
       "type": "string"
     },
+    "height": {
+      "type": "string"
+    },
+    "viewheight": {
+      "type": "string"
+    },
+    "h": {
+      "type": "number"
+    },
+    "width": {
+      "type": "string"
+    },
+    "fullwidth": {
+      "type": "boolean"
+    },
+    "position": {
+      "type": "string"
+    },
+    "positionalignment": {
+      "type": "string"
+    },
     "align": {
       "type": "string",
       "default": "full"

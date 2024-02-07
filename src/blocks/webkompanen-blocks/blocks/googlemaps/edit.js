@@ -1,8 +1,10 @@
 /**
  * WordPress dependencies
  */
+import { PluginDocumentSettingPanel } from '@wordpress/edit-post';
 import { Wrapper, Status } from '@googlemaps/react-wrapper';
-import { GoogleMap, useLoadScript, Marker, Autocomplete, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, Marker, Autocomplete as AutocompleteNormal, useJsApiLoader } from '@react-google-maps/api';
+import Autocomplete from 'react-google-autocomplete';
 import { React, useEffect, useRef, ReactElement, useMemo } from "react";
 import ReactDOM from "react-dom";
 import {
@@ -70,10 +72,24 @@ const googleMapsEdit = (props) => {
 		clientId
 	} = props;
 	let autocomplete = null
+
 	//https://codesandbox.io/s/react-google-maps-api-multiple-markers-infowindow-forked-dpueyy?file=/src/App.js:165-231
 	//https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7C62.107733,-145.541936&key=YOUR_API_KEY
 	const [searchResult, setSearchResult] = useState("Result: none");
-	const googlemapsapikey = 'AIzaSyApISeKdsn9D36qQieobFvHrIEXMwkIVU4'
+
+	const selectedBlock = useSelect(
+		( select ) => select( 'core/block-editor' ).getSelectedBlock()
+	  );
+	
+	  useEffect( () => {
+		console.log( selectedBlock );
+		console.log( 'selectedBlock' );
+	  }, [ selectedBlock ] );
+
+	const siteinfo = useSelect( ( select ) =>
+		select('core').getSite()
+	);
+
     if ( ! attributes.blockId ) {
         setAttributes( { blockId: clientId } );
     }
@@ -122,8 +138,369 @@ const googleMapsEdit = (props) => {
 			templateLock: false
 	}
     );
+
+
+    const removeMarkerHandeler = (requestItem) =>{
+		console.log('requestItem')
+		console.log('removeMarkerHandeler')
+        if(attributes.locations){
+            let locations = []
+
+            attributes.locations.map(
+                (location, index) => {
+                    index !== Number(requestItem) ? 
+                    locations.push({
+                        latitude:Number(location.latitude),
+                        longitude:Number(location.longitude)
+                    }):''
+                }
+            )
+
+            setAttributes({
+				locations: locations 
+			}) 
+        }
+    }
+	const changeMarker = (requestLat, requestLng, requestItem) =>{
+		attributes.locationPanel !== Number(requestItem) ? setAttributes({
+			locationPanel: Number(requestItem) 
+		}) : null
+		
+		if(attributes.locations){
+			let locations = []
+
+			attributes.locations.map(
+                (location, index) => {
+                    index !== Number(requestItem) ? 
+                    locations.push({
+                        latitude:Number(location.latitude),
+                        longitude:Number(location.longitude)
+                    }):
+                    locations.push({
+                        latitude:Number(requestLat),
+                        longitude:Number(requestLng)
+                    })
+                }
+            )
+
+			setAttributes({
+				locations: locations 
+			}) 
+		}
+	}
+	
+	const changeMarkerHandelerNew = (requestField, requestItem, requestValue) =>{
+
+        //locationPanel !== Number(requestItem) ? setArtistPanel(Number(requestItem)) : ''
+        //focusField !== requestField ? setFocusField(requestField) : ''
+        //this.setState( { openArtistPanel: Number(requestItem) } )
+        if(attributes.locations){
+            
+            let locations = []
+
+            attributes.locations.map(
+                (location, index) => {
+                    index !== Number(requestItem) ? 
+                    locations.push({
+                        latitude:Number(location.latitude),
+                        longitude:Number(location.longitude)
+                    }):
+                    locations.push({
+                        latitude:requestField == 'latitude' ? Number(requestValue) : Number(location.latitude),
+                        longitude:requestField == 'longitude' ? Number(requestValue) : Number(location.longitude)
+                    })
+                }
+            )
+
+            //console.log(artists)
+
+            //console.log('requestItem')
+            //console.log(requestItem)
+
+            //setMeta( { ...meta, agenda_performers: artists } );
+
+            setAttributes({
+				locations: locations 
+			}) 
+        }
+    }
+	
+    const changeMarkerHandeler = (requestField, requestItem, requestValue) =>{
+		attributes.locationPanel !== Number(requestItem) ? setAttributes({
+			locationPanel: Number(requestItem) 
+		}) : null
+		attributes.focusField !== requestField ? setAttributes({
+			focusField: requestField 
+		}) : null
+
+        //locationPanel !== Number(requestItem) ? setArtistPanel(Number(requestItem)) : ''
+        //focusField !== requestField ? setFocusField(requestField) : ''
+        //this.setState( { openArtistPanel: Number(requestItem) } )
+        if(attributes.locations){
+            
+            let locations = []
+
+            attributes.locations.map(
+                (location, index) => {
+                    index !== Number(requestItem) ? 
+                    locations.push({
+                        latitude:Number(location.latitude),
+                        longitude:Number(location.longitude)
+                    }):
+                    locations.push({
+                        latitude:requestField == 'latitude' ? Number(requestValue) : Number(location.latitude),
+                        longitude:requestField == 'longitude' ? Number(requestValue) : Number(location.longitude)
+                    })
+                }
+            )
+
+            //console.log(artists)
+
+            //console.log('requestItem')
+            //console.log(requestItem)
+
+            //setMeta( { ...meta, agenda_performers: artists } );
+
+            setAttributes({
+				locations: locations 
+			}) 
+        }
+    }
+
+	const markerHandeler = () =>{
+		console.log('markerHandeler')
+        if(attributes.locations){
+            //const metaFieldValue = meta[ 'myguten_meta_block_field' ];
+
+            //let artists = event_performers
+
+            let locations = []
+
+            attributes.locations.map(
+                (location, index) => {
+                    locations.push({
+                        latitude:Number(location.latitude),
+                        longitude:Number(location.longitude)
+                    })
+                }
+            )
+
+
+            locations.push({
+                latitude:'',
+                longitude:''
+            })
+
+            //console.log(artists)
+
+            //setMeta( { ...meta, event_performers: artists } );
+
+            setAttributes({
+				locations: locations 
+			}) 
+        }
+		else{
+			let locations = []
+
+			locations.push({
+                latitude:'',
+                longitude:''
+            })
+
+			setAttributes({
+				locations: locations 
+			}) 
+		}
+
+    }
+
+	const MarkersOutput = (props) =>{
+		
+		const googlemapsapikey = 'AIzaSyApISeKdsn9D36qQieobFvHrIEXMwkIVU4'
+        //console.log(event_performers)
+        //console.log(metadata)
+        //console.log(props)
+        //console.log(props.locationPanel)
+        //console.log('props.locationPanel')
+        //console.log('props.focusField')
+        var markerinputs = [];
+        if(attributes.locations){
+            for(var i=0; i<attributes.locations.length; i++){
+                markerinputs.push(
+                    <PanelBody
+                        name={`location-panel-${i}`}
+                        className={`location-panel-${i}`}
+					    title={__('Locatie '+(i+1)+'', 'webkompanen')}
+                        initialOpen={ attributes.locationPanel === i ? true : false }
+						children={'test'}
+                        onToggle={
+                            (e, props)=>{
+								console.log(e, props)
+								if(!(e)){
+									setAttributes({
+										locationPanel: null
+									})
+								}
+                            }
+                        }
+			        >
+                        <div
+                            className='row'
+                        >
+                            <div
+                                className='col-12'
+                            >
+                                <a 
+                                    href="#" 
+                                    data-location={`${i}`} 
+                                    style={
+                                        {
+                                            color:'red'
+                                        }
+                                    }
+                                    onClick={
+                                        (e)=>{
+                                            removeMarkerHandeler(e.target.getAttribute('data-location'))
+                                        }
+                                    } 
+                                >
+                                    Verwijder locatie
+                                </a>
+                                <div class="form-floating mb-3">
+                                    <input 
+                                        autoFocus={ Number(attributes.locationPanel) === i && attributes.focusField == 'latitude' ? true : false}
+										onBlur={
+											()=>{
+												setAttributes({
+													focusField: null 
+												})
+											}
+										}
+                                        type="number" 
+                                        class="form-control" 
+                                        id={`latitude${i}`} 
+                                        value={Number(attributes.locations[i].latitude)} 
+                                        placeholder="Latitude"
+                                        data-location={`${i}`} 
+                                        onChange={
+                                            (e)=>{
+                                                changeMarkerHandeler('latitude', e.target.getAttribute('data-location'), e.target.value)
+                                            }
+                                        }
+                                    />
+                                    <label for={`latitude${i}`}>Latitude</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input 
+                                        autoFocus={ Number(attributes.locationPanel) === i && attributes.focusField == 'longitude' ? true : false}
+										onBlur={
+											()=>{
+												setAttributes({
+													focusField: null 
+												})
+											}
+										}
+                                        type="number" 
+                                        class="form-control" 
+                                        id={`longitude${i}`}
+                                        value={Number(attributes.locations[i].longitude)} 
+                                        placeholder="Longitude"
+                                        data-location={`${i}`} 
+                                        onChange={
+                                            (e)=>{
+                                                changeMarkerHandeler('longitude', e.target.getAttribute('data-location'), e.target.value)
+                                            }
+                                        }
+                                    />
+                                    <label for={`longitude${i}`}>Longitude</label>
+                                </div>
+								<div class="form-floating mb-3">
+									<Autocomplete
+										data-location={`${i}`}
+                                        id={`autocomplete${i}`}
+										placeholder="Zoeken..."
+										class="form-control" 
+										apiKey={siteinfo.googleMapsAPIKey}
+										onPlaceSelected={
+											(place, inputRef) => {
+												console.log(inputRef.getAttribute('data-location'))
+												console.log(place.geometry.location.lat())
+												console.log(place.geometry.location.lng())
+												changeMarker(place.geometry.location.lat(), place.geometry.location.lng(), inputRef.getAttribute('data-location'))
+											}
+										}
+          							/>
+									<label for={`longitude${i}`}>Zoeken...</label>
+								</div>
+                            </div>
+                        </div>
+                    </PanelBody>
+                )
+
+                if(i === attributes.locations.length-1){
+                    return(
+                        <>
+                            { markerinputs }
+                        </>
+                    )
+                }
+            }
+        }
+        
+    }
+
+	const GetMarkers = (props) =>{
+		console.log('GetMarkers')
+		var markers = [];
+
+		const maplat = attributes.latitude ? Number(attributes.latitude) : 51.3638725
+		const maplng = attributes.longitude ? Number(attributes.longitude) : 5.3228256
+		//console.log(lat)
+		//console.log(lng)
+		//console.log(zoom)
+		
+		const mapcenter = useMemo(()=>({ lat: maplat, lng: maplng }), []);
+		const position = { lat: maplng, lng: maplng };
+		
+
+		markers.push(
+			<Marker 
+				key={0} 
+				position={mapcenter}
+			/>
+		)
+
+        if(attributes.locations){
+            for(var i=0; i<attributes.locations.length; i++){
+				console.log('longitude')
+				console.log('latitude')
+				console.log(attributes.locations[i].latitude)
+				console.log(attributes.locations[i].longitude)
+				let maplat =  Number(attributes.locations[i].latitude)
+				let maplon =  Number(attributes.locations[i].longitude)
+				let centermap = useMemo(()=>({ lat: maplat, lng: maplon }), []);
+
+				markers.push(
+					<Marker 
+						key={i + 1}
+						position={centermap}
+					/>
+				)
+
+		
+
+				if(i === attributes.locations.length-1){
+					console.log('markers')
+					console.log(markers)
+					return(<>{ markers }</>)
+				}
+			}
+		}
+	}
 	
 	function Map(){
+		console.log('siteinfo')
+		console.log(siteinfo)
 		//console.log(attributes.zoom)
 		//console.log('attributes.zoom')
 		//console.log(attributes.latitude)
@@ -152,19 +529,21 @@ const googleMapsEdit = (props) => {
 					}
 				}
 			>
-				<Marker position={center}/>
+				<GetMarkers/>
 			</GoogleMap>
 		)
 	}
 	
-	function onLoad(autocomplete){
+	const onLoad = (autocomplete)=> {
     	console.log('autocomplete: ', autocomplete)
 
     	setSearchResult(autocomplete);
   	}
 
-  	function onPlaceChanged() {
+  	const onPlaceChanged = ()=> {
     	if (searchResult !== null) {
+			console.log('searchResult')
+			console.log(searchResult);
       		console.log(searchResult.getPlace())
 			
 			const place = searchResult.getPlace()
@@ -241,7 +620,7 @@ const googleMapsEdit = (props) => {
 								}
 							}
 						/>
-          				<Autocomplete
+          				<AutocompleteNormal
             				onLoad={
 								onLoad
 							}
@@ -266,8 +645,17 @@ const googleMapsEdit = (props) => {
 									marginTop: '10px'
               					}}
             				/>
-          				</Autocomplete>
+          				</AutocompleteNormal>
 					</PanelBody>
+					<MarkersOutput locationPanel={attributes.locationPanel} focusField={attributes.focusField} />
+					<Button 
+                		isPrimary
+                		onClick={
+                    		()=>{ markerHandeler(attributes.locationPanel, attributes.focusField) }
+                		}
+            		>
+                		{__('Add location', 'webkompanen')}
+            		</Button>
 					<PanelBody
 						title={__('Height', 'webkompanen')}
 						initialOpen={false}
@@ -828,7 +1216,7 @@ const googleMapsEdit = (props) => {
 				{
 					attributes.staticmap ? (
 						<img
-							src={'https://maps.googleapis.com/maps/api/staticmap?size=800x512&center='+maplatitude+','+maplongitude+'&zoom='+mapzoom+'&maptype=roadmap\&markers=size:mid|color:red|'+maplatitude+','+maplongitude+'&key='+googlemapsapikey+''}
+							src={'https://maps.googleapis.com/maps/api/staticmap?size=800x512&center='+maplatitude+','+maplongitude+'&zoom='+mapzoom+'&maptype=roadmap\&markers=size:mid|color:red|'+maplatitude+','+maplongitude+'&key='+siteinfo.googleMapsAPIKey+''}
 							data-latitude={attributes.latitude ? attributes.latitude : 51.3638725}
 							data-longitude={attributes.longitude ? attributes.longitude : 5.3228256}
 							data-zoom={attributes.zoom ? attributes.zoom : 17}

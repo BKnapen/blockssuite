@@ -42,7 +42,7 @@
 			// Add styles inline.
 			//wp_add_inline_style( 'wp-block-library', webkompanen_get_font_face_styles() );
 			
-			if(isset($_GET['page']) && $_GET['page'] == 'settings-admin'):
+			if(isset($_GET['page']) && $_GET['page'] == 'settings-admin' || 'post.php' === $pagenow && isset($_GET['page']) && get_post_type( $_GET['post'] ) === 'vacature'):
 				wp_register_script(
 					'webkompanen-blocks-js', // Handle.
 					$url . '/assets/build/index.js',

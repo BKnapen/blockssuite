@@ -13,6 +13,9 @@
 		"map":{
 			"type": "object"
 		},
+		"locations":{
+			"type": "array"
+		},
 		"blockId":{
 			"type": "string"
 		},
@@ -490,6 +493,12 @@
 		},
 		"w":{
 			"type": "number"
+		},
+		"locationPanel":{
+			"type": "number"
+		},
+		"focusField":{
+			"type": "string"
 		}
 	},
 	"supports": {

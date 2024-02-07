@@ -144,7 +144,12 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/woocommerce-add-to-cart-button',
 		'webkompanen-blocks/woocommerce-activity-location',
 		'webkompanen-blocks/google-reviews',
-		'webkompanen-blocks/google-rating'
+		'webkompanen-blocks/google-rating',
+		'webkompanen-blocks/woocommerce-cart',
+		'webkompanen-blocks/woocommerce-activity-products',
+		'webkompanen-blocks/woocommerce-checkout-billing-address',
+		'webkompanen-blocks/woocommerce-checkout-shipping-address',
+		'webkompanen-blocks/woocommerce-checkout-payment-options'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -233,6 +238,13 @@ const sectionEdit = (props) => {
 										}
 									)
 								}
+								else{
+									setAttributes(
+										{
+											dataaos:nextSelect
+										}
+									)
+								}
 							}
 						}
 							options={ [
@@ -276,6 +288,13 @@ const sectionEdit = (props) => {
 										}
 									)
 								}
+								else{
+									setAttributes(
+										{
+											dataaoseasing:nextSelect
+										}
+									)
+								}
 							}
 						}
 							options={ [
@@ -308,6 +327,13 @@ const sectionEdit = (props) => {
 							onChange={ 
 							( nextSelect ) => {
 								if ( nextSelect ) {
+									setAttributes(
+										{
+											dataaosanchorplacement:nextSelect
+										}
+									)
+								}
+								else{
 									setAttributes(
 										{
 											dataaosanchorplacement:nextSelect
