@@ -98,6 +98,7 @@ const sectionEdit = (props) => {
 	const ALLOWED_BLOCKS = [ 
 		'webkompanen-blocks/lastposts',
 		'webkompanen-blocks/paragraph',
+		'webkompanen-blocks/pre',
 		'webkompanen-blocks/div',
 		'webkompanen-blocks/row',
 		'webkompanen-blocks/col',
@@ -149,7 +150,24 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/woocommerce-activity-products',
 		'webkompanen-blocks/woocommerce-checkout-billing-address',
 		'webkompanen-blocks/woocommerce-checkout-shipping-address',
-		'webkompanen-blocks/woocommerce-checkout-payment-options'
+		'webkompanen-blocks/woocommerce-checkout-payment-options',
+		'webkompanen-blocks/swiper',
+		'webkompanen-blocks/swiperslide',
+		'webkompanen-blocks/table',
+		'webkompanen-blocks/thead',
+		'webkompanen-blocks/tbody',
+		'webkompanen-blocks/tr',
+		'webkompanen-blocks/th',
+		'webkompanen-blocks/td',
+		'webkompanen-blocks/modal',
+		'webkompanen-blocks/modal-body',
+		'webkompanen-blocks/modal-content',
+		'webkompanen-blocks/modal-dialog',
+		'webkompanen-blocks/modal-footer',
+		'webkompanen-blocks/modal-header',
+		'webkompanen-blocks/iframe',
+		'webkompanen-blocks/modal-btn-close',
+		'core/paragraph',
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -165,6 +183,11 @@ const sectionEdit = (props) => {
 	const style = attributes.style !== null ? attributes.style : null
 	const ariahidden = attributes.ariahidden ? 'true' : null
 
+	const role = attributes.role ? ''+attributes.role+'' : null
+	const dataBsToggle = attributes.dataBsToggle ? ''+attributes.dataBsToggle+'' : null
+	const dataBsTarget = attributes.dataBsTarget ? ''+attributes.dataBsTarget+'' : null
+	const dataBsSlideTo = attributes.dataBsSlideTo ? ''+attributes.dataBsSlideTo+'' : null
+
 	const margin = new Margin(props)
 	const negativemargin = new NegativeMargin(props)
 	const padding = new Padding(props)
@@ -179,6 +202,12 @@ const sectionEdit = (props) => {
 	const alignitems = new Alignitems(props)
 
 	let bgimg = (attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ''+attributes.imageUrl+'' : null
+	
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
 	
 	let blockClasses = '';
 
@@ -219,6 +248,105 @@ const sectionEdit = (props) => {
 		<>		
 			<Fragment>		
 				<InspectorControls>
+					<PanelBody
+						title={__('Microdata', 'webkompanen')}
+						initialOpen={false}
+						>
+							<InputControl
+								label={__('Microdata itemprop', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemprop }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemprop:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata itemtype', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemtype }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemtype:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata href', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataHref }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataHref:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata content', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataContent }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataContent:nextvalue
+										})
+									}
+								}
+							/>
+					</PanelBody>
+					<PanelBody
+						title={__('Data bs toggle', 'webkompanen')}
+						initialOpen={false}
+					>
+						<InputControl
+							label={__('Name', 'webkompanen')}
+							labelPosition="top"
+							value={ attributes.dataBsToggle }
+							type="text"
+							isPressEnterToChange
+							onChange={ 
+								( nextvalue ) => {
+									setAttributes({
+										dataBsToggle:nextvalue
+									})
+								}
+							}
+						/>
+					</PanelBody>
+					<PanelBody
+						title={__('Data bs target', 'webkompanen')}
+						initialOpen={false}
+					>
+						<InputControl
+							label={__('Target', 'webkompanen')}
+							labelPosition="top"
+							value={ attributes.dataBsTarget }
+							type="text"
+							isPressEnterToChange
+							onChange={ 
+								( nextvalue ) => {
+									setAttributes({
+										dataBsTarget:nextvalue
+									})
+								}
+							}
+						/>
+					</PanelBody>
 					<ImageEdit 
 						props={props}
 					/>	
@@ -1071,6 +1199,14 @@ const sectionEdit = (props) => {
 			{
 				bgimg && (
   					<div 
+					  	itemprop={microdataItemprop}
+					  	itemscope={microdataItemscope}
+					  	itemtype={microdataItemtype}
+						href={microdataHref}
+						content={microdataContent}
+						role={role}	
+						data-bs-toggle={dataBsToggle}	
+						data-bs-target={dataBsTarget}
 						{ ...innerBlocksProps }
 						style={
 							{
@@ -1103,6 +1239,14 @@ const sectionEdit = (props) => {
 				!bgimg && (
   					<div 
 						{ ...innerBlocksProps }
+						itemprop={microdataItemprop}
+						itemscope={microdataItemscope}
+						itemtype={microdataItemtype}
+					  	href={microdataHref}
+					  	content={microdataContent}
+						role={role}	
+						data-bs-toggle={dataBsToggle}	
+						data-bs-target={dataBsTarget}
 					>
 						
   					</div>

@@ -26,6 +26,9 @@
 		"alignselfsm":{
 			"type": "string"
 		},
+		"isDisabled":{
+			"type": "boolean"
+		},
 		"alignselfmd":{
 			"type": "string"
 		},

@@ -1,0 +1,707 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "webkompanen-blocks/row",
+	"title": "Row",
+	"category": "webkompanen-blocks/layout",
+	"description": "Rows <div class=\"row\"> are wrappers for columns <div class=\"col\">. Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to uniformly apply column sizing and gutter classes to change the spacing of your content.",
+	"keywords": [ "row" ],
+	"textdomain": "webkompanen",	
+	"attributes": {
+		"post":{
+			"type": "object"
+		},
+		"content":{
+			"type": "string"
+		},
+		"align":{
+			"type": "string",
+			"default": "full"
+		},
+		"alignselfxs":{
+			"type": "string"
+		},
+		"alignselfsm":{
+			"type": "string"
+		},
+		"alignselfmd":{
+			"type": "string"
+		},
+		"alignselflg":{
+			"type": "string"
+		},
+		"alignselfxl":{
+			"type": "string"
+		},
+		"alignselfxxl":{
+			"type": "string"
+		},
+		"bgcolor":{
+			"type": "string"
+		},
+        "classes":{
+            "type": "string"
+        },
+		"colxs":{
+			"type": "number"
+		},
+		"colautoxs":{
+			"type": "number"
+		},
+		"colsm":{
+			"type": "number"
+		},
+		"colautosm":{
+			"type": "number"
+		},
+		"colmd":{
+			"type": "number"
+		},
+		"colautomd":{
+			"type": "number"
+		},
+		"collg":{
+			"type": "number"
+		},
+		"colautolg":{
+			"type": "number"
+		},
+		"colxl":{
+			"type": "number"
+		},
+		"colautoxl":{
+			"type": "number"
+		},
+		"colxxl":{
+			"type": "number"
+		},
+		"colautoxxl":{
+			"type": "number"
+		},
+		"color":{
+			"type": "string"
+		},
+		"dxs":{
+			"type": "string"
+		},
+		"dsm":{
+			"type": "string"
+		},
+		"dmd":{
+			"type": "string"
+		},
+		"dlg":{
+			"type": "string"
+		},
+		"dxl":{
+			"type": "string"
+		},
+		"dxxl":{
+			"type": "string"
+		},
+		"mxsauto":{
+			"type": "boolean"
+		},
+		"mxsxauto":{
+			"type": "boolean"
+		},
+		"mxsyauto":{
+			"type": "boolean"
+		},
+		"mxstauto":{
+			"type": "boolean"
+		},
+		"mxseauto":{
+			"type": "boolean"
+		},
+		"mxsbauto":{
+			"type": "boolean"
+		},
+		"mxssauto":{
+			"type": "boolean"
+		},
+		"msmauto":{
+			"type": "boolean"
+		},
+		"msmxauto":{
+			"type": "boolean"
+		},
+		"msmyauto":{
+			"type": "boolean"
+		},
+		"msmtauto":{
+			"type": "boolean"
+		},
+		"msmeauto":{
+			"type": "boolean"
+		},
+		"msmbauto":{
+			"type": "boolean"
+		},
+		"msmsauto":{
+			"type": "boolean"
+		},
+		"mmdxauto":{
+			"type": "boolean"
+		},
+		"mmdyauto":{
+			"type": "boolean"
+		},
+		"mmdtauto":{
+			"type": "boolean"
+		},
+		"mmdeauto":{
+			"type": "boolean"
+		},
+		"mmdbauto":{
+			"type": "boolean"
+		},
+		"mmdsauto":{
+			"type": "boolean"
+		},
+		"mlgxauto":{
+			"type": "boolean"
+		},
+		"mlgyauto":{
+			"type": "boolean"
+		},
+		"mlgtauto":{
+			"type": "boolean"
+		},
+		"mlgeauto":{
+			"type": "boolean"
+		},
+		"mlgbauto":{
+			"type": "boolean"
+		},
+		"mlgsauto":{
+			"type": "boolean"
+		},
+		"mxlxauto":{
+			"type": "boolean"
+		},
+		"mxlyauto":{
+			"type": "boolean"
+		},
+		"mxltauto":{
+			"type": "boolean"
+		},
+		"mxleauto":{
+			"type": "boolean"
+		},
+		"mxlbauto":{
+			"type": "boolean"
+		},
+		"mxlsauto":{
+			"type": "boolean"
+		},
+		"mxxlxauto":{
+			"type": "boolean"
+		},
+		"mxxlyauto":{
+			"type": "boolean"
+		},
+		"mxxltauto":{
+			"type": "boolean"
+		},
+		"mxxleauto":{
+			"type": "boolean"
+		},
+		"mxxlbauto":{
+			"type": "boolean"
+		},
+		"mxxlsauto":{
+			"type": "boolean"
+		},
+		"mxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"gutterxs":{
+			"type": "number"
+		},
+		"gutterxsx":{
+			"type": "number"
+		},
+		"gutterxsy":{
+			"type": "number"
+		},
+		"gutterms":{
+			"type": "number"
+		},
+		"guttermsx":{
+			"type": "number"
+		},
+		"guttermsy":{
+			"type": "number"
+		},
+		"guttermd":{
+			"type": "number"
+		},
+		"guttermdx":{
+			"type": "number"
+		},
+		"guttermdy":{
+			"type": "number"
+		},
+		"gutterlg":{
+			"type": "number"
+		},
+		"gutterlgx":{
+			"type": "number"
+		},
+		"gutterlgy":{
+			"type": "number"
+		},
+		"gutterxl":{
+			"type": "number"
+		},
+		"gutterxlx":{
+			"type": "number"
+		},
+		"gutterxly":{
+			"type": "number"
+		},
+		"gutterxxl":{
+			"type": "number"
+		},
+		"gutterxxlx":{
+			"type": "number"
+		},
+		"gutterxxly":{
+			"type": "number"
+		},
+		"msm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mlg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmsm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmlg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"orderxs":{
+			"type": "number"
+		},
+		"orderfirstxs":{
+			"type": "number"
+		},
+		"orderlastxs":{
+			"type": "number"
+		},
+		"ordersm":{
+			"type": "number"
+		},
+		"orderfirstsm":{
+			"type": "number"
+		},
+		"orderlastsm":{
+			"type": "number"
+		},
+		"ordermd":{
+			"type": "number"
+		},
+		"orderfirstmd":{
+			"type": "number"
+		},
+		"orderlastmd":{
+			"type": "number"
+		},
+		"orderlg":{
+			"type": "number"
+		},
+		"orderfirstlg":{
+			"type": "number"
+		},
+		"orderlastlg":{
+			"type": "number"
+		},
+		"orderxl":{
+			"type": "number"
+		},
+		"orderfirstxl":{
+			"type": "number"
+		},
+		"orderlastxl":{
+			"type": "number"
+		},
+		"orderxxl":{
+			"type": "number"
+		},
+		"orderfirstxxl":{
+			"type": "number"
+		},
+		"orderlastxxl":{
+			"type": "number"
+		},
+		"pxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"psm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"plg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"posxs":{
+			"type": "string"
+		},
+		"posmd":{
+			"type": "string"
+		},
+		"poslg":{
+			"type": "string"
+		},
+		"posxl":{
+			"type": "string"
+		},
+		"posxxl":{
+			"type": "string"
+		},
+		"position":{
+			"type": "string"
+		},
+		"justifycontentxs":{
+			"type": "string"
+		},
+		"justifycontentsm":{
+			"type": "string"
+		},
+		"justifycontentmd":{
+			"type": "string"
+		},
+		"justifycontentlg":{
+			"type": "string"
+		},
+		"justifycontentxl":{
+			"type": "string"
+		},
+		"justifycontentxxl":{
+			"type": "string"
+		},
+		"alignitemsxs":{
+			"type": "string"
+		},
+		"alignitemssm":{
+			"type": "string"
+		},
+		"alignitemsmd":{
+			"type": "string"
+		},
+		"alignitemslg":{
+			"type": "string"
+		},
+		"alignitemsxl":{
+			"type": "string"
+		},
+		"alignitemsxxl":{
+			"type": "string"
+		},
+		"rowcolsxs":{
+			"type": "number"
+		},
+		"rowcolsautoxs":{
+			"type": "number"
+		},
+		"rowcolssm":{
+			"type": "number"
+		},
+		"rowcolsautosm":{
+			"type": "number"
+		},
+		"rowcolsmd":{
+			"type": "number"
+		},
+		"rowcolsautomd":{
+			"type": "number"
+		},
+		"rowcolslg":{
+			"type": "number"
+		},
+		"rowcolsautolg":{
+			"type": "number"
+		},
+		"rowcolsxl":{
+			"type": "number"
+		},
+		"rowcolsautoxl":{
+			"type": "number"
+		},
+		"rowcolsxxl":{
+			"type": "number"
+		},
+		"rowcolsautoxxl":{
+			"type": "number"
+		},
+		"gxs":{
+			"type": "number"
+		},
+		"gsm":{
+			"type": "number"
+		},
+		"gmd":{
+			"type": "number"
+		},
+		"glg":{
+			"type": "number"
+		},
+		"gxl":{
+			"type": "number"
+		},
+		"gxxl":{
+			"type": "number"
+		},
+		"gxsx":{
+			"type": "number"
+		},
+		"gsmx":{
+			"type": "number"
+		},
+		"gmdx":{
+			"type": "number"
+		},
+		"glgx":{
+			"type": "number"
+		},
+		"gxlx":{
+			"type": "number"
+		},
+		"gxxlx":{
+			"type": "number"
+		},
+		"gxsy":{
+			"type": "number"
+		},
+		"gsmy":{
+			"type": "number"
+		},
+		"gmdy":{
+			"type": "number"
+		},
+		"glgy":{
+			"type": "number"
+		},
+		"gxly":{
+			"type": "number"
+		},
+		"gxxly":{
+			"type": "number"
+		},
+		"tintshade":{
+			"type": "number"
+		},
+		"bordercolor":{
+			"type": "string"
+		},
+		"height":{
+			"type": "string"
+		},
+		"width":{
+			"type":"string"
+		}
+	},
+	"supports": {
+		"__experimentalOnEnter": false,
+		"__experimentalSettings": false,
+		"align": [ "full" ],
+		"ariaLabel": false,
+		"html": false,
+		"anchor": false,
+		"className": false,
+		"customClassName": false,
+		"color": {
+			"gradients": false,
+			"link": false,
+			"text": false,
+			"background": false,
+			"__experimentalDefaultControls": {
+				"background": false,
+				"text": false
+			}
+		},
+		"spacing": {
+			"margin": false,
+			"padding": false,
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"padding": false,
+				"blockGap": false
+			}
+		},
+		"dimensions": {
+			"minHeight": false
+		},
+		"__experimentalBorder": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false,
+			"__experimentalDefaultControls": {
+				"color": false,
+				"radius": false,
+				"style": false,
+				"width": false
+			}
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false,
+			"__experimentalFontFamily": false,
+			"__experimentalTextDecoration": false,
+			"__experimentalFontStyle": false,
+			"__experimentalFontWeight": false,
+			"__experimentalLetterSpacing": false,
+			"__experimentalTextTransform": false,
+			"__experimentalDefaultControls": {
+				"fontSize": false
+			}
+		},
+		"__experimentalLayout": {
+			"allowSizingOnChildren": false
+		},
+		"__experimentalSelector": "p",
+		"__unstablePasteTextInline": true
+	},
+	"editorStyle": "webkompanen-row-editor",
+	"style": "webkompanen-row"
+}

@@ -1,0 +1,341 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "webkompanen-blocks/dropdown-link",
+  "title": "Dropdown link",
+  "category": "webkompanen-blocks/components",
+  "description": "Create a dropdown-link component",
+  "textdomain": "webkompanen",
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "post": {
+      "type": "object"
+    },
+    "isOutline": {
+      "type": "boolean"
+    },
+    "bgcolor": {
+      "type": "string"
+    },
+    "tintshade": {
+      "type": "number"
+    },
+    "color": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
+    "classes": {
+      "type": "string"
+    },
+    "dxs": {
+      "type": "string"
+    },
+    "dsm": {
+      "type": "string"
+    },
+    "dmd": {
+      "type": "string"
+    },
+    "dlg": {
+      "type": "string"
+    },
+    "dxl": {
+      "type": "string"
+    },
+    "dxxl": {
+      "type": "string"
+    },
+    "mxsauto": {
+      "type": "boolean"
+    },
+    "mxsxauto": {
+      "type": "boolean"
+    },
+    "mxsyauto": {
+      "type": "boolean"
+    },
+    "mxstauto": {
+      "type": "boolean"
+    },
+    "mxseauto": {
+      "type": "boolean"
+    },
+    "mxsbauto": {
+      "type": "boolean"
+    },
+    "mxssauto": {
+      "type": "boolean"
+    },
+    "msmauto": {
+      "type": "boolean"
+    },
+    "msmxauto": {
+      "type": "boolean"
+    },
+    "msmyauto": {
+      "type": "boolean"
+    },
+    "msmtauto": {
+      "type": "boolean"
+    },
+    "msmeauto": {
+      "type": "boolean"
+    },
+    "msmbauto": {
+      "type": "boolean"
+    },
+    "msmsauto": {
+      "type": "boolean"
+    },
+    "mmdxauto": {
+      "type": "boolean"
+    },
+    "mmdyauto": {
+      "type": "boolean"
+    },
+    "mmdtauto": {
+      "type": "boolean"
+    },
+    "mmdeauto": {
+      "type": "boolean"
+    },
+    "mmdbauto": {
+      "type": "boolean"
+    },
+    "mmdsauto": {
+      "type": "boolean"
+    },
+    "mlgxauto": {
+      "type": "boolean"
+    },
+    "mlgyauto": {
+      "type": "boolean"
+    },
+    "mlgtauto": {
+      "type": "boolean"
+    },
+    "mlgeauto": {
+      "type": "boolean"
+    },
+    "mlgbauto": {
+      "type": "boolean"
+    },
+    "mlgsauto": {
+      "type": "boolean"
+    },
+    "mxlxauto": {
+      "type": "boolean"
+    },
+    "mxlyauto": {
+      "type": "boolean"
+    },
+    "mxltauto": {
+      "type": "boolean"
+    },
+    "mxleauto": {
+      "type": "boolean"
+    },
+    "mxlbauto": {
+      "type": "boolean"
+    },
+    "mxlsauto": {
+      "type": "boolean"
+    },
+    "mxxlxauto": {
+      "type": "boolean"
+    },
+    "mxxlyauto": {
+      "type": "boolean"
+    },
+    "mxxltauto": {
+      "type": "boolean"
+    },
+    "mxxleauto": {
+      "type": "boolean"
+    },
+    "mxxlbauto": {
+      "type": "boolean"
+    },
+    "mxxlsauto": {
+      "type": "boolean"
+    },
+    "mxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "msm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mlg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "mxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmsm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmlg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "nmxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "psm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "plg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "pxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

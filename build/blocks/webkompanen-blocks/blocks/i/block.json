@@ -50,6 +50,18 @@
     "classes": {
       "type": "string"
     },
+    "rounded": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "roundedcircle": {
+      "type": "boolean"
+    },
     "pxs": {
       "type": "object",
       "default": {

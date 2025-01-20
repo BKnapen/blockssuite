@@ -67,6 +67,8 @@
 			); // Better be
 		}
 	endif;
-		
-	add_action( 'init', 'acture_freelancesolutions_post_type' );
+	
+	if(get_option('showActureFreelanceSolutionsCustomPost') == true):
+		add_action( 'init', 'acture_freelancesolutions_post_type' );
+	endif;
 ?>

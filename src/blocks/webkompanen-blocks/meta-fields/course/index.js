@@ -2,7 +2,7 @@ const { __ } = wp.i18n;
 import { startOfMinute, format, set, setHours, setMonth } from 'date-fns';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { PluginDocumentSettingPanel } from '@wordpress/edit-post';
+import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import { select, dispatch, subscribe, useSelect, withSelect, withDispatch, useDispatch  } from '@wordpress/data';
 import {
 	render,

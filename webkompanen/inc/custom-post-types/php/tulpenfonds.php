@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'tulpenfonds_post_type' );
+	if(get_option('showTulpenfondsCustomPost') == true):
+		add_action( 'init', 'tulpenfonds_post_type' );
+	endif;
 ?>

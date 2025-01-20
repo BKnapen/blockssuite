@@ -16,6 +16,21 @@
     "content": {
       "type": "string"
     },
+    "microdataItemprop": {
+      "type": "string"
+    },
+    "microdataItemscope": {
+      "type": "boolean"
+    },
+    "microdataItemtype": {
+      "type": "string"
+    },
+    "microdataHref": {
+      "type": "string"
+    },
+    "microdataContent": {
+      "type": "string"
+    },
     "align": {
       "type": "string",
       "default": "full"
@@ -224,8 +239,12 @@
         "left": null
       }
     },
-    "gutterxs": {
-      "type": "number"
+    "guttersxs": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gutterxsx": {
       "type": "number"
@@ -233,8 +252,12 @@
     "gutterxsy": {
       "type": "number"
     },
-    "gutterms": {
-      "type": "number"
+    "gutterssm": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "guttermsx": {
       "type": "number"
@@ -242,8 +265,12 @@
     "guttermsy": {
       "type": "number"
     },
-    "guttermd": {
-      "type": "number"
+    "guttersmd": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "guttermdx": {
       "type": "number"
@@ -251,8 +278,12 @@
     "guttermdy": {
       "type": "number"
     },
-    "gutterlg": {
-      "type": "number"
+    "gutterslg": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gutterlgx": {
       "type": "number"
@@ -260,8 +291,12 @@
     "gutterlgy": {
       "type": "number"
     },
-    "gutterxl": {
-      "type": "number"
+    "guttersxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gutterxlx": {
       "type": "number"
@@ -269,14 +304,25 @@
     "gutterxly": {
       "type": "number"
     },
-    "gutterxxl": {
-      "type": "number"
+    "guttersxxl": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gutterxxlx": {
       "type": "number"
     },
     "gutterxxly": {
       "type": "number"
+    },
+    "gutters": {
+      "type": "object",
+      "default": {
+        "x": null,
+        "y": null
+      }
     },
     "msm": {
       "type": "object",
@@ -576,58 +622,130 @@
       "type": "number"
     },
     "gxs": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gsm": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gmd": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "glg": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxl": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxxl": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxsx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gsmx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gmdx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "glgx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxlx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxxlx": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxsy": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gsmy": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gmdy": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "glgy": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxly": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "gxxly": {
-      "type": "number"
+      "type": "object",
+      "default": {
+        "top": null,
+        "left": null
+      }
     },
     "tintshade": {
       "type": "number"
@@ -636,6 +754,9 @@
       "type": "string"
     },
     "height": {
+      "type": "string"
+    },
+    "width": {
       "type": "string"
     }
   },

@@ -5,6 +5,7 @@ function webkompanen_post_meta_fields_gallery() {
         'post', 
         'gallerie_location', 
         array(
+            'object_subtype' => 'galleries',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -14,6 +15,7 @@ function webkompanen_post_meta_fields_gallery() {
         'post', 
         'gallerie_edition', 
         array(
+            'object_subtype' => 'galleries',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true

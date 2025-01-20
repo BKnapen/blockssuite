@@ -181,6 +181,18 @@ const formEdit = (props) => {
 							}
 						}
 					/>
+					<ToggleControl
+						label={__('Is disabled', 'webkompanen')}
+						help={attributes.isDisabled ? __('Yes', 'webkompanen') : __('No', 'webkompanen')}
+						checked={ attributes.isDisabled }
+						onChange={ (newValue) => {
+							setAttributes( 
+								{
+									isDisabled: newValue
+								} 
+							);
+						} }
+					/>
 					<InputControl
 						label={__('Aria label', 'webkompanen')}
 						labelPosition="top"
@@ -215,6 +227,7 @@ const formEdit = (props) => {
 				{ ...innerBlocksProps }
 				id={ attributes.id }
 				value={attributes.value}
+				disabled={attributes.isDisabled}
 			>
 				{ attributes.text }
 			</option>

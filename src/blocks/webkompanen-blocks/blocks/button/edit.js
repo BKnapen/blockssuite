@@ -274,17 +274,42 @@ function ButtonLinkEdit( props ) {
 										value={ attributes.post }
 										settings={
 											[
+												{
+													id: 'openInNweTab',
+													title: __('Open in new tab', 'webkompanen')
+												},
+												{
+													id: 'noFollowLink',
+													title: __('No follow link', 'webkompanen')
+												}
 											]
 										}
 										onChange={ 
-											( newPost ) => setAttributes( 
-												{ 
-													post: newPost,
-													button: newPost.url
-												},
-												setIsVisible( ( state ) => ! state )
-											) 
+											( newPost ) => {
+												console.log(newPost)
+												setAttributes( 
+													{ 
+														post: newPost,
+														button: newPost.url
+													},
+													setIsVisible( ( state ) => ! state )
+												)
+											}
+											 
 										}
+										onRemove={
+											( newPost ) => {
+												setAttributes( 
+													{ 
+														post: null,
+														button: null
+													},
+													setIsVisible( ( state ) => ! state )
+												)
+											}
+											
+										}
+										withUnlinkControl={ true }
 										withCreateSuggestion={true}
 										createSuggestion={ 
 				  							(inputValue) => setAttributes( 
@@ -326,14 +351,32 @@ function ButtonLinkEdit( props ) {
                	onChange={ ( content ) => setAttributes( { content } ) } // Store updated content as a block attribute
 				onClick={
 					(event) => { 
-						this.preventDefault()
-						this.stopPropagation()
-						this.target.preventDefault()
-						this.target.stopPropagation()
-						event.preventDefault()
-						event.stopPropagation()
-						event.target.preventDefault()
-						event.target.stopPropagation()
+						//this.preventDefault()
+						//this.stopPropagation()
+						
+						/*if(this.target !== undefined){
+							this.target.preventDefault()
+							this.target.stopPropagation()
+						}*/
+						try {
+							event.target.preventDefault()
+							event.target.stopPropagation()
+							console.log('target')
+						}
+						catch(err) {
+							console.log(err.message)
+							console.log('target')
+						}
+
+						try {
+							event.preventDefault()
+							event.stopPropagation()
+							console.log('event')
+						}
+						catch(err) {
+							console.log(err.message)
+							console.log('event')
+						}
 					}
 				}
                	placeholder={ __( 'Text...' ) } // Display this text before any content has been added by the user

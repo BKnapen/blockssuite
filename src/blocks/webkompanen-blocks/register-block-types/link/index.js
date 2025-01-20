@@ -8,8 +8,8 @@ export const metadata = {
     tagName: 'a',
     className: 'link-btn',
     href: null,
-    target: false,
-    rel: false,
+    target: null,
+    rel: null,
     edit: edit
 }
 

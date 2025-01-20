@@ -53,7 +53,8 @@ import {
 	IconButton,
 	Button,
 	ColorPalette,
-	Toolbar
+	Toolbar,
+	__experimentalInputControl as InputControl
 } from '@wordpress/components';
 
 import {
@@ -148,6 +149,8 @@ function ButtonLinkEdit( props ) {
 	
 	const classes = attributes.classes ? attributes.classes : ''
 	const dropdowntoggle = attributes.dropdowntoggle ? 'dropdown-toggle' : ''
+	const modaltoggle = attributes.dataBsToggle ? ''+attributes.dataBsToggle+'' : ''
+	const dataBsTarget = attributes.dataBsTarget != null && attributes.dataBsTarget != '' ? attributes.dataBsTarget : null
 	
 	let blockClasses = 'nav-link';
 
@@ -170,16 +173,57 @@ function ButtonLinkEdit( props ) {
 	blockClasses = blockClasses == '' ? null : blockClasses
 
 	const parentidoutput = attributes.parentid != null && attributes.parentid != '' && dropdowntoggle != null && dropdowntoggle != '' ? attributes.parentid : null
-	const databstoggle = dropdowntoggle != null && dropdowntoggle != '' ? 'dropdown' : null
+	let databstoggle = dropdowntoggle != null && dropdowntoggle != '' ? 'dropdown' : null
+	databstoggle = modaltoggle != null && modaltoggle != '' ? modaltoggle : null
+	//const dataBsTarget = dataBsTarget != null && dataBsTarget != '' ? 'false' : null
 	const ariaexpanded = dropdowntoggle != null && dropdowntoggle != '' ? 'false' : null
-	const role = dropdowntoggle != null && dropdowntoggle != '' ? 'button' : null
+	let role = dropdowntoggle != null && dropdowntoggle != '' ? 'button' : null
+	role = modaltoggle != null && modaltoggle != '' ? 'button' : null
 	
-	const blockProps = useBlockProps( { id: parentidoutput, dataBsToggle: databstoggle, ariaExpanded: ariaexpanded, role:role, className: blockClasses } );
+	const blockProps = useBlockProps( { id: parentidoutput, dataBsToggle: databstoggle, ariaExpanded: ariaexpanded, dataBsTarget: dataBsTarget, role:role, className: blockClasses } );
 	
 	return(
 		<>
 			<Fragment>		
 				<InspectorControls>
+				<PanelBody
+						title={__('Data bs toggle', 'webkompanen')}
+						initialOpen={false}
+					>
+						<InputControl
+							label={__('Name', 'webkompanen')}
+							labelPosition="top"
+							value={ attributes.dataBsToggle }
+							type="text"
+							isPressEnterToChange
+							onChange={ 
+								( nextvalue ) => {
+									setAttributes({
+										dataBsToggle:nextvalue
+									})
+								}
+							}
+						/>
+					</PanelBody>
+					<PanelBody
+						title={__('Data bs target', 'webkompanen')}
+						initialOpen={false}
+					>
+						<InputControl
+							label={__('Target', 'webkompanen')}
+							labelPosition="top"
+							value={ attributes.dataBsTarget }
+							type="text"
+							isPressEnterToChange
+							onChange={ 
+								( nextvalue ) => {
+									setAttributes({
+										dataBsTarget:nextvalue
+									})
+								}
+							}
+						/>
+					</PanelBody>
 					<PanelBody
 						title={__('Typografie', 'webkompanen')}
 						initialOpen={false}

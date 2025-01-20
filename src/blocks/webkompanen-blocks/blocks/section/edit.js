@@ -61,7 +61,7 @@ import {
 import { 
 	PluginSidebarMoreMenuItem, 
 	PluginSidebar 
-} from '@wordpress/edit-post';
+} from '@wordpress/editor';
 
 import { 
 	compose 
@@ -107,7 +107,15 @@ const sectionEdit = (props) => {
 		'webkompanen-blocks/google-reviews',
 		'webkompanen-blocks/google-rating',,
 		'webkompanen-blocks/woocommerce-checkout-billing-address',
-		'webkompanen-blocks/woocommerce-checkout-shipping-address'
+		'webkompanen-blocks/woocommerce-checkout-shipping-address',
+		'webkompanen-blocks/swiper',
+		'webkompanen-blocks/swiperslide',
+		'webkompanen-blocks/modal',
+		'webkompanen-blocks/modal-body',
+		'webkompanen-blocks/modal-content',
+		'webkompanen-blocks/modal-dialog',
+		'webkompanen-blocks/modal-footer',
+		'webkompanen-blocks/modal-header'
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>

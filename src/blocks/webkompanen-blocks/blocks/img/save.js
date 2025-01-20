@@ -39,12 +39,15 @@ function imageSave( props ) {
 	const showlabel = attributes.showlabel ? attributes.showlabel : attributes.showlabel
 	
 	const objectfitcover = attributes.objectfitcover ? ' object-fit-cover':''
+	const objectposition = attributes.objectposition ? ' object-position-'+attributes.objectposition+'':''
 	
 	const url = attributes.url ? ' d-block' : ''
 	
 	const WrapperTag = attributes.url ? `a` : `figure`;
+	let WrapperOuterTag = attributes.url ? `div` : `a`;
 	
-	const urlurl = attributes.url ? attributes.url.url : null;
+	let urlurl = attributes.url ? attributes.url.url : null;
+	urlurl = attributes.lightbox ? attributes.imageUrl : urlurl;
 	
 	const margin = new Margin(props)
 	const borders = new Borders(props)
@@ -59,6 +62,7 @@ function imageSave( props ) {
 	const backgroundcolor = new Backgroundcolor(props)
 	
 	const figure = attributes.imgfigure
+	WrapperOuterTag = figure ? `div` : ``;
 	
 	const width = attributes.width ? ' '+attributes.width+'' : ''
 	const height = attributes.height ? ' '+attributes.height+'' : ''
@@ -81,6 +85,7 @@ function imageSave( props ) {
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
 	blockClasses += objectfitcover
+	blockClasses += objectposition
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');
@@ -146,16 +151,18 @@ function imageSave( props ) {
 		<>
 			{
 				urlurl &&
-				<a 
-					href={urlurl}
-					target={attributes.url.opensInNewTab ? '_blank' : null}
-					rel={attributes.url.opensInNewTab ? 'noopener' : null}
+				<WrapperOuterTag
+					href={WrapperTag == 'figure' ? urlurl : null }
+					target={attributes.url.opensInNewTab & WrapperTag == 'figure' ? '_blank' : null}
+					data-lightbox={attributes.lightbox & WrapperTag == 'figure'  ? 'slider' : null}
+					rel={attributes.url.opensInNewTab & WrapperTag == 'figure' ? 'noopener' : null}
 				>
 			
 					{width && figure &&
 						<WrapperTag
 							className={zoomeffect+''+url+''+hw}
 							href={urlurl}
+							data-lightbox={attributes.lightbox ? 'slider' : null}
 						>
 							<img 
 								className={blockClasses}
@@ -182,6 +189,7 @@ function imageSave( props ) {
 						<WrapperTag
 			 				className={zoomeffect+''+url+''+hw}
 			 				href={urlurl}
+							data-lightbox={attributes.lightbox ? 'slider' : null}
 			 			>
 							<img 
 								className={blockClasses}
@@ -213,34 +221,48 @@ function imageSave( props ) {
 						</WrapperTag>
 					}
 					{!width && !figure &&
-						<img 
-							className={blockClasses}
-							src={(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ''+attributes.imageUrl+'' : ''+attributes.imagePlaceholder+''}
-							alt={''+alttext+''}	
-			 				width={w}
-							height={h}
-							style={
-								{
-									"height": 'auto !important',
-									"width": ''+w+'px'
+						<WrapperTag
+							href={WrapperTag == 'a' ? urlurl : null }
+							target={attributes.url.opensInNewTab & WrapperTag == 'a' ? '_blank' : null}
+							data-lightbox={attributes.lightbox & WrapperTag == 'a'  ? 'slider' : null}
+							rel={attributes.url.opensInNewTab & WrapperTag == 'a' ? 'noopener' : null}
+			 			>
+							<img 
+								className={blockClasses}
+								src={(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ''+attributes.imageUrl+'' : ''+attributes.imagePlaceholder+''}
+								alt={''+alttext+''}	
+								width={w}
+								height={h}
+								style={
+									{
+										"height": 'auto !important',
+										"width": ''+w+'px'
+									}
 								}
-							}
-							data-bs-toggle={dataBsToggle}	
-							data-bs-target={dataBsTarget}	
-							data-bs-slide-to={dataBsSlideTo}
-						/>
+								data-bs-toggle={dataBsToggle}	
+								data-bs-target={dataBsTarget}	
+								data-bs-slide-to={dataBsSlideTo}
+							/>				
+						</WrapperTag>
 					}
 					{width && !figure &&
-						<img 
-							className={blockClasses}
-							src={(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ''+attributes.imageUrl+'' : ''+attributes.imagePlaceholder+''}
-							alt={''+alttext+''}	
-							data-bs-toggle={dataBsToggle}	
-							data-bs-target={dataBsTarget}	
-							data-bs-slide-to={dataBsSlideTo}
-						/>
+						<WrapperTag
+							href={WrapperTag == 'a' ? urlurl : null }
+							target={attributes.url.opensInNewTab & WrapperTag == 'a' ? '_blank' : null}
+							data-lightbox={attributes.lightbox & WrapperTag == 'a'  ? 'slider' : null}
+							rel={attributes.url.opensInNewTab & WrapperTag == 'a' ? 'noopener' : null}
+			 			>
+							<img 
+								className={blockClasses}
+								src={(attributes.imageUrl !== '' && attributes.imageUrl !== undefined) ? ''+attributes.imageUrl+'' : ''+attributes.imagePlaceholder+''}
+								alt={''+alttext+''}	
+								data-bs-toggle={dataBsToggle}	
+								data-bs-target={dataBsTarget}	
+								data-bs-slide-to={dataBsSlideTo}
+							/>
+						</WrapperTag>
 					}
-				</a>
+				</WrapperOuterTag>
 			}
 			{
 				!urlurl &&
@@ -250,6 +272,7 @@ function imageSave( props ) {
 						<WrapperTag
 							className={zoomeffect+''+url+''+hw}
 							href={urlurl}
+							data-lightbox={attributes.lightbox ? 'slider' : null}
 						>
 							<img 
 								className={blockClasses}
@@ -276,6 +299,7 @@ function imageSave( props ) {
 						<WrapperTag
 			 				className={zoomeffect+''+url+''+hw}
 			 				href={urlurl}
+							data-lightbox={attributes.lightbox ? 'slider' : null}
 			 			>
 							<img 
 								className={blockClasses}

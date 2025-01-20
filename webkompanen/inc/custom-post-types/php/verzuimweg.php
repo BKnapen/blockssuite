@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'verzuimweg_post_type' );
+	if(get_option('showVerzuimwegCustomPost') == true):
+		add_action( 'init', 'verzuimweg_post_type' );
+	endif;
 ?>

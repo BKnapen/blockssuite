@@ -13,6 +13,21 @@
 		"content":{
 			"type": "string"
 		},
+		"microdataItemprop":{
+			"type": "string"
+		},
+		"microdataItemscope":{
+			"type": "boolean"
+		},
+		"microdataItemtype":{
+			"type": "string"
+		},
+	   	"microdataHref":{
+			"type": "string"
+		},
+	  	"microdataContent":{
+			"type": "string"
+		},
 		"align":{
 			"type": "string",
 			"default": "full"
@@ -529,6 +544,9 @@
 		},
 		"bgimg":{
 			"type":"string"
+		},
+		"role":{
+			"type": "string"
 		},
         "dataBsToggle":{
             "type": "string"

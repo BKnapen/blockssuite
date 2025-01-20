@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'acture_verzekeringen_post_type' );
+	if(get_option('showActureVerzekeringenCustomPost') == true):
+		add_action( 'init', 'acture_verzekeringen_post_type' );
+	endif;
 ?>

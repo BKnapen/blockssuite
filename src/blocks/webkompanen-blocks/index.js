@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import './settings/network-site-settings/index';
 import './settings/single-site-settings/index';
+//import { createRoot } from '@wordpress/element';
 
-import domReady from '@wordpress/dom-ready';
+//import domReady from '@wordpress/dom-ready';
+
+/*Block Editor*/
+//import * as customblockeditor from './block-editor';
+
+import coreTextBlocks from '../core-blocks/paragraph-heading';
+
 /*Admin*/
 import * as batchuserimport from './admin/batch-user-import';
 import * as emailsettings from './admin/email-settings';
@@ -39,12 +47,12 @@ import * as metafieldsvideotraining from './meta-fields/video-training';
 
 /*Edit site Sidebars*/
 
-import * as sidebareditsitexs from './plugin-sidebar-edit-site/xs';
+/*import * as sidebareditsitexs from './plugin-sidebar-edit-site/xs';
 import * as sidebareditsitesm from './plugin-sidebar-edit-site/sm';
 import * as sidebareditsitemd from './plugin-sidebar-edit-site/md';
 import * as sidebareditsitelg from './plugin-sidebar-edit-site/lg';
 import * as sidebareditsitexl from './plugin-sidebar-edit-site/xl';
-import * as sidebareditsitexxl from './plugin-sidebar-edit-site/xxl';
+import * as sidebareditsitexxl from './plugin-sidebar-edit-site/xxl';*/
 
 /*Serverside render blocks*/
 
@@ -77,6 +85,7 @@ import * as postfeaturedimg from './blocks/post-featured-img';
 import * as heading from './blocks/h';
 import * as sitetitle from './blocks/site-title';
 import * as paragraph from './blocks/p';
+import * as Preformattedtext from './blocks/pre';
 import * as span from './blocks/span';
 import * as btn from './blocks/btn';
 import * as button from './blocks/button';
@@ -123,12 +132,32 @@ import * as listgroup from './blocks/list-group';
 import * as listgroupitem from './blocks/list-group-item';
 import * as listitem from './blocks/li';
 import * as unorderedlist from './blocks/ul';
+import * as orderedlist from './blocks/ol';
+import * as swiper from './blocks/swiper';
+import * as swiperwrapper from './blocks/swiperwrapper';
+import * as swiperpagination from './blocks/swiperpagination';
+import * as swiperslide from './blocks/swiperslide';
+import * as table from './blocks/table';
+import * as thead from './blocks/thead';
+import * as tbody from './blocks/tbody';
+import * as tr from './blocks/tr';
+import * as th from './blocks/th';
+import * as td from './blocks/td';
+import * as modal from './blocks/modal';
+import * as modalbody from './blocks/modal-body';
+import * as modalconent from './blocks/modal-content';
+import * as modaldialog from './blocks/modal-dialog';
+import * as modalfooter from './blocks/modal-footer';
+import * as modalheader from './blocks/modal-header';
+import * as modalbtnclose from './blocks/modal-btn-close';
+import * as iframe from './blocks/iframe';
+
 
 const getAllBlockCollections = () => [
 	webkompanen
 ]
 
-const registerWebkompanenBlockCollections = (
+const registerwebkompanenBlockCollections = (
 	collections = getAllBlockCollections()
 ) => {
 	collections.forEach(
@@ -136,14 +165,14 @@ const registerWebkompanenBlockCollections = (
 	)
 }
 
-registerWebkompanenBlockCollections()
+registerwebkompanenBlockCollections()
 
 
 const getAllBlockUpdates = () => [
 	layout
 ]
 
-const updateWebkompanenBlocks = (
+const updatewebkompanenBlocks = (
 	updates = getAllBlockUpdates()
 ) => {
 	updates.forEach(
@@ -151,7 +180,7 @@ const updateWebkompanenBlocks = (
 	)
 }
 
-updateWebkompanenBlocks()
+updatewebkompanenBlocks()
 
 const getAllFormatTypes = () => [
 	color,
@@ -160,7 +189,7 @@ const getAllFormatTypes = () => [
 	fontsize
 ]
 
-const registerWebkompanenFormatTypes = (
+const registerwebkompanenFormatTypes = (
 	formattypes = getAllFormatTypes()
 ) => {
 	formattypes.forEach(
@@ -168,7 +197,7 @@ const registerWebkompanenFormatTypes = (
 	)
 }
 
-registerWebkompanenFormatTypes()
+registerwebkompanenFormatTypes()
 
 const getAllBlockSidebars = () => [
 	sidebarxs,
@@ -177,12 +206,12 @@ const getAllBlockSidebars = () => [
 	sidebarlg,
 	sidebarxl,
 	sidebarxxl,
-	sidebareditsitexs,
-	sidebareditsitesm,
-	sidebareditsitemd,
-	sidebareditsitelg,
-	sidebareditsitexl,
-	sidebareditsitexxl,
+	//sidebareditsitexs,
+	//sidebareditsitesm,
+	//sidebareditsitemd,
+	//sidebareditsitelg,
+	//sidebareditsitexl,
+	//sidebareditsitexxl,
 	metafieldsgallery,
 	metafieldsevents,
 	metafieldsagenda,
@@ -190,7 +219,7 @@ const getAllBlockSidebars = () => [
 	metafieldsvideotraining
 ]
 
-const registerWebkompanenSidebars = (
+const registerwebkompanenSidebars = (
 	sidebars = getAllBlockSidebars()
 ) => {
 	sidebars.forEach(
@@ -198,7 +227,7 @@ const registerWebkompanenSidebars = (
 	)
 }
 
-registerWebkompanenSidebars()
+registerwebkompanenSidebars()
 
 
 const getAllBlocks = () => [
@@ -212,6 +241,7 @@ const getAllBlocks = () => [
 	heading,
 	sitetitle,
 	paragraph,
+	Preformattedtext,
 	span,
 	btn,
 	button,
@@ -273,11 +303,30 @@ const getAllBlocks = () => [
 	listgroupitem,
 	listitem,
 	unorderedlist,
+	orderedlist,
 	googlerating,
-	googlereviews
+	googlereviews,
+	swiper,
+	swiperwrapper,
+	swiperpagination,
+	swiperslide,
+	table,
+	thead,
+	tbody,
+	tr,
+	th,
+	td,
+	modal,
+	modalbody,
+	modalconent,
+	modaldialog,
+	modalfooter,
+	modalheader,
+	modalbtnclose,
+	iframe
 ]
 
-const registerWebkompanenBlocks = (
+const registerwebkompanenBlocks = (
 	blocks = getAllBlocks()
 ) => {
 	blocks.forEach(
@@ -285,7 +334,7 @@ const registerWebkompanenBlocks = (
 	)
 }
 
-registerWebkompanenBlocks()
+registerwebkompanenBlocks()
 
 
 const getAllAdminTools = () => [
@@ -301,6 +350,44 @@ const registerAdminTools = (
 }
 
 registerAdminTools()
+
+const getAllBlockEditors = () => [
+	customblockeditor
+
+]
+
+const registerBlockEditors = (
+	blockeditors = getAllBlockEditors()
+) => {
+	blockeditors.forEach(
+		( { init } ) => init()
+	)
+}
+
+//registerBlockEditors()
+//paragraph_heading();
+
+document.addEventListener("DOMContentLoaded", function(event) {
+	wp.domReady( () => {
+		//wp.api.loadPromise.done( function() {
+		if(document.getElementById( 'webkompanen-block-editor' )){
+			const getAllBlockEditors = () => [
+				customblockeditor
+			
+			]
+			
+			const registerBlockEditors = (
+				blockeditors = getAllBlockEditors()
+			) => {
+				blockeditors.forEach(
+					( { init } ) => init()
+				)
+			}
+			
+			registerBlockEditors()
+		}
+	});
+});
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	wp.domReady( () => {
@@ -323,37 +410,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 });
 
-/*const getAllWebkompanenAdminSettings = () => [
+/*const getAllwebkompanenAdminSettings = () => [
 	emailsettings
 ]
 
-const registerAllWebkompanenAdminSettings = (
-	webkompanenadminsettings = getAllWebkompanenAdminSettings()
+const registerAllwebkompanenAdminSettings = (
+	webkompanenadminsettings = getAllwebkompanenAdminSettings()
 ) => {
 	webkompanenadminsettings.forEach(
 		( { init } ) => init()
 	)
 }
 
-registerAllWebkompanenAdminSettings()*/
+registerAllwebkompanenAdminSettings()*/
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	wp.domReady( () => {
 		//wp.api.loadPromise.done( function() {
 		if(document.getElementById( 'webkompanen-settings' )){
-			const getAllWebkompanenAdminSettings = () => [
+			const getAllwebkompanenAdminSettings = () => [
 				emailsettings
 			]
 
-			const registerAllWebkompanenAdminSettings = (
-				webkompanenadminsettings = getAllWebkompanenAdminSettings()
+			const registerAllwebkompanenAdminSettings = (
+				webkompanenadminsettings = getAllwebkompanenAdminSettings()
 			) => {
 				webkompanenadminsettings.forEach(
 					( { init } ) => init()
 				)
 			}
 			
-			registerAllWebkompanenAdminSettings()
+			registerAllwebkompanenAdminSettings()
 		}
 	});
 });

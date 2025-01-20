@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'keesz_post_type' );
+	if(get_option('showKeezCustomPost') == true):
+		add_action( 'init', 'keesz_post_type' );
+	endif;
 ?>

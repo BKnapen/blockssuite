@@ -146,6 +146,7 @@ const imageEdit = (props) => {
 	const showlabel = attributes.showlabel ? attributes.showlabel : attributes.showlabel
 	
 	const objectfitcover = attributes.objectfitcover ? ' object-fit-cover':''
+	const objectposition = attributes.objectposition ? ' object-position-'+attributes.objectposition+'':''
 	
 	const url = attributes.url ? ' d-block' : ''
 	
@@ -153,7 +154,8 @@ const imageEdit = (props) => {
 	
 	const WrapperTag = attributes.url ? `a` : `figure`;
 	
-	const urlurl = attributes.url ? attributes.url.url : null;
+	let urlurl = attributes.url ? attributes.url.url : null;
+	urlurl = attributes.lightbox ? attributes.imageUrl : urlurl;
 
 	const h = attributes.h ? attributes.h : 0
 	const w = attributes.w ? attributes.w : 0
@@ -170,6 +172,7 @@ const imageEdit = (props) => {
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
 	blockClasses += objectfitcover
+	blockClasses += objectposition
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');

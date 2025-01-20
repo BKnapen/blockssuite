@@ -79,6 +79,7 @@ import {
 } from '../../icons'
 
 import { Margin } from '../../utilities/margin';
+import { Rounded } from '../../utilities/rounded';
 import { NegativeMargin } from '../../utilities/negativemargin';
 import { Padding } from '../../utilities/padding';
 import { Display } from '../../utilities/display';
@@ -89,6 +90,7 @@ import { Backgroundcolor } from '../../utilities/backgroundcolor';
 /* Editors */
 
 import ColorEdit from '../../editor/color';
+import RoundedEdit from '../../editor/rounded';
 import BackgroundcolorEdit from '../../editor/backgroundcolor';
 import PositionEdit from '../../editor/position';
 import fontawasomeicons from './icons.json'
@@ -158,6 +160,7 @@ const iEdit = (props) => {
 	];
 	
 	const margin = new Margin(props)
+	const rounded = new Rounded(props)
 	const negativemargin = new NegativeMargin(props)
 	const padding = new Padding(props)
 	const display = new Display(props)
@@ -178,6 +181,7 @@ const iEdit = (props) => {
 	blockClasses += backgroundcolor.classes() != null && backgroundcolor.classes() != '' ? ' '+backgroundcolor.classes() : ''
 	blockClasses += color.classes() != null && color.classes() != '' ? ' '+color.classes() : ''
 	blockClasses += margin.classes() != null && margin.classes() != '' ? ' '+margin.classes() : ''
+	blockClasses += rounded.classes() != null && rounded.classes() != '' ? ' '+rounded.classes() : ''
 	blockClasses += negativemargin.classes() != null && negativemargin.classes() != '' ? ' '+negativemargin.classes() : ''
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
@@ -240,6 +244,9 @@ const iEdit = (props) => {
 						props={props}
 					/>
 					<PositionEdit 
+						props={props}
+					/>
+					<RoundedEdit
 						props={props}
 					/>
 					<PanelBody

@@ -9,6 +9,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_price_per_lesson', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -18,6 +19,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_first_lesson_free', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'boolean',
             'show_in_rest' => true,
             'single' => true
@@ -27,6 +29,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'hide_course_duration', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'boolean',
             'show_in_rest' => true,
             'single' => true
@@ -36,6 +39,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_show_as_weekly', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'boolean',
             'show_in_rest' => true,
             'single' => true
@@ -45,6 +49,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_show_as_monthly', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'boolean',
             'show_in_rest' => true,
             'single' => true
@@ -54,6 +59,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_name', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -63,6 +69,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_description', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -72,6 +79,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_door_time', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -81,6 +89,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_course_mode', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -90,6 +99,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_course_workload', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -99,6 +109,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_duration', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -108,6 +119,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_les_method', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -117,6 +129,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_minimum_attendee_capacity', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -126,6 +139,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_maximum_attendee_capacity', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -135,6 +149,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_start_date', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -144,6 +159,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_end_date', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -153,6 +169,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_start_time', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -162,6 +179,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_end_time', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -171,6 +189,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_location_name', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -180,6 +199,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_location_same_as', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -189,6 +209,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_location_address', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -198,6 +219,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_days', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'array',
 			'show_in_rest' => array(
         		'schema' => array(
@@ -214,6 +236,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_price', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -223,6 +246,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_url', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -232,6 +256,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_price_currency', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -241,6 +266,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_certificate', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -250,6 +276,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_study_load', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -259,6 +286,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_entry_requirements', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -268,6 +296,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_target_audience', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -278,6 +307,7 @@ function webkompanen_post_meta_fields_courses() {
         'post', 
         'course_event_schedule', 
         array(
+            'object_subtype' => 'courses',
             'type' => 'array',
             'show_in_rest' => array(
                  'schema' => array(

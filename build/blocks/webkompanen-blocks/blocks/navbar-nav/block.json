@@ -17,6 +17,24 @@
       "type": "string",
       "default": "full"
     },
+    "fs": {
+      "type": "number"
+    },
+    "fw": {
+      "type": "string"
+    },
+    "texttransform": {
+      "type": "string"
+    },
+    "lh": {
+      "type": "string"
+    },
+    "textdecoration": {
+      "type": "string"
+    },
+    "textalignment": {
+      "type": "string"
+    },
     "id": {
       "type": "string"
     },

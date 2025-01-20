@@ -100,6 +100,12 @@ const HeadingEdit = (props) => {
 	} = props;
 	
 	const formattypes = wp.data.select( 'core/rich-text' ).getFormatTypes();
+
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
 	
 	const margin = new Margin(props)
 	const negativemargin = new NegativeMargin(props)
@@ -154,6 +160,67 @@ const HeadingEdit = (props) => {
 		<>	
 			<Fragment>		
 				<InspectorControls>
+					<PanelBody
+						title={__('Microdata', 'webkompanen')}
+						initialOpen={false}
+					>
+							<InputControl
+								label={__('Microdata itemprop', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemprop }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemprop:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata itemtype', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemtype }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemtype:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata href', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataHref }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataHref:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata content', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataContent }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataContent:nextvalue
+										})
+									}
+								}
+							/>
+					</PanelBody>
 					<PanelBody
 						title={__('AOS', 'webkompanen')}
 						initialOpen={false}
@@ -641,6 +708,11 @@ const HeadingEdit = (props) => {
 			</BlockControls>
 			<RichText
 				{ ...blockProps }
+				itemprop={microdataItemprop}
+				itemscope={microdataItemscope}
+				itemtype={microdataItemtype}
+			  	href={microdataHref}
+			  	content={microdataContent}
 				//className="display-4"
                	tagName={ attributes.tagname ? attributes.tagname : 'h1' } // The tag here is the element output and editable in the admin
                	value={ attributes.content } // Any existing content, either from the database or an attribute default

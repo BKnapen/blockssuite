@@ -17,8 +17,11 @@
       "type": "string",
       "default": "full"
     },
-    "href": {
-      "type": "string"
+    "navbarbrandlink": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
     },
     "navbarExpand": {
       "type": "string"

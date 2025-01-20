@@ -42,7 +42,7 @@ const UrlButton = ( props ) => {
     const [ showPopover, setShowPopover ] = useState( false );
     const [ activeLink, setActiveLink ] = useState( '' );
     const [ activeTarget, setActiveTarget ] = useState( `_self` );
-    const [ activeRel, setActiveRel ] = useState( `noopener` );
+    const [ activeRel, setActiveRel ] = useState( false );
 	let curlink, curtarget, currel
 	// Function to get active colour from format.
     const getActiveLink = () => {
@@ -92,13 +92,13 @@ const UrlButton = ( props ) => {
             	}
 
             	if ( atts ) {
-					if ( atts.target ) {
+					if ( atts.target !== undefined) {
 						setActiveTarget(atts.target)
 					}
-					if ( atts.href) {
+					if ( atts.href !== undefined) {
 						setActiveLink(atts.href)
 					}
-					if ( atts.rel) {
+					if ( atts.rel !== undefined) {
 						setActiveRel(atts.rel)
 					}
             	} 
@@ -116,7 +116,7 @@ const UrlButton = ( props ) => {
 
             	let atts = unregisteredAttributes;
 
-            	if ( attributes && attributes.length ) {
+            	if ( attributes && !unregisteredAttributes ) {
                 	atts = attributes;
             	}
 
@@ -125,7 +125,8 @@ const UrlButton = ( props ) => {
             	if ( ! atts ) {
 					return {
 						url: null,
-						target: false
+						target: false,
+						rel: false
 					}
             	}
 
@@ -133,7 +134,8 @@ const UrlButton = ( props ) => {
 
 					return {
 						url: atts.href ? atts.href : '',
-						target: atts.target === '_blank' ? true : false
+						target: atts.target === '_blank' ? true : false,
+						rel: atts.rel !== undefined && atts.rel !== `` ? true : false
 					}
             	} 
         	}   
@@ -195,18 +197,36 @@ const UrlButton = ( props ) => {
         			className="components-inline-color-popover linktest-popover"
         			onClose={ () => setShowPopover( false ) }
         		>
+					
 					<LinkControl
 						className="bootstrap-linkcontrol"
 						searchInputPlaceholder="Search here..."
 						value={ getCurrentValues() }
+						withUnlinkControl={ true }
 						settings={
 							[
 								{
 									id:'target',
-									title: 'New tab?',
+									title: __('Open in new tab', 'webkompanen')
+								},
+								{
+									id: 'rel',
+									title: __('No follow link', 'webkompanen')
 								}
-
 							]
+						}
+						onRemove={
+							()=>{
+								setShowPopover(false)
+								onChange(
+									removeFormat(
+										value,
+										webkompanenblockshref,
+										value.start,
+										value.end
+									)
+								)
+							}
 						}
 						onChange={ 
 							(newPost) =>{
@@ -217,11 +237,6 @@ const UrlButton = ( props ) => {
 									const attributes  = {};
 									
 									console.clear()
-									console.log('newPost test')
-									console.log(newPost)
-									console.log(newPost.target)
-									console.log(activeTarget)
-									console.log(activeRel)
 
 									if(newPost.url !== undefined){
 										setActiveLink(newPost.url)
@@ -230,10 +245,18 @@ const UrlButton = ( props ) => {
 
 									if(newPost.target !== undefined){
 										newPost.target ? setActiveTarget(`_blank`) : setActiveTarget(`_self`)
-										newPost.target ? setActiveRel(`noopener`) : setActiveRel(``)
 
 										attributes.target = newPost.target ? `_blank` : `_self`
-										attributes.rel = newPost.target ? `noopener`  : `noopener`
+									}
+									if(newPost.rel === false || newPost.rel === null || newPost.rel === undefined){
+										setActiveRel(``)
+										attributes.rel = false
+										delete attributes.rel;
+
+									}
+									else{
+										setActiveRel(`nofollow`)
+										attributes.rel = `nofollow`
 									}
 
 									//attributes.rel = null
@@ -266,26 +289,6 @@ const UrlButton = ( props ) => {
 						}
 					>
 					</LinkControl>
-					<p>
-						<a
-							href="#"
-							onClick={
-								()=>{
-									setShowPopover(false)
-									onChange(
-										removeFormat(
-											value,
-											webkompanenblockshref,
-											value.start,
-											value.end
-										)
-									)
-								}
-							}
-						>
-							Wissen
-						</a>
-					</p>
       			</Popover>
     		) }
 		</>

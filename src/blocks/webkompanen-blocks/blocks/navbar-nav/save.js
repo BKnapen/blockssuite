@@ -53,6 +53,12 @@ function divSave( props ) {
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
+	blockClasses += attributes.fs != null && attributes.fs != '' ? ' fs-'+attributes.fs : ''
+	blockClasses += attributes.fw != null && attributes.fw != '' ? ' '+attributes.fw : ''
+	blockClasses += attributes.texttransform != null && attributes.texttransform != '' ? ' '+attributes.texttransform : ''
+	blockClasses += attributes.textdecoration != null && attributes.textdecoration != '' ? ' '+attributes.textdecoration : ''
+	blockClasses += attributes.lh != null && attributes.lh != '' ? ' '+attributes.lh : ''
+	blockClasses += attributes.textalignment != null && attributes.textalignment != '' ? ' '+attributes.textalignment : ''
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');

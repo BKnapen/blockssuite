@@ -173,13 +173,13 @@
 					$message .='<center style="width: 100%;">';
 						$message .='<!-- Visually Hidden Preheader Text : BEGIN -->';
 						$message .='<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: \'Lato\', sans-serif !important;">';
-							$message .='Nieuwe inzending van een formulier van skeelup.com';
+							$message .='Nieuwe inzending van een formulier van webkompanen.com';
 						$message .='</div>';
 						$message .='<!-- Visually Hidden Preheader Text : END --> ';
 						$message .='<!-- Email Header : BEGIN -->';
             			$message .='<table align="center" width="600" class="email-container">';
             				$message .='<tr>';
-                				$message .='<td style="padding: 20px 0; text-align: center;"><img style="width:25%" src="https://skeelup.gaatbinnenkortonline.nl/wp-content/uploads/cropped-fav-icon-skeel-up@2x.png" alt="logo SKEELUP" border="0"></td>';
+                				$message .='<td style="padding: 20px 0; text-align: center;"><img style="width:25%" src="https://webkompanen.gaatbinnenkortonline.nl/wp-content/uploads/cropped-fav-icon-skeel-up@2x.png" alt="logo SKEELUP" border="0"></td>';
               				$message .='</tr>';
           				$message .='</table>';
             			$message .='<!-- Email Header : END --> ';
@@ -196,7 +196,7 @@
 									} 
 									$message .='<br><br>';
 									$message .= 'SKEELUP,<br>';
-									$message .= 'skeelup.com';
+									$message .= 'webkompanen.com';
 								$message .='</td>';
 							$message .='</tr>';
 							$message .='<!-- 1 Column Text : BEGIN -->';
@@ -208,7 +208,7 @@
             				$message .='<tr>';
                 				$message .='<td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: \'Lato\', sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #ffffff;">';
                 					$message .='SKEELUP<br>';
-                					$message .='<span class="mobile-link--footer">skeelup.com</span><br>';
+                					$message .='<span class="mobile-link--footer">webkompanen.com</span><br>';
 								$message .='</td>';
               				$message .='</tr>';
           				$message .='</table>';
@@ -220,7 +220,7 @@
 	$message .='</body>';
 $message .='</html>';
 
-		$headers = array('Content-Type: text/html; charset=UTF-8','From: info@skeelup.com <info@skeelup.com>');
+		$headers = array('Content-Type: text/html; charset=UTF-8','From: info@webkompanen.com <info@webkompanen.com>');
 		
 	$clientId = 'fab16d60-6975-4286-b310-e460920ce040';
 	$clientSecret = 'I_e8Q~RiLDsaCSNMAyn._vRKna1VABUAhmb9KdwI';
@@ -259,8 +259,8 @@ $message .='</html>';
 		
 	$accesstoken = $response->access_token;
 
-    $graphPostUrl = '/v1.0/users/info@skeelup.com/sendMail/';
-	$graphFullUrl = 'https://graph.microsoft.com/v1.0/users/info@skeelup.com/sendMail/';
+    $graphPostUrl = '/v1.0/users/info@webkompanen.com/sendMail/';
+	$graphFullUrl = 'https://graph.microsoft.com/v1.0/users/info@webkompanen.com/sendMail/';
 	$graphHostname = 'graph.microsoft.com';
 
 	$graphheaders = array(
@@ -280,19 +280,19 @@ $message .='</html>';
             'sender' => array(
                 'emailAddress' => array(
                       'name' => 'Info | SKEELUP',
-                      'address' => 'info@skeelup.com'
+                      'address' => 'info@webkompanen.com'
                 )
               ),
             'from' => array(
                 'emailAddress' => array(
                       'name' => 'Info | SKEELUP',
-                      'address' => 'info@skeelup.com'
+                      'address' => 'info@webkompanen.com'
                 )
            	),
             'toRecipients' => [
 				array(
                 	'emailAddress' => array(
-                    	'address' => 'info@skeelup.com'
+                    	'address' => 'info@webkompanen.com'
                 	)
             	)
 			],
@@ -300,13 +300,13 @@ $message .='</html>';
 				array(
                 	'emailAddress' => array(
 						'name' => 'Tim | SKEELUP',
-                    	'address' => 'tim@skeelup.com'
+                    	'address' => 'tim@webkompanen.com'
                 	)
             	),
 				array(
                 	'emailAddress' => array(
 						'name' => 'Amanda | SKEELUP',
-                    	'address' => 'amanda@skeelup.com'
+                    	'address' => 'amanda@webkompanen.com'
                 	)
             	)
 			],
@@ -352,7 +352,7 @@ $message .='</html>';
 		wp_die();
 	endif;
 	
-		/*$send = wp_mail('tim@skeelup.com', 'test', $message, $headers);
+		/*$send = wp_mail('tim@webkompanen.com', 'test', $message, $headers);
 		$sendcopy = wp_mail('bramknapen@outlook.com', 'test', $message, $headers);
 
 	

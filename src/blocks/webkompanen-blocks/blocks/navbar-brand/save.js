@@ -63,7 +63,7 @@ function divSave( props ) {
 			<a 
 				style={style}
 				className={ blockClasses }
-				href={ attributes.href }
+				href={ attributes.navbarbrandlink }
 			>
 				<InnerBlocks.Content />
 			</a>

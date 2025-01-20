@@ -2,8 +2,10 @@
  * WordPress dependencies
  */
 import {
-	registerBlockType
-	
+	registerBlockType,
+	getBlockBindingsSource,
+	getBlockBindingsSources,
+	registerBlockBindingsSource
 } from '@wordpress/blocks';
 import { 
 	useSelect, useDispatch, withSelect
@@ -26,6 +28,7 @@ import {
 	withColors,
 	useInnerBlocksProps,
 	getColorClassName,
+	useBlockBindingsUtils,
 	getColorObjectByColorValue,
 	store as blockEditorStore
 	
@@ -87,6 +90,10 @@ import PositionEdit from '../../editor/position';
 
 import { Colors } from '../../utilities/colors';
 
+//import blockbind  from './test'
+
+//registerBlockBindingsSource(blockbind);
+
 /*function HeaderEdit( props ) {*/
 const paragraphEdit = (props) => {
 	const [ outputChatGPT, setOutputChatGPT] = useState('');
@@ -96,6 +103,7 @@ const paragraphEdit = (props) => {
 
 	const {
 		attributes,
+		metadata,
 		setAttributes,
 		className,
 		onChange,
@@ -106,6 +114,8 @@ const paragraphEdit = (props) => {
 		'webkompanen/row'
 	]
 
+	const { updateBlockBindings, removeAllBlockBindings } = useBlockBindingsUtils(clientId);
+
 	const colors = new Colors;
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -113,11 +123,27 @@ const paragraphEdit = (props) => {
 		[ clientId ]
 	);
 
+	const sources = getBlockBindingsSources();
+
+	console.log('sources')
+	console.log(sources)
+	//console.log(sources.getValues(['core/post-meta']))
+	
 	const chatGPTAPIKEY = wp.data.select( 'core' )
 	
 	const siteinfo = useSelect( ( select ) =>
 		select('core').getSite()
 	);
+
+	const [selectFramework, setSelectFramework] = useState( 
+		attributes?.metadata?.bindings?.content?.source
+	);
+
+	console.log('selectFramework')
+	console.log(selectFramework)
+	console.log(attributes.content)
+	console.log(attributes)
+	console.log(metadata)
 	
 	const margin = new Margin(props)
 	const negativemargin = new NegativeMargin(props)
@@ -130,6 +156,12 @@ const paragraphEdit = (props) => {
 	
 	const classes = attributes.classes ? attributes.classes : ''
 	
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
+
 	let blockClasses = '';
 
 	blockClasses += classes != null && classes != '' ? ' '+classes : ''
@@ -271,6 +303,142 @@ const paragraphEdit = (props) => {
 		<>	
 			<Fragment>		
 				<InspectorControls>
+					<PanelBody
+						title={__('Microdata', 'webkompanen')}
+						initialOpen={false}
+						>
+							<InputControl
+								label={__('Microdata itemprop', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemprop }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemprop:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata itemtype', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemtype }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemtype:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata href', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataHref }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataHref:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata content', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataContent }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataContent:nextvalue
+										})
+									}
+								}
+							/>
+					</PanelBody>
+					<PanelBody
+						title={__('Binding selector', 'webkompanen')}
+						initialOpen={false}
+						>
+							<Button
+								isPrimary
+								onClick={
+									()=>{
+										removeAllBlockBindings()
+									}
+								}
+							>
+								{__('Remove binding', 'webkompanen')}
+							</Button>
+							<Button
+								isPrimary
+								onClick={
+									()=>{
+										updateBlockBindings({
+											content:{
+												source:'core/post-meta',
+												key:'description'
+											}
+										})
+									}
+								}
+							>
+								{__('Add native binding', 'webkompanen')}
+							</Button>
+							<SelectControl
+								label={ __( 'Binding source', 'webkompanen' ) }
+								value={ selectFramework }
+								onChange={ 
+									( nextSelect ) => {
+										setAttributes({ 
+											metadata:{
+												...attributes.metadata,
+												bindings:{
+													conttent:{
+														...attributes?.metadata?.bindings?.content,
+														source:nextSelect
+													}
+												}
+											} 
+										})
+									}
+								}
+								options={ [
+									{ value: '', label: __('Maak een keuze', 'webkompanen' ) },
+									{ value: 'webkompanen/acf', label: __('ACF', 'webkompanen' ) },
+									{ value: 'webkompanen/pods', label: __('PODS', 'webkompanen' ) },
+									{ value: 'webkompanen/toolset', label: __('Native', 'webkompanen' ) }
+								] }
+							/>
+							<SelectControl
+								label={ __( 'Key to bind', 'webkompanen' ) }
+								value={ selectFramework }
+								onChange={ 
+									( nextSelect ) => {
+										updateBlockBindings({
+											content:{
+												source:selectFramework,
+												key:'description'
+											}
+										})
+									}
+								}
+								options={ [
+									{ value: '', label: __('Maak een keuze', 'webkompanen' ) },
+									{ value: 'description', label: __('ACF', 'webkompanen' ) },
+									{ value: 'description', label: __('PODS', 'webkompanen' ) },
+									{ value: 'description', label: __('Native', 'webkompanen' ) }
+								] }
+							/>
+					</PanelBody>
 					<PanelBody
 						title={__('AOS', 'webkompanen')}
 						initialOpen={false}
@@ -804,6 +972,11 @@ const paragraphEdit = (props) => {
 			</Fragment>
 			<RichText
 				{ ...blockProps }
+				itemprop={microdataItemprop}
+				itemscope={microdataItemscope}
+				itemtype={microdataItemtype}
+			  	href={microdataHref}
+			  	content={microdataContent}
 				//className="display-4"
                	tagName="p" // The tag here is the element output and editable in the admin
                	value={ outputChatGPT != '' ? outputChatGPT : attributes.content } // Any existing content, either from the database or an attribute default

@@ -24,6 +24,12 @@ function ColSave( props ) {
 	const {
 		attributes
 	} = props;
+
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
 	
 	let classes = attributes.classes ? ''+attributes.classes : ''
 	let datasrc = attributes.datasrc ? ''+attributes.datasrc : null
@@ -68,6 +74,11 @@ function ColSave( props ) {
 		<>
 			<div 
 				className={blockClasses}
+				itemprop={microdataItemprop}
+				itemscope={microdataItemscope}
+				itemtype={microdataItemtype}
+			  	href={microdataHref}
+			  	content={microdataContent}
 				data-src={datasrc}
 				data-image={dataImage}
 			>

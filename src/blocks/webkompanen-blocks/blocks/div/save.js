@@ -27,13 +27,23 @@ function divSave( props ) {
 		attributes
 	} = props;
 	
-	
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
+
 	const classes = attributes.classes ? attributes.classes : ''
 	const ratio = attributes.ratio ? ' ratio' : ''
 	const ratiosize = attributes.ratiosize ? ' '+attributes.ratiosize+'' : ''
 	const flickity = attributes.flickity !== null ? JSON.stringify(attributes.flickity) : null
 	const style = attributes.style !== null ? attributes.style : null
 	const ariahidden = attributes.ariahidden ? 'true' : null
+
+	const role = attributes.role ? ''+attributes.role+'' : null
+	const dataBsToggle = attributes.dataBsToggle ? ''+attributes.dataBsToggle+'' : null
+	const dataBsTarget = attributes.dataBsTarget ? ''+attributes.dataBsTarget+'' : null
+	const dataBsSlideTo = attributes.dataBsSlideTo ? ''+attributes.dataBsSlideTo+'' : null
 	
 	const margin = new Margin(props)
 	const negativemargin = new NegativeMargin(props)
@@ -78,9 +88,16 @@ function divSave( props ) {
 			{
 				bgimg && (
   					<div 
+					  	itemprop={microdataItemprop}
+					  	itemtype={microdataItemtype}
+						href={microdataHref}
+						content={microdataContent}
 						data-flickity={flickity}
 					  	aria-hidden={ ariahidden }
 					  	className={ blockClasses }
+						role={role}	
+						data-bs-toggle={dataBsToggle}	
+						data-bs-target={dataBsTarget}
 						style={
 							{
 								'background':'inline-block',
@@ -111,8 +128,16 @@ function divSave( props ) {
 			{
 				!bgimg && (
   					<div 
+					  	itemprop={microdataItemprop}
+					  	itemscope={microdataItemscope}
+					  	itemtype={microdataItemtype}
+						href={microdataHref}
+						content={microdataContent}
 						data-flickity={flickity}
 					  	aria-hidden={ ariahidden }
+						role={role}	
+						data-bs-toggle={dataBsToggle}	
+						data-bs-target={dataBsTarget}
 					  	style={style}
 					  	className={ blockClasses }
 						data-aos={attributes.dataaos && attributes.dataaos != '' ? attributes.dataaos : null}

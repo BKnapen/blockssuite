@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'ascot_advies_post_type' );
+	if(get_option('showAscotAdviesCustomPost') == true):
+		add_action( 'init', 'ascot_advies_post_type' );
+	endif;
 ?>

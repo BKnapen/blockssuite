@@ -6,6 +6,7 @@ import MarginEdit from '../editor/margin';
 import NegativeMarginEdit from '../editor/negativemargin';
 import PaddingEdit from '../editor/padding';
 import DisplayEdit from '../editor/display';
+import GuttersEdit from '../editor/gutters';
 import JustifyEdit from '../editor/justify';
 import AlignItemsEdit from '../editor/alignitems';
 import TextAlignEdit from '../editor/textalign';
@@ -14,7 +15,8 @@ import PositionEdit from '../editor/position';
 const GetProps = (props) => {
 	
 	const colblocks = [
-		'webkompanen-blocks/col'
+		'webkompanen-blocks/col',
+		'webkompanen-blocks/lastposts'
 	]
 	
 	const displayblocks = [
@@ -30,6 +32,7 @@ const GetProps = (props) => {
 		'webkompanen-blocks/fontawesome',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li'
 	]
 	
@@ -40,6 +43,7 @@ const GetProps = (props) => {
 		'webkompanen-blocks/navbar-collapse',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li'
 	]
 	
@@ -48,6 +52,7 @@ const GetProps = (props) => {
 		'webkompanen-blocks/nav-link',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li'
 	]
 	
@@ -64,6 +69,7 @@ const GetProps = (props) => {
 		'webkompanen-blocks/img',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li'
 	]
 	
@@ -85,9 +91,14 @@ const GetProps = (props) => {
 		'webkompanen-blocks/accordion',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li'
 	]
 	
+	const gutterblocks = [
+		'webkompanen-blocks/row',
+	]
+
 	const paddingblocks = [
 		'webkompanen-blocks/linkbutton',
 		'webkompanen-blocks/paragraph',
@@ -102,6 +113,7 @@ const GetProps = (props) => {
 		'webkompanen-blocks/nav',
 		'webkompanen-blocks/site-title',
 		'webkompanen-blocks/ul',
+		'webkompanen-blocks/ol',
 		'webkompanen-blocks/li',
 		'webkompanen-blocks/nav-item'
 	]
@@ -160,6 +172,12 @@ const GetProps = (props) => {
 		}
 		{selectedblockprops && paddingblocks.includes(props.props.name) &&
 			<PaddingEdit
+				props={ props.props }
+				breakpoint={props.requestBreakpoint}
+			/>
+		}
+		{selectedblockprops && gutterblocks.includes(props.props.name) &&
+			<GuttersEdit
 				props={ props.props }
 				breakpoint={props.requestBreakpoint}
 			/>

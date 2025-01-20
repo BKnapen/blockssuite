@@ -4,6 +4,8 @@ class Colors {
 			{ name: 'primary', color: 'var(--bs-primary)' },
 			{ name: 'secondary', color: 'var(--bs-secondary)' },
 			{ name: 'tertiary', color: 'var(--bs-tertiary)' },
+			{ name: 'quaternary', color: 'var(--bs-quaternary)' },
+			{ name: 'quinary', color: 'var(--bs-quinary)' },
 			{ name: 'white', color: 'var(--bs-white)' },
 			{ name: 'light', color: 'var(--bs-light)' },
 			{ name: 'dark', color: 'var(--bs-dark)' },

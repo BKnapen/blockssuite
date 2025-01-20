@@ -10,6 +10,7 @@ import {
 } from '@wordpress/block-editor';
 
 import { Margin } from '../../utilities/margin';
+import { Rounded } from '../../utilities/rounded';
 import { NegativeMargin } from '../../utilities/negativemargin';
 import { Padding } from '../../utilities/padding';
 import { Display } from '../../utilities/display';
@@ -29,6 +30,7 @@ function iSave( props ) {
 	
 	
 	const margin = new Margin(props)
+	const rounded = new Rounded(props)
 	const negativemargin = new NegativeMargin(props)
 	const padding = new Padding(props)
 	const display = new Display(props)
@@ -44,6 +46,7 @@ function iSave( props ) {
 	blockClasses += backgroundcolor.classes() != null && backgroundcolor.classes() != '' ? ' '+backgroundcolor.classes() : ''
 	blockClasses += color.classes() != null && color.classes() != '' ? ' '+color.classes() : ''
 	blockClasses += margin.classes() != null && margin.classes() != '' ? ' '+margin.classes() : ''
+	blockClasses += rounded.classes() != null && rounded.classes() != '' ? ' '+rounded.classes() : ''
 	blockClasses += negativemargin.classes() != null && negativemargin.classes() != '' ? ' '+negativemargin.classes() : ''
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''

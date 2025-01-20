@@ -92,6 +92,7 @@ const colEdit = (props) => {
 	const ALLOWED_BLOCKS = [ 
 		'webkompanen-blocks/lastposts',
 		'webkompanen-blocks/paragraph',
+		'webkompanen-blocks/pre',
 		'webkompanen-blocks/button',
 		'webkompanen-blocks/heading',
 		'webkompanen-blocks/div',
@@ -122,7 +123,10 @@ const colEdit = (props) => {
 		'webkompanen-blocks/woocommerce-activity-products',
 		'webkompanen-blocks/woocommerce-checkout-billing-address',
 		'webkompanen-blocks/woocommerce-checkout-shipping-address',
-		'webkompanen-blocks/woocommerce-checkout-payment-options'
+		'webkompanen-blocks/woocommerce-checkout-payment-options',
+		'webkompanen-blocks/swiper',
+		'webkompanen-blocks/swiperslide',
+		'core/paragraph',
 	]
 	
 	const hasInnerBlocks = useSelect( ( select ) =>
@@ -159,6 +163,12 @@ const colEdit = (props) => {
 			datasrc:attributes.datasrc
 		})
 	}
+
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
 	
 	let classes = attributes.classes ? ''+attributes.classes : ''
 	let dataImage = attributes.dataImage ? ''+attributes.dataImage : null
@@ -213,6 +223,67 @@ const colEdit = (props) => {
 		<>	
 			<Fragment>		
 				<InspectorControls>
+					<PanelBody
+						title={__('Microdata', 'webkompanen')}
+						initialOpen={false}
+						>
+							<InputControl
+								label={__('Microdata itemprop', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemprop }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemprop:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata itemtype', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataItemtype }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataItemtype:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata href', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataHref }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataHref:nextvalue
+										})
+									}
+								}
+							/>
+							<InputControl
+								label={__('Microdata content', 'webkompanen')}
+								labelPosition="top"
+								value={ attributes.microdataContent }
+								type="text"
+								isPressEnterToChange
+								onChange={ 
+									( nextvalue ) => {
+										setAttributes({
+											microdataContent:nextvalue
+										})
+									}
+								}
+							/>
+					</PanelBody>
 					<ButtonGroup>
 						{
 							attributes.height === 'h-25' ?
@@ -363,6 +434,11 @@ const colEdit = (props) => {
 			</Fragment>
   			<div 
 				{ ...innerBlocksProps }
+				itemprop={microdataItemprop}
+				itemscope={microdataItemscope}
+				itemtype={microdataItemtype}
+			  	href={microdataHref}
+			  	content={microdataContent}
 				data-src={attributes.datasrc}
 				data-image={dataImage}
 			>

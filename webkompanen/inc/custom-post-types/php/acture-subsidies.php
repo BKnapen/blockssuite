@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-add_action( 'init', 'acture_subsidies_post_type' );
+	if(get_option('showActureSubsidiesCustomPost') == true):
+		add_action( 'init', 'acture_subsidies_post_type' );
+	endif;
 ?>

@@ -241,6 +241,7 @@ function ButtonLinkEdit( props ) {
 										value={ attributes.post }
 										settings={
 											[
+												'test'
 											]
 										}
 										onChange={ 
@@ -251,6 +252,19 @@ function ButtonLinkEdit( props ) {
 												},
 												setIsVisible( ( state ) => ! state )
 											) 
+										}
+										onRemove={
+											( newPost ) => {
+												console.log('test')
+												setAttributes( 
+													{ 
+														post: null,
+														button: null
+													},
+													setIsVisible( ( state ) => ! state )
+												)
+											}
+											
 										}
 										withCreateSuggestion={true}
 										createSuggestion={ 
@@ -290,10 +304,14 @@ function ButtonLinkEdit( props ) {
                	onChange={ ( content ) => setAttributes( { content } ) } // Store updated content as a block attribute
 				onClick={
 					(e) => { 
-						e.target.preventDefault()
-						e.target.stopPropagation()
-						e.preventDefault()
-						e.stopPropagation()
+						if(e.target){
+							e.target.preventDefault()
+							e.target.stopPropagation()
+						}
+						else{
+							e.preventDefault()
+							e.stopPropagation()
+						}
 					}
 				}
                	placeholder={ __( 'Text...' ) } // Display this text before any content has been added by the user

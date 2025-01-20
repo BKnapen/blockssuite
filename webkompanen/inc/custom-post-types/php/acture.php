@@ -66,6 +66,7 @@
 		}
 
 	endif;
-
+	if(get_option('showActureCustomPost') == true):
 	add_action( 'init', 'acture_post_type' );
+	endif;
 ?>

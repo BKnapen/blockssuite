@@ -63,6 +63,16 @@ function ButtonLinkSave( props ) {
 		<>     	
 			<RichText.Content 
 				href={ attributes.post ? attributes.post.url : null }
+				target={
+					attributes.post ? (
+						attributes.post.openInNweTab ? '_blank' : null
+					) : null
+				}
+				rel={
+					attributes.post ? (
+						attributes.post.noFollowLink ? 'nofollow' : null
+					) : null
+				}
 				id={blockID}
                 value={ attributes.content }
                 type={ attributes.type }

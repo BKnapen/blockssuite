@@ -14,6 +14,21 @@
     "content": {
       "type": "string"
     },
+    "microdataItemprop": {
+      "type": "string"
+    },
+    "microdataItemscope": {
+      "type": "boolean"
+    },
+    "microdataItemtype": {
+      "type": "string"
+    },
+    "microdataHref": {
+      "type": "string"
+    },
+    "microdataContent": {
+      "type": "string"
+    },
     "tagname": {
       "type": "string"
     },
@@ -393,6 +408,12 @@
       "type": "number"
     },
     "dataaosoffset": {
+      "type": "number"
+    },
+    "tintshade": {
+      "type": "number"
+    },
+    "opacity": {
       "type": "number"
     }
   },

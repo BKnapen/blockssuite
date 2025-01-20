@@ -44,6 +44,7 @@ function formSave( props ) {
 			<option 
 				id={ attributes.id }
 				value={attributes.value}
+				disabled={attributes.isDisabled}
 			>
 				{ attributes.text }
 			</option>

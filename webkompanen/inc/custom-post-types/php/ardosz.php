@@ -65,5 +65,7 @@
 			); // Better be
 		}
 	endif;
-	add_action( 'init', 'ardosz_post_type' );
+	if(get_option('showArdoszCustomPost') == true):
+		add_action( 'init', 'ardosz_post_type' );
+	endif;
 ?>

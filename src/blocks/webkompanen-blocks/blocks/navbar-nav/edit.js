@@ -139,6 +139,12 @@ const sectionEdit = (props) => {
 	blockClasses += padding.classes() != null && padding.classes() != '' ? ' '+padding.classes() : ''
 	blockClasses += display.classes() != null && display.classes() != '' ? ' '+display.classes() : ''
 	blockClasses += position.classes() != null && position.classes() != '' ? ' '+position.classes() : ''
+	blockClasses += attributes.fs != null && attributes.fs != '' ? ' fs-'+attributes.fs : ''
+	blockClasses += attributes.fw != null && attributes.fw != '' ? ' '+attributes.fw : ''
+	blockClasses += attributes.texttransform != null && attributes.texttransform != '' ? ' '+attributes.texttransform : ''
+	blockClasses += attributes.textdecoration != null && attributes.textdecoration != '' ? ' '+attributes.textdecoration : ''
+	blockClasses += attributes.lh != null && attributes.lh != '' ? ' '+attributes.lh : ''
+	blockClasses += attributes.textalignment != null && attributes.textalignment != '' ? ' '+attributes.textalignment : ''
 	
 	blockClasses = blockClasses.replace(/^\s+|\s+$/gm,'');
 	blockClasses = blockClasses.replace(/\s+\s+/gm,' ');
@@ -159,6 +165,158 @@ const sectionEdit = (props) => {
 		<>		
 			<Fragment>		
 				<InspectorControls>
+					<PanelBody
+						title={__('Typography', 'webkompanen')}
+						initialOpen={false}
+					>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Text alignment', 'webkompanen' ) }
+									value={ attributes.textalignment } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												textalignment:nextSelect
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 'text-start', label: __( 'Left', 'webkompanen' ) },
+										{ value: 'text-center', label: __( 'Center', 'webkompanen' ) },
+										{ value: 'text-end', label: __( 'Right', 'webkompanen' ) }
+									] }
+								/>
+							</div>
+						</div>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Text transform', 'webkompanen' ) }
+									value={ attributes.texttransform } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												texttransform:nextSelect
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 'text-lowercase', label: __('Lowercase', 'webkompanen' ) },
+										{ value: 'text-uppercase', label: __('Uppercase', 'webkompanen' ) },
+										{ value: 'text-capitalize', label: __('Capitalize', 'webkompanen' ) }
+									] }
+								/>
+							</div>
+						</div>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Font size', 'webkompanen' ) }
+									value={ attributes.fs } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												fs:Number(nextSelect)
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 1, label: __('fs-1', 'webkompanen' ) },
+										{ value: 2, label: __('fs-2', 'webkompanen' ) },
+										{ value: 3, label: __('fs-3', 'webkompanen' ) },
+										{ value: 4, label: __('fs-4', 'webkompanen' ) },
+										{ value: 5, label: __('fs-5', 'webkompanen' ) },
+										{ value: 6, label: __('fs-6', 'webkompanen' ) }
+									] }
+								/>
+							</div>
+						</div>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Font weight and italics', 'webkompanen' ) }
+									value={ attributes.fw } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												fw:nextSelect
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 'fw-bold', label: __('Bold text', 'webkompanen' ) },
+										{ value: 'fw-bolder', label: __('Bolder weight text', 'webkompanen' ) },
+										{ value: 'fw-semibold', label: __('Semibold weight text', 'webkompanen' ) },
+										{ value: 'fw-normal', label: __('Normal weight text', 'webkompanen' ) },
+										{ value: 'fw-light', label: __('Light weight text', 'webkompanen' ) },
+										{ value: 'fw-lighter', label: __('Lighter weight text', 'webkompanen' ) },
+										{ value: 'fst-italic', label: __('Italic text', 'webkompanen' ) },
+										{ value: 'fst-normal', label: __('Text with normal font style', 'webkompanen' ) }
+									] }
+								/>
+							</div>
+						</div>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Lineheight', 'webkompanen' ) }
+									value={ attributes.lh } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												lh:nextSelect
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 'lh-1', label: __('Lineheight 1', 'webkompanen' ) },
+										{ value: 'lh-sm', label: __('Lineheight small', 'webkompanen' ) },
+										{ value: 'lh-base', label: __('Lineheight base', 'webkompanen' ) },
+										{ value: 'lh-lg', label: __('Lineheight large', 'webkompanen' ) }
+									] }
+								/>
+							</div>
+						</div>
+						<div 
+							className="row"
+						>
+							<div className="col-12">
+								<SelectControl
+									label={ __( 'Text decoration', 'webkompanen' ) }
+									value={ attributes.textdecoration } // e.g: value = [ 'a', 'c' ]
+									onChange={ 
+										( nextSelect ) => {
+											setAttributes( {
+												textdecoration:nextSelect
+											} ) 
+										} 
+									}
+									options={ [
+										{ value: '', label: __('', 'webkompanen' ) },
+										{ value: 'text-textdecoration-underline', label: __('Underline', 'webkompanen') },
+										{ value: 'text-textdecoration-line-through', label: __('Line through', 'webkompanen') },
+										{ value: 'text-textdecoration-none', label: __('None', 'webkompanen') }
+									] }
+								/>
+							</div>
+						</div>
+					</PanelBody>
 					<ColorEdit 
 						props={props}
 					/>

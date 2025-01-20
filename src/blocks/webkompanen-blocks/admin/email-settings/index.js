@@ -74,6 +74,7 @@ class WebkompanenEmailSettings extends Component {
 			showPortfolioCustomPost: false,
 			showReferentiesCustomPost: false,
 			showReviewsCustomPost: false,
+			showLandingpagesCustomPost: false,
 			phpmailerSender: ''
 		};
 	}
@@ -108,6 +109,7 @@ class WebkompanenEmailSettings extends Component {
 						showPortfolioCustomPost: response.showPortfolioCustomPost,
 						showReferentiesCustomPost: response.showReferentiesCustomPost,
 						showReviewsCustomPost: response.showReviewsCustomPost,
+						showLandingpagesCustomPost: response.showLandingpagesCustomPost,
 						isAPILoaded: true
 					});
 				});
@@ -566,6 +568,24 @@ class WebkompanenEmailSettings extends Component {
 														this.changeOptions(
 															'showReviewsCustomPost', 
 															! this.state.showReviewsCustomPost
+														)
+													}
+												}
+												style={
+													{
+														'margin-bottom': '0px'
+													}
+												}
+											/>
+											<ToggleControl
+												label={__('Display landing pages custom post', 'webkompanen')}
+												help={ true ? '' : '' }
+												checked={ this.state.showLandingpagesCustomPost  }
+												onChange={ 
+													(e) => { 
+														this.changeOptions(
+															'showLandingpagesCustomPost', 
+															! this.state.showLandingpagesCustomPost
 														)
 													}
 												}

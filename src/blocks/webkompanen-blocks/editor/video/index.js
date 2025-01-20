@@ -179,6 +179,74 @@ const VideoEdit = (props)=> {
 					}
 				</div>
 			</div>
+			<div
+				className="row"
+			>
+				<div
+					className="col-12"
+				>
+					<ToggleControl
+						label={__('Autoplay', 'webkompanen')}
+						help={ attributes.autoplay ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.autoplay }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									autoplay: ! attributes.autoplay
+								})
+							}
+						}
+					/>
+					<ToggleControl
+						label={__('Muted', 'webkompanen')}
+						help={ attributes.muted ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.muted }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									muted: ! attributes.muted
+								})
+							}
+						}
+					/>
+					<ToggleControl
+						label={__('Controls', 'webkompanen')}
+						help={ attributes.controls ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.controls }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									controls: ! attributes.controls
+								})
+							}
+						}
+					/>
+					<ToggleControl
+						label={__('Loop', 'webkompanen')}
+						help={ attributes.loop ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.loop }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									loop: ! attributes.loop
+								})
+							}
+						}
+					/>
+					<ToggleControl
+						label={__('playsinline', 'webkompanen')}
+						help={ attributes.playsinline ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.playsinline }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									playsinline: ! attributes.playsinline
+								})
+							}
+						}
+					/>
+				</div>
+			</div>
 		</PanelBody>
 	)
 }

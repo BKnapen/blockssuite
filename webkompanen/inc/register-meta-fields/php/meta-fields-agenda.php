@@ -5,6 +5,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_focalpoint', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'array',
             'show_in_rest' => array(
                  'schema' => array(
@@ -28,6 +29,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_link', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'array',
             'show_in_rest' => array(
                  'schema' => array(
@@ -60,6 +62,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'array',
             'show_in_rest' => array(
                  'schema' => array(
@@ -93,6 +96,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_link_url', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -102,6 +106,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_weekly_event', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'boolean',
             'show_in_rest' => true,
             'single' => true
@@ -111,6 +116,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_button_text', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -120,6 +126,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image_id', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'number',
             'show_in_rest' => true,
             'single' => true
@@ -129,6 +136,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image_url', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -138,6 +146,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image_alt', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -147,6 +156,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image_height', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'number',
             'show_in_rest' => true,
             'single' => true
@@ -156,6 +166,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_image_width', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'number',
             'show_in_rest' => true,
             'single' => true
@@ -165,6 +176,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_name', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -174,6 +186,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_start_date', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -183,6 +196,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_end_date', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -192,6 +206,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_location_name', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -201,6 +216,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_location_same_as', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -210,6 +226,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_location_address', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -219,6 +236,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_ticket_price', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -228,6 +246,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_ticket_url', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -237,6 +256,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_location_price_currency', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'string',
             'show_in_rest' => true,
             'single' => true
@@ -247,6 +267,7 @@ function webkompanen_post_meta_fields_agenda() {
         'post', 
         'agenda_performers', 
         array(
+            'object_subtype' => 'agenda',
             'type' => 'array',
             'show_in_rest' => array(
                  'schema' => array(

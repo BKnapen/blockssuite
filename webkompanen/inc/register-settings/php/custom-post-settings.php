@@ -11,6 +11,15 @@
     	);
 		register_setting(
         	'general',
+        	'showLandingpagesCustomPost',
+        	array(
+            	'type'              => 'boolean',
+            	'show_in_rest'      => true,
+            	'sanitize_callback' => 'sanitize_text_field',
+        	)
+    	);
+		register_setting(
+        	'general',
         	'showCoursesCustomPost',
         	array(
             	'type'              => 'boolean',

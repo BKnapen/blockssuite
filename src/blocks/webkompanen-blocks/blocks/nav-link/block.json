@@ -384,6 +384,12 @@
 		},
 		"textalignxxl":{
 			"type": "string"
+		},
+		"dataBsTarget":{
+			"type": "string"
+		},
+		"dataBsToggle":{
+			"type": "string"
 		}
 	},
 	"supports": {

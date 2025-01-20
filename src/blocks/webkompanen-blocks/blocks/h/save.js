@@ -34,6 +34,12 @@ function headingSave( props ) {
 	const position = new Position(props)
 	const color = new Color(props)
 	const backgroundcolor = new Backgroundcolor(props)
+
+	let microdataItemtype = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? ''+attributes.microdataItemtype+'' : null
+	let microdataItemscope = (attributes.microdataItemtype !== '' && attributes.microdataItemtype !== undefined && attributes.microdataItemtype !== null) ? true : null
+	let microdataItemprop = (attributes.microdataItemprop !== '' && attributes.microdataItemprop !== undefined && attributes.microdataItemprop !== null) ? ''+attributes.microdataItemprop+'' : null
+	let microdataHref = (attributes.microdataHref !== '' && attributes.microdataHref !== undefined && attributes.microdataHref !== null) ? ''+attributes.microdataHref+'' : null
+	let microdataContent = (attributes.microdataContent !== '' && attributes.microdataContent !== undefined && attributes.microdataContent !== null) ? ''+attributes.microdataContent+'' : null
 	
 	let blockClasses = '';
 
@@ -57,6 +63,11 @@ function headingSave( props ) {
 	return(
 		<>
 			<RichText.Content 
+				itemprop={microdataItemprop}
+				itemscope={microdataItemscope}
+				itemtype={microdataItemtype}
+				href={microdataHref}
+				content={microdataContent}
 				value={attributes.content} 
 				className={ blockClasses } 
 				tagName={attributes.tagname ? attributes.tagname : 'h1' } 

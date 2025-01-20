@@ -575,6 +575,18 @@ const ImageEdit = (props)=> {
 							}
 						}
 					/>
+					<ToggleControl
+						label={__('Lightbox afbeelding', 'webkompanen')}
+						help={ attributes.lightbox ? __('Yes.', 'webkompanen') : __('No.', 'webkompanen') }
+						checked={ attributes.lightbox }
+						onChange={ 
+							(e) => {
+								setAttributes({
+									lightbox: ! attributes.lightbox
+								})
+							}
+						}
+					/>
 					{
 						attributes.showlabel&&
 							<>

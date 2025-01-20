@@ -31,6 +31,8 @@ function ButtonLinkSave( props ) {
 	const btnclassnames = 'btn btn-'+btnoutline+''+btncolor+' btn-lg' 
 	const classes = attributes.classes ? attributes.classes : ''
 	const dropdowntoggle = attributes.dropdowntoggle ? 'dropdown-toggle' : ''
+	const modaltoggle = attributes.dataBsToggle ? ''+attributes.dataBsToggle+'' : ''
+	const dataBsTarget = attributes.dataBsTarget != null && attributes.dataBsTarget != '' ? attributes.dataBsTarget : null
 	let blockClasses = 'nav-link';
 	
 	const margin = new Margin(props)
@@ -62,9 +64,12 @@ function ButtonLinkSave( props ) {
 	blockClasses = blockClasses == '' ? null : blockClasses
 
 	const parentidoutput = attributes.parentid != null && attributes.parentid != '' && dropdowntoggle != null && dropdowntoggle != '' ? attributes.parentid : null
-	const databstoggle = dropdowntoggle != null && dropdowntoggle != '' ? 'dropdown' : null
+	let databstoggle = dropdowntoggle != null && dropdowntoggle != '' ? 'dropdown' : null
+	databstoggle = modaltoggle != null && modaltoggle != '' ? modaltoggle : null
+	//const dataBsTarget = dataBsTarget != null && dataBsTarget != '' ? 'false' : null
 	const ariaexpanded = dropdowntoggle != null && dropdowntoggle != '' ? 'false' : null
-	const role = dropdowntoggle != null && dropdowntoggle != '' ? 'button' : null
+	let role = dropdowntoggle != null && dropdowntoggle != '' ? 'button' : null
+	role = modaltoggle != null && modaltoggle != '' ? 'button' : null
 	
 	return(
 		<>     	
@@ -74,6 +79,7 @@ function ButtonLinkSave( props ) {
 				className={ blockClasses }
 				id={parentidoutput}
 				data-bs-toggle={databstoggle}
+				data-bs-target={dataBsTarget}
 				aria-expanded={ariaexpanded}
 				role={role}
 				tagName="a" 

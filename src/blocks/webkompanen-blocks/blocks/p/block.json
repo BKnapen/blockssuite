@@ -15,6 +15,22 @@
 			"type": "string"
 		},
 		"content":{
+			"type": "string",
+			"role": "content"
+		},
+		"microdataItemprop":{
+			"type": "string"
+		},
+		"microdataItemscope":{
+			"type": "boolean"
+		},
+		"microdataItemtype":{
+			"type": "string"
+		},
+	   	"microdataHref":{
+			"type": "string"
+		},
+	  	"microdataContent":{
 			"type": "string"
 		},
         "classes":{

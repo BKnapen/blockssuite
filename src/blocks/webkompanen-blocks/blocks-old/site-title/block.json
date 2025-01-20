@@ -1,0 +1,403 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "webkompanen-blocks/site-title",
+	"title": "Site title",
+	"category": "webkompanen-blocks/text",
+	"description": "Create a site title element",
+	"textdomain": "webkompanen",
+	"attributes": {
+		"align":{
+			"type": "string",
+			"default": "full"
+		},
+		"content":{
+			"type": "string"
+		},
+		"tagname":{
+			"type": "string"
+		},
+		"textalign":{
+			"type": "string"
+		},
+		"textalignxs":{
+			"type": "string"
+		},
+		"textalignsm":{
+			"type": "string"
+		},
+		"textalignmd":{
+			"type": "string"
+		},
+		"textalignlg":{
+			"type": "string"
+		},
+		"textalignxl":{
+			"type": "string"
+		},
+		"textalignxxl":{
+			"type": "string"
+		},
+		"texttransform":{
+			"type": "string"
+		},
+		"bgcolor":{
+			"type": "string"
+		},
+		"color":{
+			"type": "string"
+		},
+        "classes":{
+            "type": "string"
+        },
+		"pxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"psm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"plg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"pxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"dxs":{
+			"type": "string"
+		},
+		"dsm":{
+			"type": "string"
+		},
+		"dmd":{
+			"type": "string"
+		},
+		"dlg":{
+			"type": "string"
+		},
+		"dxl":{
+			"type": "string"
+		},
+		"dxxl":{
+			"type": "string"
+		},
+		"mxsauto":{
+			"type": "boolean"
+		},
+		"mxsxauto":{
+			"type": "boolean"
+		},
+		"mxsyauto":{
+			"type": "boolean"
+		},
+		"mxstauto":{
+			"type": "boolean"
+		},
+		"mxseauto":{
+			"type": "boolean"
+		},
+		"mxsbauto":{
+			"type": "boolean"
+		},
+		"mxssauto":{
+			"type": "boolean"
+		},
+		"msmauto":{
+			"type": "boolean"
+		},
+		"msmxauto":{
+			"type": "boolean"
+		},
+		"msmyauto":{
+			"type": "boolean"
+		},
+		"msmtauto":{
+			"type": "boolean"
+		},
+		"msmeauto":{
+			"type": "boolean"
+		},
+		"msmbauto":{
+			"type": "boolean"
+		},
+		"msmsauto":{
+			"type": "boolean"
+		},
+		"mmdxauto":{
+			"type": "boolean"
+		},
+		"mmdyauto":{
+			"type": "boolean"
+		},
+		"mmdtauto":{
+			"type": "boolean"
+		},
+		"mmdeauto":{
+			"type": "boolean"
+		},
+		"mmdbauto":{
+			"type": "boolean"
+		},
+		"mmdsauto":{
+			"type": "boolean"
+		},
+		"mlgxauto":{
+			"type": "boolean"
+		},
+		"mlgyauto":{
+			"type": "boolean"
+		},
+		"mlgtauto":{
+			"type": "boolean"
+		},
+		"mlgeauto":{
+			"type": "boolean"
+		},
+		"mlgbauto":{
+			"type": "boolean"
+		},
+		"mlgsauto":{
+			"type": "boolean"
+		},
+		"mxlxauto":{
+			"type": "boolean"
+		},
+		"mxlyauto":{
+			"type": "boolean"
+		},
+		"mxltauto":{
+			"type": "boolean"
+		},
+		"mxleauto":{
+			"type": "boolean"
+		},
+		"mxlbauto":{
+			"type": "boolean"
+		},
+		"mxlsauto":{
+			"type": "boolean"
+		},
+		"mxxlxauto":{
+			"type": "boolean"
+		},
+		"mxxlyauto":{
+			"type": "boolean"
+		},
+		"mxxltauto":{
+			"type": "boolean"
+		},
+		"mxxleauto":{
+			"type": "boolean"
+		},
+		"mxxlbauto":{
+			"type": "boolean"
+		},
+		"mxxlsauto":{
+			"type": "boolean"
+		},
+		"mxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"msm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mlg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"mxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxs":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmsm":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmmd":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmlg":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"nmxxl":{
+			"type": "object",
+			"default":{
+				"top":null,
+				"right":null,
+				"bottom":null,
+				"left":null
+			}
+		},
+		"posxs":{
+			"type": "string"
+		},
+		"posmd":{
+			"type": "string"
+		},
+		"poslg":{
+			"type": "string"
+		},
+		"posxl":{
+			"type": "string"
+		},
+		"posxxl":{
+			"type": "string"
+		},
+		"position":{
+			"type": "string"
+		},
+		"fw":{
+			"type": "string"
+		},
+		"fs":{
+			"type": "string"
+		},
+		"post":{
+			"type": "object"
+		},
+		"dataaos":{
+			"type":"string"
+		},
+		"dataaoseasing":{
+			"type":"string"
+		},
+		"dataaosanchorplacement":{
+			"type":"string"
+		},
+		"dataaosonce":{
+			"type":"boolean"
+		},
+		"dataaosanchor":{
+			"type":"string"
+		},
+		"dataaosduration":{
+			"type":"number"
+		},
+		"dataaosdelay":{
+			"type":"number"
+		},
+		"dataaosoffset":{
+			"type":"number"
+		}
+	},
+	"usesContext": [ "postId", "postType", "queryId" ],
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
+}

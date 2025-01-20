@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "webkompanen-blocks/lastgallerie",
+  "name": "webkompanen-blocks/lastposts",
   "title": "Last posts",
   "category": "webkompanen-blocks/querys",
   "description": "Return a list of last posts from the database",
@@ -39,6 +39,59 @@
       "type": "string"
     },
     "wrapper": {
+      "type": "boolean"
+    },
+    "post_type": {
+      "type": "boolean"
+    },
+    "tag_type": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "boolean"
+    },
+    "showaslist": {
+      "default": true,
+      "type": "boolean"
+    },
+    "showpostthumbnail": {
+      "default": true,
+      "type": "boolean"
+    },
+    "colxs": {
+      "type": "number"
+    },
+    "colautoxs": {
+      "type": "boolean"
+    },
+    "colsm": {
+      "type": "number"
+    },
+    "colautosm": {
+      "type": "boolean"
+    },
+    "colmd": {
+      "type": "number"
+    },
+    "colautomd": {
+      "type": "boolean"
+    },
+    "collg": {
+      "type": "number"
+    },
+    "colautolg": {
+      "type": "boolean"
+    },
+    "colxl": {
+      "type": "number"
+    },
+    "colautoxl": {
+      "type": "boolean"
+    },
+    "colxxl": {
+      "type": "number"
+    },
+    "colautoxxl": {
       "type": "boolean"
     }
   },

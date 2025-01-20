@@ -84,6 +84,12 @@ const sectionEdit = (props) => {
 		className,
 		clientId
 	} = props;
+
+	const [ isVisible, setIsVisible ] = useState( false );
+	
+    const toggleVisible = () => {
+       	setIsVisible( ( state ) => ! state );
+    };
 	
 	const ALLOWED_BLOCKS = [ 
 		'webkompanen-blocks/lastposts',
@@ -168,6 +174,66 @@ const sectionEdit = (props) => {
 					/>
 				</InspectorControls>
 			</Fragment>	
+			<BlockControls>
+				<Toolbar>
+					<IconButton
+						label={__('Link', 'webkompanen')}
+						icon={link}
+						className="link"
+						onClick={ 
+							(e) => { 
+								setIsVisible( ( state ) => ! state );
+							} 
+						}
+					/>
+					{ 
+						isVisible && (
+							<Popover>
+								<div style={{padding: "16px"}}>
+									<LinkControl
+										className="bootstrap-linkcontrol"
+										searchInputPlaceholder="Search here..."
+										value={ attributes.post }
+										settings={
+											[
+											]
+										}
+										onChange={ 
+											( newPost ) => setAttributes( 
+												{ 
+													post: newPost,
+													navbarbrandlink: newPost.url
+												},
+												setIsVisible( ( state ) => ! state )
+											) 
+										}
+										withCreateSuggestion={true}
+										createSuggestion={ 
+				  							(inputValue) => setAttributes( 
+												{ 
+													post: {
+														...attributes.post,
+														title: inputValue,
+														type: "custom-url",
+														id: Date.now(),
+														url: inputValue
+													}
+												} 
+											) 
+										}
+										createSuggestionButtonText={ 
+											(newValue) => { 
+												newValue
+											} 
+										}
+									>
+									</LinkControl>
+								</div>
+							</Popover>
+						) 
+					}
+				</Toolbar>
+			</BlockControls>
   			<a
 				{ ...innerBlocksProps }
 				href={ attributes.href }
