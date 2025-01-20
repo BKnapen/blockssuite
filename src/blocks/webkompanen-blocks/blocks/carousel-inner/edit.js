@@ -65,7 +65,7 @@ import {
 import { 
 	PluginSidebarMoreMenuItem, 
 	PluginSidebar 
-} from '@wordpress/editor';
+} from '@wordpress/editor';//test
 
 import { 
 	compose 
