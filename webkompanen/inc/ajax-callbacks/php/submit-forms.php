@@ -179,7 +179,7 @@
 						$message .='<!-- Email Header : BEGIN -->';
             			$message .='<table align="center" width="600" class="email-container">';
             				$message .='<tr>';
-                				$message .='<td style="padding: 20px 0; text-align: center;"><img style="width:25%" src="https://webkompanen.gaatbinnenkortonline.nl/wp-content/uploads/cropped-fav-icon-skeel-up@2x.png" alt="logo SKEELUP" border="0"></td>';
+                				$message .='<td style="padding: 20px 0; text-align: center;"><img style="width:25%" src="https://webkompanen.gaatbinnenkortonline.nl/wp-content/uploads/cropped-fav-icon-company@2x.png" alt="logo COMPANY" border="0"></td>';
               				$message .='</tr>';
           				$message .='</table>';
             			$message .='<!-- Email Header : END --> ';
@@ -195,7 +195,7 @@
 										}
 									} 
 									$message .='<br><br>';
-									$message .= 'SKEELUP,<br>';
+									$message .= 'COMPANY,<br>';
 									$message .= 'webkompanen.com';
 								$message .='</td>';
 							$message .='</tr>';
@@ -207,7 +207,7 @@
 						$message .='<table align="center" width="600" class="email-container">';
             				$message .='<tr>';
                 				$message .='<td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: \'Lato\', sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #ffffff;">';
-                					$message .='SKEELUP<br>';
+                					$message .='COMPANY<br>';
                 					$message .='<span class="mobile-link--footer">webkompanen.com</span><br>';
 								$message .='</td>';
               				$message .='</tr>';
@@ -222,12 +222,12 @@ $message .='</html>';
 
 		$headers = array('Content-Type: text/html; charset=UTF-8','From: info@webkompanen.com <info@webkompanen.com>');
 		
-	$clientId = 'fab16d60-6975-4286-b310-e460920ce040';
-	$clientSecret = 'I_e8Q~RiLDsaCSNMAyn._vRKna1VABUAhmb9KdwI';
+	$clientId = '';
+	$clientSecret = '';
 
-	$postUrl = '/c8079608-e881-41b4-ba11-21fff7769a52/oauth2/v2.0/token';
+	$postUrl = '//v2.0/token';
 	$hostname = 'login.microsoftonline.com';
-	$fullurl = 'https://login.microsoftonline.com/c8079608-e881-41b4-ba11-21fff7769a52/oauth2/v2.0/token';
+	$fullurl = 'https://login.microsoftonline.com//v2.0/token';
 
 	$headers = array(
     	'POST ' . $postUrl . ' HTTP/1.1',
@@ -279,42 +279,42 @@ $message .='</html>';
             ),
             'sender' => array(
                 'emailAddress' => array(
-                      'name' => 'Info | SKEELUP',
-                      'address' => 'info@webkompanen.com'
+                      'name' => 'Info | Company',
+                      'address' => 'info@company.com'
                 )
               ),
             'from' => array(
                 'emailAddress' => array(
-                      'name' => 'Info | SKEELUP',
-                      'address' => 'info@webkompanen.com'
+                      'name' => 'Info | Company',
+                      'address' => 'info@company.com'
                 )
            	),
             'toRecipients' => [
 				array(
                 	'emailAddress' => array(
-                    	'address' => 'info@webkompanen.com'
+                    	'address' => 'info@company.com'
                 	)
             	)
 			],
             'ccRecipients' => [
 				array(
                 	'emailAddress' => array(
-						'name' => 'Tim | SKEELUP',
-                    	'address' => 'tim@webkompanen.com'
+						'name' => 'Name | Company',
+                    	'address' => 'name@company.com'
                 	)
             	),
 				array(
                 	'emailAddress' => array(
-						'name' => 'Amanda | SKEELUP',
-                    	'address' => 'amanda@webkompanen.com'
+						'name' => 'Other name | Company',
+                    	'address' => 'othername@company.com'
                 	)
             	)
 			],
             'bccRecipients' => [
 				array(
                 	'emailAddress' => array(
-						'name' => 'Bram Knapen',
-                    	'address' => 'bramknapen@outlook.com'
+						'name' => 'Developer | Company',
+                    	'address' => 'developer@company.com'
                 	)
             	)
 			]
